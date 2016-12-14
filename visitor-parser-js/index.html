@@ -98,9 +98,7 @@
 		<a class="github-fork-ribbon right-bottom fixed" href="https://github.com/bachors/Visitor-Parser-JS" title="Fork me on GitHub">Fork me on GitHub</a> 
 		<script src="../src/js/jquery.min.js"></script>
 		<script src="js/visitor-parser.js"></script>
-		<script>
-
-		document.getElementById('header').innerHTML = loadPage('/header.html');
+		<script>		
 		var visitor = new visitorParser();
 		var info = visitor.getInfo();
 
@@ -156,15 +154,7 @@
 			}else{
 				document.getElementById('result').innerHTML = JSON.stringify(visitor.getUa(), null, 2);
 			}
-		}
-		
-		function loadPage(href) {
-			var yuyu = new XMLHttpRequest();
-			yuyu.open("GET", href, false);
-			yuyu.send();
-			return yuyu.responseText;
-		}
-		
+		}		
 		</script>
 	</body>
 </html>
