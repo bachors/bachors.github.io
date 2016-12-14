@@ -33,12 +33,7 @@ var scp = function(g, f) {
                 d += '<div class="scp-play ' + x + '" data-play="' + b[i].id + '">' + b[i].title + '<br><span>By ' + b[i].user.username + '</span></div>'
             });
             $('.scp-play-bottom').html(d);
-			var hu = '<object type="application/x-shockwave-flash" data="//w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + b[0].id + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" class="vid-iframe">'
-					+'	<param name="movie" value="//w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + b[0].id + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />'
-					+'	<param name="allowFullScreen" value="true" />'
-					+'	<param name="allowscriptaccess" value="always" />'
-					+'</object>';
-            $('.scp_track_play').html(hu);
+            $('.scp_track_play').html('<iframe class="scp-play-iframe" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + b[0].id + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>');
             $("#scp-search").click(function() {
                 scp_track($("#scp-select").val(), $("#scp-input").val());
                 return false
@@ -48,12 +43,7 @@ var scp = function(g, f) {
                     var a = $(this).attr("data-play");
                     $('div').removeClass('scp-play-active');
                     $(this).addClass('scp-play-active');
-					var aha = '<object type="application/x-shockwave-flash" data="//w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + a + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" class="vid-iframe">'
-							+'	<param name="movie" value="//w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + a + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />'
-							+'	<param name="allowFullScreen" value="true" />'
-							+'	<param name="allowscriptaccess" value="always" />'
-							+'</object>';
-                    $('.scp_track_play').html(aha);
+                    $('.scp_track_play').html('<iframe class="scp-play-iframe" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + a + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>');
                     return false
                 })
             })
