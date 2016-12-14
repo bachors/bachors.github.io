@@ -163,7 +163,7 @@
 
 .github-feed .bod .bachorsactiv .result .gfpost {
 	display: inline-block;
-	width: calc(100% - 30px);
+	width: calc(100% - 60px);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 0.8em;
@@ -172,7 +172,7 @@
 
 .github-feed .bod .result .gfpost {
 	display: inline-block;
-	width: calc(100% - 80px);
+	width: calc(100% - 120px);
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
