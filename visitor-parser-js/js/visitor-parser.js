@@ -395,11 +395,7 @@ var visitorParser = function visitorParser(opt) {
     }
 	
     function getGeo() {
-		if (window.XMLHttpRequest) {
-			xmlhttp = new XMLHttpRequest();
-		} else {
-			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		}
+		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", opt.geoAPI, false);
 		xmlhttp.send();
 		var jsn = xmlhttp.responseText,
