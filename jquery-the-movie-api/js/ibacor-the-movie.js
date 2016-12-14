@@ -37,7 +37,7 @@ var ibacor_themovie = function(h) {
 
     function ibacor_pop_movie(e, f) {
         $.ajax({
-            url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + e + '&sort_by=popularity.desc&page=' + f,
+            url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + e + '&page=' + f,
             crossDomain: true,
             dataType: 'json'
         }).done(function(c) {
