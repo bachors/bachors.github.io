@@ -20,7 +20,7 @@ var scp = function(g, f) {
 
     function scp_track(c, e) {
         $.ajax({
-            url: 'http://ibacor.com/api/soundcloud?m=' + c + '&t=' + e + '&k=' + f,
+            url: '//ibacor.com/api/soundcloud?m=' + c + '&t=' + e + '&k=' + f,
             crossDomain: true,
             dataType: 'json'
         }).done(function(b) {
