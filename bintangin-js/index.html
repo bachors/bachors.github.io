@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- Title -->
+		<title>Bintangin.js - Bachors</title>
+
+		<!-- Asset -->
+		<link type="text/css" rel="stylesheet" href="../src/css/bootstrap.css" />
+		<link type="text/css" rel="stylesheet" href="../src/css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
+		<!--[if lt IE 9]>
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+		<![endif]--> 
+		<style>
+		i.bintang {
+		  cursor: pointer;
+		  color: black
+		}
+		i.bintangin {
+		  color: yellow
+		}
+		</style>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div class="main content-wrap dnl-visible content-opacity" data-effect="dnl-overlay">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="post">
+							<div class="content">
+								<h1>Bintangin.js</h1>
+								<br>
+								<div id="1" class="anu" data-bintangin="3"></div>
+								<div id="2" class="anu" data-bintangin="1"></div>
+								<div id="3" class="anu" data-bintangin="0"></div>
+								<br>
+								<h4>Usage:</h4>
+								<pre>&lt;div id="1" class="anu" data-bintangin="3"&gt;&lt;/div&gt;
+&lt;div id="2" class="anu" data-bintangin="1"&gt;&lt;/div&gt;
+&lt;div id="3" class="anu" data-bintangin="0"&gt;&lt;/div&gt;
+
+&lt;script&gt;        
+$(document).ready(function(){
+  $(".anu").bintangin(
+    save = "http://anu.kom/post/update.php", // url untuk mengupdate rate bintang ke database menggunakan method POST dengan 3 parameter yaitu postid, rate &amp; visitor
+    visitor = "otong", // by user id, name or ipaddress
+    message = "bintang"
+  );
+});
+&lt;/script&gt;</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_BLANK">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="RG95K7HU7AFDS">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/id_ID/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				Lovingly crafted by <a href="https://github.com/bachors" target="_BLANK">Bachors</a>
+			</footer>
+		</div>
+		<a class="github-fork-ribbon right-bottom fixed" href="https://github.com/bachors/bintangin.js" title="Fork me on GitHub">Fork me on GitHub</a> 
+		<script src="../src/js/jquery.min.js"></script>
+		<script src="js/bintangin.js"></script>
+		<script>
+		$(document).ready(function(){
+			"use strict";
+			
+			$(".anu").bintangin(
+				save = "http://anu.kom/post/update.php", // url untuk mengupdate rate bintang ke database menggunakan method POST dengan 3 parameter yaitu postid, rate & visitor
+				visitor = "otong", // by user id, name or ipaddress
+				message = "bintang"
+			);
+			
+			$('#header').load('/header.html');var dnl=$(".menur-navbar-left"),dnlBtnToggle=$(".dnl-btn-toggle"),dnlBtnCollapse=$(".dnl-btn-collapse"),contentWrap=$(".content-wrap"),contentWrapEffect=contentWrap.data("effect"),windowHeight=$(window).height()-61,windowWidth=$(window).width()<767;dnl.addClass("dnl-hide");dnlBtnToggle.click(function(){if(dnl.hasClass("dnl-hide")){dnlShow()}else{dnlHide()}});dnlBtnCollapse.click(function(e){e.preventDefault();if(dnl.hasClass("dnl-collapsed")){dnl.removeClass("dnl-collapsed");contentWrap.removeClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-right").addClass("fa-arrow-left")}else{dnl.addClass("dnl-collapsed");contentWrap.addClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-left").addClass("fa-arrow-right")}});$('.navbar-toggle').click(function(){if($(this).hasClass('collapsed')){dnlHide()}});dnlBtnToggle.click(function(){$('.navbar-toggle').addClass('collapsed');$('.navbar-collapse').removeClass('in')});if(isMobile()==true){$(window).swipe({swipeRight:function(){dnlShow();$('.navbar-collapse').removeClass('in')},swipeLeft:function(){dnlHide()},threshold:75})}function cwShowOverflow(){if(windowWidth){contentWrap.css({height:windowHeight,overflow:'hidden'})}}function cwHideOverflow(){if(windowWidth){contentWrap.css({height:'auto',overflow:'auto'})}}function dnlShow(){dnl.addClass("dnl-show").removeClass("dnl-hide");contentWrap.addClass(contentWrapEffect);cwShowOverflow();dnlBtnToggle.find("span").removeClass("fa-bars").addClass("fa-times")}function dnlHide(){dnl.removeClass("dnl-show").addClass("dnl-hide");contentWrap.removeClass(contentWrapEffect);cwHideOverflow();dnlBtnToggle.find("span").removeClass("fa-times").addClass("fa-bars")}function isMobile(){try{document.createEvent("TouchEvent");return true}catch(e){return false}}
+			
+		});
+		</script>
+	</body>
+</html>
