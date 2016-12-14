@@ -11,7 +11,7 @@ var visitorParser = function visitorParser(opt) {
 	var defaultopt = {
         setUa : navigator.userAgent, // set user-agent string
 		getOpt : false, // get all options result of regex
-		geoAPI : 'http://ip-api.com/json' // set url ip geo location apis
+		geoAPI : '//ip-api.com/json' // set url ip geo location apis
     };
 	opt = (typeof opt === 'object' ? opt : {});
 	opt.setUa = (opt.setUa == undefined ? defaultopt.setUa : opt.setUa);
