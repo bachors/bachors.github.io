@@ -9,14 +9,14 @@ var scp = function(g, f) {
     var d = '<div class="scp-unit scp-play-kenca"><div class="scp_track_play"></div></div>';
     d += '<div class = "scp-unit scp-play-katuhu"><div class="scp_track">';
     d += '<div class="scp-play-top">';
-    d += '<input type="text" id="scp-input" value="dangdut koplo"/>';
+    d += '<input type="text" id="scp-input" value="dubstep"/>';
     d += '<select id="scp-select"><option value="q">Title</option><option value="tags">Tags</option><option value="user_id">Username</option></select>';
     d += '<input type="submit" id="scp-search" value="Go"/>';
     d += '</div><div class="scp-play-bottom">';
     d += '</div>';
     d += '</div></div>';
     $('#scp').html(d);
-    scp_track('q', 'dangdut koplo');
+    scp_track('q', 'dubstep');
 
     function scp_track(c, e) {
         $.ajax({
