@@ -93,7 +93,7 @@ div.scp-play:hover {
 	background:#222;
 }
 
-.vid-iframe {
+iframe.scp-play-iframe {
 	width: 100%;
 	height: 500px;
 	border:0
@@ -111,7 +111,7 @@ div.scp-play:hover {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.scp-play-katuhu {width:100%}
 	.scp-play-kenca {width:100%;margin-bottom:20px}
-	.vid-iframe {height: 450px;}
+	iframe.scp-play-iframe {height: 450px;}
 	div.scp-play-bottom{height: 385px}
 }
 
@@ -119,6 +119,6 @@ div.scp-play:hover {
 	.scp-play-katuhu{margin:0}
 	.scp-play-kenca {margin:0 0 20px 0}
 	.scp-unit{width:auto;margin-left:0;display:block;margin-top:0}
-	.vid-iframe {height: 350px;}
+	iframe.scp-play-iframe {height: 350px;}
 	div.scp-play-bottom{height: 285px}
 }
