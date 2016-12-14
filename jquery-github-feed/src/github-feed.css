@@ -5,6 +5,8 @@
 * Updates will be posted to this site.
 ***********************************************************/
 
+@import url(//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css);
+
 .github-feed {
 	font-family: Helvetica, arial, freesans, clean, sans-serif;
 	height: 100%;
