@@ -4,7 +4,7 @@
 body {
 	font-family: Roboto;
 	color: #fff;
-	background: #21252B
+	background: #171717
 }
 
 a, a:hover, a:active, a:focus {
@@ -15,13 +15,16 @@ a, a:hover, a:active, a:focus {
 
 header {
 	padding: 10px;
-	background: #5CADFF;
-	color: #fff;
+	background-color: #f7f7f7;
+	background-image: -moz-linear-gradient(top, #f7f7f7 0%, #cfcfcf 7%, #aaaaaa 100%);
+	color: #444;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	height: 55px;
 	position: fixed;
 	width: 100%;
 	z-index: 9999999999999;
-	box-shadow: 0 0 5px rgba(57,70,78,.2);
+	border-bottom: 1px solid #111;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 	
 }
 
@@ -34,11 +37,11 @@ header .fa-times {
 header .fa-bars,
 header .fa-times {
 	display: none;
-	color: #fff;
+	color: #444;
 }
 
 header a.logo {
-	color: #fff;
+	color: #444;
 	font-size: 2em;
 	margin-right: 30px
 }
@@ -50,7 +53,7 @@ header a.logo {
 
 .main h1 {
 	text-align: center;
-	border-bottom: 1px solid #1a2226;
+	border-bottom: 1px solid #333;
 	padding-bottom: 20px
 }
 
@@ -62,7 +65,7 @@ header a.logo {
 	background: #fff;
 	padding: 10px 20px 20px 20px;
 	margin-top: 30px;
-	color: #34495e;
+	color: #212121;
 }
 
 ul#info li {
@@ -79,7 +82,7 @@ footer {
 /* menur */
 .menur-navbar-left {
   position: fixed;
-  background-color: #222d32;
+  background-color: #212121;
   width: 250px;
   top: 55px;
   bottom: 0;
