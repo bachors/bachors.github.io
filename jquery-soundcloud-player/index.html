@@ -29,19 +29,7 @@
 						
 								<h1>jQuery Soundcloud player</h1>
 								<br>
-								<div id="scp">
-									<div class="scp-unit scp-play-kenca"><div class="scp_track_play"></div></div>';
-										<div class = "scp-unit scp-play-katuhu">
-											<div class="scp_track">';
-												<div class="scp-play-top">';
-												<input type="text" id="scp-input" value="dangdut koplo"/>';
-												<select id="scp-select"><option value="q">Title</option><option value="tags">Tags</option><option value="user_id">Username</option></select>';
-												<input type="submit" id="scp-search" value="Go"/>';
-												</div><div class="scp-play-bottom">';
-												</div>';
-											</div>
-										</div>
-								</div>
+								<div id="scp"></div>
 							
 					</div>
 				</div>
@@ -58,56 +46,27 @@
 		</div>
 		<a class="github-fork-ribbon right-bottom fixed" href="https://github.com/bachors/Soundcloud-Player" title="Fork me on GitHub">Fork me on GitHub</a> 
 		<script src="../src/js/jquery.min.js"></script>
+		<script src="src/scp.js"></script>
 		<script>
-		document.getElementById('header').innerHTML = loadPage('/header.html');
-		
-		$(document).ready(function(){
-			"use strict";
-			
-			scp_track('q', 'dangdut koplo', true, 'cb9020c4747f32673915aa1caccf1ecd');
-		
-			function scp_track(c, e, g, f) {
-				$.ajax({
-					url: 'http://ibacor.com/api/soundcloud?m=' + c + '&t=' + e + '&k=' + f,
-					crossDomain: true,
-					dataType: 'json'
-				}).done(function(b) {
-					var d = '';
-					$.each(b, function(i, a) {
-						var x = '';
-						if (i == 0) {
-							x += 'scp-play-active'
-						}
-						d += '<div class="scp-play ' + x + '" data-play="' + b[i].id + '">' + b[i].title + '<br><span>By ' + b[i].user.username + '</span></div>'
-					});
-					$('.scp-play-bottom').html(d);
-					$('.scp_track_play').html('<iframe class="scp-play-iframe" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + b[0].id + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>');
-					$("#scp-search").click(function() {
-						scp_track($("#scp-select").val(), $("#scp-input").val(), true, 'cb9020c4747f32673915aa1caccf1ecd');
-						return false
-					});
-					$(".scp-play").each(function() {
-						$(this).click(function() {
-							var a = $(this).attr("data-play");
-							$('div').removeClass('scp-play-active');
-							$(this).addClass('scp-play-active');
-							$('.scp_track_play').html('<iframe class="scp-play-iframe" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + a + '&amp;auto_play=' + g + '&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>');
-							return false
-						})
-					})
-				})
-			}
-			
-			var dnl=$(".menur-navbar-left"),dnlBtnToggle=$(".dnl-btn-toggle"),dnlBtnCollapse=$(".dnl-btn-collapse"),contentWrap=$(".content-wrap"),contentWrapEffect=contentWrap.data("effect"),windowHeight=$(window).height()-61,windowWidth=$(window).width()<767;dnl.addClass("dnl-hide");dnlBtnToggle.click(function(){if(dnl.hasClass("dnl-hide")){dnlShow()}else{dnlHide()}});dnlBtnCollapse.click(function(e){e.preventDefault();if(dnl.hasClass("dnl-collapsed")){dnl.removeClass("dnl-collapsed");contentWrap.removeClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-right").addClass("fa-arrow-left")}else{dnl.addClass("dnl-collapsed");contentWrap.addClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-left").addClass("fa-arrow-right")}});$('.navbar-toggle').click(function(){if($(this).hasClass('collapsed')){dnlHide()}});dnlBtnToggle.click(function(){$('.navbar-toggle').addClass('collapsed');$('.navbar-collapse').removeClass('in')});if(isMobile()==true){$(window).swipe({swipeRight:function(){dnlShow();$('.navbar-collapse').removeClass('in')},swipeLeft:function(){dnlHide()},threshold:75})}function cwShowOverflow(){if(windowWidth){contentWrap.css({height:windowHeight,overflow:'hidden'})}}function cwHideOverflow(){if(windowWidth){contentWrap.css({height:'auto',overflow:'auto'})}}function dnlShow(){dnl.addClass("dnl-show").removeClass("dnl-hide");contentWrap.addClass(contentWrapEffect);cwShowOverflow();dnlBtnToggle.find("span").removeClass("fa-bars").addClass("fa-times")}function dnlHide(){dnl.removeClass("dnl-show").addClass("dnl-hide");contentWrap.removeClass(contentWrapEffect);cwHideOverflow();dnlBtnToggle.find("span").removeClass("fa-times").addClass("fa-bars")}function isMobile(){try{document.createEvent("TouchEvent");return true}catch(e){return false}}
-			
-		});
-		
 		function loadPage(href) {
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.open("GET", href, false);
 			xmlhttp.send();
 			return xmlhttp.responseText;
 		}
+
+		document.getElementById('header').innerHTML = loadPage('/header.html');
+		$(document).ready(function(){
+			"use strict";
+			
+			scp(
+				true, // true or false
+				'cb9020c4747f32673915aa1caccf1ecd'
+			);
+			
+			var dnl=$(".menur-navbar-left"),dnlBtnToggle=$(".dnl-btn-toggle"),dnlBtnCollapse=$(".dnl-btn-collapse"),contentWrap=$(".content-wrap"),contentWrapEffect=contentWrap.data("effect"),windowHeight=$(window).height()-61,windowWidth=$(window).width()<767;dnl.addClass("dnl-hide");dnlBtnToggle.click(function(){if(dnl.hasClass("dnl-hide")){dnlShow()}else{dnlHide()}});dnlBtnCollapse.click(function(e){e.preventDefault();if(dnl.hasClass("dnl-collapsed")){dnl.removeClass("dnl-collapsed");contentWrap.removeClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-right").addClass("fa-arrow-left")}else{dnl.addClass("dnl-collapsed");contentWrap.addClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-left").addClass("fa-arrow-right")}});$('.navbar-toggle').click(function(){if($(this).hasClass('collapsed')){dnlHide()}});dnlBtnToggle.click(function(){$('.navbar-toggle').addClass('collapsed');$('.navbar-collapse').removeClass('in')});if(isMobile()==true){$(window).swipe({swipeRight:function(){dnlShow();$('.navbar-collapse').removeClass('in')},swipeLeft:function(){dnlHide()},threshold:75})}function cwShowOverflow(){if(windowWidth){contentWrap.css({height:windowHeight,overflow:'hidden'})}}function cwHideOverflow(){if(windowWidth){contentWrap.css({height:'auto',overflow:'auto'})}}function dnlShow(){dnl.addClass("dnl-show").removeClass("dnl-hide");contentWrap.addClass(contentWrapEffect);cwShowOverflow();dnlBtnToggle.find("span").removeClass("fa-bars").addClass("fa-times")}function dnlHide(){dnl.removeClass("dnl-show").addClass("dnl-hide");contentWrap.removeClass(contentWrapEffect);cwHideOverflow();dnlBtnToggle.find("span").removeClass("fa-times").addClass("fa-bars")}function isMobile(){try{document.createEvent("TouchEvent");return true}catch(e){return false}}
+			
+		});
 		</script>
 	</body>
 </html>
