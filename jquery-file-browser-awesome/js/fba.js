@@ -33,9 +33,8 @@ var fba = function(g) {
 	
 	var editor = CodeMirror.fromTextArea(document.getElementById("fba_text"),
 	{
-		mode: "application/x-httpd-php", 
-		lineNumbers: true,
-		theme: "monokai"
+		mode: "text/html",
+		lineNumbers: true
 	});
 
     function fba_direktori(d, e, f) {
