@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+    <loc>https://bachors.github.io/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/ayoshare-js/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/bintangin-js/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/code-sandbox-fiddle-theme/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/disqusin-js/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/htmlfromrss-js/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-facebook-fans-page-albums/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-facebook-streaming/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-file-browser-awesome/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-github-feed/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-github-repos-feed/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-google-plus-streaming/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-my-dribbble-gallery/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-my-instagram-gallery/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-prefix-input/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-soundcloud-player/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-stackoverflow-search/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-the-movie-api/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/jquery-youtube-channels-playlist/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/visitor-parser-js/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+<url>
+	<loc>https://bachors.github.io/ygrab-js/</loc>
+	<changefreq>always</changefreq>
+    <priority>0.1</priority>
+</url>
+
+</urlset>
