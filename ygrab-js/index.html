@@ -84,33 +84,39 @@
 			$(document).ready(function(){
 				"use strict";
 									
-					var data = [{
-						url: 'http://ibacor.com/blog',
-						selector: 'div.post',
-						loop: true,
-						result: [{
-							name: 'title',
-							find: 'h3 a',
-							grab: {
-								by: 'text',
-								value: ''
+					var data = [
+					  {
+						"url": "https://news.ycombinator.com/news",
+						"selector": "table.itemlist tr.athing",
+						"loop": true,
+						"result": [
+						  {
+							"name": "title",
+							"find": "td.title a",
+							"grab": {
+							  "by": "text",
+							  "value": ""
 							}
-						},{
-							name: 'image',
-							find: 'img',
-							grab: {
-								by: 'attr',
-								value: 'src'
+						  },
+						  {
+							"name": "site",
+							"find": "span.sitebit span",
+							"grab": {
+							  "by": "text",
+							  "value": ""
 							}
-						},{
-							name: 'link',
-							find: 'h3 a',
-							grab: {
-								by: 'attr',
-								value: 'href'
+						  },
+						  {
+							"name": "link",
+							"find": "td.title a",
+							"grab": {
+							  "by": "attr",
+							  "value": "href"
 							}
-						}]
-					}];
+						  }
+						]
+					  }
+					];
 					
 					var htm = '&lt;script src="<a href="https://code.jquery.com/" tagrget="_BLANK">jquery.min.js</a>"&gt;&lt;/script&gt;<br>'+
 '&lt;script src="<a href="https://github.com/bachors/Ygrab.js" tagrget="_BLANK">ygrab.js</a>"&gt;&lt;/script&gt;<br>'+
