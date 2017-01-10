@@ -30,9 +30,9 @@
 						<div class="post">
 							<div class="content">
 								<h1>hacker-news-feed.js</h1>
-								<p>Lightweight javascript-based.</p><br>
+								<p align="center">Lightweight javascript-based.</p><br>
 								
-								<form class="form-inline">
+								<form class="form-inline" align="center">
 									<div class="form-group">
 										<label>Menu:</label>
 										<select class="form-control" id="hnmenu">
@@ -106,6 +106,7 @@
 				var result = JSON.stringify(feed, null, 2);
 				
 				$('#hnresult').html(result);
+				return false;
 			});
 			
 		});
