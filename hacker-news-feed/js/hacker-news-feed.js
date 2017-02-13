@@ -72,7 +72,7 @@ var hnfeed = function(m, p = 1) {
     function yql(b) {
         var d = '';
         $.ajax({
-            url: 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT content FROM data.headers WHERE url="' + b + '" and ua="Googlebot/2.1 (http://www.googlebot.com/bot.html)"') + '&format=xml&env=http://datatables.org/alltables.env',
+            url: 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT content FROM data.headers WHERE url="' + b + '" and ua="Googlebot/2.1 (http://www.googlebot.com/bot.html)"') + '&format=xml&env=store://datatables.org/alltableswithkeys',
             async: false
         }).done(function(a) {
             var e = $(a).find("content").text();
