@@ -46,61 +46,81 @@
 								<div class="anu" data-ayoshare="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/"></div><br>
 								<code>&lt;div id="unik" data-ayoshare="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button"&gt;&lt;/div&gt;</code>
 								<div id="unik" data-ayoshare="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button"></div><br>
-								<pre>$(".anu").ayoshare({
-    google : true,
-    facebook : true,
-    pinterest : true,
-    linkedin : true,
-    twitter : true,
-    email : true,
-    whatsapp : true,
-    telegram : true,
-    line : true,
-    bbm : true,
-    viber : true,
-    sms : true
-});
-
-$("#unik").ayoshare({
-    google : true,
-    stumbleupon : true,
-    facebook : true,
-    pinterest : true,
-    bufferapp : true,
-    reddit : true,
-    vk : true,
-    pocket : true,
-    twitter : true,
-    digg : true,
-    telegram : true,
-    sms : true
-});</pre><br>
+								<pre>&lt;script&gt;
+    $(function() {
+    
+        $(".anu").ayoshare({
+            counter: true,
+            button: {
+                google : true,
+                facebook : true,
+                pinterest : true,
+                linkedin : true,
+                twitter : true,
+                email : true,
+                whatsapp : true,
+                telegram : true,
+                line : true,
+                bbm : true,
+                viber : true,
+                sms : true
+            }
+        });
+	
+        $("#unik").ayoshare({
+            button: {
+                google : true,
+                stumbleupon : true,
+                facebook : true,
+                pinterest : true,
+                bufferapp : true,
+                reddit : true,
+                vk : true,
+                pocket : true,
+                twitter : true,
+                digg : true,
+                telegram : true,
+                sms : true
+            }
+        });
+	
+    });
+&lt;/script&gt;</pre><br>
 								<h4>Options:</h4>
 								<ul>
-			<li>Website. Appears in all devices
+			<li>Counter
 				<ul>
-					<li>google</li>
-					<li>stumbleupon</li>
-					<li>facebook</li>
-					<li>linkedin</li>
-					<li>pinterest</li>
-					<li>bufferapp</li>
-					<li>reddit</li>
-					<li>vk</li>
-					<li>pocket</li>
-					<li>twitter</li>
-					<li>digg</li>
-					<li>email</li>
+					<li>Boolean</li>
 				</ul>
 			</li>
-			<li>Mobile. Appears when opened using mobile
+			<li>Button
 				<ul>
-					<li>whatsapp</li>
-					<li>telegram</li>
-					<li>viber</li>
-					<li>line</li>
-					<li>bbm</li>
-					<li>sms</li>
+					<li>Website. Appears in all devices
+						<ul>
+							<li>google</li>
+							<li>stumbleupon</li>
+							<li>facebook</li>
+							<li>linkedin</li>
+							<li>pinterest</li>
+							<li>bufferapp</li>
+							<li>reddit</li>
+							<li>vk</li>
+							<li>pocket</li>
+							<li>twitter</li>
+							<li>digg</li>
+							<li>email</li>
+						</ul>
+					</li>
+					<li>Mobile. Appears when opened using mobile
+						<ul>
+							<li>whatsapp</li>
+							<li>telegram</li>
+							<li>viber</li>
+							<li>line</li>
+							<li>bbm</li>
+							<li>sms</li>
+						</ul>
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -145,33 +165,37 @@ $("#unik").ayoshare({
 			"use strict";
 			
 			$(".anu").ayoshare({
-				google : true,
-				facebook : true,
-				pinterest : true,
-				linkedin : true,
-				twitter : true,
-				email : true,
-				whatsapp : true,
-				telegram : true,
-				line : true,
-				bbm : true,
-				viber : true,
-				sms : true
+				counter: true,
+				button: {
+					google : true,
+					facebook : true,
+					pinterest : true,
+					linkedin : true,
+					twitter : true,
+					email : true,
+					whatsapp : true,
+					telegram : true,
+					line : true,
+					bbm : true,
+					viber : true,
+					sms : true
+				}
 			});
-			
 			$("#unik").ayoshare({
-				google : true,
-				stumbleupon : true,
-				facebook : true,
-				pinterest : true,
-				bufferapp : true,
-				reddit : true,
-				vk : true,
-				pocket : true,
-				twitter : true,
-				digg : true,
-				telegram : true,
-				sms : true
+				button: {
+					google : true,
+					stumbleupon : true,
+					facebook : true,
+					pinterest : true,
+					bufferapp : true,
+					reddit : true,
+					vk : true,
+					pocket : true,
+					twitter : true,
+					digg : true,
+					telegram : true,
+					sms : true
+				}
 			});
 			
 			var dnl=$(".menur-navbar-left"),dnlBtnToggle=$(".dnl-btn-toggle"),dnlBtnCollapse=$(".dnl-btn-collapse"),contentWrap=$(".content-wrap"),contentWrapEffect=contentWrap.data("effect"),windowHeight=$(window).height()-61,windowWidth=$(window).width()<767;dnl.addClass("dnl-hide");dnlBtnToggle.click(function(){if(dnl.hasClass("dnl-hide")){dnlShow()}else{dnlHide()}});dnlBtnCollapse.click(function(e){e.preventDefault();if(dnl.hasClass("dnl-collapsed")){dnl.removeClass("dnl-collapsed");contentWrap.removeClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-right").addClass("fa-arrow-left")}else{dnl.addClass("dnl-collapsed");contentWrap.addClass("dnl-collapsed");$(this).find(".dnl-link-icon").removeClass("fa-arrow-left").addClass("fa-arrow-right")}});$('.navbar-toggle').click(function(){if($(this).hasClass('collapsed')){dnlHide()}});dnlBtnToggle.click(function(){$('.navbar-toggle').addClass('collapsed');$('.navbar-collapse').removeClass('in')});if(isMobile()==true){$(window).swipe({swipeRight:function(){dnlShow();$('.navbar-collapse').removeClass('in')},swipeLeft:function(){dnlHide()},threshold:75})}function cwShowOverflow(){if(windowWidth){contentWrap.css({height:windowHeight,overflow:'hidden'})}}function cwHideOverflow(){if(windowWidth){contentWrap.css({height:'auto',overflow:'auto'})}}function dnlShow(){dnl.addClass("dnl-show").removeClass("dnl-hide");contentWrap.addClass(contentWrapEffect);cwShowOverflow();dnlBtnToggle.find("span").removeClass("fa-bars").addClass("fa-times")}function dnlHide(){dnl.removeClass("dnl-show").addClass("dnl-hide");contentWrap.removeClass(contentWrapEffect);cwHideOverflow();dnlBtnToggle.find("span").removeClass("fa-times").addClass("fa-bars")}function isMobile(){try{document.createEvent("TouchEvent");return true}catch(e){return false}}
