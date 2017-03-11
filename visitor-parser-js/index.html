@@ -117,61 +117,67 @@
 		});
 		document.getElementById('header').innerHTML = loadPage('/header.html');
 		
-		var visitor = new visitorParser();
-		var info = visitor.getInfo();
+		visitorParser(function(info) {
+		
+			var html = '';
 
-		var html = '';
+			var result = JSON.stringify(info, null, 2);
 
-		var result = JSON.stringify(info, null, 2);
+			if(info.parser.geo.ip != ''){
+				html += '<li><b>Your IP address</b><br><code>' + info.parser.geo.ip + '</code>';
+				html += (info.parser.geo.city != '' || info.parser.geo.country != '' ? ' tells visitorParser.js that you are from' : '');
+				html += (info.parser.geo.city != '' ? ' around <code>' + info.parser.geo.city + '</code>,' : '');
+				html += (info.parser.geo.country != '' ? ' <code>' + info.parser.geo.country + '</code>' : '');
+				html += (info.parser.geo.provider != '' ? ' using the provider <code>' + info.parser.geo.provider + '</code>' : '');
+				html += '.</li>';
+			}
+			html += '<li><b>Date of last visit</b><br>This seems to be your 2nd visit to the visitorParser.js website. Your last visit was on <code>' + info.parser.ua.date + '</code>. Nice to see you again!</li>';
+			if(info.parser.ua.referring.url != ''){
+				html += '<li><b>Referring website</b><br>You have been referred to this website by <code>' + info.parser.ua.referring.host + '</code>.</li>';
+			}
+			if(info.parser.ua.processor.name != '' || info.parser.ua.platform.name != ''){
+				html += '<li><b>Platform or operating system</b><br>';
+				html += 'On <code>' + (info.parser.ua.platform.name != '' ? info.parser.ua.platform.name : 'n/a') + ' ' + (info.parser.ua.platform.version != undefined ? info.parser.ua.platform.version : '') + '</code> with processor <code>' + (info.parser.ua.processor.name != '' ? info.parser.ua.processor.name : 'n/a') + '</code>.';
+				html += '</li>';
+			}
+			html += '<li><b>Browser, engine and resolution</b><br>You seem to be using <code>' + (info.parser.ua.browser.name != '' ? info.parser.ua.browser.name : 'n/a') + ' ' + (info.parser.ua.browser.version != undefined ? info.parser.ua.browser.version : '') + '</code> and engine <code>' + (info.parser.ua.engine.name != '' ? info.parser.ua.engine.name : 'n/a') + ' ' + (info.parser.ua.engine.version != undefined ? info.parser.ua.engine.version : '') + '</code> with a resolution of <code>' + info.parser.ua.resolution.width + '</code>x<code>' + info.parser.ua.resolution.height + '</code> pixels.</li>';
+			if(info.parser.ua.mobile.name != ''){
+				html += '<li><b>Mobile device</b><br>';
+				html += 'You are using a <code>' + info.parser.ua.mobile.name + ' ' + (info.parser.ua.mobile.version != undefined ? info.parser.ua.mobile.version : '') + '</code>.';
+				html += '</li>';
+			}
 
-		if(info.geo.ip != ''){
-			html += '<li><b>Your IP address</b><br><code>' + info.geo.ip + '</code>';
-			html += (info.geo.city != '' || info.geo.country != '' ? ' tells visitorParser.js that you are from' : '');
-			html += (info.geo.city != '' ? ' around <code>' + info.geo.city + '</code>,' : '');
-			html += (info.geo.country != '' ? ' <code>' + info.geo.country + '</code>' : '');
-			html += (info.geo.provider != '' ? ' using the provider <code>' + info.geo.provider + '</code>' : '');
-			html += '.</li>';
-		}
-		html += '<li><b>Date of last visit</b><br>This seems to be your 2nd visit to the visitorParser.js website. Your last visit was on <code>' + info.ua.date + '</code>. Nice to see you again!</li>';
-		if(info.ua.referring.url != ''){
-			html += '<li><b>Referring website</b><br>You have been referred to this website by <code>' + info.ua.referring.host + '</code>.</li>';
-		}
-		if(info.ua.processor.name != '' || info.ua.platform.name != ''){
-			html += '<li><b>Platform or operating system</b><br>';
-			html += 'On <code>' + (info.ua.platform.name != '' ? info.ua.platform.name : 'n/a') + ' ' + (info.ua.platform.version != undefined ? info.ua.platform.version : '') + '</code> with processor <code>' + (info.ua.processor.name != '' ? info.ua.processor.name : 'n/a') + '</code>.';
-			html += '</li>';
-		}
-		html += '<li><b>Browser, engine and resolution</b><br>You seem to be using <code>' + (info.ua.browser.name != '' ? info.ua.browser.name : 'n/a') + ' ' + (info.ua.browser.version != undefined ? info.ua.browser.version : '') + '</code> and engine <code>' + (info.ua.engine.name != '' ? info.ua.engine.name : 'n/a') + ' ' + (info.ua.engine.version != undefined ? info.ua.engine.version : '') + '</code> with a resolution of <code>' + info.ua.resolution.width + '</code>x<code>' + info.ua.resolution.height + '</code> pixels.</li>';
-		if(info.ua.mobile.name != ''){
-			html += '<li><b>Mobile device</b><br>';
-			html += 'You are using a <code>' + info.ua.mobile.name + ' ' + (info.ua.mobile.version != undefined ? info.ua.mobile.version : '') + '</code>.';
-			html += '</li>';
-		}
-
-		document.getElementById('info').innerHTML = html;
-		document.getElementById('uas').innerHTML = visitor.getUas();
-		document.getElementById('result').innerHTML = result;
+			document.getElementById('info').innerHTML = html;
+			document.getElementById('uas').innerHTML = info.uas;
+			document.getElementById('result').innerHTML = result;
+			
+		});
 		
 		function tested(){
-			var visitor = new visitorParser({
-				setUa : (document.getElementById('setua').value == '' ? navigator.userAgent : document.getElementById('setua').value),
-				getOpt : (document.getElementById('setopt').value == 'false' ? false : true),
-				geoAPI : document.getElementById('setgeo').value
+			var config = {
+				// set user-agent string
+				setUa: (document.getElementById('setua').value == '' ? navigator.userAgent : document.getElementById('setua').value),
+				// get all options result of regex
+				getOpt: (document.getElementById('setopt').value == 'false' ? false : true),
+				// set url ip geo location apis
+				geoAPI: document.getElementById('setgeo').value
+			};
+			visitorParser(config, function(visitor) {
+				document.getElementById('uas').innerHTML = visitor.uas;
+				if(document.getElementById('setget').value == 'info'){
+					document.getElementById('result').innerHTML = JSON.stringify(visitor, null, 2);
+				}else if(document.getElementById('setget').value == 'geo'){
+					document.getElementById('result').innerHTML = JSON.stringify(visitor.parser.geo, null, 2);
+				}else if(document.getElementById('setget').value == 'browser'){
+					document.getElementById('result').innerHTML = JSON.stringify(visitor.parser.ua.browser, null, 2);
+				}else if(document.getElementById('setget').value == 'ip'){
+					document.getElementById('result').innerHTML = visitor.parser.geo.ip;
+				}else if(document.getElementById('setget').value == 'os'){
+					document.getElementById('result').innerHTML = visitor.parser.ua.platform.name;
+				}else{
+					document.getElementById('result').innerHTML = JSON.stringify(visitor.parser.ua, null, 2);
+				}
 			});
-			document.getElementById('uas').innerHTML = visitor.getUas();
-			if(document.getElementById('setget').value == 'info'){
-				document.getElementById('result').innerHTML = JSON.stringify(visitor.getInfo(), null, 2);
-			}else if(document.getElementById('setget').value == 'geo'){
-				document.getElementById('result').innerHTML = JSON.stringify(visitor.getGeo(), null, 2);
-			}else if(document.getElementById('setget').value == 'browser'){
-				document.getElementById('result').innerHTML = JSON.stringify(visitor.getUa().browser, null, 2);
-			}else if(document.getElementById('setget').value == 'ip'){
-				document.getElementById('result').innerHTML = visitor.getGeo().ip;
-			}else if(document.getElementById('setget').value == 'os'){
-				document.getElementById('result').innerHTML = visitor.getUa().platform.name;
-			}else{
-				document.getElementById('result').innerHTML = JSON.stringify(visitor.getUa(), null, 2);
-			}
 		}
 		
 		function loadPage(href) {
