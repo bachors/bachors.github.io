@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		#url {
+			width: 80%;
+			box-sizing: border-box
+		}
+
+		#render,
+		#log {
+			width: 100%;
+			height: calc(100% - 200px);
+			border: none;
+			overflow: auto
+		}
+
+		#hiji {
+			width: 70%;
+			display: inline-block;
+			height: 800px;
+			vertical-align:top;
+		}
+
+		#dua {
+			width: 30%;
+			height: 800px;
+			display: inline-block;
+			vertical-align:top;
+		}
+		</style>
+	</head>
+	<body>
+		Url: <input type="text" id="url" value="http://stackoverflow.com/"/>
+		<input type="button" id="btnSave" value="LOAD"/>
+
+		<div id="hiji">
+			<iframe id="render"></iframe>
+		</div><div id="dua">
+			<pre id="log"></pre>
+		</div>
+
+		<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		/***********************************************
+		 * Example by @bachors 2016.
+		***********************************************/
+
+		function sendRequest(a, b) {
+			if (window.XMLHttpRequest) {
+				xhttp = new XMLHttpRequest()
+			} else {
+				xhttp = new ActiveXObject("Microsoft.XMLHTTP")
+			}
+			xhttp.open("GET", 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT content FROM data.headers WHERE url="' + a + '" and ua="' + b + '"') + '&format=xml&env=store://datatables.org/alltableswithkeys', false);
+			xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xhttp.send();
+			var d = xhttp.responseXML;
+			var x = d.getElementsByTagName('content');
+			var e = x[0].innerHTML;
+			return '<style>.otong{background:#e44 !important;color:#fff !important}</style>' + html_entity_decode(e);
+		}
+		
+		function html_entity_decode(a,b){var c={},symbol='',tmp_str='',entity='';tmp_str=a.toString();if(false===(c=this.get_html_translation_table('HTML_ENTITIES',b))){return false}delete(c['&']);c['&']='&amp;';for(symbol in c){entity=c[symbol];tmp_str=tmp_str.split(entity).join(symbol)}tmp_str=tmp_str.split('&#039;').join("'");return tmp_str}function get_html_translation_table(a,b){var c={},hash_map={},decimal;var d={},constMappingQuoteStyle={};var e={},useQuoteStyle={};d[0]='HTML_SPECIALCHARS';d[1]='HTML_ENTITIES';constMappingQuoteStyle[0]='ENT_NOQUOTES';constMappingQuoteStyle[2]='ENT_COMPAT';constMappingQuoteStyle[3]='ENT_QUOTES';e=!isNaN(a)?d[a]:a?a.toUpperCase():'HTML_SPECIALCHARS';useQuoteStyle=!isNaN(b)?constMappingQuoteStyle[b]:b?b.toUpperCase():'ENT_COMPAT';if(e!=='HTML_SPECIALCHARS'&&e!=='HTML_ENTITIES'){throw new Error('Table: '+e+' not supported');}c['38']='&amp;';if(e==='HTML_ENTITIES'){c['160']='&nbsp;';c['161']='&iexcl;';c['162']='&cent;';c['163']='&pound;';c['164']='&curren;';c['165']='&yen;';c['166']='&brvbar;';c['167']='&sect;';c['168']='&uml;';c['169']='&copy;';c['170']='&ordf;';c['171']='&laquo;';c['172']='&not;';c['173']='&shy;';c['174']='&reg;';c['175']='&macr;';c['176']='&deg;';c['177']='&plusmn;';c['178']='&sup2;';c['179']='&sup3;';c['180']='&acute;';c['181']='&micro;';c['182']='&para;';c['183']='&middot;';c['184']='&cedil;';c['185']='&sup1;';c['186']='&ordm;';c['187']='&raquo;';c['188']='&frac14;';c['189']='&frac12;';c['190']='&frac34;';c['191']='&iquest;';c['192']='&Agrave;';c['193']='&Aacute;';c['194']='&Acirc;';c['195']='&Atilde;';c['196']='&Auml;';c['197']='&Aring;';c['198']='&AElig;';c['199']='&Ccedil;';c['200']='&Egrave;';c['201']='&Eacute;';c['202']='&Ecirc;';c['203']='&Euml;';c['204']='&Igrave;';c['205']='&Iacute;';c['206']='&Icirc;';c['207']='&Iuml;';c['208']='&ETH;';c['209']='&Ntilde;';c['210']='&Ograve;';c['211']='&Oacute;';c['212']='&Ocirc;';c['213']='&Otilde;';c['214']='&Ouml;';c['215']='&times;';c['216']='&Oslash;';c['217']='&Ugrave;';c['218']='&Uacute;';c['219']='&Ucirc;';c['220']='&Uuml;';c['221']='&Yacute;';c['222']='&THORN;';c['223']='&szlig;';c['224']='&agrave;';c['225']='&aacute;';c['226']='&acirc;';c['227']='&atilde;';c['228']='&auml;';c['229']='&aring;';c['230']='&aelig;';c['231']='&ccedil;';c['232']='&egrave;';c['233']='&eacute;';c['234']='&ecirc;';c['235']='&euml;';c['236']='&igrave;';c['237']='&iacute;';c['238']='&icirc;';c['239']='&iuml;';c['240']='&eth;';c['241']='&ntilde;';c['242']='&ograve;';c['243']='&oacute;';c['244']='&ocirc;';c['245']='&otilde;';c['246']='&ouml;';c['247']='&divide;';c['248']='&oslash;';c['249']='&ugrave;';c['250']='&uacute;';c['251']='&ucirc;';c['252']='&uuml;';c['253']='&yacute;';c['254']='&thorn;';c['255']='&yuml;'}if(useQuoteStyle!=='ENT_NOQUOTES'){c['34']='&quot;'}if(useQuoteStyle==='ENT_QUOTES'){c['39']='&#39;'}c['60']='&lt;';c['62']='&gt;';for(decimal in c){if(c.hasOwnProperty(decimal)){hash_map[String.fromCharCode(decimal)]=c[decimal]}}return hash_map}
+
+		$(function() {
+			var c = document.getElementById('render');
+			var b = c.contentDocument || c.contentWindow.document || c.contentWindow || c.contentDocument.document;
+			var d = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0";
+			$("#btnSave").click(function() {
+				var url_target = $("#url").val();
+				domain = url_target.split("/")[2];
+				var e = sendRequest(url_target, d);
+				
+				$('body', $(b)).html(e);
+			});
+			
+			$('body', $(b)).on('mouseover', '*', function() {
+				var selektor = [], kls = '';
+				var element = $(this).get(0).tagName.toLowerCase();
+				var id = $(this).attr("id");
+				var klass = $(this).attr("class");
+				if (id){
+					id = "#"+id;
+					selektor.push(id);
+					selektor.push(id + ':hover');
+					selektor.push(id + ':focus');
+				}else{
+					id = "";
+				}
+				if (klass){
+					klass = "."+klass.replace(/\s*otong/, '');
+					kls = klass.replace(/\s/g, ' .').split(' ');
+					$.each(kls, function(x, a) {
+						selektor.push(a);
+						selektor.push(a + ':hover');
+						selektor.push(a + ':focus');
+					});
+				}else{
+					klass = "";
+				}
+				$('body', $(b)).find('*').removeClass("otong");
+				$(this).addClass("otong");
+				//$(this).attr("title", element+id+klass + ' | ' + $(this).width() + ' x ' + $(this).height());
+				
+				var cs = ['font-family','font-size','font-weight','font-style','color',
+					'text-transform','text-decoration','letter-spacing','word-spacing',
+					'line-height','text-align','vertical-align','direction','background-color',
+					'background-image','background-repeat','background-position',
+					'background-attachment','opacity','width','height','top','right','bottom',
+					'left','margin-top','margin-right','margin-bottom','margin-left',
+					'padding-top','padding-right','padding-bottom','padding-left',
+					'border-top-width','border-right-width','border-bottom-width',
+					'border-left-width','border-top-color','border-right-color',
+					'border-bottom-color','border-left-color','border-top-style',
+					'border-right-style','border-bottom-style','border-left-style','position',
+					'display','visibility','z-index','overflow-x','overflow-y','white-space',
+					'clip','float','clear','cursor','list-style-image','list-style-position',
+					'list-style-type','marker-offset'];
+				var attr = ['title','alt','src','href','data','rel'];
+				var len = cs.length, obj2 = {};
+				if (id == '' && klass == '') {
+					for (var i = 0; i < len; i++) {
+						obj2[cs[i]] = $(this).css(cs[i]);
+					}
+				}else{
+					$.each(selektor, function(x, a) {
+						var obj = {};
+						for (var i = 0; i < len; i++) {
+							obj[cs[i]] = $('body', $(b)).find(element + a).css(cs[i]);
+						}
+						obj2[a] = obj;
+					});
+				}
+				
+				
+				var lent = attr.length, obj3 = {};
+				for (var i = 0; i < lent; i++) {
+					obj3[attr[i]] = $(this).attr(attr[i]);
+				}
+				
+				var dom = {
+					element: element,
+					id: id,
+					className: kls,
+					attr: obj3,
+					style: obj2
+				};
+				$('#log').html(JSON.stringify(dom, null, 2));
+				return false;
+			});
+		});
+		</script>
+	</body>
+</html>
