@@ -4,34 +4,23 @@
 * https://github.com/bachors/jQuery-Youtube-Channels-Playlist
 * Updates will be posted to this site.
 ******************************************************/
-	
-	var tag = document.createElement('script');
-					tag.id = 'iframe-demo';
-					tag.src = 'https://www.youtube.com/iframe_api';
-					var firstScriptTag = document.getElementsByTagName('script')[0];
-					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 $.fn.ycp = function(opt) {
 	
 	var defaultopt = {
         playlist : 10,
 		autoplay : false,
-		related : false,
-		mute : false
+		related : false
     };
 	opt.playlist = (opt.playlist == undefined ? defaultopt.playlist : opt.playlist);
 	opt.autoplay = (opt.autoplay == undefined ? defaultopt.autoplay : opt.autoplay);
 	opt.related = (opt.related == undefined ? defaultopt.related : opt.related);
-	opt.mute = (opt.mute == undefined ? defaultopt.mute : opt.mute);
-	
-	var player;
-	var YTplayers = [];
 
     $(this).each(function(i, a) {
 		var b = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class')),
 			title = ($(this).data('ycp_title') == undefined ? 'YCP.js' : $(this).data('ycp_title')),
 			channel = $(this).data('ycp_channel'),
-			html = '<div class="ycp">' + '<div class="unit kenca">' + '<div class="ycp_vid_play" title="Play video"></div>' + '</div>' + '<div class = "unit katuhu">' + '<div id="ycp_youtube_channels' + i + '"></div>' + '</div>' + '</div>';
+			html = '<div class="ycp">' + '<div class="belah ycp_vid_play" title="Play video">' + '</div>' + '<div class="belah" id="ycp_youtube_channels' + i + '">' + '</div>' + '</div>';
 			$(this).html(html);
 		if(channel.substring(0, 2) == 'PL' || channel.substring(0, 2) == 'UU'){
 			var pageToken = '';
@@ -60,14 +49,14 @@ $.fn.ycp = function(opt) {
             dataType: 'json'
         }).done(function(c) {
             var d = '';
-            d += '<div class="vid-top">';
-			d += '<div class="title"><input type="text" placeholder="Title"></div>';
-			d += '<span class="tombol vid-prev" title="Previous videos"><i class="fa fa-backward"></i></span> ';
-            d += '<span class="tombol vid-next" title="Next videos"><i class="fa fa-forward"></i></span></div><div class="vid-bottom">';
+            d += '<div class="luhur">';
+			d += '<div class="title">' + title + '</div>';
+			d += '<span class="tombol vid-prev" title="Previous videos">Prev</span> ';
+            d += '<span class="tombol vid-next" title="Next videos">Next</span><span class="about" title="ycp.js"><a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">♥</a></span></div><div class="handap">';
             $.each(c.items, function(i, a) {
                 var b = c.items[i].snippet.resourceId.videoId;
                 ycp_part(b, i, k, l);
-                d += '<div class="play" data-vvv="' + b + '" data-img="' + c.items[i].snippet.thumbnails.high.url + '" title="' + c.items[i].snippet.title + '"><div class="thumb"><img src="' + c.items[i].snippet.thumbnails.default.url + '" alt=" "><span class="tm' + i + '"></span></div>';
+                d += '<div class="play" data-vvv="' + b + '" data-tit="' + c.items[i].snippet.title + '" data-img="' + c.items[i].snippet.thumbnails.high.url + '" title="' + c.items[i].snippet.title + '"><div class="thumb"><img src="' + c.items[i].snippet.thumbnails.default.url + '" alt=" "><span class="tm' + i + '"></span></div>';
                 d += '<div class="title">' + c.items[i].snippet.title + '</div><span class="mute by' + i + '"></span><br><span class="mute views' + i + '"></span> <span class="mute">-</span> <span class="mute date' + i + '"></span></div>'
             });
             d += '</div>';
@@ -75,23 +64,17 @@ $.fn.ycp = function(opt) {
             if (c.prevPageToken == null || c.prevPageToken == undefined) {
                 var e = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-vvv"),
 					imag = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-img"),
-					bn = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("title");
+					tit = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-tit");
+				$('#ycp-rf').html(tit);
 				if(opt.autoplay == false){
-					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<a href="#">Play</a>');
-					$(l + ' .ycp div.kenca:eq(' + k + ')').css('background', 'url(' + imag + ') no-repeat');
-					$(l + ' .ycp div.kenca:eq(' + k + ')').css('-webkit-background-size', 'cover');
-					$(l + ' .ycp div.kenca:eq(' + k + ')').css('-moz-background-size', 'cover');
-					$(l + ' .ycp div.kenca:eq(' + k + ')').css('-o-background-size', 'cover');
-					$(l + ' .ycp div.kenca:eq(' + k + ')').css('background-size', 'cover');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<a href="#"></a>');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('background', 'url(' + imag + ') no-repeat');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('-webkit-background-size', 'cover');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('-moz-background-size', 'cover');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('-o-background-size', 'cover');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('background-size', 'cover');
                 }else{
-					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe id="' + f + '" src="//www.youtube.com/embed/' + e + '?enablejsapi=1&rel=' + (opt.related ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
-					$('#ycp-rf').html(bn);
-    player = new YT.Player(f, {
-        events: {
-          'onReady': onPlayerReady
-        }
-    });
-	YTplayers.push(player);
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="//www.youtube.com/embed/' + e + '?rel=' + (opt.related ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>');
                 }
 				$(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                 $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play:eq(0)').addClass('vid-active')
@@ -111,51 +94,30 @@ $.fn.ycp = function(opt) {
                 $(this).click(function() {
                     var a = $(this).attr("data-vvv"),
 						m = $(this).attr("data-img"),
-						bn = $(this).attr("title");
-					$('#ycp-rf').html(bn);
+						tit = $(this).attr("data-tit");
+					$('#ycp-rf').html(tit);
                     $(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                     $(this).addClass('vid-active');
 					if(opt.autoplay == false){
-						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<a href="#">Play</a>');
-						$(l + ' .ycp div.kenca:eq(' + k + ')').css('background', 'url(' + m + ') no-repeat');
-						$(l + ' .ycp div.kenca:eq(' + k + ')').css('-webkit-background-size', 'cover');
-						$(l + ' .ycp div.kenca:eq(' + k + ')').css('-moz-background-size', 'cover');
-						$(l + ' .ycp div.kenca:eq(' + k + ')').css('-o-background-size', 'cover');
-						$(l + ' .ycp div.kenca:eq(' + k + ')').css('background-size', 'cover');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<a href="#"></a>');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('background', 'url(' + m + ') no-repeat');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('-webkit-background-size', 'cover');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('-moz-background-size', 'cover');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('-o-background-size', 'cover');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').css('background-size', 'cover');
 					}else{
-						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe id="' + f + '" src="//www.youtube.com/embed/' + a + '?enablejsapi=1&rel=' + (opt.related ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
-						
-   
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="//www.youtube.com/embed/' + a + '?rel=' + (opt.related ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>');
 					}
 					return false
                 })
             });
 			$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').click(function() {
                 var a = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play.vid-active').attr("data-vvv");
-				$(this).html('<iframe id="' + f + '" src="//www.youtube.com/embed/' + a + '?enablejsapi=1&rel=' + (opt.related ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
-				
-    player = new YT.Player(f, {
-        events: {
-          'onReady': onPlayerReady
-        }
-    });
-	YTplayers.push(player);
+				$(this).html('<iframe src="//www.youtube.com/embed/' + a + '?rel=' + (opt.related ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>');
 				return false
 			});
         })
     }
-	
-	function onPlayerReady(event) {
-		$.each(YTplayers, function(i, a) {
-			if(opt.mute){
-				a.mute();
-			}
-			if(a.playVideo() != undefined){
-				a.playVideo()
-			}
-		});
-	//	alert(JSON.stringify(YTplayers,null,2));
-	}
 
     function ycp_part(c, i, d, e) {
         $.ajax({

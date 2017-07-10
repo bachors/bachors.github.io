@@ -2,6 +2,8 @@
 * #### jQuery File Browser Awesome v0.2.0 ####
 * Coded by Ican Bachors 2014.
 * https://github.com/bachors/jQuery-File-Browser-Awesome
+* https://github.com/bachors/TVTeditor
+* https://github.com/bachors/jQuery-Github-Repos-Feed
 * Updates will be posted to this site.
 *********************************************************************/
 

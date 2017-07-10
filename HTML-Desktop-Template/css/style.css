@@ -62,7 +62,7 @@ html,
 			width: 80px;
 			height: auto;
 			max-height: 80px;
-			display: block;
+			float: left;
 			text-align: center;
 			font-size: 2em;
 			cursor: pointer
@@ -133,6 +133,16 @@ html,
 			box-shadow: 0 4px 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 		}
 		
+		.window.calculator {
+			width: 300px; 
+			height: 497px
+		}
+		
+		.window.games {
+			width: 400px; 
+			height: 520px
+		}
+		
 		.window.active {
 			z-index: 999;
 		}
@@ -178,6 +188,25 @@ html,
 			color: #333
 		}
 		
+		.window .toolbar.black,
+		.window .toolbar.black {
+			background: #333;
+			color: #fff
+		}
+		
+		.window .toolbar.black {
+			color: #ccc
+		}
+		
+		.window .toolbar.black .panel {
+			color: #555
+		}
+		
+		.window .toolbar.black .panel:hover,
+		.window .toolbar.black .panel:focus {
+			background: #111;
+		}
+		
 		.window .toolbar .panel.close:hover,
 		.window .toolbar .panel.close:focus {
 			background: #f44336;
@@ -219,10 +248,13 @@ html,
 			background: #eee;
 		}
 		
-		#site iframe {
+		iframe {
 			border: 0px;
 			width: 100%;
 			height: 100%;
+		}
+		
+		#site iframe {
 			background: #eee;
 		}
 		
@@ -233,7 +265,8 @@ html,
 			height: 100%
 		}
 		
-		#ycp {
+		#ycp,
+		#scp {
 			display: block;
 			width: 100%;
 			box-sizing: border-box;
@@ -250,4 +283,36 @@ html,
 			border: 0px;
 			padding: 10px;
 			resize: none;
+		}
+		
+		.calculator table {
+			background: #eee
+		}
+		
+		.calculator input[type="text"] {
+			background: #f5f5f5;
+			width: 100%;
+			display: block;
+			box-sizing: border-box;
+			font-size: 3em;
+			text-align: right;
+			padding: 10px;
+			border: none;
+			border-bottom: 1px solid #ccc
+		}
+		
+		.calculator input[type="button"] {
+			background: #eee;
+			width: 100%;
+			display: block;
+			box-sizing: border-box;
+			padding: 15px 10px 15px 10px;
+			border: none;
+			cursor: pointer;
+			font-size: 1em
+		}
+		
+		.calculator input[type="button"]:hover,
+		.calculator input[type="button"]:focus {
+			background: #ddd
 		}
