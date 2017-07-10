@@ -19,36 +19,25 @@
 		<link type="text/css" rel="stylesheet" href="src/css/style.css" />
 		<link type="text/css" rel="stylesheet" href="jquery-github-feed/src/github-feed.css" />
 	</head>
-	<body>
-		<div id="header"></div>
-		<div class="main content-wrap dnl-visible content-opacity" data-effect="dnl-overlay">
+	<body align="center">
+		<div class="main content-wrap">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3">
-						<div style="margin-top: 50px">
-							
-								<div class="anu" data-username="bachors"></div>
-							
-						</div>
+						<div class="anu" data-username="bachors"></div>
+						<footer>
+							<span class='st_sharethis_large' displayText='ShareThis'></span>
+							<span class='st_facebook_large' displayText='Facebook'></span>
+							<span class='st_twitter_large' displayText='Tweet'></span>
+							<span class='st_googleplus_large' displayText='Google +'></span>
+							<span class='st_linkedin_large' displayText='LinkedIn'></span>
+							<span class='st_whatsapp_large' displayText='WhatsApp'></span>
+							<span class='st_email_large' displayText='Email'></span><br>
+							Lovingly crafted by <a href="https://github.com/bachors" target="_BLANK">Bachors</a>
+						</footer>
 					</div>
 				</div>
 			</div>
-			<footer>
-				<span class='st_sharethis_large' displayText='ShareThis'></span>
-				<span class='st_facebook_large' displayText='Facebook'></span>
-				<span class='st_twitter_large' displayText='Tweet'></span>
-				<span class='st_googleplus_large' displayText='Google +'></span>
-				<span class='st_linkedin_large' displayText='LinkedIn'></span>
-				<span class='st_whatsapp_large' displayText='WhatsApp'></span>
-				<span class='st_email_large' displayText='Email'></span>
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_BLANK">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="RG95K7HU7AFDS">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					<img alt="" border="0" src="https://www.paypalobjects.com/id_ID/i/scr/pixel.gif" width="1" height="1">
-				</form>
-				Lovingly crafted by <a href="https://github.com/bachors" target="_BLANK">Bachors</a>
-			</footer>
 		</div>
 		<script type="text/javascript">var switchTo5x=true;</script>
 		<script type="text/javascript" id="st_insights_js" src="https://ws.sharethis.com/button/buttons.js?publisher=18235c4c-29b5-4c55-813b-272fe54ef9da"></script>
@@ -56,14 +45,6 @@
 		<script src="src/js/jquery.min.js"></script>
 		<script src="jquery-github-feed/src/github-feed.js"></script>
 		<script>
-		function loadPage(href) {
-			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", href, false);
-			xmlhttp.send();
-			return xmlhttp.responseText;
-		}
-
-		document.getElementById('header').innerHTML = loadPage('/header.html');
 		$(document).ready(function(){
 			"use strict";
 						
