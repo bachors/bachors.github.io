@@ -7,218 +7,123 @@
 		<meta name="description" content="bachors (Ican Bachors) : Github">
 		<title>bachors (Ican Bachors)</title>
 		<style>
-			html,
 			body {
 				font-family: "Dongle", sans-serif;
-				margin: 0;
-				padding: 0;
+				height: 90%;
 			}
 
-			.text-container {
-				z-index: 100;
-				width: 100vw;
-				height: 100vh;
-				display: flex;
+			/* Overlay prevents clicking. */
+			#player_wrapper,
+			#player,
+			.overlay {
 				position: absolute;
 				top: 0;
+				right: 0;
+				bottom: 0;
 				left: 0;
-				justify-content: center;
-				align-items: center;
-				font-size: 96px;
-				color: white;
-				opacity: 0.8;
-				user-select: none;
-				text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 			}
 
-			:root {
-				--color-bg1: rgb(108, 0, 162);
-				--color-bg2: rgb(0, 17, 82);
-				--color1: 18, 113, 255;
-				--color2: 221, 74, 255;
-				--color3: 100, 220, 255;
-				--color4: 200, 50, 50;
-				--color5: 180, 180, 50;
-				--color-interactive: 140, 100, 255;
-				--circle-size: 80%;
-				--blending: hard-light;
-			}
-
-			@keyframes moveInCircle {
-				0% {
-					transform: rotate(0deg);
-				}
-
-				50% {
-					transform: rotate(180deg);
-				}
-
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-
-			@keyframes moveVertical {
-				0% {
-					transform: translateY(-50%);
-				}
-
-				50% {
-					transform: translateY(50%);
-				}
-
-				100% {
-					transform: translateY(-50%);
-				}
-			}
-
-			@keyframes moveHorizontal {
-				0% {
-					transform: translateX(-50%) translateY(-10%);
-				}
-
-				50% {
-					transform: translateX(50%) translateY(10%);
-				}
-
-				100% {
-					transform: translateX(-50%) translateY(-10%);
-				}
-			}
-
-			.gradient-bg {
-				width: 100vw;
-				height: 100vh;
-				position: relative;
+			#player_wrapper {
 				overflow: hidden;
-				background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-				top: 0;
-				left: 0;
-
-				svg {
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 0;
-					height: 0;
-				}
-
-				.gradients-container {
-					filter: url(#goo) blur(40px);
-					width: 100%;
-					height: 100%;
-				}
-
-				.g1 {
-					position: absolute;
-					background: radial-gradient(circle at center,
-							rgba(var(--color1), 0.8) 0,
-							rgba(var(--color1), 0) 50%) no-repeat;
-					mix-blend-mode: var(--blending);
-					width: var(--circle-size);
-					height: var(--circle-size);
-					top: calc(50% - var(--circle-size) / 2);
-					left: calc(50% - var(--circle-size) / 2);
-					transform-origin: center center;
-					animation: moveVertical 30s ease infinite;
-					opacity: 1;
-				}
-
-				.g2 {
-					position: absolute;
-					background: radial-gradient(circle at center,
-							rgba(var(--color2), 0.8) 0,
-							rgba(var(--color2), 0) 50%) no-repeat;
-					mix-blend-mode: var(--blending);
-					width: var(--circle-size);
-					height: var(--circle-size);
-					top: calc(50% - var(--circle-size) / 2);
-					left: calc(50% - var(--circle-size) / 2);
-					transform-origin: calc(50% - 400px);
-					animation: moveInCircle 20s reverse infinite;
-					opacity: 1;
-				}
-
-				.g3 {
-					position: absolute;
-					background: radial-gradient(circle at center,
-							rgba(var(--color3), 0.8) 0,
-							rgba(var(--color3), 0) 50%) no-repeat;
-					mix-blend-mode: var(--blending);
-					width: var(--circle-size);
-					height: var(--circle-size);
-					top: calc(50% - var(--circle-size) / 2 + 200px);
-					left: calc(50% - var(--circle-size) / 2 - 500px);
-					transform-origin: calc(50% + 400px);
-					animation: moveInCircle 40s linear infinite;
-					opacity: 1;
-				}
-
-				.g4 {
-					position: absolute;
-					background: radial-gradient(circle at center,
-							rgba(var(--color4), 0.8) 0,
-							rgba(var(--color4), 0) 50%) no-repeat;
-					mix-blend-mode: var(--blending);
-					width: var(--circle-size);
-					height: var(--circle-size);
-					top: calc(50% - var(--circle-size) / 2);
-					left: calc(50% - var(--circle-size) / 2);
-					transform-origin: calc(50% - 200px);
-					animation: moveHorizontal 40s ease infinite;
-					opacity: 0.7;
-				}
-
-				.g5 {
-					position: absolute;
-					background: radial-gradient(circle at center,
-							rgba(var(--color5), 0.8) 0,
-							rgba(var(--color5), 0) 50%) no-repeat;
-					mix-blend-mode: var(--blending);
-					width: calc(var(--circle-size) * 2);
-					height: calc(var(--circle-size) * 2);
-					top: calc(50% - var(--circle-size));
-					left: calc(50% - var(--circle-size));
-					transform-origin: calc(50% - 800px) calc(50% + 200px);
-					animation: moveInCircle 20s ease infinite;
-					opacity: 1;
-				}
-
-				.interactive {
-					position: absolute;
-					background: radial-gradient(circle at center,
-							rgba(var(--color-interactive), 0.8) 0,
-							rgba(var(--color-interactive), 0) 50%) no-repeat;
-					mix-blend-mode: var(--blending);
-					width: 100%;
-					height: 100%;
-					top: -50%;
-					left: -50%;
-					opacity: 0.7;
-				}
 			}
 		</style>
 	</head>
 	<body>
-		<div class="text-container"> Bachors </div>
-		<div class="gradient-bg">
-			<svg xmlns="http://www.w3.org/2000/svg">
-				<defs>
-					<filter id="goo">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-						<feBlend in="SourceGraphic" in2="goo" />
-					</filter>
-				</defs>
-			</svg>
-			<div class="gradients-container">
-				<div class="g1"></div>
-				<div class="g2"></div>
-				<div class="g3"></div>
-				<div class="g4"></div>
-				<div class="g5"></div>
-				<div class="interactive"></div>
-			</div>
+		<div id="player_wrapper">
+			<div id="player"></div>
+			<div class="overlay"><a href="https://www.youtube.com/shorts/qV72QynkDPU" target="_BLANK" style="color:#fff">@bachors</a></div>
 		</div>
+<script>
+
+var vidid = 'qV72QynkDPU';
+/* If you only see the placeholder image, your window size is too small */
+
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+var player_wrapper = document.getElementById('player_wrapper');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  // Logic to prevent the video from being loaded at smaller screen sizes.
+  player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
+    videoId: vidid,
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    },
+    playerVars: {
+      'autoplay': 1,
+      'mute': 1,
+      'autohide': 1,
+      'modestbranding': 1,
+      'rel': 0,
+      'controls': 0,
+      'showinfo': 0,
+      'disablekb': 1,
+      'enablejsapi': 1,
+      'iv_load_policy': 3,
+      'loop': 1,
+      'volume': 0,
+      'playlist': vidid
+    }
+  });
+  window.onresize = bgCover;
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+  event.target.mute();
+  bgCover();
+
+  // Get the duration of the currently playing video
+  const videoDuration = event.target.getDuration();
+
+  // When the video is playing, compare the total duration
+  // To the current passed time if it's below 2 and above 0,
+  // Return to the first frame (0) of the video
+  // This is needed to avoid the buffering at the end of the video
+  // Which displays a black screen + the YouTube loader
+  setInterval(function () {
+    const videoCurrentTime = event.target.getCurrentTime();
+    const timeDifference = videoDuration - videoCurrentTime;
+
+    if (2 > timeDifference > 0) {
+      event.target.seekTo(0);
+    }
+  }, 1000);
+}
+function onPlayerStateChange(event) {}
+
+// Mimic background-size:cover.
+var resolution = 16/9;
+function bgCover () {
+  if (window.innerWidth/resolution > window.innerHeight) {
+    var w = window.innerWidth;
+    var h = w/resolution;
+    var offset = (h-window.innerHeight)/2;
+    player.a.width = '100%';
+    player.a.height = h;
+    player_wrapper.style.top = '-' + offset + 'px';
+  }
+  else {
+    var h = window.innerHeight;
+    var w = h*resolution;
+    var offset = (w-window.innerWidth)/2;
+    player.a.height = '100%';
+    player.a.width = w;
+    player.a.style.left = '-' + offset + 'px';
+  }
+}
+
+</script>
 	</body>
 </html>
