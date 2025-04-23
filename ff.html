@@ -1,6 +1,5 @@
 <style>
 body {
-  background:url('http://placehold.it/1920/1080') center center / cover no-repeat;
   height:90%;
 }
 /* Overlay prevents clicking. */
@@ -62,6 +61,23 @@ function onPlayerReady(event) {
   event.target.playVideo();
   event.target.mute();
   bgCover();
+
+  // Get the duration of the currently playing video
+  const videoDuration = event.target.getDuration();
+
+  // When the video is playing, compare the total duration
+  // To the current passed time if it's below 2 and above 0,
+  // Return to the first frame (0) of the video
+  // This is needed to avoid the buffering at the end of the video
+  // Which displays a black screen + the YouTube loader
+  setInterval(function () {
+    const videoCurrentTime = event.target.getCurrentTime();
+    const timeDifference = videoDuration - videoCurrentTime;
+
+    if (2 > timeDifference > 0) {
+      event.target.seekTo(0);
+    }
+  }, 1000);
 }
 function onPlayerStateChange(event) {}
 
