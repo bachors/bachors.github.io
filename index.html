@@ -1,799 +1,915 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bachors | Software Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&amp;display=swap"/>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            light: '#3b82f6',
-                            dark: '#2563eb'
-                        },
-                        secondary: {
-                            light: '#10b981',
-                            dark: '#059669'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Raleway', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        .section {
-            min-height: 100vh;
-            padding-top: 80px;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: currentColor;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .active::after {
-            width: 100%;
-        }
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .dark .project-card {
-            background-color: #1e293b;
-        }
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
-    <!-- Header/Navigation -->
-    <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="https://bachors.js.org" class="text-2xl font-bold">Bachors</a>
-            
-            <div class="flex items-center space-x-8">
-                <div class="hidden md:flex space-x-6">
-                    <a href="#about" class="nav-link active" data-section="about">About</a>
-                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-                </div>
-                
-                <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
-                    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
-                </button>
-                
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-full focus:outline-none">
-                    <i class="fas fa-bars text-gray-700 dark:text-gray-200"></i>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4 shadow-md">
-            <div class="flex flex-col space-y-4">
-                <a href="#about" class="nav-link active" data-section="about">About</a>
-                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-            </div>
-        </div>
-    </header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bachors | Software Developer</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&amp;display=swap" />
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+				theme: {
+					extend: {
+						colors: {
+							primary: {
+								light: '#3b82f6',
+								dark: '#2563eb'
+							},
+							secondary: {
+								light: '#10b981',
+								dark: '#059669'
+							}
+						},
+						fontFamily: {
+							sans: ['Raleway', 'sans-serif'],
+						},
+					}
+				}
+			}
+		</script>
+		<style>
+			.section {
+				min-height: 100vh;
+				padding-top: 80px;
+			}
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="container mx-auto px-6 py-12">
-			<div class="max-w-4xl mx-auto text-center mt-12">
-				<div class="flex justify-center mb-12">
-					<div class="rounded-full overflow-hidden w-64 h-64 bg-blue-600 flex items-center justify-center mt-12 mb-6">
-						<img alt="Logo of a smartphone with 'dvn' text on screen, white and black phone on blue circle background" class="w-64 h-64 object-contain" src="img/logo.jpg"/>
+			.nav-link {
+				position: relative;
+			}
+
+			.nav-link::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				bottom: -2px;
+				left: 0;
+				background-color: currentColor;
+				transition: width 0.3s ease;
+			}
+
+			.nav-link:hover::after {
+				width: 100%;
+			}
+
+			.active::after {
+				width: 100%;
+			}
+
+			.project-card {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.project-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.dark .project-card {
+				background-color: #1e293b;
+			}
+
+			.skill-badge {
+				transition: all 0.3s ease;
+			}
+
+			.skill-badge:hover {
+				transform: scale(1.05);
+			}
+			
+			
+/******************************************************
+* #### jQuery-Youtube-Channels-Playlist v7.0 ####
+* Coded by Ican Bachors 2014.
+* https://github.com/bachors/jQuery-Youtube-Channels-Playlist
+* Updates will be posted to this site.
+******************************************************/
+
+.ycp {
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	font-size: 1em;
+	color: #444;
+	background: #000;
+	display: block;
+	width: 100%;
+	height: 500px;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.ycp,
+.ycp .belah {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.ycp .belah {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+
+.ycp .belah:first-of-type {
+	width: 65%;
+}
+
+.ycp .belah:last-of-type {
+	width: 35%;
+}
+
+.ycp .belah .luhur {
+	color: #fff;
+	background: #222;
+	display: block;
+	width: 100%;
+	height: 70px;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 0;
+}
+
+.ycp .belah .handap {
+	color: #ddd;
+	background: #111;
+	height: calc(100% - 70px);
+	padding: 0;
+	overflow-y: auto;
+	-moz-box-shadow: inset 0 0 10px #000;
+	-webkit-box-shadow: inset 0 0 10px #000;
+	box-shadow: inset 0 0 10px #000;
+}
+
+.ycp .belah .handap,
+.ycp .belah .bingkay {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.ycp .belah .bingkay {
+	height: 100%;
+	border: 0;
+}
+
+.ycp .belah .luhur span.tombol {
+	margin-right: 20px;
+	color: silver;
+}
+
+.ycp .belah .luhur span.about {
+	float: right;
+	background: #111;
+	padding: 2px;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+.ycp a {
+	text-decoration: none;
+	outline: 0;
+}
+
+.ycp a img {
+	border: 0;
+}
+
+.ycp .belah.ycp_vid_play {
+	cursor: pointer;
+}
+
+.ycp .belah.ycp_vid_play a {
+	background: #e52d27;
+	width: 120px;
+	height: 75px;
+	display: block;
+	border-radius: 10%;
+	position: relative;
+	top: calc(50% - 35px);
+	left: calc(50% - 60px);
+	text-align: center;
+}
+
+.ycp .belah.ycp_vid_play a::before {
+	color: #fff;
+	content: "\25B6";
+	z-index: 100;
+	font-size: 50px;
+}
+
+.ycp .belah .thumb {
+	float: left;
+	margin-right: 10px;
+	position: relative;
+	height: 61px;
+}
+
+.ycp .belah .thumb span {
+	position: absolute;
+	right: 2px;
+	bottom: -2px;
+	padding: 2px;
+	background: #000;
+	color: silver;
+	font-size: .8em;
+}
+
+.ycp .belah .play {
+	margin: 0;
+	padding: 10px;
+	display: block;
+	overflow: hidden;
+	*overflow: visible;
+}
+
+.ycp .belah .luhur div.title {
+	color: #fff;
+	border-bottom: 1px solid #111;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.ycp .belah .handap div.title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.ycp .belah span.mute,
+.ycp .belah span.about a {
+	color: #767676;
+	font-size: .8em;
+}
+
+.ycp .belah .thumb img {
+	width: 80px;
+	height: 100%;
+	border: 2px solid #000;
+}
+
+.ycp .belah .play:hover,
+.ycp .belah .vid-active {
+	background: #000;
+}
+
+.ycp .belah .luhur .vid-prev,
+.ycp .belah .luhur .vid-next,
+.ycp .belah .play {
+	cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+	.ycp {
+		height: 1000px;
+	}
+
+	.ycp .belah,
+	.ycp .belah:first-of-type,
+	.ycp .belah:last-of-type {
+		width: 100%;
+		display: block;
+	}
+
+	.ycp .belah:first-of-type {
+		height: 40%;
+	}
+
+	.ycp .belah:last-of-type {
+		height: 60%;
+	}
+}			
+			
+		</style>
+	</head>
+	<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+		<!-- Header/Navigation -->
+		<header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm z-50 shadow-sm">
+			<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+				<a href="https://bachors.js.org" class="text-2xl font-bold">Bachors</a>
+				<div class="flex items-center space-x-8">
+					<div class="hidden md:flex space-x-6">
+						<a href="#about" class="nav-link active" data-section="about">About</a>
+						<a href="#projects" class="nav-link" data-section="projects">Projects</a>
+						<a href="#video" class="nav-link" data-section="video">Video</a>
+						<a href="#contact" class="nav-link" data-section="contact">Contact</a>
 					</div>
-			   </div>
-   <hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto"/>
-			   <h2 class="text-3xl font-bold mb-6">About Me</h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    Hi! I'm Bachors, a software developer from Garut with over 10 years of experience who is passionate about building web and mobile applications.
-				</p>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    Here, you can explore a selection of my projects. I am passionate about continuously expanding my knowledge of various technologies and honing my skills with programming tools and languages. As a result, I dedicate extra time and effort to refine and perfect these projects as much as possible.
-				</p>
-                <p class="text-gray-600 dark:text-gray-300">
-                    If you have any questions please don't hesitate to <a href="#contact" class="underline nav-link">reach out</a>!
-				</p>
+					<button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
+						<i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+					</button>
+					<button id="mobile-menu-button" class="md:hidden p-2 rounded-full focus:outline-none">
+						<i class="fas fa-bars text-gray-700 dark:text-gray-200"></i>
+					</button>
+				</div>
+			</nav>
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4 shadow-md">
+				<div class="flex flex-col space-y-4">
+					<a href="#about" class="nav-link active" data-section="about">About</a>
+					<a href="#projects" class="nav-link" data-section="projects">Projects</a>
+					<a href="#video" class="nav-link" data-section="video">Video</a>
+					<a href="#contact" class="nav-link" data-section="contact">Contact</a>
+				</div>
 			</div>
-        </section>
+		</header>
+		<!-- Main Content -->
+		<main>
+			<!-- About Section -->
+			<section id="about" class="container mx-auto px-6 py-12">
+				<div class="max-w-4xl mx-auto text-center mt-12">
+					<div class="flex justify-center mb-12">
+						<div class="rounded-full overflow-hidden w-64 h-64 bg-blue-600 flex items-center justify-center mt-12 mb-6">
+							<img alt="Logo of a smartphone with 'dvn' text on screen, white and black phone on blue circle background" class="w-64 h-64 object-contain" src="img/logo.jpg" />
+						</div>
+					</div>
+					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
+					<h2 class="text-3xl font-bold mb-6">About Me</h2>
+					<p class="text-gray-600 dark:text-gray-300 mb-6"> Hi! I'm Bachors, a software developer from Garut with over 10 years of experience who is passionate about building web and mobile applications. </p>
+					<p class="text-gray-600 dark:text-gray-300 mb-6"> Here, you can explore a selection of my projects. I am passionate about continuously expanding my knowledge of various technologies and honing my skills with programming tools and languages. As a result, I dedicate extra time and effort to refine and perfect these projects as much as possible. </p>
+					<p class="text-gray-600 dark:text-gray-300"> If you have any questions please don't hesitate to <a href="#contact" class="underline nav-link">reach out</a>! </p>
+				</div>
+			</section>
+			<!-- Projects Section -->
+			<section id="projects" class="px-6 py-20">
+				<div class="container max-w-4xl mx-auto text-center">
+					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
+					<h2 class="text-3xl font-bold mb-6">Personal Projects</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/qurandart.gif" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Al Quran Flutter</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Al Quran ID Flutter Offline. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-teal-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Dart</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Al-Quran-ID-Flutter/tree/master" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/quran.gif" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Al Quran Wear OS</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Al Quran application for Android Wear OS with translation and Latin. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Al-Quran-Wear-OS/tree/master" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/kalender.gif" alt="E-commerce Platform" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Kalender Indonesia</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Aplikasi kalender hari libur nasional & cuti bersama beserta dengan kalender Hijriah. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Android-Kalender-Indonesia/tree/master" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/pokemon.gif" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Pokemon Wear OS</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> This repository contains a set of individual Android Studio projects to help you get started writing Wear OS apps. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Pokemon-Wear-OS/tree/master" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/ycp.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">YCP.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery plugin to display youtube video playlist to your website easily and simply. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Youtube-Channels-Playlist/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/nik.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">nik_parse.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Parse & Validasi Nomor Induk Kependudukan (NIK) KTP Menggunakan Javascript. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/nik_parse.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/api.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Free API</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Free API and database for untuk semua orang. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-green-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">JSON</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/apiapi" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/file.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">CI File Browser Awesome</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> You can upload to a folder somewhere on your site and share documents, pictures and other files. This app is built with PHP CodeIgniter, jQuery. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/CI-FIle-Browser-Awesome" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/github.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">jQuery Github Feed</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> This is a small and simple jQuery plugin to make github repositories, activity and gists widget from multiple accounts. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Feed/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Feed" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/iptv.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">IPTV Android</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Android application for live streaming. Source is taken from https://github.com/iptv-org/iptv using jsoup and m3u parse in realtime. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/IPTV-Android/raw/refs/heads/master/app-debug.apk" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/IPTV-Android" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/subtitle.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Subtitle Resync</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Subtitle Resync library for android. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/SubtitleResync" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/span.gif" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Android WordToSpan</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Small & simple library to create a link url, mail, mention, tag and text highlighter in textView. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Android-WordToSpan" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/chat.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Chat Realtime</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> realtime chat application using firebase. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Chat-Realtime" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/prefix.gif" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Android Prefix Input</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Small & simple library to adding a prefix to an EditText. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Android-Prefix-Input" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/ascii.gif" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Android Img2Ascii</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Convert image to ascii. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Android-Img2Ascii" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/palette.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">PHP Extract Image Color Class</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> PHP Extract Image Color Class a library to extract the color from internal or external image. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/PHP-Extract-Image-Color-Class" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/imap.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Email Inbox IMAP</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> A simple PHP application to show email inbox along with file attachments. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Email-Inbox-IMAP" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/meta.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Android LinkMetaData</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> fetch website metadata to display in android app. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Android-LinkMetaData" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/ygrab.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Ygrab.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Dynamic web scrapping that allows you to turn any site into a JSON accessible api using CSS selectors. This api using google script. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/Ygrab.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/Ygrab.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/sitemap.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">XML Sitemap Generator</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Sitemap Generator is the tool you have been looking for! You can create now your own xml sitemap generator directly on your website. Create an XML sitemap that can be submitted to search engines. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/XML-Sitemap-Generator" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/code.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Code Sandbox Fiddle Theme</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Theme HTML, CSS & JS sandbox for developers to quickly try out code and share code snippets. Inspired by jsfiddle & codepen. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/Sandbox-Fiddle/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/Sandbox-Fiddle" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/bintang.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">bintangin.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> simple easy jquery plugin for rate your post. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/bintangin.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/bintangin.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/prefixjs.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">jQuery Prefix Input</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> jquery plugins to provide the input prefix </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Prefix-Input/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/jQuery-Prefix-Input" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/catur.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Chess Online</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Chess Online realtime multiplayer with Chat using firebase. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://www.youtube.com/watch?v=jfSZg6JABoA" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/blob.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Img2Blob.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Lightweight javascript-based. Convert internal image url to blob url & add watermark. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/Img2Blob.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/Img2Blob.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/repo.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">jQuery Github Repos Feed</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery Github Repository Feed. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Repos-Feed/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Repos-Feed" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/tree.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">TVTeditor</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> TreeView Text Editor web based using Codemirror, Enhsplitter & Fontawesome. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/TVTeditor" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/tmdb.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">TMDb7</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> A demo application built on top of Framework7. This app will list upcoming and current movies from theaters and give you detailed information. It is based on the Official TMDb API. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/TMDb7/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/TMDb7" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/bcralnit.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">bcralnit.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery plugin to add line number in textarea, pre, div etc. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/bcralnit.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/bcralnit.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/disqus.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Disqusin.js</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery plugin to display disqus feed & stream in your website. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/Disqusin.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/desktop.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">HTML Desktop Template</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> HTML Desktop Template. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/HTML-Desktop-Template/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/HTML-Desktop-Template" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/kodingdong.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">CodingDong</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> CodingDong is a code editor, code execute and code tester build with codemirror. Write css code, html, javascript, PHP, sql and run the code. Supports cdn/external sourche. You can try all the code directly on the website. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/CodingDong" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/ws.jpg" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">ChatWs</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Contoh aplikasi chatting sederhana yang dibuat menggunakan PHP + jQuery + Websocket. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/ChatWs" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/file.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">jQuery File Browser Awesome</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> You can upload to a folder somewhere on your site and share documents, pictures and other files. This app is built with PHP, jQuery. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/jQuery-File-Browser-Awesome" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/shot.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">Apps Screenshot</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> Apps screenshot builder using Fabric.js. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+								</div>
+								<a target="_BLANK" href="https://bachors.js.org/Apps-Screenshot/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/Apps-Screenshot" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+						<!-- Project -->
+						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img src="img/kompres.png" class="w-full h-48 object-cover">
+							<div class="p-6">
+								<h3 class="text-xl font-bold mb-2">PHP Image Compressor Class</h3>
+								<p class="text-gray-600 dark:text-gray-300 mb-6"> PHP library to compress images with a high level of compression without loosing the original quality. </p>
+								<div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+								</div>
+								<a target="_BLANK" href="https://github.com/bachors/PHP-Image-Compressor-Class" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Video Section -->
+			<section id="video" class="container mx-auto px-6 py-20">
+				<div class="max-w-4xl mx-auto text-center">
+					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
+					<h2 class="text-3xl font-bold mb-6">My Video</h2>
+					<div id="unix" data-ycp_title="@bachors" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ"></div>
+				</div>
+			</section>
+			<!-- Contact Section -->
+			<section id="contact" class="container mx-auto px-6 py-20">
+				<div class="max-w-4xl mx-auto text-center">
+					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
+					<h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+					<p class="text-gray-600 dark:text-gray-300 mb-6"> Feel free to send me a message here: <a class="underline text-blue-400 hover:text-blue-300" href="mailto:bachor.can@gmail.com">bachor.can@gmail.com</a>, I'll try to respond as quick as I can! </p>
+					<p class="text-gray-600 dark:text-gray-300 mb-6"> You can also visit my github and social media: </p>
+					<div class="space-x-4">
+						<a target="_BLANK" href="https://github.com/bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
+							<i class="fab fa-github text-2xl"></i>
+						</a>
+						<a target="_BLANK" href="https://www.youtube.com/@bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
+							<i class="fab fa-youtube text-2xl"></i>
+						</a>
+						<a target="_BLANK" href="https://instagram.com/bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
+							<i class="fab fa-instagram text-2xl"></i>
+						</a>
+						<a target="_BLANK" href="https://facebook.com/ican.bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
+							<i class="fab fa-facebook text-2xl"></i>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer class="bg-gray-800 text-gray-300 py-6">
+			<div class="container mx-auto px-6">
+				<div class="text-center">
+					<p>&copy; 2025 Bachors. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+			// Theme Toggle
+			const themeToggle = document.getElementById('theme-toggle');
+			const html = document.documentElement;
+			// Check for saved user preference or use system preference
+			const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+			html.classList.add(savedTheme);
+			// Update icon based on current theme
+			updateThemeIcon();
+			themeToggle.addEventListener('click', () => {
+				html.classList.toggle('dark');
+				localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+				updateThemeIcon();
+			});
 
-        <!-- Projects Section -->
-        <section id="projects" class="px-6 py-20">
-            <div class="container max-w-4xl mx-auto text-center">
-   <hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto"/>
-                <h2 class="text-3xl font-bold mb-6">Personal Projects</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/kalender.gif" 
-                             alt="E-commerce Platform" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Kalender Indonesia</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Aplikasi kalender hari libur nasional & cuti bersama beserta dengan kalender Hijriah.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                                <span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Android-Kalender-Indonesia/tree/master" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/pokemon.gif" 
-                             alt="Analytics Dashboard" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Pokemon Wear OS</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                This repository contains a set of individual Android Studio projects to help you get started writing Wear OS apps.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Pokemon-Wear-OS/tree/master" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/ycp.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">YCP.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                jQuery plugin to display youtube video playlist to your website easily and simply.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/nik.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">nik_parse.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Parse & Validasi Nomor Induk Kependudukan (NIK) KTP Menggunakan Javascript.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/nik_parse.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/api.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Free API</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Free API and database for untuk semua orang.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-green-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">JSON</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/apiapi" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/file.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">CI File Browser Awesome</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                You can upload to a folder somewhere on your site and share documents, pictures and other files. This app is built with PHP CodeIgniter, jQuery.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/CI-FIle-Browser-Awesome" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/github.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">jQuery Github Feed</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                This is a small and simple jQuery plugin to make github repositories, activity and gists widget from multiple accounts.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Feed" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/iptv.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">IPTV Android</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Android application for live streaming. Source is taken from https://github.com/iptv-org/iptv using jsoup and m3u parse in realtime.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/IPTV-Android" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/subtitle.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Subtitle Resync</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Subtitle Resync library for android.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/SubtitleResync" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/span.gif" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Android WordToSpan</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Small & simple library to create a link url, mail, mention, tag and text highlighter in textView.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Android-WordToSpan" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/chat.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Chat Realtime</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                realtime chat application using firebase.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Chat-Realtime" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/prefix.gif" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Android Prefix Input</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Small & simple library to adding a prefix to an EditText.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Android-Prefix-Input" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/ascii.gif" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Android Img2Ascii</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Convert image to ascii.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Android-Img2Ascii" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/palette.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">PHP Extract Image Color Class</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                PHP Extract Image Color Class a library to extract the color from internal or external image.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/PHP-Extract-Image-Color-Class" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/imap.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Email Inbox IMAP</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                A simple PHP application to show email inbox along with file attachments.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Email-Inbox-IMAP" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/meta.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Android LinkMetaData</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                fetch website metadata to display in android app.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Android-LinkMetaData" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/ygrab.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Ygrab.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Dynamic web scrapping that allows you to turn any site into a JSON accessible api using CSS selectors. This api using google script.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Ygrab.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/sitemap.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">XML Sitemap Generator</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Sitemap Generator is the tool you have been looking for! You can create now your own xml sitemap generator directly on your website. Create an XML sitemap that can be submitted to search engines.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/XML-Sitemap-Generator" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/code.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Code Sandbox Fiddle Theme</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Theme HTML, CSS & JS sandbox for developers to quickly try out code and share code snippets. Inspired by jsfiddle & codepen.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Sandbox-Fiddle" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/bintang.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">bintangin.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                simple easy jquery plugin for rate your post.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/bintangin.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/prefixjs.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">jQuery Prefix Input</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                jquery plugins to provide the input prefix
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/jQuery-Prefix-Input" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/blob.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Img2Blob.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Lightweight javascript-based. Convert internal image url to blob url & add watermark.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Img2Blob.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/repo.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">jQuery Github Repos Feed</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                jQuery Github Repository Feed.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Repos-Feed" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/tree.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">TVTeditor</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                TreeView Text Editor web based using Codemirror, Enhsplitter & Fontawesome.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/TVTeditor" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/tmdb.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">TMDb7</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                A demo application built on top of Framework7. This app will list upcoming and current movies from theaters and give you detailed information. It is based on the Official TMDb API.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/TMDb7" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/bcralnit.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">bcralnit.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                jQuery plugin to add line number in textarea, pre, div etc.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/bcralnit.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/disqus.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Disqusin.js</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                jQuery plugin to display disqus feed & stream in your website.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Disqusin.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/desktop.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">HTML Desktop Template</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                HTML Desktop Template.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/HTML-Desktop-Template" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/kodingdong.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">CodingDong</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                CodingDong is a code editor, code execute and code tester build with codemirror. Write css code, html, javascript, PHP, sql and run the code. Supports cdn/external sourche. You can try all the code directly on the website.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/CodingDong" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/ws.jpg" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">ChatWs</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Contoh aplikasi chatting sederhana yang dibuat menggunakan PHP + jQuery + Websocket.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/ChatWs" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/file.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">jQuery File Browser Awesome</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                You can upload to a folder somewhere on your site and share documents, pictures and other files. This app is built with PHP, jQuery.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/jQuery-File-Browser-Awesome" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/shot.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Apps Screenshot</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                Apps screenshot builder using Fabric.js.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/Apps-Screenshot" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/kompres.png" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">PHP Image Compressor Class</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6">
-                                PHP library to compress images with a high level of compression without loosing the original quality.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-                            </div>
-                            <a target="_BLANK" href="https://github.com/bachors/PHP-Image-Compressor-Class" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
-                        </div>
-                    </div>
-					
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-   <hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto"/>
-                <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    Feel free to send me a message here: <a class="underline text-blue-400 hover:text-blue-300" href="mailto:bachor.can@gmail.com">bachor.can@gmail.com</a>, I'll try to respond as quick as I can!
-				</p>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    You can also visit my github and social media:
-				</p>
+			function updateThemeIcon() {
+				const icon = themeToggle.querySelector('i');
+				if (html.classList.contains('dark')) {
+					icon.classList.remove('fa-moon');
+					icon.classList.add('fa-sun');
+				} else {
+					icon.classList.remove('fa-sun');
+					icon.classList.add('fa-moon');
+				}
+			}
+			// Mobile Menu Toggle
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+			mobileMenuButton.addEventListener('click', () => {
+				mobileMenu.classList.toggle('hidden');
+			});
+			// Smooth scrolling for navigation links
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function(e) {
+					e.preventDefault();
+					const targetId = this.getAttribute('href');
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth'
+						});
+						// Close mobile menu if open
+						mobileMenu.classList.add('hidden');
+					}
+				});
+			});
+			// Highlight active navigation link based on scroll position
+			const sections = document.querySelectorAll('section');
+			const navLinks = document.querySelectorAll('.nav-link');
+			window.addEventListener('scroll', () => {
+				let current = '';
+				sections.forEach(section => {
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.clientHeight;
+					if (pageYOffset >= (sectionTop - 100)) {
+						current = section.getAttribute('id');
+					}
+				});
+				navLinks.forEach(link => {
+					link.classList.remove('active');
+					if (link.getAttribute('data-section') === current) {
+						link.classList.add('active');
+					}
+				});
+			});
+			
+			$.fn.ycp=function(e){const t=10,a=!1,s=!1;function i(t,a,s,l,c){$.ajax({url:`https://www.googleapis.com/youtube/v3/playlistItems?part=status,snippet&maxResults=${e.playlist}&playlistId=${a}&key=${e.apikey}&pageToken=${s}`,dataType:"json"}).done((p=>{let n="";if(n+='<div class="luhur">',n+=`<div class="title">${t}</div>`,n+='<span class="tombol vid-prev" title="Previous videos">Prev</span> ',n+='<span class="tombol vid-next" title="Next videos">Next</span><span class="about" title="ycp.js"><a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">♥</a></span></div><div class="handap">',$.each(p.items,((t,a)=>{if("public"==p.items[t].status.privacyStatus){const a=p.items[t].snippet.resourceId.videoId;!function(t,a,s,i){$.ajax({url:`https://www.googleapis.com/youtube/v3/videos?id=${t}&key=${e.apikey}&part=contentDetails,snippet,statistics`,dataType:"json"}).done((e=>{const t=e.items[0].contentDetails.duration;let l="",c="",p="";t.match(/M/g)?(l=t.split("M"),c=l[0].replace("PT",""),p=""!=l[1]?l[1].replace("S",""):"00"):(l=t.split("PT"),c="00",p=l[1].replace("S","")),p=p.length>1?p:`0${p}`,$(`${i} .ycp div#ycp_youtube_channels${s} span.tm${a}`).html(`${c}:${p}`),$(`${i} .ycp div#ycp_youtube_channels${s} span.by${a}`).html(`by ${e.items[0].snippet.channelTitle}`),$(`${i} .ycp div#ycp_youtube_channels${s} span.views${a}`).html(`${function(e){e+="",x=e.split("."),x1=x[0],x2=x.length>1?`.${x[1]}`:"";const t=/(\d+)(\d{3})/;for(;t.test(x1);)x1=x1.replace(t,"$1,$2");return x1+x2}(e.items[0].statistics.viewCount)} views`),$(`${i} .ycp div#ycp_youtube_channels${s} span.date${a}`).html(function(e){const t=Math.floor((new Date-e)/1e3);let a=Math.floor(t/31536e3);if(a>1)return`${a} years ago`;if(a=Math.floor(t/2592e3),a>1)return`${a} months ago`;if(a=Math.floor(t/86400),a>1)return`${a} days ago`;if(a=Math.floor(t/3600),a>1)return`${a} hours ago`;if(a=Math.floor(t/60),a>1)return`${a} minutes ago`;return`${Math.floor(t)} seconds ago`}(new Date(e.items[0].snippet.publishedAt).getTime()))}))}(a,t,l,c),n+=`<div class="play" data-vvv="${a}" data-img="${p.items[t].snippet.thumbnails.high.url}" title="${p.items[t].snippet.title}"><div class="thumb"><img src="${p.items[t].snippet.thumbnails.default.url}" alt=" "><span class="tm${t}"></span></div>`,n+=`<div class="title">${p.items[t].snippet.title}</div><span class="mute by${t}"></span><br><span class="mute views${t}"></span> <span class="mute">-</span> <span class="mute date${t}"></span></div>`}})),n+="</div>",$(`${c} .ycp div#ycp_youtube_channels${l}`).html(n),null==p.prevPageToken||null==p.prevPageToken){const t=$(`${c} .ycp div#ycp_youtube_channels${l} div.play`).attr("data-vvv"),a=$(`${c} .ycp div#ycp_youtube_channels${l} div.play`).attr("data-img");0==e.autoplay?($(`${c} .ycp div.ycp_vid_play:eq(${l})`).html('<a href="#"></a>'),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background",`url(${a}) no-repeat`),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-webkit-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-moz-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-o-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background-size","cover")):$(`${c} .ycp div.ycp_vid_play:eq(${l})`).html(`<iframe src="//www.youtube.com/embed/${t}?rel=${e.related?1:0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`),$(`${c} .ycp div#ycp_youtube_channels${l} div`).removeClass("vid-active"),$(`${c} .ycp div#ycp_youtube_channels${l} div.play:eq(0)`).addClass("vid-active")}else $(`${c} .ycp div#ycp_youtube_channels${l} span.vid-prev`).click((()=>(s=p.prevPageToken,i(t,a,s,l,c),!1)));$(`${c} .ycp div#ycp_youtube_channels${l} span.vid-next`).click((()=>(s=p.nextPageToken,i(t,a,s,l,c),!1))),$(`${c} .ycp div#ycp_youtube_channels${l} div.play`).each((function(){$(this).click((function(){const t=$(this).attr("data-vvv"),a=$(this).attr("data-img");return $(`${c} .ycp div#ycp_youtube_channels${l} div`).removeClass("vid-active"),$(this).addClass("vid-active"),0==e.autoplay?($(`${c} .ycp div.ycp_vid_play:eq(${l})`).html('<a href="#"></a>'),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background",`url(${a}) no-repeat`),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-webkit-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-moz-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-o-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background-size","cover")):$(`${c} .ycp div.ycp_vid_play:eq(${l})`).html(`<iframe src="//www.youtube.com/embed/${t}?rel=${e.related?1:0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`),!1}))})),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).click((function(){const t=$(`${c} .ycp div#ycp_youtube_channels${l} div.play.vid-active`).attr("data-vvv");return $(this).html(`<iframe src="//www.youtube.com/embed/${t}?rel=${e.related?1:0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`),!1}))}))}e.playlist=null==e.playlist?t:e.playlist,e.autoplay=null==e.autoplay?a:e.autoplay,e.related=null==e.related?s:e.related,$(this).each((function(t,a){const s=null!=$(this).attr("id")&&null!=$(this).attr("id")?`#${$(this).attr("id")}`:`.${$(this).attr("class")}`,l=null==$(this).data("ycp_title")?"YCP.js":$(this).data("ycp_title"),c=$(this).data("ycp_channel"),p=`<div class="ycp"><div class="belah ycp_vid_play" title="Play video"></div><div class="belah" id="ycp_youtube_channels${t}"></div></div>`;if($(this).html(p),"PL"==c.substring(0,2)||"UU"==c.substring(0,2)){i(l,c,"",t,s)}else{const a="UC"==c.substring(0,2)?"id":"forUsername";!function(t,a,s,l,c){$.ajax({url:`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&${s}=${a}&key=${e.apikey}`,crossDomain:!0,dataType:"json"}).done((e=>{const a=e.items[0].contentDetails.relatedPlaylists.uploads;i(t,a,"",l,c)}))}(l,c,a,t,s)}}))};
+		
+			$(function() {
+			
+				$("#unix").ycp({
+					apikey : "AIzaSyA0XdFjyX0c5pTAxNCIEPSnuGQ-cL2PLE0",
+					playlist : 7,
+					autoplay : true,
+					related : true
+				});
 				
-                    
-                    <div class="space-x-4">
-                        <a target="_BLANK" href="https://github.com/bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a target="_BLANK" href="https://www.youtube.com/@bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
-                            <i class="fab fa-youtube text-2xl"></i>
-                        </a>
-                        <a target="_BLANK" href="https://instagram.com/bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </a>
-                        <a target="_BLANK" href="https://facebook.com/ican.bachors" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition">
-                            <i class="fab fa-facebook text-2xl"></i>
-                        </a>
-                    </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-6">
-        <div class="container mx-auto px-6">            
-            <div class="text-center">
-                <p>&copy; 2025 Bachors. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        
-        // Check for saved user preference or use system preference
-        const savedTheme = localStorage.getItem('theme') || 
-                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.classList.add(savedTheme);
-        
-        // Update icon based on current theme
-        updateThemeIcon();
-        
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-            updateThemeIcon();
-        });
-        
-        function updateThemeIcon() {
-            const icon = themeToggle.querySelector('i');
-            if (html.classList.contains('dark')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-        
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-        
-        // Highlight active navigation link based on scroll position
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-				if (link.getAttribute('data-section') === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
+			});
+		</script>
+	</body>
 </html>
