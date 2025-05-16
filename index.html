@@ -59,15 +59,15 @@
 				width: 100%;
 			}
 
-			.project-card {
+			.project-card, .portfolio-card {
 				transition: transform 0.3s ease, box-shadow 0.3s ease;
 			}
 
-			.project-card:hover {
+			.project-card:hover, .portfolio-card:hover {
 				transform: translateY(-5px);
 			}
 
-			.dark .project-card {
+			.dark .project-card, .dark .portfolio-card {
 				background-color: #1e293b;
 			}
 
@@ -77,6 +77,10 @@
 
 			.skill-badge:hover {
 				transform: scale(1.05);
+			}
+			
+			#modal {
+				z-index: 999999999
 			}
 
 			.ycp {
@@ -286,6 +290,7 @@
 					<div class="hidden md:flex space-x-6">
 						<a href="#about" class="nav-link active" data-section="about">About</a>
 						<a href="#projects" class="nav-link" data-section="projects">Projects</a>
+						<a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
 						<a href="#video" class="nav-link" data-section="video">Video</a>
 						<a href="#contact" class="nav-link" data-section="contact">Contact</a>
 					</div>
@@ -302,6 +307,7 @@
 				<div class="flex flex-col space-y-4">
 					<a href="#about" class="nav-link active" data-section="about">About</a>
 					<a href="#projects" class="nav-link" data-section="projects">Projects</a>
+					<a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
 					<a href="#video" class="nav-link" data-section="video">Video</a>
 					<a href="#contact" class="nav-link" data-section="contact">Contact</a>
 				</div>
@@ -314,7 +320,7 @@
 				<div class="max-w-4xl mx-auto text-center mt-12">
 					<div class="flex justify-center mb-12">
 						<div class="rounded-full overflow-hidden w-64 h-64 bg-blue-600 flex items-center justify-center mt-12 mb-6">
-							<img alt="Logo of a smartphone with 'dvn' text on screen, white and black phone on blue circle background" class="w-64 h-64 object-contain" src="img/logo.png" />
+							<img class="w-64 h-64 object-contain" src="img/logo.png" />
 						</div>
 					</div>
 					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
@@ -329,10 +335,10 @@
 				<div class="container max-w-4xl mx-auto text-center">
 					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
 					<h2 class="text-3xl font-bold mb-6">Personal Projects</h2>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 						<!-- Project -->
 						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-							<img src="img/qurandart.gif" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+							<img src="img/qurandart.gif" class="w-full h-48 object-cover">
 							<div class="p-6">
 								<h3 class="text-xl font-bold mb-2">Al Quran Flutter</h3>
 								<p class="text-gray-600 dark:text-gray-300 mb-6"> Al Quran ID Flutter Offline. </p>
@@ -344,7 +350,7 @@
 						</div>
 						<!-- Project -->
 						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-							<img src="img/quran.gif" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+							<img src="img/quran.gif" class="w-full h-48 object-cover">
 							<div class="p-6">
 								<h3 class="text-xl font-bold mb-2">Al Quran Wear OS</h3>
 								<p class="text-gray-600 dark:text-gray-300 mb-6"> Al Quran application for Android Wear OS with translation and Latin. </p>
@@ -356,7 +362,7 @@
 						</div>
 						<!-- Project -->
 						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-							<img src="img/kalender.gif" alt="E-commerce Platform" class="w-full h-48 object-cover">
+							<img src="img/kalender.gif" class="w-full h-48 object-cover">
 							<div class="p-6">
 								<h3 class="text-xl font-bold mb-2">Kalender Indonesia</h3>
 								<p class="text-gray-600 dark:text-gray-300 mb-6"> Aplikasi kalender hari libur nasional & cuti bersama beserta dengan kalender Hijriah. </p>
@@ -369,7 +375,7 @@
 						</div>
 						<!-- Project -->
 						<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-							<img src="img/pokemon.gif" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+							<img src="img/pokemon.gif" class="w-full h-48 object-cover">
 							<div class="p-6">
 								<h3 class="text-xl font-bold mb-2">Pokemon Wear OS</h3>
 								<p class="text-gray-600 dark:text-gray-300 mb-6"> This repository contains a set of individual Android Studio projects to help you get started writing Wear OS apps. </p>
@@ -388,7 +394,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/jQuery-Youtube-Channels-Playlist/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Youtube-Channels-Playlist/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -438,7 +444,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Feed/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Feed/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Feed" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -451,7 +457,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
 								</div>
-								<a target="_BLANK" href="https://github.com/bachors/IPTV-Android/raw/refs/heads/master/app-debug.apk" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://github.com/bachors/IPTV-Android/raw/refs/heads/master/app-debug.apk" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/IPTV-Android" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -560,7 +566,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/Ygrab.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/Ygrab.js/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/Ygrab.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -585,7 +591,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/Sandbox-Fiddle/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/Sandbox-Fiddle/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/Sandbox-Fiddle" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -598,7 +604,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/bintangin.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/bintangin.js/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/bintangin.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -611,7 +617,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/jQuery-Prefix-Input/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Prefix-Input/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/jQuery-Prefix-Input" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -624,7 +630,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://www.youtube.com/watch?v=jfSZg6JABoA" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a>
+								<a target="_BLANK" href="https://www.youtube.com/watch?v=jfSZg6JABoA" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a>
 							</div>
 						</div>
 						<!-- Project -->
@@ -636,7 +642,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/Img2Blob.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/Img2Blob.js/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/Img2Blob.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -649,7 +655,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Repos-Feed/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Repos-Feed/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Repos-Feed" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -674,7 +680,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/TMDb7/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/TMDb7/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/TMDb7" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -687,7 +693,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/bcralnit.js/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/bcralnit.js/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/bcralnit.js" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -712,7 +718,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/HTML-Desktop-Template/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/HTML-Desktop-Template/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/HTML-Desktop-Template" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -764,7 +770,7 @@
 								<div class="flex flex-wrap gap-2 mb-6">
 									<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
 								</div>
-								<a target="_BLANK" href="https://bachors.js.org/Apps-Screenshot/" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
+								<a target="_BLANK" href="https://bachors.js.org/Apps-Screenshot/" class="text-secondary-light dark:text-white dark:underline font-medium hover:underline">Demo →</a><br><br>
 								<a target="_BLANK" href="https://github.com/bachors/Apps-Screenshot" class="text-primary-light dark:text-white dark:underline font-medium hover:underline">View Project →</a>
 							</div>
 						</div>
@@ -783,12 +789,28 @@
 					</div>
 				</div>
 			</section>
+			<!-- Portfolio Section -->
+			<section id="portfolio" class="container mx-auto px-6 py-20">
+				<div class="max-w-4xl mx-auto">
+					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
+					<h2 class="text-3xl font-bold mb-6 text-center">My Portfolio</h2>
+					<!-- Image grid -->
+					<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5">
+						<div class="portfolio-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img class="w-full h-full object-cover cursor-pointer" src="img/prt1.png" id="prt1" />
+						</div>
+						<div class="portfolio-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+							<img class="w-full h-full object-cover cursor-pointer" src="img/prt2.jpg" id="prt2" />
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- Video Section -->
 			<section id="video" class="container mx-auto px-6 py-20">
 				<div class="max-w-4xl mx-auto">
 					<hr class="border-blue-600 border-2 rounded mb-8 max-w-xl mx-auto" />
 					<h2 class="text-3xl font-bold mb-6 text-center">My Video</h2>
-					<div id="unix" data-ycp_title="@bachors" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ"></div>
+					<div id="unix" data-ycp_title="@bachors" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ" class="shadow-lg"></div>
 				</div>
 			</section>
 			<!-- Contact Section -->
@@ -823,6 +845,24 @@
 				</div>
 			</div>
 		</footer>
+		<!-- The Modal -->
+		<div id="modal"
+			class="hidden fixed top-0 left-0 z-80 
+					w-screen h-screen bg-black/70 flex 
+					justify-center items-center">
+
+			<!-- The close button -->
+			<a class="fixed z-90 top-6 right-8 
+					text-white text-5xl font-bold" 
+			href="javascript:void(0)"
+			onclick="closeModal()">
+				×
+			</a>
+
+			<!-- A big image will be displayed here -->
+			<img id="modal-img"
+				class="max-w-[800px] max-h-[600px] object-cover"/>
+		</div>
 		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script>
 			// Theme Toggle
@@ -890,6 +930,35 @@
 					}
 				});
 			});
+			
+			// Get all the img elements in the grid
+			var images = document.querySelectorAll('.grid img');
+
+			// Loop through each img element
+			images.forEach(function (img) {
+				
+			// Add a click event listener to each img element
+				img.addEventListener('click', function () {
+					showModal(img.src);
+				});
+			});
+
+			// Get the modal by id
+			var modal = document.getElementById("modal");
+
+			// Get the modal image tag
+			var modalImg = document.getElementById("modal-img");
+
+			// This function is called when a small image is clicked
+			function showModal(src) {
+				modal.classList.remove('hidden');
+				modalImg.src = src;
+			}
+
+			// This function is called when the close button is clicked
+			function closeModal() {
+				modal.classList.add('hidden');
+			}
 			
 			$.fn.ycp=function(e){const t=10,a=!1,s=!1;function i(t,a,s,l,c){$.ajax({url:`https://www.googleapis.com/youtube/v3/playlistItems?part=status,snippet&maxResults=${e.playlist}&playlistId=${a}&key=${e.apikey}&pageToken=${s}`,dataType:"json"}).done((p=>{let n="";if(n+='<div class="luhur">',n+=`<div class="title">${t}</div>`,n+='<span class="tombol vid-prev" title="Previous videos">Prev</span> ',n+='<span class="tombol vid-next" title="Next videos">Next</span><span class="about" title="ycp.js"><a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">♥</a></span></div><div class="handap">',$.each(p.items,((t,a)=>{if("public"==p.items[t].status.privacyStatus){const a=p.items[t].snippet.resourceId.videoId;!function(t,a,s,i){$.ajax({url:`https://www.googleapis.com/youtube/v3/videos?id=${t}&key=${e.apikey}&part=contentDetails,snippet,statistics`,dataType:"json"}).done((e=>{const t=e.items[0].contentDetails.duration;let l="",c="",p="";t.match(/M/g)?(l=t.split("M"),c=l[0].replace("PT",""),p=""!=l[1]?l[1].replace("S",""):"00"):(l=t.split("PT"),c="00",p=l[1].replace("S","")),p=p.length>1?p:`0${p}`,$(`${i} .ycp div#ycp_youtube_channels${s} span.tm${a}`).html(`${c}:${p}`),$(`${i} .ycp div#ycp_youtube_channels${s} span.by${a}`).html(`by ${e.items[0].snippet.channelTitle}`),$(`${i} .ycp div#ycp_youtube_channels${s} span.views${a}`).html(`${function(e){e+="",x=e.split("."),x1=x[0],x2=x.length>1?`.${x[1]}`:"";const t=/(\d+)(\d{3})/;for(;t.test(x1);)x1=x1.replace(t,"$1,$2");return x1+x2}(e.items[0].statistics.viewCount)} views`),$(`${i} .ycp div#ycp_youtube_channels${s} span.date${a}`).html(function(e){const t=Math.floor((new Date-e)/1e3);let a=Math.floor(t/31536e3);if(a>1)return`${a} years ago`;if(a=Math.floor(t/2592e3),a>1)return`${a} months ago`;if(a=Math.floor(t/86400),a>1)return`${a} days ago`;if(a=Math.floor(t/3600),a>1)return`${a} hours ago`;if(a=Math.floor(t/60),a>1)return`${a} minutes ago`;return`${Math.floor(t)} seconds ago`}(new Date(e.items[0].snippet.publishedAt).getTime()))}))}(a,t,l,c),n+=`<div class="play" data-vvv="${a}" data-img="${p.items[t].snippet.thumbnails.high.url}" title="${p.items[t].snippet.title}"><div class="thumb"><img src="${p.items[t].snippet.thumbnails.default.url}" alt=" "><span class="tm${t}"></span></div>`,n+=`<div class="title">${p.items[t].snippet.title}</div><span class="mute by${t}"></span><br><span class="mute views${t}"></span> <span class="mute">-</span> <span class="mute date${t}"></span></div>`}})),n+="</div>",$(`${c} .ycp div#ycp_youtube_channels${l}`).html(n),null==p.prevPageToken||null==p.prevPageToken){const t=$(`${c} .ycp div#ycp_youtube_channels${l} div.play`).attr("data-vvv"),a=$(`${c} .ycp div#ycp_youtube_channels${l} div.play`).attr("data-img");0==e.autoplay?($(`${c} .ycp div.ycp_vid_play:eq(${l})`).html('<a href="#"></a>'),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background",`url(${a}) no-repeat`),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-webkit-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-moz-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-o-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background-size","cover")):$(`${c} .ycp div.ycp_vid_play:eq(${l})`).html(`<iframe src="//www.youtube.com/embed/${t}?rel=${e.related?1:0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`),$(`${c} .ycp div#ycp_youtube_channels${l} div`).removeClass("vid-active"),$(`${c} .ycp div#ycp_youtube_channels${l} div.play:eq(0)`).addClass("vid-active")}else $(`${c} .ycp div#ycp_youtube_channels${l} span.vid-prev`).click((()=>(s=p.prevPageToken,i(t,a,s,l,c),!1)));$(`${c} .ycp div#ycp_youtube_channels${l} span.vid-next`).click((()=>(s=p.nextPageToken,i(t,a,s,l,c),!1))),$(`${c} .ycp div#ycp_youtube_channels${l} div.play`).each((function(){$(this).click((function(){const t=$(this).attr("data-vvv"),a=$(this).attr("data-img");return $(`${c} .ycp div#ycp_youtube_channels${l} div`).removeClass("vid-active"),$(this).addClass("vid-active"),0==e.autoplay?($(`${c} .ycp div.ycp_vid_play:eq(${l})`).html('<a href="#"></a>'),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background",`url(${a}) no-repeat`),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-webkit-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-moz-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("-o-background-size","cover"),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).css("background-size","cover")):$(`${c} .ycp div.ycp_vid_play:eq(${l})`).html(`<iframe src="//www.youtube.com/embed/${t}?rel=${e.related?1:0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`),!1}))})),$(`${c} .ycp div.ycp_vid_play:eq(${l})`).click((function(){const t=$(`${c} .ycp div#ycp_youtube_channels${l} div.play.vid-active`).attr("data-vvv");return $(this).html(`<iframe src="//www.youtube.com/embed/${t}?rel=${e.related?1:0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`),!1}))}))}e.playlist=null==e.playlist?t:e.playlist,e.autoplay=null==e.autoplay?a:e.autoplay,e.related=null==e.related?s:e.related,$(this).each((function(t,a){const s=null!=$(this).attr("id")&&null!=$(this).attr("id")?`#${$(this).attr("id")}`:`.${$(this).attr("class")}`,l=null==$(this).data("ycp_title")?"YCP.js":$(this).data("ycp_title"),c=$(this).data("ycp_channel"),p=`<div class="ycp"><div class="belah ycp_vid_play" title="Play video"></div><div class="belah" id="ycp_youtube_channels${t}"></div></div>`;if($(this).html(p),"PL"==c.substring(0,2)||"UU"==c.substring(0,2)){i(l,c,"",t,s)}else{const a="UC"==c.substring(0,2)?"id":"forUsername";!function(t,a,s,l,c){$.ajax({url:`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&${s}=${a}&key=${e.apikey}`,crossDomain:!0,dataType:"json"}).done((e=>{const a=e.items[0].contentDetails.relatedPlaylists.uploads;i(t,a,"",l,c)}))}(l,c,a,t,s)}}))};
 		
