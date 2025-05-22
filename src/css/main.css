@@ -54,6 +54,7 @@
 }
 
 .ycp {
+    font-family: monospace, monospace;
     color: #444;
     background: #000;
     display: block;
@@ -184,6 +185,7 @@
 }
 
 .ycp .belah .play {
+    line-height: 80%;
     margin: 0;
     padding: 10px;
     display: block;
