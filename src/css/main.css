@@ -34,7 +34,8 @@
 
 .project-card:hover,
 .portfolio-card:hover,
-.video-card:hover {
+.video-card:hover,
+.toel:hover {
     transform: translateY(-5px);
 }
 
