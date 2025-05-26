@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content="width=device-width,maximum-scale=2">
+		<meta name="description" content="bachors (Ican Bachors) : Github">
+		<title>bachors (Ican Bachors)</title>
+		<style>
+			body {
+				font-family: "Dongle", sans-serif;
+				height: 90%;
+			}
+
+			/* Overlay prevents clicking. */
+			#player_wrapper,
+			#player,
+			.overlay {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+
+			#player_wrapper {
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="player_wrapper">
+			<div id="player"></div>
+			<div class="overlay"><a href="https://www.youtube.com/shorts/qV72QynkDPU" target="_BLANK" style="color:#fff">@bachors</a></div>
+		</div>
+<script>
+
+var vidid = 'qV72QynkDPU';
+/* If you only see the placeholder image, your window size is too small */
+
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+var player_wrapper = document.getElementById('player_wrapper');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  // Logic to prevent the video from being loaded at smaller screen sizes.
+  player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
+    videoId: vidid,
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    },
+    playerVars: {
+      'autoplay': 1,
+      'mute': 1,
+      'autohide': 1,
+      'modestbranding': 1,
+      'rel': 0,
+      'controls': 0,
+      'showinfo': 0,
+      'disablekb': 1,
+      'enablejsapi': 1,
+      'iv_load_policy': 3,
+      'loop': 1,
+      'volume': 0,
+      'playlist': vidid
+    }
+  });
+  window.onresize = bgCover;
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+  event.target.mute();
+  bgCover();
+
+  // Get the duration of the currently playing video
+  const videoDuration = event.target.getDuration();
+
+  // When the video is playing, compare the total duration
+  // To the current passed time if it's below 2 and above 0,
+  // Return to the first frame (0) of the video
+  // This is needed to avoid the buffering at the end of the video
+  // Which displays a black screen + the YouTube loader
+  setInterval(function () {
+    const videoCurrentTime = event.target.getCurrentTime();
+    const timeDifference = videoDuration - videoCurrentTime;
+
+    if (2 > timeDifference > 0) {
+      event.target.seekTo(0);
+    }
+  }, 1000);
+}
+function onPlayerStateChange(event) {}
+
+// Mimic background-size:cover.
+var resolution = 16/9;
+function bgCover () {
+  if (window.innerWidth/resolution > window.innerHeight) {
+    var w = window.innerWidth;
+    var h = w/resolution;
+    var offset = (h-window.innerHeight)/2;
+    player.a.width = '100%';
+    player.a.height = h;
+    player_wrapper.style.top = '-' + offset + 'px';
+  }
+  else {
+    var h = window.innerHeight;
+    var w = h*resolution;
+    var offset = (w-window.innerWidth)/2;
+    player.a.height = '100%';
+    player.a.width = w;
+    player.a.style.left = '-' + offset + 'px';
+  }
+}
+
+</script>
+	</body>
+</html>
