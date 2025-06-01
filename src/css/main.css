@@ -73,13 +73,11 @@
 }
 
 .ycp {
-    color: #444;
+    color: #fff;
     background: #000;
     display: block;
     width: 100%;
     height: 500px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14),
-        0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ycp,
@@ -115,14 +113,11 @@
 }
 
 .ycp .belah .handap {
-    color: #ddd;
-    background: #111;
+    color: #fff;
+    background: #121212;
     height: calc(100% - 70px);
     padding: 0;
     overflow-y: auto;
-    -moz-box-shadow: inset 0 0 10px #000;
-    -webkit-box-shadow: inset 0 0 10px #000;
-    box-shadow: inset 0 0 10px #000;
 }
 
 .ycp .belah .handap,
@@ -145,7 +140,7 @@
 
 .ycp .belah .luhur span.about {
     float: right;
-    background: #111;
+    background: #121212;
     padding: 2px;
     border-radius: 50%;
     width: 20px;
