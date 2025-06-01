@@ -17,7 +17,7 @@
 		<!-- Header/Navigation -->
 		<header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm z-50 shadow-sm">
 			<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-				<a href="https://bachors.js.org" class="text-2xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Bachors</a>
+				<a href="https://bachors.js.org" class="text-2xl font-bold gradient-text">Bachors</a>
 				<div class="flex items-center space-x-8">
 					<div class="hidden md:flex space-x-6">
 						<a href="#about" class="nav-link active" data-section="about">About</a>
@@ -48,32 +48,32 @@
 		<!-- Main Content -->
 		<main>
 			<!-- About Section -->
-			<section id="about" class="container mx-auto px-6 py-20">
+			<section id="about" class="container mx-auto px-6 py-20 bg-white dark:bg-gray-900">
 				<div class="max-w-4xl mx-auto text-center mt-6">
 					<div class="flex justify-center mb-12">
-						<div class="rounded-full overflow-hidden w-64 h-64 bg-gray-300 dark:bg-gray-800/80 flex items-center justify-center mt-12 mb-6">
+						<div class="rounded-full overflow-hidden w-64 h-64 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mt-12 mb-6">
 							<img class="w-64 h-64 object-contain toel" src="img/logo.png" />
 						</div>
 					</div>
-					<hr class="border-gray-800/80 border-2 rounded mb-8 max-w-xl mx-auto" />
-					<h2 class="text-3xl font-bold mb-6">About Me</h2>
+					<h2 class="text-3xl font-bold mb-6">About <span class="gradient-text">Me</span></h2>
+					<div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
 					<p class="text-gray-600 dark:text-gray-300 mb-6"> Hi! I'm Ican Bachors, a software developer from Garut with over 10 years of experience who is passionate about building web and mobile applications. </p>
 					<p class="text-gray-600 dark:text-gray-300 mb-6"> Here, you can explore a selection of my projects. I am passionate about continuously expanding my knowledge of various technologies and honing my skills with programming tools and languages. As a result, I dedicate extra time and effort to refine and perfect these projects as much as possible. </p>
 					<p class="text-gray-600 dark:text-gray-300"> If you have any questions please don't hesitate to <a href="#contact" class="underline nav-link">reach out</a>! </p>
 				</div>
 			</section>
 			<!-- Projects Section -->
-			<section id="projects" class="px-6 py-20 bg-gray-300 dark:bg-gray-800">
+			<section id="projects" class="px-6 py-20 bg-gray-100 dark:bg-gray-800">
 				<div class="container max-w-4xl mx-auto text-center">
-					<hr class="border-gray-800/80 dark:border-gray-700/80 border-2 rounded mb-8 max-w-xl mx-auto" />
-					<h2 class="text-3xl font-bold mb-6">Personal Projects</h2>
+					<h2 class="text-3xl font-bold mb-6">Personal <span class="gradient-text">Projects</span></h2>
+					<div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/nama.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Cari-Nama-Flutter/tree/master" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold">Cari Nama Flutter</h3></a>
+									<h3 class="text-xl font-bold mb-2">Cari Nama Flutter</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Cari-Nama-Flutter/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Cari-Nama-Flutter/tree/master" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -81,17 +81,20 @@
 										<a class="github-button" href="https://github.com/bachors/Cari-Nama-Flutter/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> With this project you will learn how to display JSON data from local assets with search filters in Flutter. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-teal-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Dart</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-teal-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Dart</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=Ri5Y5Hhc3ic" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Cari-Nama-Flutter/tree/master" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/watch?v=Ri5Y5Hhc3ic" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/quran_f.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Al-Quran-ID-Flutter/tree/master" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Al Quran Flutter</h3></a>
+									<h3 class="text-xl font-bold mb-2">Al Quran Flutter</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-ID-Flutter/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-ID-Flutter/tree/master" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -99,8 +102,12 @@
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-ID-Flutter/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Al Quran ID Flutter Offline. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-teal-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Dart</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-teal-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Dart</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Al-Quran-ID-Flutter/tree/master" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.instagram.com/bachors/reel/DKUpiDSzqP1/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
 									</div>
 								</div>
 							</div>
@@ -108,7 +115,7 @@
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/quran_w.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Al-Quran-Wear-OS/tree/master" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Al Quran Wear OS</h3></a>
+									<h3 class="text-xl font-bold mb-2">Al Quran Wear OS</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-Wear-OS/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-Wear-OS/tree/master" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -116,10 +123,13 @@
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-Wear-OS/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Al Quran application for Android Wear OS with translation and Latin. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-purple-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Kotlin</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/shorts/T9ZEQe-pSwk" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Al-Quran-Wear-OS/tree/master" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/shorts/T9ZEQe-pSwk" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -128,7 +138,7 @@
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/kalender.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Android-Kalender-Indonesia/tree/master" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Kalender Indonesia</h3></a>
+									<h3 class="text-xl font-bold mb-2">Kalender Indonesia</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Android-Kalender-Indonesia/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Android-Kalender-Indonesia/tree/master" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -136,18 +146,21 @@
 										<a class="github-button" href="https://github.com/bachors/Android-Kalender-Indonesia/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Aplikasi kalender hari libur nasional & cuti bersama beserta dengan kalender Hijriah. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
-										<span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
+										<span class="bg-purple-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Kotlin</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/shorts/WiFYyyoB2cM" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Android-Kalender-Indonesia/tree/master" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/shorts/WiFYyyoB2cM" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/pokemon.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Pokemon-Wear-OS/tree/master" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Pokemon Wear OS</h3></a>
+									<h3 class="text-xl font-bold mb-2">Pokemon Wear OS</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Pokemon-Wear-OS/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Pokemon-Wear-OS/tree/master" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -155,17 +168,20 @@
 										<a class="github-button" href="https://github.com/bachors/Pokemon-Wear-OS/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> This repository contains a set of individual Android Studio projects to help you get started writing Wear OS apps. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-purple-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Kotlin</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-purple-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Kotlin</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/shorts/nlkv-Z_RlEU" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Pokemon-Wear-OS/tree/master" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/shorts/nlkv-Z_RlEU" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/ycp.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">YCP.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">YCP.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -173,18 +189,24 @@
 										<a class="github-button" href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery plugin to display youtube video playlist to your website easily and simply. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/jQuery-Youtube-Channels-Playlist/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/jQuery-Youtube-Channels-Playlist/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/nik_parse.js" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">nik_parse.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">nik_parse.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/nik_parse.js/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/nik_parse.js" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -192,17 +214,20 @@
 										<a class="github-button" href="https://github.com/bachors/nik_parse.js/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Parse & Validasi Nomor Induk Kependudukan (NIK) KTP Menggunakan Javascript. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/nik_parse.js/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/nik_parse.js" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/nik_parse.js/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/iptv.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/IPTV-Android" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">IPTV Android</h3></a>
+									<h3 class="text-xl font-bold mb-2">IPTV Android</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/IPTV-Android/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/IPTV-Android" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -210,16 +235,22 @@
 										<a class="github-button" href="https://github.com/bachors/IPTV-Android/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Android application for live streaming. Source is taken from https://github.com/iptv-org/iptv using jsoup and m3u parse in realtime. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
 									</div>
-									<a target="_BLANK" href="https://github.com/bachors/IPTV-Android/raw/refs/heads/master/app-debug.apk" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/IPTV-Android" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://github.com/bachors/IPTV-Android/raw/refs/heads/master/app-debug.apk" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/CI-FIle-Browser-Awesome" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">CI File Browser Awesome</h3></a>
+									<h3 class="text-xl font-bold mb-2">CI File Browser Awesome</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/CI-FIle-Browser-Awesome/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/CI-FIle-Browser-Awesome" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -227,9 +258,12 @@
 										<a class="github-button" href="https://github.com/bachors/CI-FIle-Browser-Awesome/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> You can upload to a folder somewhere on your site and share documents, pictures and other files. This app is built with PHP CodeIgniter, jQuery. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/CI-FIle-Browser-Awesome" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
@@ -239,7 +273,7 @@
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/tmdb.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/TMDb7" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">TMDb7</h3></a>
+									<h3 class="text-xl font-bold mb-2">TMDb7</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/TMDb7/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/TMDb7" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -247,16 +281,22 @@
 										<a class="github-button" href="https://github.com/bachors/TMDb7/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> This app will list upcoming and current movies from theaters and give you detailed information. It is based on the Official TMDb API. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/TMDb7/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/TMDb7" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/TMDb7/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Feed" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">jQuery Github Feed</h3></a>
+									<h3 class="text-xl font-bold mb-2">jQuery Github Feed</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/jQuery-Github-Feed/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/jQuery-Github-Feed" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -264,16 +304,22 @@
 										<a class="github-button" href="https://github.com/bachors/jQuery-Github-Feed/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> This is a small and simple jQuery plugin to make github repositories, activity and gists widget from multiple accounts. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Feed/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/jQuery-Github-Feed" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/jQuery-Github-Feed/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-purple-100 text-purple-600">
+									<i class="fas fa-mobile-screen text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/SubtitleResync" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Subtitle Resync</h3></a>
+									<h3 class="text-xl font-bold mb-2">Subtitle Resync</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/SubtitleResync/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/SubtitleResync" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -281,8 +327,11 @@
 										<a class="github-button" href="https://github.com/bachors/SubtitleResync/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Subtitle Resync library for android. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/SubtitleResync" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
@@ -290,8 +339,11 @@
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-purple-100 text-purple-600">
+									<i class="fas fa-mobile-screen text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Android-WordToSpan" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Android WordToSpan</h3></a>
+									<h3 class="text-xl font-bold mb-2">Android WordToSpan</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Android-WordToSpan/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Android-WordToSpan" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -299,15 +351,21 @@
 										<a class="github-button" href="https://github.com/bachors/Android-WordToSpan/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Small & simple library to create a link url, mail, mention, tag and text highlighter in textView. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Android-WordToSpan" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Chat-Realtime" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Chat Realtime</h3></a>
+									<h3 class="text-xl font-bold mb-2">Chat Realtime</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Chat-Realtime/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Chat-Realtime" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -315,16 +373,22 @@
 										<a class="github-button" href="https://github.com/bachors/Chat-Realtime/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> realtime chat application using firebase. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=wuRgHkb5XiM" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Chat-Realtime" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/watch?v=wuRgHkb5XiM" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-purple-100 text-purple-600">
+									<i class="fas fa-mobile-screen text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Android-Prefix-Input" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Android Prefix Input</h3></a>
+									<h3 class="text-xl font-bold mb-2">Android Prefix Input</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Android-Prefix-Input/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Android-Prefix-Input" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -332,8 +396,11 @@
 										<a class="github-button" href="https://github.com/bachors/Android-Prefix-Input/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Small & simple library to adding a prefix to an EditText. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Android-Prefix-Input" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
@@ -341,8 +408,11 @@
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-purple-100 text-purple-600">
+									<i class="fas fa-mobile-screen text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Android-Img2Ascii" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Android Img2Ascii</h3></a>
+									<h3 class="text-xl font-bold mb-2">Android Img2Ascii</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Android-Img2Ascii/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Android-Img2Ascii" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -350,15 +420,21 @@
 										<a class="github-button" href="https://github.com/bachors/Android-Img2Ascii/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Convert image to ascii. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Android-Img2Ascii" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/PHP-Extract-Image-Color-Class" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">PHP Extract Image Color Class</h3></a>
+									<h3 class="text-xl font-bold mb-2">PHP Extract Image Color Class</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/PHP-Extract-Image-Color-Class/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/PHP-Extract-Image-Color-Class" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -366,15 +442,21 @@
 										<a class="github-button" href="https://github.com/bachors/PHP-Extract-Image-Color-Class/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> PHP Extract Image Color Class a library to extract the color from internal or external image. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/PHP-Extract-Image-Color-Class" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Email-Inbox-IMAP" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Email Inbox IMAP</h3></a>
+									<h3 class="text-xl font-bold mb-2">Email Inbox IMAP</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Email-Inbox-IMAP/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Email-Inbox-IMAP" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -382,18 +464,24 @@
 										<a class="github-button" href="https://github.com/bachors/Email-Inbox-IMAP/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> A simple PHP application to show email inbox along with file attachments. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=xFQxTB0awiU" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Email-Inbox-IMAP" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/watch?v=xFQxTB0awiU" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-purple-100 text-purple-600">
+									<i class="fas fa-mobile-screen text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Android-LinkMetaData" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Android LinkMetaData</h3></a>
+									<h3 class="text-xl font-bold mb-2">Android LinkMetaData</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Android-LinkMetaData/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Android-LinkMetaData" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -401,15 +489,21 @@
 										<a class="github-button" href="https://github.com/bachors/Android-LinkMetaData/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> fetch website metadata to display in android app. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-yellow-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Java</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-yellow-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Java</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Android-LinkMetaData" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Ygrab.js" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Ygrab.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">Ygrab.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Ygrab.js/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Ygrab.js" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -417,16 +511,22 @@
 										<a class="github-button" href="https://github.com/bachors/Ygrab.js/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Dynamic web scrapping that allows you to turn any site into a JSON accessible api using CSS selectors. This api using google script. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/Ygrab.js/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Ygrab.js" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/Ygrab.js/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/XML-Sitemap-Generator" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">XML Sitemap Generator</h3></a>
+									<h3 class="text-xl font-bold mb-2">XML Sitemap Generator</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/XML-Sitemap-Generator/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/XML-Sitemap-Generator" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -434,8 +534,11 @@
 										<a class="github-button" href="https://github.com/bachors/XML-Sitemap-Generator/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Sitemap Generator is the tool you have been looking for! You can create now your own xml sitemap generator directly on your website. Create an XML sitemap that can be submitted to search engines. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/XML-Sitemap-Generator" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
@@ -443,8 +546,11 @@
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Sandbox-Fiddle" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Code Sandbox Fiddle Theme</h3></a>
+									<h3 class="text-xl font-bold mb-2">Code Sandbox Fiddle Theme</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Sandbox-Fiddle/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Sandbox-Fiddle" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -452,16 +558,22 @@
 										<a class="github-button" href="https://github.com/bachors/Sandbox-Fiddle/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Theme HTML, CSS & JS sandbox for developers to quickly try out code and share code snippets. Inspired by jsfiddle & codepen. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/Sandbox-Fiddle/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Sandbox-Fiddle" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/Sandbox-Fiddle/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/bintangin.js" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">bintangin.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">bintangin.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/bintangin.js/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/bintangin.js" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -469,16 +581,22 @@
 										<a class="github-button" href="https://github.com/bachors/bintangin.js/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> simple easy jquery plugin for rate your post. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/bintangin.js/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/bintangin.js" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/bintangin.js/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/jQuery-Prefix-Input" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">jQuery Prefix Input</h3></a>
+									<h3 class="text-xl font-bold mb-2">jQuery Prefix Input</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/jQuery-Prefix-Input/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/jQuery-Prefix-Input" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -486,28 +604,40 @@
 										<a class="github-button" href="https://github.com/bachors/jQuery-Prefix-Input/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> jquery plugins to provide the input prefix </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/jQuery-Prefix-Input/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/jQuery-Prefix-Input" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/jQuery-Prefix-Input/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-purple-100 text-purple-600">
+									<i class="fas fa-mobile-screen text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=jfSZg6JABoA" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Chess Online</h3></a>
+									<h3 class="text-xl font-bold mb-2">Chess Online</h3>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Chess Online realtime multiplayer with Chat using firebase. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://www.youtube.com/watch?v=jfSZg6JABoA" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Img2Blob.js" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Img2Blob.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">Img2Blob.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Img2Blob.js/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Img2Blob.js" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -515,16 +645,22 @@
 										<a class="github-button" href="https://github.com/bachors/Img2Blob.js/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Lightweight javascript-based. Convert internal image url to blob url & add watermark. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/Img2Blob.js/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Img2Blob.js" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/Img2Blob.js/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/jQuery-Github-Repos-Feed" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">jQuery Github Repos Feed</h3></a>
+									<h3 class="text-xl font-bold mb-2">jQuery Github Repos Feed</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/jQuery-Github-Repos-Feed/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/jQuery-Github-Repos-Feed" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -532,18 +668,24 @@
 										<a class="github-button" href="https://github.com/bachors/jQuery-Github-Repos-Feed/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery Github Repository Feed. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/jQuery-Github-Repos-Feed/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/jQuery-Github-Repos-Feed" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/jQuery-Github-Repos-Feed/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/TVTeditor" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">TVTeditor</h3></a>
+									<h3 class="text-xl font-bold mb-2">TVTeditor</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/TVTeditor/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/TVTeditor" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -551,16 +693,22 @@
 										<a class="github-button" href="https://github.com/bachors/TVTeditor/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> TreeView Text Editor web based using Codemirror, Enhsplitter & Fontawesome. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=v9p_TaabEfE" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/TVTeditor" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/watch?v=v9p_TaabEfE" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-pink-100 text-pink-600">
+									<i class="fas fa-server text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/apiapi" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Free API</h3></a>
+									<h3 class="text-xl font-bold mb-2">Free API</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/apiapi/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/apiapi" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -568,16 +716,22 @@
 										<a class="github-button" href="https://github.com/bachors/apiapi/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Free API and database for untuk semua orang. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-green-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">JSON</span>
-										<span class="bg-fuchsia-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">SQL</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-green-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">JSON</span>
+										<span class="bg-fuchsia-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">SQL</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/apiapi" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/bcralnit.js" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">bcralnit.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">bcralnit.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/bcralnit.js/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/bcralnit.js" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -585,18 +739,24 @@
 										<a class="github-button" href="https://github.com/bachors/bcralnit.js/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery plugin to add line number in textarea, pre, div etc. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/bcralnit.js/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/bcralnit.js" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/bcralnit.js/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Disqusin.js" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Disqusin.js</h3></a>
+									<h3 class="text-xl font-bold mb-2">Disqusin.js</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Disqusin.js/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Disqusin.js" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -604,15 +764,21 @@
 										<a class="github-button" href="https://github.com/bachors/Disqusin.js/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> jQuery plugin to display disqus feed & stream in your website. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Disqusin.js" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/HTML-Desktop-Template" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">HTML Desktop Template</h3></a>
+									<h3 class="text-xl font-bold mb-2">HTML Desktop Template</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/HTML-Desktop-Template/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/HTML-Desktop-Template" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -620,16 +786,22 @@
 										<a class="github-button" href="https://github.com/bachors/HTML-Desktop-Template/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> HTML Desktop Template. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/HTML-Desktop-Template/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/HTML-Desktop-Template" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/HTML-Desktop-Template/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/CodingDong" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">CodingDong</h3></a>
+									<h3 class="text-xl font-bold mb-2">CodingDong</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/CodingDong/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/CodingDong" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -637,19 +809,25 @@
 										<a class="github-button" href="https://github.com/bachors/CodingDong/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> CodingDong is a code editor, code execute and code tester build with codemirror. Write css code, html, javascript, PHP, sql and run the code. Supports cdn/external sourche. You can try all the code directly on the website. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=yemRFdAh8No" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/CodingDong" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/watch?v=yemRFdAh8No" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/ChatWs" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">ChatWs</h3></a>
+									<h3 class="text-xl font-bold mb-2">ChatWs</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/ChatWs/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/ChatWs" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -657,17 +835,23 @@
 										<a class="github-button" href="https://github.com/bachors/ChatWs/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Contoh aplikasi chatting sederhana yang dibuat menggunakan PHP + jQuery + Websocket. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/watch?v=nNBEAygY-B0" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/ChatWs" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/watch?v=nNBEAygY-B0" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/jQuery-File-Browser-Awesome" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">jQuery File Browser Awesome</h3></a>
+									<h3 class="text-xl font-bold mb-2">jQuery File Browser Awesome</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/jQuery-File-Browser-Awesome/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/jQuery-File-Browser-Awesome" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -675,16 +859,22 @@
 										<a class="github-button" href="https://github.com/bachors/jQuery-File-Browser-Awesome/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> You can upload to a folder somewhere on your site and share documents, pictures and other files. This app is built with PHP, jQuery. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/jQuery-File-Browser-Awesome" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-blue-100 text-blue-600">
+									<i class="fas fa-laptop-code text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Apps-Screenshot" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Apps Screenshot</h3></a>
+									<h3 class="text-xl font-bold mb-2">Apps Screenshot</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Apps-Screenshot/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Apps-Screenshot" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -692,18 +882,24 @@
 										<a class="github-button" href="https://github.com/bachors/Apps-Screenshot/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Apps screenshot builder using Fabric.js. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
 									</div>
-									<a target="_BLANK" href="https://bachors.js.org/Apps-Screenshot/" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Apps-Screenshot" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://bachors.js.org/Apps-Screenshot/" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid gap-5">
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-pink-100 text-pink-600">
+									<i class="fas fa-server text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Al-Quran-ID-API" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">Al Quran ID API</h3></a>
+									<h3 class="text-xl font-bold mb-2">Al Quran ID API</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-ID-API/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-ID-API" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -711,15 +907,21 @@
 										<a class="github-button" href="https://github.com/bachors/Al-Quran-ID-API/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Al-Quran API Terjemahan Indonesia Beserta Audio. Firebase, Npoint or Offline. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-green-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">JSON</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-green-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">JSON</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Al-Quran-ID-API" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
 							<!-- Project -->
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+								<div class="p-20 rounded-lg bg-pink-100 text-pink-600">
+									<i class="fas fa-server text-8xl"></i>
+								</div>
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/KBBI.sql" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">KBBI.sql</h3></a>
+									<h3 class="text-xl font-bold mb-2">KBBI.sql</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/KBBI.sql/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/KBBI.sql" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -727,8 +929,11 @@
 										<a class="github-button" href="https://github.com/bachors/KBBI.sql/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Big Indonesian Dictionary (KBBI) SQL Database. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-fuchsia-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">SQL</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-fuchsia-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">SQL</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/KBBI.sql" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
@@ -736,7 +941,7 @@
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/kompres.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/PHP-Image-Compressor-Class" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">PHP Image Compressor Class</h3></a>
+									<h3 class="text-xl font-bold mb-2">PHP Image Compressor Class</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/PHP-Image-Compressor-Class/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/PHP-Image-Compressor-Class" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -744,8 +949,11 @@
 										<a class="github-button" href="https://github.com/bachors/PHP-Image-Compressor-Class/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> PHP library to compress images with a high level of compression without loosing the original quality. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-red-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">PHP</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-red-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">PHP</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/PHP-Image-Compressor-Class" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
 									</div>
 								</div>
 							</div>
@@ -760,10 +968,13 @@
 								</p>
 								<script async src="https://public.codepenassets.com/embed/index.js"></script>
 								<div class="p-6">
-									<a target="_BLANK" href="https://codepen.io/bachors/pen/dPoPyoP" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold mb-2">GIF Maker</h3></a>
+									<h3 class="text-xl font-bold mb-2">GIF Maker</h3>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Application to create animated GIF from images or videos, change size, speed easily, simple but powerful. Only using javascript without serverside. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-blue-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Javascript</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-blue-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Javascript</span>
+									</div>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://codepen.io/bachors/pen/dPoPyoP" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
 									</div>
 								</div>
 							</div>
@@ -771,7 +982,7 @@
 							<div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
 								<img src="img/store.png" class="w-full object-cover cursor-pointer">
 								<div class="p-6">
-									<a target="_BLANK" href="https://github.com/bachors/Fake-Store-Flutter/tree/master" class="text-primary-light dark:text-white underline font-medium hover:underline" title="View Project"><h3 class="text-xl font-bold">Fake Store Flutter</h3></a>
+									<h3 class="text-xl font-bold">Fake Store Flutter</h3>
 									<p class="mb-4 mt-6">
 										<a class="github-button" href="https://github.com/bachors/Fake-Store-Flutter/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye" data-show-count="true" aria-label="Watch on GitHub">Watch</a>
 										<a class="github-button" href="https://github.com/bachors/Fake-Store-Flutter/tree/master" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star on GitHub">Star</a>
@@ -779,21 +990,28 @@
 										<a class="github-button" href="https://github.com/bachors/Fake-Store-Flutter/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-show-count="true" aria-label="Issue on GitHub">Issue</a>
 									</p>
 									<p class="text-gray-600 dark:text-gray-300 mb-6"> Fake Store Flutter https://api.npoint.io/62aeea8b12f5d65a066c. </p>
-									<div class="flex flex-wrap gap-2 mb-6">
-										<span class="bg-teal-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">Dart</span>
+									<div class="flex flex-wrap gap-2 mb-6 justify-center">
+										<span class="bg-teal-100 dark:bg-gray-100 text-gray-900 text-xs px-3 py-1 rounded-full">Dart</span>
 									</div>
-									<a target="_BLANK" href="https://www.youtube.com/shorts/6-8renSgUuQ" class="text-secondary-light dark:text-white underline font-medium hover:underline">Demo →</a>
+									<div class="flex space-x-4 justify-center">
+										<a href="https://github.com/bachors/Fake-Store-Flutter/tree/master" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fab fa-github"></i> Code</a>
+										<a href="https://www.youtube.com/shorts/6-8renSgUuQ" target="_BLANK" class="px-6 py-3 border border-gray-800 dark:border-white text-secondary-light dark:text-white font-medium rounded-lg transition-all duration-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+									</div>
 								</div>
+							</div>
+							<!-- Project -->
+							<div class="project-card h-screen bg-gray-100 dark:bg-gray-800">
+								<!-- Clear -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- Portfolio Section -->
-			<section id="portfolio" class="container mx-auto px-6 py-20">
+			<section id="portfolio" class="container mx-auto px-6 py-20 bg-white dark:bg-gray-900">
 				<div class="max-w-4xl mx-auto text-center">
-					<hr class="border-gray-800/80 border-2 rounded mb-8 max-w-xl mx-auto" />
-					<h2 class="text-3xl font-bold mb-6 text-center">My Portfolio</h2>
+					<h2 class="text-3xl font-bold mb-6 text-center">My <span class="gradient-text">Portfolio</span></h2>
+					<div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
 					<p class="text-gray-600 dark:text-gray-300 mb-6">I am very enthusiastic in developing mobile applications and it has been my hobby till now.</p>
 					<!-- Image grid -->
 					<div class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-5">
@@ -825,18 +1043,18 @@
 				</div>
 			</section>
 			<!-- Video Section -->
-			<section id="video" class="px-6 py-20 bg-gray-300 dark:bg-gray-800">
+			<section id="video" class="px-6 py-20 bg-gray-100 dark:bg-gray-800">
 				<div class="container max-w-4xl mx-auto">
-					<hr class="border-gray-800/80 dark:border-gray-700/80 border-2 rounded mb-8 max-w-xl mx-auto" />
-					<h2 class="text-3xl font-bold mb-6 text-center">My Video</h2>
+					<h2 class="text-3xl font-bold mb-6 text-center">My <span class="gradient-text">Video</span></h2>
+					<div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
 					<div id="unix" data-ycp_title="@bachors" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ" class="video-card shadow-lg"></div>
 				</div>
 			</section>
 			<!-- Contact Section -->
-			<section id="contact" class="container mx-auto px-6 py-20">
+			<section id="contact" class="container mx-auto px-6 py-20 bg-white dark:bg-gray-900">
 				<div class="max-w-4xl mx-auto text-center">
-					<hr class="border-gray-800/80 border-2 rounded mb-8 max-w-xl mx-auto" />
-					<h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+					<h2 class="text-3xl font-bold mb-6">Contact <span class="gradient-text">Me</span></h2>
+					<div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
 					<p class="text-gray-600 dark:text-gray-300 mb-6"> Feel free to send me a message here: <a class="underline text-blue-500" href="mailto:bachor.can@gmail.com">bachor.can@gmail.com</a>, I'll try to respond as quick as I can! </p>
 					<p class="text-gray-600 dark:text-gray-300 mb-6"> You can also visit my github and social media: </p>
 					<div class="space-x-4 mb-6">
@@ -856,7 +1074,7 @@
 							<i class="fab fa-codepen text-2xl"></i>
 						</a>
 					</div>
-					<img class="w-full h-full object-cover toel" src="https://pixel-profile-ui.vercel.app/api/github-stats?username=bachors&include_all_commits=true&pixelate_avatar=true&background=linear-gradient%280deg%2C+%23f9f9fbFF+0%25%2C+%23f9f9fbFF+0%25%29+&color=%231f2937FF&hide=contributions" />
+					<img class="w-full h-full object-cover toel" src="https://pixel-profile-ui.vercel.app/api/github-stats?username=bachors&include_all_commits=true&pixelate_avatar=true&background=linear-gradient%280deg%2C+%23ffffffFF+0%25%2C+%23ffffffFF+0%25%29+&color=%231f2937FF&hide=contributions" />
 				</div>
 			</section>
 		</main>
@@ -875,6 +1093,10 @@
 			<!-- A big image will be displayed here -->
 			<img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover"/>
 		</div>
+		<!-- Back to Top Button -->
+		<button id="backToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-purple-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+			<i class="fas fa-arrow-up"></i>
+		</button>
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
 		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="src/js/main.js"></script>
