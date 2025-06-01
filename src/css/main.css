@@ -34,8 +34,7 @@
 
 .project-card:hover,
 .portfolio-card:hover,
-.video-card:hover,
-.toel:hover {
+.video-card:hover {
     transform: translateY(-5px);
 }
 
@@ -61,6 +60,16 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+@keyframes float {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-20px); }
+	100% { transform: translateY(0px); }
+}
+        
+.floating {
+	animation: float 3s ease-in-out infinite;
 }
 
 .ycp {
