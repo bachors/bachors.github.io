@@ -14,7 +14,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: currentColor;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
     transition: width 0.3s ease;
 }
 
@@ -258,4 +258,7 @@
     .ycp .belah:last-of-type {
         height: 60%;
     }
+	.project-card.h-screen {
+		display: none
+	}
 }
