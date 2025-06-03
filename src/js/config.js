@@ -4,12 +4,12 @@ tailwind.config = {
         extend: {
             colors: {
                 primary: {
-                    light: '#121212',
-                    dark: '#121212'
+                    light: '#131313',
+                    dark: '#131313'
                 },
                 secondary: {
-                    light: '#121212',
-                    dark: '#121212'
+                    light: '#131313',
+                    dark: '#131313'
                 }
             }
         }
