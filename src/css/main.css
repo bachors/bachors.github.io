@@ -43,11 +43,11 @@
     background-color: #1e293b;
 }
 
-.skill-badge {
+.tag-badge {
     transition: all 0.3s ease;
 }
 
-.skill-badge:hover {
+.tag-badge:hover {
     transform: scale(1.05);
 }
 
@@ -203,7 +203,6 @@
     padding: 10px;
     display: block;
     overflow: hidden;
-    *overflow: visible;
 }
 
 .ycp .belah .luhur div.title {
