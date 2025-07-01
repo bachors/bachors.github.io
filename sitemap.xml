@@ -64,12 +64,12 @@
 		<changefreq>daily</changefreq>
         <priority>0.1</priority>
     </url>
-    </url>
+    <url>
         <loc>https://bachors.js.org/Apps-Screenshot/</loc>
 		<changefreq>daily</changefreq>
         <priority>0.1</priority>
     </url>
-    </url>
+    <url>
         <loc>https://bachors.js.org/Disqusin.js/</loc>
 		<changefreq>daily</changefreq>
         <priority>0.1</priority>
