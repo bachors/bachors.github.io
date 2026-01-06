@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgDownloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'instagram': '#E4405F',
+                        'instagram-light': '#F56565'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-xl">
+                        <i class="fab fa-instagram text-white text-2xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                        IgDownloader
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-2xl mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                Pengunduh Foto, Video Instagram
+            </h2>
+            <p class="text-lg text-gray-600">
+                Simpan foto dan video Instagram dengan kualitas HD
+            </p>
+        </div>
+
+        <!-- Download Form -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-100">
+            <div class="mb-8">
+                <label class="block text-sm font-semibold text-gray-700 mb-3">
+                    URL Post Instagram
+                </label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i class="fab fa-instagram text-instagram text-xl"></i>
+                    </div>
+                    <input type="url" 
+                           id="instagram-url"
+                           placeholder="https://www.instagram.com/p/..." 
+                           class="w-full pl-12 pr-16 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400">
+                    <button id="paste-btn" class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-purple-600 transition-colors">
+                        <i class="fas fa-paste text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button id="download-btn" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg">
+                <i class="fas fa-download mr-2"></i>
+                Analisis & Download
+            </button>
+        </div>
+
+        <!-- Preview Section (Hidden by default) -->
+        <div id="preview-section" class="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-100 hidden">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-images text-purple-600 mr-2"></i>
+                Preview Media
+            </h3>
+            <div id="media-container" class="grid gap-4">
+                <!-- Media items will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-photo-film text-white text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-2">Kualitas HD</h3>
+                <p class="text-sm text-gray-600">Download dengan resolusi asli</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div class="bg-gradient-to-r from-green-500 to-green-600 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-bolt text-white text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-2">Super Cepat</h3>
+                <p class="text-sm text-gray-600">Proses download instan</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-600 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-2">100% Aman</h3>
+                <p class="text-sm text-gray-600">Tanpa malware atau virus</p>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Cara Menggunakan</h3>
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-1">Buka Instagram</h4>
+                        <p class="text-gray-600 text-sm">Temukan post yang ingin didownload</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-1">Salin Link</h4>
+                        <p class="text-gray-600 text-sm">Klik "..." dan pilih "Salin tautan"</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-1">Paste & Download</h4>
+                        <p class="text-gray-600 text-sm">Tempel link di atas dan klik download</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-8 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-xl">
+                    <i class="fab fa-instagram text-white text-lg"></i>
+                </div>
+                <span class="text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    IgDownloader
+                </span>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">Download gambar Instagram dengan mudah dan cepat</p>
+            <p class="text-gray-400 text-xs">&copy; 2026 IgDownloader.</p>
+        </div>
+    </footer>
+
+    <script>
+        const downloadBtn = document.getElementById('download-btn');
+        const urlInput = document.getElementById('instagram-url');
+        const pasteBtn = document.getElementById('paste-btn');
+        const previewSection = document.getElementById('preview-section');
+        const mediaContainer = document.getElementById('media-container');
+
+        // Paste button functionality
+        pasteBtn.addEventListener('click', async function() {
+            try {
+                // Request clipboard permission first
+                const permission = await navigator.permissions.query({name: 'clipboard-read'});
+                
+                if (permission.state === 'denied') {
+                    showNotification('Akses clipboard ditolak. Silakan paste manual dengan Ctrl+V', 'error');
+                    return;
+                }
+                
+                const text = await navigator.clipboard.readText();
+                urlInput.value = text;
+                urlInput.focus();
+                showNotification('Link berhasil di-paste!', 'success');
+            } catch (err) {
+                if (err.name === 'NotAllowedError') {
+                    showNotification('Izin akses clipboard diperlukan. Klik "Allow" pada popup browser', 'error');
+                } else {
+                    showNotification('Gagal paste. Coba paste manual dengan Ctrl+V', 'error');
+                }
+            }
+        });
+
+        downloadBtn.addEventListener('click', async function() {
+            const url = urlInput.value.trim();
+            
+            if (!url) {
+                showNotification('Silakan masukkan URL Instagram', 'error');
+                return;
+            }
+
+            if (!url.includes('instagram.com')) {
+                showNotification('URL tidak valid. Gunakan link Instagram yang benar', 'error');
+                return;
+            }
+
+            // Show loading state
+            downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Memproses...';
+            downloadBtn.disabled = true;
+
+            try {
+                const apiUrl = `https://script.google.com/macros/s/AKfycbyHQ9twIO2CKf4TFsPDHrB2JARDK66yVDlUrmPukDefHnWsAAnRuFjE8DR1R-qU-nC9/exec?u=${encodeURIComponent(url)}`;
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.data && data.data.length > 0) {
+                    showPreview(data.data);
+                    showNotification('Media berhasil dianalisis!', 'success');
+                } else {
+                    showNotification('Tidak ada media ditemukan', 'error');
+                }
+            } catch (error) {
+                showNotification('Gagal mengambil data. Coba lagi nanti', 'error');
+            } finally {
+                downloadBtn.innerHTML = '<i class="fas fa-download mr-2"></i>Analisis & Download';
+                downloadBtn.disabled = false;
+            }
+        });
+
+        function showPreview(mediaData) {
+            mediaContainer.innerHTML = '';
+            
+            mediaData.forEach((media, index) => {
+                const mediaItem = document.createElement('div');
+                mediaItem.className = 'bg-gray-50 rounded-xl p-4 border border-gray-200';
+                
+                const mediaElement = media.type === 'Video' 
+                    ? `<video src="${media.url}" controls class="w-full rounded-lg mb-4" poster="">
+                         <source src="${media.url}" type="video/mp4">
+                       </video>`
+                    : `<img src="${media.url}" alt="Instagram Media ${index + 1}" class="w-full rounded-lg mb-4">`;
+                
+                mediaItem.innerHTML = `
+                    ${mediaElement}
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="text-sm text-gray-600">
+                            <i class="fas fa-${media.type === 'Video' ? 'video' : 'image'} mr-1"></i>
+                            ${media.type} • ${media.width}x${media.height}
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            ${media.filename}
+                        </div>
+                    </div>
+                    <button onclick="downloadMedia('${media.url}', '${media.filename}', '${media.type}')" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-2 px-4 rounded-lg transition-all">
+                        <i class="fas fa-download mr-2"></i>Download ${media.type}
+                    </button>
+                `;
+                mediaContainer.appendChild(mediaItem);
+            });
+
+            previewSection.classList.remove('hidden');
+            previewSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function downloadMedia(url, filename, type) {
+            // For images, open in new tab
+            if (type === 'Image') {
+                window.open(url, '_blank');
+                showNotification('Gambar dibuka di tab baru!', 'success');
+                return;
+            }
+
+            // For videos, download as usual
+            const button = event.target;
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Downloading...';
+            button.disabled = true;
+
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(link.href);
+                    showNotification('Download berhasil!', 'success');
+                })
+                .catch(error => {
+                    showNotification('Download gagal. Coba lagi', 'error');
+                })
+                .finally(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                });
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg text-white font-medium z-50 transform transition-all duration-300 ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Auto-focus on input
+        urlInput.focus();
+    </script>
+</body>
+</html>
