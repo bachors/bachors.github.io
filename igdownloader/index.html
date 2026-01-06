@@ -61,7 +61,10 @@
                     <input type="url" 
                            id="instagram-url"
                            placeholder="https://www.instagram.com/p/..." 
-                           class="w-full pl-12 pr-16 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400">
+                           class="w-full pl-12 pr-20 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all text-gray-700 placeholder-gray-400">
+                    <button id="clear-btn" class="absolute inset-y-0 right-12 pr-2 flex items-center text-gray-400 hover:text-red-500 transition-colors hidden">
+                        <i class="fas fa-times text-lg"></i>
+                    </button>
                     <button id="paste-btn" class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fas fa-paste text-lg"></i>
                     </button>
@@ -159,8 +162,29 @@
         const downloadBtn = document.getElementById('download-btn');
         const urlInput = document.getElementById('instagram-url');
         const pasteBtn = document.getElementById('paste-btn');
+        const clearBtn = document.getElementById('clear-btn');
         const previewSection = document.getElementById('preview-section');
         const mediaContainer = document.getElementById('media-container');
+
+        // Toggle clear button visibility
+        function toggleClearButton() {
+            if (urlInput.value.trim()) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+        }
+
+        // Clear button functionality
+        clearBtn.addEventListener('click', function() {
+            urlInput.value = '';
+            urlInput.focus();
+            toggleClearButton();
+            previewSection.classList.add('hidden');
+        });
+
+        // Input change listener
+        urlInput.addEventListener('input', toggleClearButton);
 
         // Paste button functionality
         pasteBtn.addEventListener('click', async function() {
@@ -176,6 +200,7 @@
                 const text = await navigator.clipboard.readText();
                 urlInput.value = text;
                 urlInput.focus();
+                toggleClearButton();
                 showNotification('Link berhasil di-paste!', 'success');
             } catch (err) {
                 if (err.name === 'NotAllowedError') {
@@ -233,7 +258,7 @@
                     ? `<video src="${media.url}" controls class="w-full rounded-lg mb-4" poster="">
                          <source src="${media.url}" type="video/mp4">
                        </video>`
-                    : `<img src="${media.url}" alt="Instagram Media ${index + 1}" class="w-full rounded-lg mb-4">`;
+                    : `<img src="${media.url}" alt="Instagram Media ${index + 1}" class="w-full rounded-lg mb-4" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div style="display:none" class="w-full h-64 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500"><i class="fas fa-image text-4xl"></i></div>`;
                 
                 mediaItem.innerHTML = `
                     ${mediaElement}
