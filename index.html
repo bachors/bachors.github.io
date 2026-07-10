@@ -43,7 +43,7 @@
   <div class="max-w-5xl mx-auto">
     <div class="flex items-center justify-between mb-6">
       <a href="" class="flex items-center gap-3">
-        <img src="logo.jpg" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover">
+        <img src="logo.png" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover">
         <h1 class="text-2xl font-semibold">Ican Bachors</h1>
       </a>
       <div class="flex items-center gap-3">
@@ -58,20 +58,20 @@
 
     <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="bg-white dark:bg-[#1e1f21] rounded-2xl p-5 shadow-lg">
-        <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Tentang saya</p>
-        <p class="text-sm font-semibold mt-0.5 mb-2">Pengembang aplikasi mobile.</p>
-        <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Hubungi saya</p>
-        <p class="text-sm font-semibold mt-0.5 mb-2"><a href="mailto:bachor.can@gmail.com">bachor.can@gmail.com</a></p>
-        <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Terhubung dengan saya</p>
+        <p class="text-sm font-semibold tracking-wide">Tentang</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Pengembang aplikasi mobile.</p>
+        <p class="text-sm font-semibold tracking-wide">Kontak</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2"><a href="mailto:bachor.can@gmail.com">bachor.can@gmail.com</a></p>
+        <p class="text-sm font-semibold tracking-wide">Terhubung</p>
         <div class="space-x-2 mt-0.5">
 						<a target="_BLANK" href="https://github.com/bachors">
-							<i class="fab fa-github text-sm"></i>
+							<i class="fab fa-github text-sm text-gray-500 dark:text-gray-400"></i>
 						</a>
 						<a target="_BLANK" href="https://www.youtube.com/@bachors">
-							<i class="fab fa-youtube text-sm"></i>
+							<i class="fab fa-youtube text-sm text-gray-500 dark:text-gray-400"></i>
 						</a>
 						<a target="_BLANK" href="https://codepen.io/bachors">
-							<i class="fab fa-codepen text-sm"></i>
+							<i class="fab fa-codepen text-sm text-gray-500 dark:text-gray-400"></i>
 						</a>
 					</div>
       </div>
@@ -95,8 +95,8 @@
       seven_day: '7 hari terakhir',
       twentyeight_day: '28 hari terakhir',
       this_month: 'Selama bulan ini',
-      last_month: 'Bulan Lalu',
-      all_time: 'Semua Waktu'
+      last_month: 'Bulan lalu',
+      all_time: 'Semua waktu'
     };
 
     function updateThemeIcon() {
@@ -115,8 +115,8 @@
     function stat(label, value) {
       return `
         <div>
-          <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">${label}</p>
-          <p class="text-sm font-semibold mt-0.5">${value}</p>
+          <p class="text-sm font-semibold tracking-wide">${label}</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${value}</p>
         </div>`;
     }
 
@@ -129,15 +129,15 @@
               <i class="text-3xl fa fa-coins text-gray-700/30 dark:text-gray-200/30"></i>
             </div>
             <div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">${LABELS[key] || key}</p>
-              <p class="text-sm font-semibold mt-0.5">${d.date_range}</p>
+              <p class="text-sm font-semibold tracking-wide">${LABELS[key] || key}</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${d.date_range.replace("-", "•")}</p>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2">
             ${stat('Peristiwa', d.ad_requests)}
             ${stat('Pendapatan', d.earnings)}
             ${stat('Tayangan', d.ad_impressions)}
-            ${stat('RPM', d.ecpm)}
+            ${stat('eCPM', d.ecpm)}
           </div>
         </div>
       `).join('');
@@ -146,24 +146,24 @@
           <div class="grid grid-cols-2 gap-2 mb-2">
             <div>
               <i class="fa fa-chart-line text-3xl text-gray-700/30 dark:text-gray-200/30 mb-2"></i>
-              <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Aplikasi</p>
-              <p class="text-sm font-semibold mt-0.5">Android</p>
+              <p class="text-sm font-semibold tracking-wide">Sumber</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Google Play • AdMob</p>
             </div>
             <div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Update</p>
-              <p class="text-sm font-semibold mt-0.5 mb-2">${formatTime(last_update)}</p>
-              <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Install</p>
-              <p class="text-sm font-semibold mt-0.5">500 rb+</p>
+              <p class="text-sm font-semibold tracking-wide">Update</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 mb-2">${formatTime(last_update)}</p>
+              <p class="text-sm font-semibold tracking-wide">Install</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">500 rb+</p>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2">
             <div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Ulasan</p>
-              <p class="text-sm font-semibold mt-0.5">10 rb+</p>
+              <p class="text-sm font-semibold tracking-wide">Ulasan</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">10 rb+</p>
             </div>
             <div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 tracking-wide">Rating</p>
-              <p class="text-sm font-semibold mt-0.5">4,8★</p>
+              <p class="text-sm font-semibold tracking-wide">Rating</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">4,8★</p>
             </div>
           </div>
         </div>
