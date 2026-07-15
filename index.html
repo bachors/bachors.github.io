@@ -1,1 +1,70 @@
-<!DOCTYPE html><html lang="id" class="dark"><head><meta charset="UTF-8"><meta name="description" content="Hi! I'm Ican Bachors, a mobile app developer from Garut Indonesia."><meta name="keywords" content="bachors, ican bachors"><meta name="author" content="Bachors"><meta property="og:image" content="https://bachors.id/logo.png"><meta property="og:image:alt" content="Hi! I'm Ican Bachors"><meta property="og:site_name" content="Bachors"><meta property="og:type" content="website"><meta property="og:title" content="Ican | Bachors"><meta property="og:url" content="https://bachors.id/index.html"><meta property="og:description" content="Hi! I'm Ican Bachors, a mobile app developer from Garut Indonesia."><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ican | Bachors</title><link rel="shortcut icon" href="favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script><script>tailwind.config={darkMode:"class"}</script><script>"light"===localStorage.theme&&document.documentElement.classList.remove("dark")</script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-JEH1NEEXKV")</script></head><body class="bg-gray-100 text-gray-700 dark:bg-[#131313] dark:text-gray-200 text-base min-h-screen p-4 md:p-8 transition-colors duration-300"><div class="max-w-5xl mx-auto"><div class="flex items-center justify-between mb-6"><a href="https://bachors.id/" class="flex items-center gap-3"><img src="logo.png" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover"><h1 class="text-2xl font-semibold">Bachors</h1></a><div class="flex items-center gap-3"><a class="text-xs text-gray-500 dark:text-gray-400 mr-2" href="privacy-policy.html">Privacy Policy</a><button id="theme-toggle" onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-[#1e1f21] text-lg"><span id="theme-icon">☀️</span></button></div></div><div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"><div class="bg-white dark:bg-[#1e1f21] rounded-2xl p-5 shadow-lg"><div class="flex justify-end mb-2"><i class="text-3xl fa fa-address-card text-gray-700/30 dark:text-gray-200/30"></i></div><p class="text-sm font-semibold tracking-wide">Ican Bachors</p><p class="text-xs text-gray-500 dark:text-gray-400 mb-6 mt-0.5">Bismillah makan tidur ngoding ulangi.</p><div class="text-gray-500 dark:text-gray-400 space-x-4 mt-0.5"><a target="_BLANK" href="https://github.com/bachors"><i class="fab fa-github"></i></a><a target="_BLANK" href="https://www.youtube.com/@bachors"><i class="fab fa-youtube"></i></a><a target="_BLANK" href="https://codepen.io/bachors"><i class="fab fa-codepen"></i></a><a href="mailto:bachor.can@gmail.com"><i class="fa fa-envelope"></i></a></div></div></div></div><footer class="mt-10"><div class="max-w-5xl mx-auto"><div class="text-center"><p>&copy; 2026 Bachors</p></div></div></footer><script>const API_URL="https://script.google.com/macros/s/AKfycbxWqv8sfrNtuqkJ281wRBkiftm_6e7zcAe-oTKzrWs3grLG858sBsYQ2_cpJhBxnHZuQQ/exec",LABELS={today:"Sepanjang hari Ini",yesterday:"Kemarin",seven_day:"7 hari terakhir",twentyeight_day:"28 hari terakhir",this_month:"Selama bulan ini",last_month:"Bulan lalu",all_time:"Semua waktu"};function updateThemeIcon(){document.getElementById("theme-icon").textContent=document.documentElement.classList.contains("dark")?"☀️":"🌙"}function toggleTheme(){const t=document.documentElement.classList.toggle("dark");localStorage.theme=t?"dark":"light",updateThemeIcon()}function stat(t,a){return`<div><p class="text-sm font-semibold tracking-wide">${t}</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${a}</p></div>`}function renderCards(t,a){const e=document.getElementById("cards");let n=Object.entries(t).map(([t,a],e)=>`<div class="bg-white dark:bg-[#1e1f21] rounded-2xl p-5 shadow-lg"><div class="grid grid-cols-2 gap-2 mb-2"><div><i class="text-3xl fa fa-coins text-gray-700/30 dark:text-gray-200/30"></i></div><div><p class="text-sm font-semibold tracking-wide">${LABELS[t]||t}</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${a.date_range.replace("-","•")}</p></div></div><div class="grid grid-cols-2 gap-2">${stat("Peristiwa",a.ad_requests)}${stat("Pendapatan",a.earnings)}${stat("Tayangan",a.ad_impressions)}${stat("eCPM",a.ecpm)}</div></div>`).join("");const s=`<div class="bg-white dark:bg-[#1e1f21] rounded-2xl pl-5 pt-5 pr-5 pb-5 shadow-lg"><div class="grid grid-cols-2 gap-2 mb-2"><div><i class="fa fa-chart-line text-3xl text-gray-700/30 dark:text-gray-200/30 mb-2"></i><p class="text-sm font-semibold tracking-wide">Download</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">500 rb+</p></div><div><p class="text-sm font-semibold tracking-wide">Update</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 mb-2">${formatTime(a)}</p><p class="text-sm font-semibold tracking-wide">Rating</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">4,8★</p></div></div><div class="grid grid-cols-2 gap-2"><div><p class="text-sm font-semibold tracking-wide">Ulasan</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">10 rb+</p></div><div><p class="text-sm font-semibold tracking-wide">Sumber</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Google Play • AdMob</p></div></div></div>`;e.insertAdjacentHTML("afterbegin",s+n)}async function fetchData(){try{const t=await fetch(API_URL,{method:"POST",body:new URLSearchParams({username:"bachors"})});if(!t.ok)throw new Error(`HTTP ${t.status}`);const a=await t.json();renderCards(a.data,a.last_update)}catch(t){}}function formatTime(t){let[a,e]=t.split(":").map(Number);const n=a>=12?"PM":"AM";a%=12,0===a&&(a=12);return`${String(a).padStart(2,"0")}:${String(e).padStart(2,"0")} ${n}`}updateThemeIcon(),fetchData();</script><audio id="bgMusic" src="chihiro.mp3" loop style="display: none;"></audio><script>const audio=document.getElementById("bgMusic");audio.play().catch(()=>{const e=()=>{audio.play(),document.removeEventListener("click",e),document.removeEventListener("scroll",e)};document.addEventListener("click",e),document.addEventListener("scroll",e)});</script></body></html>
+<!DOCTYPE html>
+<html lang="id" class="dark">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Hi! I'm Ican Bachors, a mobile app developer from Garut Indonesia.">
+		<meta name="keywords" content="bachors, ican bachors">
+		<meta name="author" content="Bachors">
+		<meta property="og:image" content="https://bachors.id/logo.png">
+		<meta property="og:image:alt" content="Hi! I'm Ican Bachors">
+		<meta property="og:site_name" content="Bachors">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Ican | Bachors">
+		<meta property="og:url" content="https://bachors.id/index.html">
+		<meta property="og:description" content="Hi! I'm Ican Bachors, a mobile app developer from Garut Indonesia.">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Ican | Bachors</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
+		<script>tailwind.config={darkMode:"class"},"light"===localStorage.theme&&document.documentElement.classList.remove("dark");</script>
+	</head>
+	<body class="bg-gray-100 text-gray-700 dark:bg-[#131313] dark:text-gray-200 text-base min-h-screen p-4 md:p-8 transition-colors duration-300">
+		<div class="max-w-5xl mx-auto">
+			<div class="flex items-center justify-between mb-6">
+				<a href="https://bachors.id/" class="flex items-center gap-3">
+					<img src="logo.png" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover">
+					<h1 class="text-2xl font-semibold">Bachors</h1>
+				</a>
+				<div class="flex items-center gap-3">
+					<a class="text-xs text-gray-500 dark:text-gray-400 mr-2" href="privacy-policy.html">Privacy Policy</a>
+					<button id="theme-toggle" onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-[#1e1f21] text-lg">
+						<span id="theme-icon">☀️</span>
+					</button>
+				</div>
+			</div>
+			<div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl p-5 shadow-lg">
+					<div class="flex justify-end mb-2">
+						<i class="text-3xl fa fa-address-card text-gray-700/30 dark:text-gray-200/30"></i>
+					</div>
+					<p class="text-sm font-semibold tracking-wide">Ican Bachors</p>
+					<p class="text-xs text-gray-500 dark:text-gray-400 mb-6 mt-0.5">Bismillah makan tidur ngoding ulangi.</p>
+					<div class="text-gray-500 dark:text-gray-400 space-x-4 mt-0.5">
+						<a target="_BLANK" href="https://github.com/bachors">
+							<i class="fab fa-github"></i>
+						</a>
+						<a target="_BLANK" href="https://www.youtube.com/@bachors">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<a target="_BLANK" href="https://codepen.io/bachors">
+							<i class="fab fa-codepen"></i>
+						</a>
+						<a href="mailto:bachor.can@gmail.com">
+							<i class="fa fa-envelope"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="mt-10">
+			<div class="max-w-5xl mx-auto">
+				<div class="text-center">
+					<p>&copy; 2026 Bachors</p>
+				</div>
+			</div>
+		</footer>        
+		<audio id="bgMusic" src="chihiro.mp3" loop style="display: none;"></audio>
+		<script>const API_URL="https://script.google.com/macros/s/AKfycbxWqv8sfrNtuqkJ281wRBkiftm_6e7zcAe-oTKzrWs3grLG858sBsYQ2_cpJhBxnHZuQQ/exec",LABELS={today:"Sepanjang hari Ini",yesterday:"Kemarin",seven_day:"7 hari terakhir",twentyeight_day:"28 hari terakhir",this_month:"Selama bulan ini",last_month:"Bulan lalu",all_time:"Semua waktu"};function updateThemeIcon(){document.getElementById("theme-icon").textContent=document.documentElement.classList.contains("dark")?"☀️":"🌙"}function toggleTheme(){const t=document.documentElement.classList.toggle("dark");localStorage.theme=t?"dark":"light",updateThemeIcon()}function stat(t,a){return`<div><p class="text-sm font-semibold tracking-wide">${t}</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${a}</p></div>`}function renderCards(t,a){const e=document.getElementById("cards");let n=Object.entries(t).map(([t,a],e)=>`<div class="bg-white dark:bg-[#1e1f21] rounded-2xl p-5 shadow-lg"><div class="grid grid-cols-2 gap-2 mb-2"><div><i class="text-3xl fa fa-coins text-gray-700/30 dark:text-gray-200/30"></i></div><div><p class="text-sm font-semibold tracking-wide">${LABELS[t]||t}</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">${a.date_range.replace("-","•")}</p></div></div><div class="grid grid-cols-2 gap-2">${stat("Peristiwa",a.ad_requests)}${stat("Pendapatan",a.earnings)}${stat("Tayangan",a.ad_impressions)}${stat("eCPM",a.ecpm)}</div></div>`).join("");const s=`<div class="bg-white dark:bg-[#1e1f21] rounded-2xl pl-5 pt-5 pr-5 pb-5 shadow-lg"><div class="grid grid-cols-2 gap-2 mb-2"><div><i class="fa fa-chart-line text-3xl text-gray-700/30 dark:text-gray-200/30 mb-2"></i><p class="text-sm font-semibold tracking-wide">Download</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">500 rb+</p></div><div><p class="text-sm font-semibold tracking-wide">Update</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 mb-2">${formatTime(a)}</p><p class="text-sm font-semibold tracking-wide">Rating</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">4,8★</p></div></div><div class="grid grid-cols-2 gap-2"><div><p class="text-sm font-semibold tracking-wide">Ulasan</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">10 rb+</p></div><div><p class="text-sm font-semibold tracking-wide">Sumber</p><p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Google Play • AdMob</p></div></div></div>`;e.insertAdjacentHTML("afterbegin",s+n)}async function fetchData(){try{const t=await fetch(API_URL,{method:"POST",body:new URLSearchParams({username:"bachors"})});if(!t.ok)throw new Error(`HTTP ${t.status}`);const a=await t.json();renderCards(a.data,a.last_update)}catch(t){}}function formatTime(t){let[a,e]=t.split(":").map(Number);const n=a>=12?"PM":"AM";a%=12,0===a&&(a=12);return`${String(a).padStart(2,"0")}:${String(e).padStart(2,"0")} ${n}`}updateThemeIcon(),fetchData();const audio=document.getElementById("bgMusic");audio.play().catch(()=>{const e=()=>{audio.play(),document.removeEventListener("click",e),document.removeEventListener("scroll",e)};document.addEventListener("click",e),document.addEventListener("scroll",e)});</script>
+	</body>
+</html>
