@@ -9,26 +9,26 @@
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
 		<script>tailwind.config={darkMode:"class"},"light"===localStorage.theme&&document.documentElement.classList.remove("dark");</script>
 	</head>
-	<body class="bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-white min-h-screen p-4 md:p-8 transition-colors duration-300">
-		<div class="max-w-5xl mx-auto">
-			<div class="flex items-center justify-between mb-6">
+	<body class="bg-gray-200 dark:bg-[#131313] text-gray-900 dark:text-white min-h-screen p-4 md:p-8 transition-colors duration-300">
+		<div class="max-w-2xl mx-auto">
+			<div class="flex items-center justify-between mb-8">
 				<a href="https://bachors.id/" class="flex items-center gap-3">
 					<img src="logo.png" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover border border-gray-200 dark:border-white/5 shadow-md">
 					<h1 class="text-2xl font-semibold">Bachors</h1>
 				</a>
 				<div class="flex items-center gap-3">
-					<a class="text-xs text-gray-500 dark:text-gray-400 mr-2" href="privacy-policy.html">Privacy Policy</a>
+					<a class="text-xs text-gray-700 dark:text-gray-300 mr-2" href="privacy-policy.html">Privacy Policy</a>
 					<button id="theme-toggle" onclick="toggleTheme()" class="dark:text-gray-100 text-[#131313] w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-[#1e1f21] text-lg border border-gray-200 dark:border-white/5 shadow-md">
 						<span id="theme-icon" class="fa fa-sun"></span>
 					</button>
 				</div>
 			</div>
-			<div class="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-[#1e1f21] rounded-2xl p-5 shadow-md">
+			<div class="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-[#1e1f21] rounded-2xl p-5">
 				<h1 class="text-sm font-semibold text-gray-800 dark:text-gray-100">Privacy Policy</h1>
 				<p class="mt-0.5">This privacy policy applies to the Bachors app for mobile devices, together with any related services operated by Bachors (collectively, the "Application"). Bachors is hereby referred to as the "Service Provider".</p>
 				<h1 class="text-sm font-semibold text-gray-800 dark:text-gray-100 mt-4">Information Collection and Use</h1>
 				<p class="mt-1">The Application collects information when you download and use it. This information may include information such as</p>
-				<ul class="list-disc list-inside mt-0.5">
+				<ul class="list-disc list-outside mt-0.5 ml-7">
 					<li>Your device's Internet Protocol address</li>
 					<li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
 					<li>The time spent on the Application</li>
@@ -46,13 +46,13 @@
 				<p class="mt-1">Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
 				<h1 class="text-sm font-semibold text-gray-800 dark:text-gray-100 mt-4">International Data Transfers</h1>
 				<p class="mt-1">The Service Provider or its third-party service providers may transfer personal data to countries outside your country of residence, including outside the European Economic Area (EEA). Where applicable law requires safeguards for international transfers, the Service Provider will use appropriate mechanisms.</p>
-				<ul class="list-disc list-inside mt-0.5">
+				<ul class="list-disc list-outside mt-0.5 ml-7">
 					<li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
 					<li>Adequacy decisions or other legally recognized transfer mechanisms</li>
 					<li>Your consent, where required and legally permitted</li>
 				</ul>
 				<p class="mt-2">Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
-				<ul class="list-disc list-inside mt-0.5">
+				<ul class="list-disc list-outside mt-0.5 ml-7">
 					<li>
 						<a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a>
 					</li>
@@ -64,7 +64,7 @@
 					</li>
 				</ul>
 				<p class="mt-2">The Service Provider may disclose User Provided and Automatically Collected Information:</p>
-				<ul class="list-disc list-inside mt-0.5">
+				<ul class="list-disc list-outside mt-0.5 ml-7">
 					<li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
 					<li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
 					<li>with their trusted services providers who work on their behalf, do not have an independent use of the information the Service Provider discloses to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
@@ -74,7 +74,7 @@
 				<p class="mt-2">To request deletion of your personal data, to withdraw consent, or to exercise any of your rights, contact the Service Provider at bachor.can@gmail.com.</p>
 				<h1 class="text-sm font-semibold text-gray-800 dark:text-gray-100 mt-4">Data Retention Policy</h1>
 				<p class="mt-1">The Service Provider retains personal data based on its necessity for the stated purposes:</p>
-				<ul class="list-disc list-inside mt-0.5">
+				<ul class="list-disc list-outside mt-0.5 ml-7">
 					<li>User Provided Data: Retained for the duration of your use of the Application plus 12 months thereafter, unless longer retention is required by law</li>
 					<li>Automatically Collected Data: Retained for up to 24 months from collection, unless longer retention is required for legal compliance</li>
 					<li>Aggregated and Anonymized Data: Retained indefinitely as it no longer identifies you</li>
@@ -103,9 +103,9 @@
 			</div>
 		</div>
 		<footer class="mt-10">
-			<div class="max-w-5xl mx-auto">
+			<div class="max-w-2xl mx-auto">
 				<div class="text-center">
-					<p class="mt-1">&copy; 2026 Bachors</p>
+					<p class="text-sm text-gray-700 dark:text-gray-300">&copy; 2026 Bachors</p>
 				</div>
 			</div>
 		</footer>
