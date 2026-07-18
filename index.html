@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="dark">
+<html lang="id">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="Hi! I'm Ican Bachors, a mobile app developer from Garut Indonesia.">
@@ -20,7 +20,7 @@
 		<script>
 			tailwind.config = {
 				darkMode: "class"
-			}, "light" === localStorage.theme && document.documentElement.classList.remove("dark");
+			}, "dark" === localStorage.theme && document.documentElement.classList.add("dark");
 		</script>
 	</head>
 	<body class="bg-gray-200 dark:bg-[#131313] text-gray-900 dark:text-white min-h-screen p-4 md:p-8 transition-colors duration-300">
@@ -33,39 +33,40 @@
 				<div class="flex items-center gap-3">
 					<a class="text-xs text-gray-700 dark:text-gray-300 mr-2" href="privacy-policy.html">Privacy Policy</a>
 					<button id="theme-toggle" onclick="toggleTheme()" class="dark:text-gray-100 text-[#131313] w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-[#1e1f21] text-lg border border-gray-200 dark:border-white/5 shadow-md">
-						<span id="theme-icon" class="fa fa-sun"></span>
+						<span id="theme-icon" class="fa fa-moon"></span>
 					</button>
 				</div>
 			</div>
-				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto">
-					<img alt="Placeholder" class="block h-auto w-full" src="pp.png">
-					<div class="flex items-center gap-3 mb-3 bg-gray-100 dark:bg-white/5 pt-3 pr-5 pb-3 pl-5">
-						<div class="w-10 h-10 rounded-xl bg-green-50 dark:bg-green-400/10 flex items-center justify-center">
-							<i class="fa-regular fa-address-card text-green-500 dark:text-green-400"></i>
-						</div>
-						<div>
-							<p class="font-semibold text-gray-900 dark:text-white text-sm">Ican Bachors</p>
-							<p class="text-xs text-gray-500 dark:text-gray-400">Mobile App Developer · Garut, ID</p>
-						</div>
+			<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto">
+				<img alt="Placeholder" class="block h-auto w-full" src="pp.png">
+				<div class="flex items-center gap-3 mb-3 bg-gray-100 dark:bg-white/5 pt-3 pr-5 pb-3 pl-5">
+					<div class="w-10 h-10 rounded-xl bg-green-50 dark:bg-green-400/10 flex items-center justify-center">
+						<i class="fa-regular fa-address-card text-green-500 dark:text-green-400"></i>
 					</div>
-					<div class="pt-0 pr-5 pb-5 pl-5">
-						<p class="text-xs mb-4 leading-relaxed">Makan <span class="text-xs text-gray-500 dark:text-gray-400">➝</span> tidur <span class="text-xs text-gray-500 dark:text-gray-400">➝</span> ngoding <span class="text-xs text-gray-500 dark:text-gray-400">➝</span> piknik <span class="text-xs text-gray-500 dark:text-gray-400">➝</span> ulangi <span class="text-xs text-gray-500 dark:text-gray-400">⟳</span></p>
-						<div class="flex gap-3">
-							<a target="_BLANK" href="https://github.com/bachors" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
-								<i class="fab fa-github"></i>
-							</a>
-							<a target="_BLANK" href="https://www.youtube.com/@bachors" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
-								<i class="fab fa-youtube"></i>
-							</a>
-							<a target="_BLANK" href="https://codepen.io/bachors" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
-								<i class="fab fa-codepen"></i>
-							</a>
-							<a href="mailto:bachor.can@gmail.com" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
-								<i class="fa fa-envelope"></i>
-							</a>
-						</div>
+					<div>
+						<p class="font-semibold text-gray-900 dark:text-white text-sm">Ican Bachors</p>
+						<p class="text-xs text-gray-500 dark:text-gray-400">Mobile App Developer · Garut, ID</p>
 					</div>
 				</div>
+				<div class="pt-0 pr-5 pb-5 pl-5">
+					<p class="text-xs mb-4 leading-relaxed">Makan <span class="text-gray-500 dark:text-gray-400">➝</span> tidur <span class="text-gray-500 dark:text-gray-400">➝</span> ngoding <span class="text-gray-500 dark:text-gray-400">➝</span> piknik <span class="text-gray-500 dark:text-gray-400">➝</span> ulangi <span class="text-sm text-gray-500 dark:text-gray-400">⟳</span>
+					</p>
+					<div class="flex gap-3">
+						<a target="_BLANK" href="https://github.com/bachors" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
+							<i class="fab fa-github"></i>
+						</a>
+						<a target="_BLANK" href="https://www.youtube.com/@bachors" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<a target="_BLANK" href="https://codepen.io/bachors" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
+							<i class="fab fa-codepen"></i>
+						</a>
+						<a href="mailto:bachor.can@gmail.com" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-sm">
+							<i class="fa fa-envelope"></i>
+						</a>
+					</div>
+				</div>
+			</div>
 			<div id="cards"></div>
 		</div>
 		<footer class="mt-10">
