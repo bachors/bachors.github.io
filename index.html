@@ -48,10 +48,10 @@
 						<p class="text-xs text-gray-500 dark:text-gray-400">Software Developer · Garut, ID</p>
 					</div>
 				</div>
-				<div class="pt-0 pr-5 pb-5 pl-5">
+				<div class="pr-5 pb-5 pl-5">
 					<div class="font-mono text-xs text-gray-700 dark:text-gray-300 mb-4">
 						<p><span class="text-violet-600 dark:text-violet-400">while</span> (<span class="text-pink-600 dark:text-pink-400">alive</span>) {</p>
-						<p>&ensp;&ensp;&ensp;&ensp;eat<span class="text-yellow-600 dark:text-yellow-400">()</span>; sleep<span class="text-green-600 dark:text-green-400">()</span>; code<span class="text-blue-600 dark:text-blue-400">()</span>; repeat<span class="text-red-600 dark:text-red-400">()</span>;</p>
+						<p class="py-0.5">&ensp;&ensp;&ensp;&ensp;eat<span class="text-yellow-600 dark:text-yellow-400">()</span>; sleep<span class="text-green-600 dark:text-green-400">()</span>; code<span class="text-blue-600 dark:text-blue-400">()</span>; repeat<span class="text-red-600 dark:text-red-400">()</span>;</p>
 						<p>}</p>
 					</div>
 					<div class="flex gap-3">
@@ -79,7 +79,6 @@
 				</div>
 			</div>
 		</footer>
-		<audio id="bgMusic" src="chihiro.mp3" loop style="display: none;"></audio>
 		<script>
 			const LABELS = {
 				today: "Hari ini",
@@ -131,13 +130,13 @@
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-3 mb-2 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">Update laporan - 
+			<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">Update otomatis - 
 				<span class="font-semibold text-sm">${formatTime(a)}</span>
 			</div>
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto" title="Statistik">
+			<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto">
 				<img alt="Placeholder" class="block h-auto w-full" src="rp.png">
 					<div class="flex items-center gap-3 mb-3 bg-gray-100 dark:bg-white/5 pt-3 pr-5 pb-3 pl-5">
 						<div class="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-400/10 flex items-center justify-center">
@@ -154,7 +153,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="pt-0 pr-5 pb-5 pl-5">
+						<div class="pr-5 pb-5 pl-5">
 							<div id="admob-stats" class="grid grid-cols-2 gap-3 mb-3"></div>
 							<hr class="h-0.5 bg-gray-100 dark:bg-white/5 border-0 mb-3">
 								<div class="flex flex-wrap gap-2">${n}</div>
@@ -164,13 +163,13 @@
 						<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-3 mb-2 text-center">
 							<i class="fa fa-ellipsis-vertical"></i>
 						</div>
-						<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">Progres aplikasi - 
+						<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">Statistik progres - 
 							<span class="font-semibold text-sm">${s}</span>
 						</div>
 						<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
 							<i class="fa fa-ellipsis-vertical"></i>
 						</div>
-						<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto" title="Statistik">
+						<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto">
 							<img alt="Placeholder" class="block h-auto w-full" src="dv.png">
 								<div class="flex items-center gap-3 mb-3 bg-gray-100 dark:bg-white/5 pt-3 pr-5 pb-3 pl-5">
 									<div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-400/10 flex items-center justify-center">
@@ -181,7 +180,7 @@
 										<p class="text-xs text-gray-500 dark:text-gray-400">Dirilis · 10/08/2021</p>
 									</div>
 								</div>
-								<div class="pt-0 pr-5 pb-5 pl-5">
+								<div class="pr-5 pb-5 pl-5">
 									<div class="grid grid-cols-2 gap-3">${stat("fa fa-download","Download","500 rb+")}${stat("fa fa-tags","Kategori","Hiburan")}${stat("fa fa-star-half-stroke","Rating","4,8 ★")}${stat("fa fa-comment-dots","Ulasan","10 rb+")}</div>
 								</div>
 							</div>`;
@@ -208,15 +207,6 @@
 			}
 
 			updateThemeIcon(), fetchData();
-
-			const audio = document.getElementById("bgMusic");
-			
-			audio.play().catch(() => {
-				let t = () => {
-					audio.play(), document.removeEventListener("click", t), document.removeEventListener("scroll", t)
-				};
-				document.addEventListener("click", t), document.addEventListener("scroll", t)
-			});
 		</script>
 	</body>
 </html>
