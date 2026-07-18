@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
 	<head>
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,11 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
-		<script>tailwind.config={darkMode:"class"},"dark"===localStorage.theme&&document.documentElement.classList.add("dark");</script>
+		<script>
+			tailwind.config = {
+				darkMode: "class"
+			}, "light" === localStorage.theme && document.documentElement.classList.remove("dark");
+		</script>
 	</head>
 	<body class="bg-gray-200 dark:bg-[#131313] text-gray-900 dark:text-white min-h-screen p-4 md:p-8 transition-colors duration-300">
 		<div class="max-w-2xl mx-auto">
@@ -109,6 +113,17 @@
 				</div>
 			</div>
 		</footer>
-		<script>function updateThemeIcon(){document.getElementById("theme-icon").className=document.documentElement.classList.contains("dark")?"fa fa-sun":"fa fa-moon"}function toggleTheme(){const e=document.documentElement.classList.toggle("dark");localStorage.theme=e?"dark":"light",updateThemeIcon()}updateThemeIcon();</script>
+		<script>
+			function updateThemeIcon() {
+				document.getElementById("theme-icon").className = document.documentElement.classList.contains("dark") ? "fa fa-sun" : "fa fa-moon"
+			}
+
+			function toggleTheme() {
+				let t = document.documentElement.classList.toggle("dark");
+				localStorage.theme = t ? "dark" : "light", updateThemeIcon()
+			}
+			
+			updateThemeIcon();
+		</script>
 	</body>
 </html>
