@@ -13,21 +13,18 @@
 			}, "dark" === localStorage.theme && document.documentElement.classList.add("dark");
 		</script>
 	</head>
-	<body class="bg-gray-200 dark:bg-[#131313] text-gray-900 dark:text-white min-h-screen p-4 md:p-8 transition-colors duration-300">
+	<body class="bg-gray-200 dark:bg-[#131313] text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
 		<div class="max-w-2xl mx-auto">
-			<div class="flex items-center justify-between mb-8">
+			<div class="flex items-center justify-between p-5">
 				<a href="https://bachors.id/" class="flex items-center gap-3">
 					<img src="logo.png" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover">
 					<h1 class="text-2xl font-semibold">Bachors</h1>
 				</a>
-				<div class="flex items-center gap-3">
-					<a class="text-xs text-gray-700 dark:text-gray-300 mr-2" href="privacy-policy.html">Privacy Policy</a>
-					<button id="theme-toggle" onclick="toggleTheme()" class="dark:text-gray-100 text-[#131313] w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-[#1e1f21] text-lg border border-gray-200 dark:border-white/5 shadow-md">
-						<span id="theme-icon" class="fa fa-moon"></span>
-					</button>
-				</div>
+				<button id="theme-toggle" onclick="toggleTheme()" class="dark:text-gray-100 text-[#131313] w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-[#1e1f21] text-lg border border-gray-200 dark:border-white/5 shadow-md">
+					<span id="theme-icon" class="fa fa-moon"></span>
+				</button>
 			</div>
-			<div class="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-[#1e1f21] rounded-2xl p-5">
+			<div class="text-xs text-gray-500 dark:text-gray-400 bg-white dark:bg-[#1e1f21] rounded-2xl p-5 mx-5">
 				<h1 class="text-sm font-semibold text-gray-800 dark:text-gray-100">Privacy Policy</h1>
 				<p class="mt-0.5">This privacy policy applies to the Bachors app for mobile devices, together with any related services operated by Bachors (collectively, the "Application"). Bachors is hereby referred to as the "Service Provider".</p>
 				<h1 class="text-sm font-semibold text-gray-800 dark:text-gray-100 mt-4">Information Collection and Use</h1>
@@ -105,14 +102,15 @@
 					<a href="https://bachors.id/">Bachors</a>
 				</p>
 			</div>
-		</div>
-		<footer class="mt-10">
-			<div class="max-w-2xl mx-auto">
-				<div class="text-center">
-					<p class="text-sm text-gray-700 dark:text-gray-300">&copy; 2026 Bachors</p>
+			<div class="max-w-2xl mx-auto text-sm text-gray-800 dark:text-gray-100 p-5 mt-2">
+				<div class="flex justify-center items-center gap-3 mb-3">
+					<a class="underline" href="privacy-policy.html">Privacy Policy</a>
+				</div>
+				<div class="text-center text-gray-700 dark:text-gray-300">
+					Ican Bachors · &copy; 2026 · bachors.id
 				</div>
 			</div>
-		</footer>
+		</div>
 		<script>
 			function updateThemeIcon() {
 				document.getElementById("theme-icon").className = document.documentElement.classList.contains("dark") ? "fa fa-sun" : "fa fa-moon"
