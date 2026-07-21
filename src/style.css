@@ -1,0 +1,11 @@
+.bg-terang {
+	background-image: url("../img/terang.png");
+	background-repeat: repeat;
+	background-size: 60px 60px;
+}
+
+.bg-gelap {
+	background-image: url("../img/gelap.png");
+	background-repeat: repeat;
+	background-size: 60px 60px;
+}
