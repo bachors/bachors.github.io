@@ -67,6 +67,16 @@ function renderCards(t, a) {
 					<div class="flex flex-wrap gap-2">${n}</div>
 				</div>
 			</div>
+			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-3 mb-2 text-center">
+				<i class="fa fa-ellipsis-vertical"></i>
+			</div>
+			<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">
+				Code with me • <span class="font-semibold text-sm">10PM - 3AM</span>
+			</div>
+			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
+				<i class="fa fa-ellipsis-vertical"></i>
+			</div>
+			<iframe class="rounded-2xl shadow-md max-w-xs mx-auto" data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/59kZpsO6vaSb1p5g1wfp2y?utm_source=generator&si=34b1b61746ed40e3" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
