@@ -71,7 +71,7 @@ function renderCards(t, a) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">
-				Code with me • <span class="font-semibold text-sm">10PM - 3AM</span>
+				Code with me • <span class="font-semibold text-sm">12:30 AM</span>
 			</div>
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
