@@ -71,7 +71,17 @@ function renderCards(t, a) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">
-				Code with me • <span class="font-semibold text-sm">12:30 AM</span>
+				video terbaru
+			</div>
+			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
+				<i class="fa fa-ellipsis-vertical"></i>
+			</div>
+			<div id="reels" class="rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto" data-ycp_title="Reels - bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-3 mb-2 text-center">
+				<i class="fa fa-ellipsis-vertical"></i>
+			</div>
+			<div class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-wider text-center leading-none">
+				Code with me • <span class="font-semibold text-sm">10PM - 3AM</span>
 			</div>
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -112,6 +122,8 @@ function renderCards(t, a) {
 				</div>
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
+	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
+	ycp("#reels", { apikey: apikey, playlist: 7, autoplay: true, related: true });
 }
 
 async function fetchData() {

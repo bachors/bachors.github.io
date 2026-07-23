@@ -1,0 +1,281 @@
+/***************************************
+* #### ycp.js v8.0 ####
+* Coded by Ican Bachors 2014.
+* https://github.com/bachors/ycp.js
+* Updates will be posted to this site.
+***************************************/
+
+:root {
+    --bg-base:    #0f0f0f;
+    --bg-panel:   #161616;
+    --bg-header:  #1a1a1a;
+    --bg-hover:   #1f1f1f;
+    --bg-active:  #242424;
+    --accent:     #ff0000;
+    --text-main:  #e8e8e8;
+    --text-muted: #6b6b6b;
+    --text-sub:   #aaaaaa;
+    --border:     #2a2a2a;
+    --radius:     12px;
+    --thumb-w:    90px;
+}
+
+.ycp {
+    font-family: "Inter", "Roboto", "Helvetica", sans-serif;
+    font-size: 13px;
+    color: var(--text-main);
+    background: var(--bg-base);
+    display: flex;
+    width: 100%;
+    height: 480px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,.6);
+}
+
+.ycp,
+.ycp .belah {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ── Two columns ── */
+.ycp .belah {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ycp .belah:first-of-type { width: 65%; }
+.ycp .belah:last-of-type  {
+    width: 35%;
+    border-left: 1px solid var(--border);
+    background: var(--bg-panel);
+}
+
+/* ── Video player area ── */
+.ycp .belah.ycp_vid_play {
+    cursor: pointer;
+    background: #000;
+    position: relative;
+    flex: 1;
+}
+
+.ycp .belah.ycp_vid_play a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(255,0,0,.85);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background .2s, transform .2s;
+    text-decoration: none;
+}
+
+.ycp .belah.ycp_vid_play a:hover {
+    background: var(--accent);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.ycp .belah.ycp_vid_play a::before {
+    content: "▶";
+    color: #fff;
+    font-size: 24px;
+    margin-left: 4px;
+}
+
+.ycp .belah .bingkay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ── Playlist header ── */
+.ycp .belah .luhur {
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 14px 10px;
+    flex-shrink: 0;
+}
+
+.ycp .belah .luhur div.title {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .3px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ycp .belah .luhur .tombol {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-sub);
+    font-size: 11px;
+    cursor: pointer;
+    transition: border-color .2s, color .2s;
+    margin-right: 6px;
+}
+
+.ycp .belah .luhur .tombol:hover {
+    border-color: var(--text-sub);
+    color: var(--text-main);
+}
+
+.ycp .belah .luhur .about {
+    float: right;
+    line-height: 1;
+}
+
+.ycp .belah .luhur .about a {
+    color: var(--text-muted);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.ycp .belah .luhur .about a:hover { color: var(--accent); }
+
+/* ── Playlist scroll area ── */
+.ycp .belah .handap {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--bg-panel);
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.ycp .belah .handap::-webkit-scrollbar       { width: 4px; }
+.ycp .belah .handap::-webkit-scrollbar-track  { background: transparent; }
+.ycp .belah .handap::-webkit-scrollbar-thumb  { background: var(--border); border-radius: 4px; }
+
+/* ── Playlist item ── */
+.ycp .belah .play {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background .15s;
+}
+
+.ycp .belah .play:last-child { border-bottom: none; }
+
+.ycp .belah .play:hover    { background: var(--bg-hover); }
+.ycp .belah .vid-active    { background: var(--bg-active) !important; }
+
+.ycp .belah .vid-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 0 2px 2px 0;
+}
+
+.ycp .belah .play { position: relative; }
+
+/* ── Thumbnail ── */
+.ycp .belah .thumb {
+    position: relative;
+    flex-shrink: 0;
+    width: var(--thumb-w);
+    height: 51px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+}
+
+.ycp .belah .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
+.ycp .belah .thumb span {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    padding: 1px 4px;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: .3px;
+}
+
+/* ── Item text ── */
+.ycp .belah .play > div:not(.thumb) {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ycp .belah .handap div.title {
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+.ycp .belah .handap .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ycp .belah span.mute {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+/* ── Links ── */
+.ycp a { text-decoration: none; outline: 0; }
+.ycp a img { border: 0; }
+
+    .ycp {
+        flex-direction: column;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .ycp .belah:first-of-type,
+    .ycp .belah:last-of-type {
+        width: 100%;
+    }
+
+    .ycp .belah.ycp_vid_play {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .ycp .belah:last-of-type {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        height: 360px;
+    }
