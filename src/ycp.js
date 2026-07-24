@@ -19,7 +19,7 @@ function ycp(selector, j) {
         const b = el.id ? `#${el.id}` : `.${el.className.split(' ')[0]}`;
         const title   = el.dataset.ycp_title   || 'ycp.js';
         const channel = el.dataset.ycp_channel;
-        el.innerHTML  = `<div class="ycp"><div class="belah ycp_vid_play" title="Play video"></div><div class="belah" id="ycp_youtube_channels${i}"></div></div>`;
+        el.innerHTML  = `<div class="ycp"><div class="belah ycp_vid_play" title="Play video"></div><div class="belah border-t border-gray-200 dark:border-white/10" id="ycp_youtube_channels${i}"></div></div>`;
 
         if (channel.substring(0, 2) === 'PL' || channel.substring(0, 2) === 'UU') {
             ycp_list(title, channel, '', i, b);
@@ -44,16 +44,16 @@ function ycp(selector, j) {
     function ycp_list(h, f, g, k, l) {
         get(`https://www.googleapis.com/youtube/v3/playlistItems?part=status,snippet&maxResults=${j.playlist}&playlistId=${f}&key=${j.apikey}&pageToken=${g}`)
             .then(c => {
-                let d = '<div class="luhur">';
-                d += `<div class="title">${h}</div>`;
-                d += '<span class="tombol vid-prev" title="Previous videos">Prev</span> ';
-                d += '<span class="tombol vid-next" title="Next videos">Next</span><span class="about" title="ycp.js"><a href="https://github.com/bachors/ycp.js" target="_BLANK">❤︎</a></span></div><div class="handap">';
+                let d = '<div class="luhur px-5 py-3 border-b border-gray-200 dark:border-white/10">';
+                d += `<div class="title font-semibold text-gray-900 dark:text-white text-sm mb-2">${h}</div>`;
+                d += '<span class="tombol text-xs px-3 py-1 rounded-lg transition-colors bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 vid-prev mr-2" title="Sebelumnya"><i class="fa fa-backward-step"></i></span> ';
+                d += '<span class="tombol text-xs px-3 py-1 rounded-lg transition-colors bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 vid-next" title="Berikutnya"><i class="fa fa-forward-step"></i></span><span class="about text-xs text-gray-500 dark:text-gray-400 mt-1" title="ycp.js"><a href="https://github.com/bachors/ycp.js" target="_BLANK">❤︎</a></span></div><div class="handap">';
                 c.items.forEach((item, i) => {
                     if (item.status.privacyStatus === 'public') {
                         const b = item.snippet.resourceId.videoId;
                         ycp_part(b, i, k, l);
-                        d += `<div class="play" data-vvv="${b}" data-img="${item.snippet.thumbnails.high.url}" title="${item.snippet.title}"><div class="thumb"><img src="${item.snippet.thumbnails.default.url}" alt=" "><span class="tm${i}"></span></div>`;
-                        d += `<div class="meta"><div class="title">${item.snippet.title}</div><span class="mute by${i}"></span><span class="mute"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
+                        d += `<div class="play hover:bg-gray-100 dark:hover:bg-white/5 px-5 py-3 border-b border-gray-200 dark:border-white/10 gap-2" data-vvv="${b}" data-img="${item.snippet.thumbnails.high.url}" title="${item.snippet.title}"><div class="thumb rounded-lg overflow-hidden"><img src="${item.snippet.thumbnails.default.url}" alt=" "><span class="rounded-md tm${i}"></span></div>`;
+                        d += `<div class="meta"><div class="title text-sm font-semibold text-gray-800 dark:text-gray-100">${item.snippet.title}</div><span class="text-xs text-gray-500 dark:text-gray-400 by${i}"></span><span class="text-xs text-gray-500 dark:text-gray-400"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
                     }
                 });
                 d += '</div>';
@@ -122,8 +122,8 @@ function ycp(selector, j) {
                 detik = detik.length > 1 ? detik : `0${detik}`;
                 const sel = `${e} .ycp div#ycp_youtube_channels${d}`;
                 document.querySelector(`${sel} span.tm${i}`).innerHTML    = `${menit}:${detik}`;
-                document.querySelector(`${sel} span.by${i}`).innerHTML    = `by ${a.items[0].snippet.channelTitle}`;
-                document.querySelector(`${sel} span.views${i}`).innerHTML = `${addCommas(a.items[0].statistics.viewCount)} views`;
+                document.querySelector(`${sel} span.by${i}`).innerHTML    = `${a.items[0].snippet.channelTitle}`;
+                document.querySelector(`${sel} span.views${i}`).innerHTML = `▷ ${addCommas(a.items[0].statistics.viewCount)}`;
                 document.querySelector(`${sel} span.date${i}`).innerHTML  = _timeSince(new Date(a.items[0].snippet.publishedAt).getTime());
             });
     }
@@ -131,12 +131,12 @@ function ycp(selector, j) {
     function _timeSince(a) {
         const s = Math.floor((Date.now() - a) / 1000);
         let i;
-        if ((i = Math.floor(s / 31536000)) > 1) return `${i} years ago`;
-        if ((i = Math.floor(s / 2592000))  > 1) return `${i} months ago`;
-        if ((i = Math.floor(s / 86400))    > 1) return `${i} days ago`;
-        if ((i = Math.floor(s / 3600))     > 1) return `${i} hours ago`;
-        if ((i = Math.floor(s / 60))       > 1) return `${i} minutes ago`;
-        return `${Math.floor(s)} seconds ago`;
+        if ((i = Math.floor(s / 31536000)) > 1) return `${i} thn lalu`;
+        if ((i = Math.floor(s / 2592000))  > 1) return `${i} bln lalu`;
+        if ((i = Math.floor(s / 86400))    > 1) return `${i} h lalu`;
+        if ((i = Math.floor(s / 3600))     > 1) return `${i} jam lalu`;
+        if ((i = Math.floor(s / 60))       > 1) return `${i} mnt lalu`;
+        return `${Math.floor(s)} dtk lalu`;
     }
 
     function addCommas(a) {

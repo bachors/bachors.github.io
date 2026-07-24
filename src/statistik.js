@@ -76,7 +76,7 @@ function renderCards(t, a) {
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-2 mb-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div id="reels" class="bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div id="reels" class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md max-w-xs mx-auto" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
 			<div class="text-sm text-gray-400/70 dark:text-gray-600 mt-3 mb-2 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -125,7 +125,7 @@ function renderCards(t, a) {
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
 	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
-	ycp("#reels", { apikey: apikey, playlist: 7, autoplay: false, related: true });
+	ycp("#reels", { apikey: apikey, playlist: 6, autoplay: false, related: true });
 }
 
 async function fetchData() {
