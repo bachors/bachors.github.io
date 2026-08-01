@@ -63,21 +63,21 @@ let admobData = {};
 
 function stat(t, a, e) {
 	return `
-			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-xl rounded-xl">
+			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-xl rounded-2xl">
 				<div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-200 dark:text-black">
 					${ICONS[a.toLowerCase()].a}
 				</div>
 				<h3 class="font-medium mt-2">${e}</h3>
-				<p class="text-xs text-gray-400 mb-1">${a}</p>
+				<p class="text-xs text-gray-500 dark:text-gray-400 mb-1">${a}</p>
 				${ICONS[a.toLowerCase()].b}
 			</div>`
 }
 
-function stik(t, a, e) {
+function stik(a, e) {
 	return `
-			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-center p-4 shadow-xl rounded-xl">
+			<div class="bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-center p-4">
 				${ICONS[a.toLowerCase()]}
-				<p class="text-xs text-gray-400 mt-2">${a}</p>
+				<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">${a}</p>
 				<h3>${e}</h3>
 			</div>`
 }
@@ -111,7 +111,7 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="max-w-xs mx-auto grid grid-cols-1 gap-1">
-				<div class="bg-white dark:bg-[#1e1f21] rounded-xl overflow-hidden shadow-xl">
+				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-xl">
 					<img alt="Placeholder" class="block h-auto w-full" src="img/rp.png">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" height="40" width="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -139,15 +139,15 @@ function renderCards(t, k) {
 						</svg>
 						<div class="flex flex-col items-start w-full">
 							<h3 class="text-lg font-medium">Google AdMob</h3>
-							<p class="text-gray-400">Performa Aplikasi</p>
+							<p class="text-gray-500 dark:text-gray-400">Performa Aplikasi</p>
 						</div>
 					</div>
 				</div>
-				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-xl rounded-xl">
-					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-xl">
+				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-xl rounded-2xl">
+					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
 						<div class="flex flex-col w-full gap-0.5">
 							<h3 id="admob-label"></h3>
-							<p class="text-xs text-gray-400" id="admob-date"></p>
+							<p class="text-xs text-gray-500 dark:text-gray-400" id="admob-date"></p>
 						</div>
 						<svg class="flex-none text-gray-500" width="26" height="26" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path>
@@ -155,7 +155,7 @@ function renderCards(t, k) {
 					</div>
 				</div>
 				<div id="admob-stats" class="grid grid-cols-2 gap-1"></div>
-				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-xl rounded-xl">${n}</div>
+				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-xl rounded-2xl">${n}</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -166,7 +166,7 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div id="reels" class="max-w-xs mx-auto grid grid-cols-1 gap-1" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div id="reels" class="max-w-xs mx-auto grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -186,8 +186,8 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="max-w-xs mx-auto grid grid-cols-1 gap-1">
-				<div class="bg-white dark:bg-[#1e1f21] rounded-xl overflow-hidden shadow-xl">
+			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px max-w-xs mx-auto rounded-2xl overflow-hidden shadow-xl">
+				<div class="bg-white dark:bg-[#1e1f21] overflow-hidden">
 					<img alt="Placeholder" class="block h-auto w-full" src="img/dv.png">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -195,7 +195,7 @@ function renderCards(t, k) {
 						</svg>						
 						<div class="flex flex-col items-start w-full">
 							<h3 class="text-lg font-medium">Google Play</h3>
-							<p class="text-gray-400">Statistik Aplikasi</p>
+							<p class="text-gray-500 dark:text-gray-400">Statistik Aplikasi</p>
 						</div>
 						<div class="flex items-center gap-1">
 							<svg width="24" height="24" class="-mt-1 fill-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -206,7 +206,7 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="grid grid-cols-3 gap-1">${stik("rotate-3", "Dirilis","10/08/21")}${stik("-rotate-3", "Kategori","Hiburan")}${stik("rotate-3", "Rating",k.apl_konten)}${stik("-rotate-3", "Diupdate",k.apl_update.replace("202", "2"))}${stik("rotate-3", "Versi",k.apl_versi)}${stik("-rotate-3", "Android",k.apl_os)}${stik("rotate-3", "Ukuran",k.apl_size)}${stik("-rotate-3", "Download",k.apl_download)}${stik("rotate-3", "Ulasan",k.apl_ulasan)}${stik("-rotate-3", "Interaksi",k.apl_interaksi)}${stik("rotate-3", "Error",k.apl_error)}${stik("-rotate-3", "ANR",k.apl_anr)}</div>
+				<div class="grid grid-cols-3 gap-px">${stik("Dirilis","10/08/21")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update.replace("202", "2"))}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
 	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";

@@ -11,6 +11,8 @@ function ycp(selector, j) {
     j.autoplay = j.autoplay ?? n.autoplay;
     j.related  = j.related  ?? n.related;
 
+    let hitung = 0;
+
     const els = selector.startsWith('#')
         ? [document.querySelector(selector)]
         : [...document.querySelectorAll(selector)];
@@ -19,10 +21,10 @@ function ycp(selector, j) {
         const b = el.id ? `#${el.id}` : `.${el.className.split(' ')[0]}`;
         const title   = el.dataset.ycp_title   || 'ycp.js';
         const channel = el.dataset.ycp_channel;
-        el.innerHTML  = `<div class="ycp"><div class="belah ycp_vid_play bg-white dark:bg-[#1e1f21] rounded-t-xl overflow-hidden shadow-[0_-8px_30px_rgb(0,0,0,0.12)]" title="Play video"></div><div class="belah grid grid-cols-1 gap-1" id="ycp_youtube_channels${i}"></div></div>`;
+        el.innerHTML  = `<div class="ycp"><div class="belah ycp_vid_play rounded-t-2xl overflow-hidden" title="Play video"></div><div class="belah grid grid-cols-1" id="ycp_youtube_channels${i}"></div></div>`;
 
         if (channel.substring(0, 2) === 'PL' || channel.substring(0, 2) === 'UU') {
-            ycp_list(title, channel, '', i, b);
+            ycp_list(title, channel, '', i, b, 1);
         } else {
             const d = channel.substring(0, 2) === 'UC' ? 'id' : 'forUsername';
             ycp_play(title, channel, d, i, b);
@@ -37,16 +39,17 @@ function ycp(selector, j) {
         get(`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&${d}=${c}&key=${j.apikey}`)
             .then(a => {
                 const b = a.items[0].contentDetails.relatedPlaylists.uploads;
-                ycp_list(g, b, '', e, f);
+                ycp_list(g, b, '', e, f, 1);
             });
     }
 
-    function ycp_list(h, f, g, k, l) {
+    function ycp_list(h, f, g, k, l, xyz) {
         get(`https://www.googleapis.com/youtube/v3/playlistItems?part=status,snippet&maxResults=${j.playlist}&playlistId=${f}&key=${j.apikey}&pageToken=${g}`)
             .then(c => {
-                let d = '<div class="luhur bg-white dark:bg-[#1e1f21] rounded-b-xl shadow-xl">';
+                hitung = hitung + xyz;
+                let d = '<div class="luhur bg-white dark:bg-[#1e1f21]">';
                 d += `
-					<div class="flex items-center gap-4 p-4 border-b border-gray-200 dark:border-blue-100/10">
+					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                             <path d="m435.57 444.12h-359.15c-37.781 0-68.409-30.628-68.409-68.409v-239.43c0-37.781 30.628-68.409 68.409-68.409h359.15c37.781 0 68.409 30.628 68.409 68.409v239.43c0 37.781-30.628 68.409-68.409 68.409z" fill="#E35336"/>
                             <path d="m469.78 409.92h-376.25c-28.336 0-51.307-22.971-51.307-51.307v-256.54c0-10.036 2.178-19.558 6.061-28.144-23.738 10.733-40.265 34.604-40.265 62.349v239.43c0 37.781 30.628 68.409 68.409 68.409h359.15c27.745 0 51.616-16.527 62.349-40.265-8.587 3.882-18.108 6.061-28.144 6.061z" fill="#D93C1C"/>
@@ -57,17 +60,17 @@ function ycp(selector, j) {
                         </svg>
 						<div class="flex flex-col items-start w-full">
 							<h3 class="text-lg font-medium">YouTube</h3>
-							<p class="text-gray-400">${h}</p>
+							<p class="text-gray-500 dark:text-gray-400">${h}</p>
 						</div>
 					</div>`;
-                d += '<div class="p-4"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 vid-prev mr-2" title="Sebelumnya"><i class="fa fa-backward-step"></i></span> ';
-                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 vid-next" title="Berikutnya"><i class="fa fa-forward-step"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21] rounded-xl shadow-xl">';
+                d += `<div class="p-4 bg-gray-100 dark:bg-white/5 dark:text-white border dark:border-gray-100/5"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-800 dark:bg-gray-200 text-gray-200 dark:text-gray-800 hover:bg-gray-900 dark:hover:bg-gray-300 vid-prev" title="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></span><span class="hitung tombol mx-4 text-xs font-medium text-gray-800 dark:text-gray-200">${hitung}</span>`;
+                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-800 dark:bg-gray-200 text-gray-200 dark:text-gray-800 hover:bg-gray-900 dark:hover:bg-gray-300 vid-next" title="Berikutnya"><i class="fa-solid fa-chevron-right"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21]">';
                 c.items.forEach((item, i) => {
                     if (item.status.privacyStatus === 'public') {
                         const b = item.snippet.resourceId.videoId;
                         ycp_part(b, i, k, l);
                         d += `<div class="play hover:bg-gray-100 dark:hover:bg-white/5 p-4 border-b border-gray-200 dark:border-blue-100/10 gap-3 overflow-hidden" data-vvv="${b}" data-img="${item.snippet.thumbnails.high.url}" title="${item.snippet.title}"><div class="thumb rounded-lg overflow-hidden hover:-rotate-3"><img src="${item.snippet.thumbnails.default.url}" alt=" "><span class="rounded-md tm${i}"></span></div>`;
-                        d += `<div class="overflow-hidden"><div class="title text-sm font-medium block">${item.snippet.title}</div><span class="text-xs text-gray-400 block by${i}"></span><span class="text-xs text-gray-400 block"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
+                        d += `<div class="overflow-hidden"><div class="title text-sm font-medium block">${item.snippet.title}</div><span class="text-xs text-gray-500 dark:text-gray-400 block by${i}"></span><span class="text-xs text-gray-500 dark:text-gray-400 block"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
                     }
                 });
                 d += '</div>';
@@ -94,14 +97,16 @@ function ycp(selector, j) {
                 } else {
                     container.querySelector('span.vid-prev').addEventListener('click', e => {
                         e.preventDefault();
-                        ycp_list(h, f, c.prevPageToken, k, l);
+                        ycp_list(h, f, c.prevPageToken, k, l, -1);
                     });
                 }
 
-                container.querySelector('span.vid-next').addEventListener('click', e => {
-                    e.preventDefault();
-                    ycp_list(h, f, c.nextPageToken, k, l);
-                });
+                if (c.nextPageToken) {
+                    container.querySelector('span.vid-next').addEventListener('click', e => {
+                        e.preventDefault();
+                        ycp_list(h, f, c.nextPageToken, k, l, 1);
+                    });
+                }
 
                 container.querySelectorAll('div.play').forEach(el => {
                     el.addEventListener('click', e => {
