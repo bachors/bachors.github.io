@@ -5,31 +5,6 @@
 * Updates will be posted to this site.
 ***************************************/
 
-.ycp {
-    display: flex;
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
-}
-
-.ycp,
-.ycp .belah {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-/* ── Two columns ── */
-.ycp .belah {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.ycp .belah:first-of-type { width: 65%; }
-.ycp .belah:last-of-type  {
-    width: 35%;
-}
 
 /* ── Video player area ── */
 .ycp .belah.ycp_vid_play {
@@ -75,15 +50,6 @@
 }
 
 /* ── Playlist header ── */
-.ycp .belah .luhur {
-    flex-shrink: 0;
-}
-
-.ycp .belah .luhur div.title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 .ycp .belah .luhur .tombol {
     display: inline-block;
@@ -93,8 +59,6 @@
 .ycp .belah .luhur .about {
     float: right;
 }
-
-.ycp .belah .luhur .about a:hover { color: rgb(239,68,68,1); }
 
 /* ── Playlist scroll area ── */
 .ycp .belah .handap {
@@ -106,7 +70,12 @@
 
 .ycp .belah .handap::-webkit-scrollbar       { width: 4px; }
 .ycp .belah .handap::-webkit-scrollbar-track  { background: transparent; }
-.ycp .belah .handap::-webkit-scrollbar-thumb  { background: #35373b; border-radius: 4px; }
+.ycp .belah .handap::-webkit-scrollbar-thumb  { background: #35373b; }
+
+.ycp .belah .handap .title {    
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 /* ── Playlist item ── */
 .ycp .belah .play {
@@ -161,35 +130,11 @@
 }
 
 /* ── Item text ── */
-.ycp .belah .play > div:not(.thumb) {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.ycp .belah .handap div.title {
-    overflow: hidden;
-    display: -webkit-box;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-}
 
 .ycp .belah .handap .meta {
     display: flex;
     flex-direction: column;
 }
-
-    .ycp {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .ycp .belah:first-of-type,
-    .ycp .belah:last-of-type {
-        width: 100%;
-    }
 
     .ycp .belah.ycp_vid_play {
         aspect-ratio: 16 / 9;
@@ -197,6 +142,5 @@
     }
 
     .ycp .belah:last-of-type {
-        border-left: none;
-        height: 360px;
+        height: 560px;
     }
