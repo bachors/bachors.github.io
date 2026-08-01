@@ -63,8 +63,8 @@ function ycp(selector, j) {
 							<p class="text-gray-400">${h}</p>
 						</div>
 					</div>`;
-                d += `<div class="px-4 pb-4"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-600 dark:bg-gray-200 text-gray-200 dark:text-gray-700 hover:bg-gray-700 dark:hover:bg-gray-300 vid-prev" title="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></span><span class="hitung tombol mx-4 text-xs font-medium text-gray-700 dark:text-gray-200">${hitung}</span>`;
-                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-600 dark:bg-gray-200 text-gray-200 dark:text-gray-700 hover:bg-gray-700 dark:hover:bg-gray-300 vid-next" title="Berikutnya"><i class="fa-solid fa-chevron-right"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21]">';
+                d += `<div class="px-4 pb-4"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 vid-prev" title="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></span><span class="hitung tombol mx-4 text-xs font-medium text-gray-700 dark:text-gray-300">${hitung}</span>`;
+                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 vid-next" title="Berikutnya"><i class="fa-solid fa-chevron-right"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21]">';
                 c.items.forEach((item, i) => {
                     if (item.status.privacyStatus === 'public') {
                         const b = item.snippet.resourceId.videoId;

@@ -110,9 +110,9 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="max-w-xs mx-auto grid grid-cols-1 gap-1">
+			<div class="max-w-sm mx-auto grid grid-cols-1 gap-1">
 				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-xl">
-					<img alt="Placeholder" class="block h-auto w-full" src="img/rp.png">
+					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/708488/pexels-photo-708488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" height="40" width="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 							viewBox="0 0 500 500" xml:space="preserve">
@@ -166,7 +166,7 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div id="reels" class="max-w-xs mx-auto grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div id="reels" class="max-w-sm mx-auto grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -186,9 +186,9 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px max-w-xs mx-auto rounded-2xl overflow-hidden shadow-xl">
+			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px max-w-sm mx-auto rounded-2xl overflow-hidden shadow-xl">
 				<div class="bg-white dark:bg-[#1e1f21] overflow-hidden">
-					<img alt="Placeholder" class="block h-auto w-full" src="img/dv.png">
+					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/9887886/pexels-photo-9887886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
 							<path style="fill:#387BD3;stroke:#333;stroke-width:2" d="m 5,25 20,1 c 0,0 9,-1 2,-6 -5,-3 -4,-15 8,-16 8,-0.7 13,2.9 13,9 0,7 -9,9 -4,13 2,2 28,0 28,0 0,0 -2,21 -1,24 1,5 7,4 9,0 4,-6 16,-4 17,8 1,9 -5,14 -8,14 -9,0 -7,-5 -13,-5 -4,0 -4,3 -4,8 0,3 2,17 2,17 0,0 -18,3 -22,3 -4,0 -8,1 -9,-3 -1,-4 6,-9 1,-13 -5,-4 -17,-5 -17,5 0,4 4,6 3,9 -1,4 -7,3 -14,2 C 8.8,94 7,94 7,94 L 4,65 c 0,0 0,-4 4,-4 4,0 4,5 9,5 5,0 8,-3 8,-9 C 25,51 18,42 10,49 2,56 5,25 5,25"/>
