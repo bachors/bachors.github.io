@@ -131,11 +131,6 @@
 
 /* ── Item text ── */
 
-.ycp .belah .handap .meta {
-    display: flex;
-    flex-direction: column;
-}
-
     .ycp .belah.ycp_vid_play {
         aspect-ratio: 16 / 9;
         height: auto;

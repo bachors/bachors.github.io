@@ -44,9 +44,9 @@ function ycp(selector, j) {
     function ycp_list(h, f, g, k, l) {
         get(`https://www.googleapis.com/youtube/v3/playlistItems?part=status,snippet&maxResults=${j.playlist}&playlistId=${f}&key=${j.apikey}&pageToken=${g}`)
             .then(c => {
-                let d = '<div class="luhur p-4 bg-white dark:bg-[#1e1f21] rounded-b-xl shadow-xl">';
+                let d = '<div class="luhur bg-white dark:bg-[#1e1f21] rounded-b-xl shadow-xl">';
                 d += `
-					<div class="flex items-center gap-4 border-b border-gray-200 dark:border-blue-100/10 pb-4 mb-4">
+					<div class="flex items-center gap-4 p-4 border-b border-gray-200 dark:border-blue-100/10">
 						<svg class="flex-none w-10 h-10" width="40" height="40" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                             <path d="m435.57 444.12h-359.15c-37.781 0-68.409-30.628-68.409-68.409v-239.43c0-37.781 30.628-68.409 68.409-68.409h359.15c37.781 0 68.409 30.628 68.409 68.409v239.43c0 37.781-30.628 68.409-68.409 68.409z" fill="#E35336"/>
                             <path d="m469.78 409.92h-376.25c-28.336 0-51.307-22.971-51.307-51.307v-256.54c0-10.036 2.178-19.558 6.061-28.144-23.738 10.733-40.265 34.604-40.265 62.349v239.43c0 37.781 30.628 68.409 68.409 68.409h359.15c27.745 0 51.616-16.527 62.349-40.265-8.587 3.882-18.108 6.061-28.144 6.061z" fill="#D93C1C"/>
@@ -60,14 +60,14 @@ function ycp(selector, j) {
 							<p class="text-gray-400">${h}</p>
 						</div>
 					</div>`;
-                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 vid-prev mr-2" title="Sebelumnya"><i class="fa fa-backward-step"></i></span> ';
-                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 vid-next" title="Berikutnya"><i class="fa fa-forward-step"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div><div class="handap bg-white dark:bg-[#1e1f21] rounded-xl shadow-xl">';
+                d += '<div class="p-4"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 vid-prev mr-2" title="Sebelumnya"><i class="fa fa-backward-step"></i></span> ';
+                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/5 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 vid-next" title="Berikutnya"><i class="fa fa-forward-step"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21] rounded-xl shadow-xl">';
                 c.items.forEach((item, i) => {
                     if (item.status.privacyStatus === 'public') {
                         const b = item.snippet.resourceId.videoId;
                         ycp_part(b, i, k, l);
                         d += `<div class="play hover:bg-gray-100 dark:hover:bg-white/5 p-4 border-b border-gray-200 dark:border-blue-100/10 gap-3 overflow-hidden" data-vvv="${b}" data-img="${item.snippet.thumbnails.high.url}" title="${item.snippet.title}"><div class="thumb rounded-lg overflow-hidden hover:-rotate-3"><img src="${item.snippet.thumbnails.default.url}" alt=" "><span class="rounded-md tm${i}"></span></div>`;
-                        d += `<div class="meta"><div class="title text-sm font-medium block">${item.snippet.title}</div><span class="text-xs text-gray-400 block by${i}"></span><span class="text-xs text-gray-400 block"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
+                        d += `<div class="overflow-hidden"><div class="title text-sm font-medium block">${item.snippet.title}</div><span class="text-xs text-gray-400 block by${i}"></span><span class="text-xs text-gray-400 block"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
                     }
                 });
                 d += '</div>';
