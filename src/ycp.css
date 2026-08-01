@@ -65,12 +65,17 @@
     flex: 1;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #35373b transparent;
+    scrollbar-color: #e5e7eb transparent;
 }
 
 .ycp .belah .handap::-webkit-scrollbar       { width: 4px; }
 .ycp .belah .handap::-webkit-scrollbar-track  { background: transparent; }
-.ycp .belah .handap::-webkit-scrollbar-thumb  { background: #35373b; }
+.ycp .belah .handap::-webkit-scrollbar-thumb  { background: #e5e7eb; }
+
+.dark .ycp .belah .handap,
+.dark .ycp .belah .handap::-webkit-scrollbar-thumb {
+    scrollbar-color: #35373b transparent;
+}
 
 .ycp .belah .handap .title {    
     white-space: nowrap;

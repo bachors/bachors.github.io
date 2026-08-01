@@ -47,7 +47,7 @@ function ycp(selector, j) {
         get(`https://www.googleapis.com/youtube/v3/playlistItems?part=status,snippet&maxResults=${j.playlist}&playlistId=${f}&key=${j.apikey}&pageToken=${g}`)
             .then(c => {
                 hitung = hitung + xyz;
-                let d = '<div class="luhur bg-white dark:bg-[#1e1f21]">';
+                let d = '<div class="luhur bg-white dark:bg-[#1e1f21] border-b border-gray-200 dark:border-blue-100/10">';
                 d += `
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -60,17 +60,17 @@ function ycp(selector, j) {
                         </svg>
 						<div class="flex flex-col items-start w-full">
 							<h3 class="text-lg font-medium">YouTube</h3>
-							<p class="text-gray-500 dark:text-gray-400">${h}</p>
+							<p class="text-gray-400">${h}</p>
 						</div>
 					</div>`;
-                d += `<div class="p-4 bg-gray-100 dark:bg-white/5 dark:text-white border dark:border-gray-100/5"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-800 dark:bg-gray-200 text-gray-200 dark:text-gray-800 hover:bg-gray-900 dark:hover:bg-gray-300 vid-prev" title="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></span><span class="hitung tombol mx-4 text-xs font-medium text-gray-800 dark:text-gray-200">${hitung}</span>`;
-                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-800 dark:bg-gray-200 text-gray-200 dark:text-gray-800 hover:bg-gray-900 dark:hover:bg-gray-300 vid-next" title="Berikutnya"><i class="fa-solid fa-chevron-right"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21]">';
+                d += `<div class="px-4 pb-4"><span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-600 dark:bg-gray-200 text-gray-200 dark:text-gray-700 hover:bg-gray-700 dark:hover:bg-gray-300 vid-prev" title="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></span><span class="hitung tombol mx-4 text-xs font-medium text-gray-700 dark:text-gray-200">${hitung}</span>`;
+                d += '<span class="tombol text-xs px-3 py-1 rounded-lg bg-gray-600 dark:bg-gray-200 text-gray-200 dark:text-gray-700 hover:bg-gray-700 dark:hover:bg-gray-300 vid-next" title="Berikutnya"><i class="fa-solid fa-chevron-right"></i></span><span class="about text-xs text-gray-400 mt-1" title="ycp.js"><a href="https://bachors.id/ycp.js" target="_BLANK"><i class="fa fa-code-fork"></i></a></span></div></div><div class="handap bg-white dark:bg-[#1e1f21]">';
                 c.items.forEach((item, i) => {
                     if (item.status.privacyStatus === 'public') {
                         const b = item.snippet.resourceId.videoId;
                         ycp_part(b, i, k, l);
-                        d += `<div class="play hover:bg-gray-100 dark:hover:bg-white/5 p-4 border-b border-gray-200 dark:border-blue-100/10 gap-3 overflow-hidden" data-vvv="${b}" data-img="${item.snippet.thumbnails.high.url}" title="${item.snippet.title}"><div class="thumb rounded-lg overflow-hidden hover:-rotate-3"><img src="${item.snippet.thumbnails.default.url}" alt=" "><span class="rounded-md tm${i}"></span></div>`;
-                        d += `<div class="overflow-hidden"><div class="title text-sm font-medium block">${item.snippet.title}</div><span class="text-xs text-gray-500 dark:text-gray-400 block by${i}"></span><span class="text-xs text-gray-500 dark:text-gray-400 block"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
+                        d += `<div class="play hover:bg-gray-100 dark:hover:bg-white/5 px-4 py-2 gap-3 overflow-hidden" data-vvv="${b}" data-img="${item.snippet.thumbnails.high.url}" title="${item.snippet.title}"><div class="thumb rounded-lg overflow-hidden hover:-rotate-3"><img src="${item.snippet.thumbnails.default.url}" alt=" "><span class="rounded-md tm${i}"></span></div>`;
+                        d += `<div class="overflow-hidden"><div class="title text-sm font-medium block">${item.snippet.title}</div><span class="text-xs text-gray-400 block by${i}"></span><span class="text-xs text-gray-400 block"><span class="views${i}"></span> • <span class="date${i}"></span></span></div></div>`;
                     }
                 });
                 d += '</div>';

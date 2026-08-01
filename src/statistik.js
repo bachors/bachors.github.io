@@ -64,11 +64,11 @@ let admobData = {};
 function stat(t, a, e) {
 	return `
 			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-xl rounded-2xl">
-				<div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-200 dark:text-black">
+				<div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-200 dark:text-gray-900">
 					${ICONS[a.toLowerCase()].a}
 				</div>
 				<h3 class="font-medium mt-2">${e}</h3>
-				<p class="text-xs text-gray-500 dark:text-gray-400 mb-1">${a}</p>
+				<p class="text-xs text-gray-400 mb-1">${a}</p>
 				${ICONS[a.toLowerCase()].b}
 			</div>`
 }
@@ -77,7 +77,7 @@ function stik(a, e) {
 	return `
 			<div class="bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-center p-4">
 				${ICONS[a.toLowerCase()]}
-				<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">${a}</p>
+				<p class="text-xs text-gray-400 mt-2">${a}</p>
 				<h3>${e}</h3>
 			</div>`
 }
@@ -86,7 +86,7 @@ function renderAdmobCard(t) {
 	const a = admobData[t];
 	document.getElementById("admob-date").textContent = a.date_range.replaceAll("202", "2"), document.getElementById("admob-label").textContent = LABELS[t].b, document.getElementById("admob-stats").innerHTML = stat("rotate-3", "Peristiwa", a.ad_requests) + stat("-rotate-3", "Pendapatan", a.earnings.split(",")[0].replace(" ", "")) + stat("-rotate-3", "Tayangan", a.ad_impressions) + stat("rotate-3", "eCPM", a.ecpm.split(",")[0].replace(" ", "")), document.querySelectorAll(".admob-btn").forEach(a => {
 		const e = a.dataset.key === t;
-		a.className = "admob-btn text-xs px-3 py-1 rounded-lg transition-colors " + (e ? "bg-red-400 dark:bg-red-500 text-white" : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10")
+		a.className = "admob-btn text-xs px-3 py-1 rounded-lg transition-colors " + (e ? "bg-red-400 dark:bg-red-500 text-gray-50" : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10")
 	})
 }
 
@@ -139,7 +139,7 @@ function renderCards(t, k) {
 						</svg>
 						<div class="flex flex-col items-start w-full">
 							<h3 class="text-lg font-medium">Google AdMob</h3>
-							<p class="text-gray-500 dark:text-gray-400">Performa Aplikasi</p>
+							<p class="text-gray-400">Performa Aplikasi</p>
 						</div>
 					</div>
 				</div>
@@ -147,7 +147,7 @@ function renderCards(t, k) {
 					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
 						<div class="flex flex-col w-full gap-0.5">
 							<h3 id="admob-label"></h3>
-							<p class="text-xs text-gray-500 dark:text-gray-400" id="admob-date"></p>
+							<p class="text-xs text-gray-400" id="admob-date"></p>
 						</div>
 						<svg class="flex-none text-gray-500" width="26" height="26" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path>
@@ -195,7 +195,7 @@ function renderCards(t, k) {
 						</svg>						
 						<div class="flex flex-col items-start w-full">
 							<h3 class="text-lg font-medium">Google Play</h3>
-							<p class="text-gray-500 dark:text-gray-400">Statistik Aplikasi</p>
+							<p class="text-gray-400">Statistik Aplikasi</p>
 						</div>
 						<div class="flex items-center gap-1">
 							<svg width="24" height="24" class="-mt-1 fill-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -210,7 +210,7 @@ function renderCards(t, k) {
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
 	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
-	ycp("#reels", { apikey: apikey, playlist: 6, autoplay: false, related: true });
+	ycp("#reels", { apikey: apikey, playlist: 8, autoplay: false, related: true });
 }
 
 async function fetchData() {
