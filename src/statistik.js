@@ -75,7 +75,7 @@ function stat(t, a, e) {
 
 function stik(a, e) {
 	return `
-			<div class="bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-center p-4">
+			<div class="bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-center py-4">
 				${ICONS[a.toLowerCase()]}
 				<p class="text-xs text-gray-400 mt-2">${a}</p>
 				<h3>${e}</h3>
