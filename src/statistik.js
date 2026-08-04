@@ -143,12 +143,12 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-2xl shadow-xl p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
+				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-2xl shadow-xl p-5 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
 						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
-						<p class="text-lg font-mono tracking-wider leading-none my-6 md:my-4">•••• •••• •••• 506</p>
-						<p class="text-xs text-white/80">Diperbarui - ${s}, ${formatTime(k.last_update)}</p>
+						<p class="text-lg font-mono tracking-wider leading-none my-7 md:my-5">•••• •••• •••• 506</p>
+						<p class="text-xs text-white/80">Diperbarui pada ${s.replaceAll("/01/", " Jan ").replaceAll("/02/", " Feb ").replaceAll("/03/", " Mar ").replaceAll("/04/", " Apr ").replaceAll("/05/", " Mei ").replaceAll("/06/", " Jun ").replaceAll("/07/", " Jul ").replaceAll("/08/", " Agu ").replaceAll("/09/", " Sep ").replaceAll("/10/", " Okt ").replaceAll("/11/", " Nov ").replaceAll("/12/", " Des ")}, ${formatTime(k.last_update)}</p>
 					</div>
 					<div class="w-10 h-7 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
 				</div>
