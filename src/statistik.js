@@ -144,13 +144,13 @@ function renderCards(t, k) {
 					</div>
 				</div>
 				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-2xl shadow-xl p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
-					<div class="flex flex-col items-start gap-1">
+					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
-						<h2 class="text-base font-medium">${t.all_time.earnings.split(",")[0]}</h2>
-						<p class="font-mono tracking-wider leading-none my-3">•••• •••• •••• 506</p>
+						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
+						<p class="text-lg font-mono tracking-wider leading-none my-4">•••• •••• •••• 506</p>
 						<p class="text-xs text-white/80">Diperbarui - ${s}, ${formatTime(k.last_update)}</p>
 					</div>
-					<div class="w-8 h-6 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
+					<div class="w-10 h-7 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
 				</div>
 				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-xl rounded-2xl">
 					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
