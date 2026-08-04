@@ -84,7 +84,7 @@ function stik(a, e) {
 
 function renderAdmobCard(t) {
 	const a = admobData[t];
-	document.getElementById("admob-date").textContent = a.date_range.replaceAll("202", "2"), document.getElementById("admob-label").textContent = LABELS[t].b, document.getElementById("admob-stats").innerHTML = stat("rotate-3", "Peristiwa", a.ad_requests) + stat("-rotate-3", "Pendapatan", a.earnings.split(",")[0].replace(" ", "")) + stat("-rotate-3", "Tayangan", a.ad_impressions) + stat("rotate-3", "eCPM", a.ecpm.split(",")[0].replace(" ", "")), document.querySelectorAll(".admob-btn").forEach(a => {
+	document.getElementById("admob-date").textContent = a.date_range, document.getElementById("admob-label").textContent = LABELS[t].b, document.getElementById("admob-stats").innerHTML = stat("rotate-3", "Peristiwa", a.ad_requests) + stat("-rotate-3", "Pendapatan", a.earnings.split(",")[0]) + stat("-rotate-3", "Tayangan", a.ad_impressions) + stat("rotate-3", "eCPM", a.ecpm.split(",")[0].replace(" ", "")), document.querySelectorAll(".admob-btn").forEach(a => {
 		const e = a.dataset.key === t;
 		a.className = "admob-btn text-xs px-3 py-1 rounded-lg transition-colors " + (e ? "bg-red-400 dark:bg-red-500 text-gray-50" : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10")
 	})
@@ -110,7 +110,7 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="max-w-sm mx-auto grid grid-cols-1 gap-1">
+			<div class="grid grid-cols-1 gap-1">
 				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-xl">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/708488/pexels-photo-708488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
@@ -143,6 +143,15 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
+				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-2xl shadow-xl p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
+					<div class="flex flex-col items-start gap-1">
+						<span class="text-xs text-gray-400">Total Saldo</span>
+						<h2 class="text-base font-medium">${t.all_time.earnings.split(",")[0]}</h2>
+						<p class="font-mono tracking-wider leading-none my-3">•••• •••• •••• 506</p>
+						<p class="text-xs text-white/80">Diperbarui - ${s}, ${formatTime(k.last_update)}</p>
+					</div>
+					<div class="w-8 h-6 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
+				</div>
 				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-xl rounded-2xl">
 					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
 						<div class="flex flex-col w-full gap-0.5">
@@ -166,7 +175,7 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div id="reels" class="max-w-sm mx-auto grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · bachors.id" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div id="reels" class="grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -181,12 +190,12 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="text-xs uppercase text-gray-700 dark:text-gray-300 tracking-wider text-center leading-none">
-				progres hari ini • <span class="text-sm font-medium leading-none">${s.replace("202", "2")}</span>
+				progres hari ini • <span class="text-sm font-medium leading-none">${s}</span>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px max-w-sm mx-auto rounded-2xl overflow-hidden shadow-xl">
+			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px rounded-2xl overflow-hidden shadow-xl">
 				<div class="bg-white dark:bg-[#1e1f21] overflow-hidden">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/9887886/pexels-photo-9887886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
@@ -206,11 +215,11 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="grid grid-cols-3 gap-px">${stik("Dirilis","10/08/21")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update.replace("202", "2"))}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
+				<div class="grid grid-cols-3 gap-px">${stik("Dirilis","10/08/2021")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update)}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
 	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
-	ycp("#reels", { apikey: apikey, playlist: 8, autoplay: false, related: true });
+	ycp("#reels", { apikey: apikey, playlist: 5, autoplay: false, related: true });
 }
 
 async function fetchData() {

@@ -22,7 +22,7 @@
 		<script src="src/config.js"></script>
 	</head>
 	<body class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen transition-colors duration-300">
-		<header class="z-30 fixed w-full px-3 py-4 bg-gray-100/70 dark:bg-[#131313]/70">
+		<header class="z-30 fixed w-full px-3 py-4 bg-gray-100/70 dark:bg-[#131313]/70 backdrop-blur-md">
 			<div class="max-w-2xl mx-auto">
 				<div class="flex items-center justify-between px-3">
 					<a href="https://bachors.id/" class="flex items-center gap-3">
@@ -38,8 +38,8 @@
 				</div>
 			</div>
 		</header>
-		<div class="max-w-2xl mx-auto pt-20">
-			<div id="cards" class="mx-3">
+		<div class="max-w-sm md:max-w-xs mx-auto pt-20">
+			<div id="cards" class="mx-2">
 				<div class="text-gray-400 dark:text-gray-500 mb-3 text-center">
 					<i class="fa fa-code-commit"></i>
 				</div>
@@ -49,7 +49,7 @@
 				<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
 					<i class="fa fa-ellipsis-vertical"></i>
 				</div>				
-				<div class="max-w-sm mx-auto grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden">
+				<div class="grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden">
 					<div class="bg-white dark:bg-[#1e1f21] overflow-hidden">
 						<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/38126979/pexels-photo-38126979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 						<div class="flex items-center gap-4 p-4">

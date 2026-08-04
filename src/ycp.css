@@ -60,23 +60,6 @@
     float: right;
 }
 
-/* ── Playlist scroll area ── */
-.ycp .belah .handap {
-    flex: 1;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #e5e7eb transparent;
-}
-
-.ycp .belah .handap::-webkit-scrollbar       { width: 4px; }
-.ycp .belah .handap::-webkit-scrollbar-track  { background: transparent; }
-.ycp .belah .handap::-webkit-scrollbar-thumb  { background: #e5e7eb; }
-
-.dark .ycp .belah .handap,
-.dark .ycp .belah .handap::-webkit-scrollbar-thumb {
-    scrollbar-color: #35373b transparent;
-}
-
 .ycp .belah .handap .title {    
     white-space: nowrap;
     overflow: hidden;
@@ -89,17 +72,17 @@
     cursor: pointer;
 }
 
-.ycp .belah .play:last-child { border-bottom: none; }
+.ycp .belah .play:last-child { padding-bottom: 1rem; }
 
 .ycp .belah .vid-active::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
+    top: 1.8rem;
+    left: 0.25rem;
+    width: 8px;
+    height: 8px;
     background: rgb(239,68,68,1);
-    border-radius: 0 2px 2px 0;
+    border-radius: 100%;
 }
 
 .ycp .belah .play { position: relative; }
@@ -139,8 +122,4 @@
     .ycp .belah.ycp_vid_play {
         aspect-ratio: 16 / 9;
         height: auto;
-    }
-
-    .ycp .belah:last-of-type {
-        height: 560px;
     }
