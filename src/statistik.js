@@ -97,17 +97,17 @@ function renderCards(t, k) {
 		n = Object.keys(t).map(t => `
 			<button class="admob-btn" data-key="${t}" onclick="renderAdmobCard('${t}')">${LABELS[t].a||t}</button>`).join(""),
 		r = `
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-700 dark:text-gray-300 tracking-wider text-center leading-none">
+			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
 				<span class="inline-flex relative mr-1">
 					<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-600 dark:bg-green-400"></span>
 					<span class="relative inline-flex rounded-full h-2 w-2 bg-green-600 border border-gray-100 dark:border-[#131313]"></span>
 				</span>
 				diperbarui jam • <span class="text-sm font-medium leading-none">${formatTime(k.last_update)}</span>
 			</div>
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="grid grid-cols-1 gap-1">
@@ -166,33 +166,33 @@ function renderCards(t, k) {
 				<div id="admob-stats" class="grid grid-cols-2 gap-1"></div>
 				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-xl rounded-2xl">${n}</div>
 			</div>
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-700 dark:text-gray-300 tracking-wider text-center leading-none">
+			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
 				video playlist
 			</div>
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div id="reels" class="grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-700 dark:text-gray-300 tracking-wider text-center leading-none">
+			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
 				Hue are you ?
 			</div>
-			<div class="text-gray-400 dark:text-gray-500 mt-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 mt-4 text-center">
 				<i class="fa fa-code"></i>
 			</div>`,
 		d = `
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-700 dark:text-gray-300 tracking-wider text-center leading-none">
+			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
 				progres hari ini • <span class="text-sm font-medium leading-none">${s}</span>
 			</div>
-			<div class="text-gray-400 dark:text-gray-500 my-3 text-center">
+			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px rounded-2xl overflow-hidden shadow-xl">
