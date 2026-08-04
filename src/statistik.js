@@ -147,7 +147,7 @@ function renderCards(t, k) {
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
 						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
-						<p class="text-lg font-mono tracking-wider leading-none my-4">•••• •••• •••• 506</p>
+						<p class="text-lg font-mono tracking-wider leading-none my-6 md:my-4">•••• •••• •••• 506</p>
 						<p class="text-xs text-white/80">Diperbarui - ${s}, ${formatTime(k.last_update)}</p>
 					</div>
 					<div class="w-10 h-7 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
