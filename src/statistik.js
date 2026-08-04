@@ -143,7 +143,7 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-2xl shadow-xl p-5 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
+				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-xl shadow-xl p-5 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
 						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
