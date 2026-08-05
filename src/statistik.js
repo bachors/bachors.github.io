@@ -63,7 +63,7 @@ let admobData = {};
 
 function stat(t, a, e) {
 	return `
-			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-xl rounded-2xl">
+			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-md rounded-2xl">
 				<div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-200 dark:text-gray-900">
 					${ICONS[a.toLowerCase()].a}
 				</div>
@@ -111,7 +111,7 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="grid grid-cols-1 gap-1">
-				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-xl">
+				<div class="bg-white dark:bg-[#1e1f21] rounded-2xl overflow-hidden shadow-md">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/708488/pexels-photo-708488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" height="40" width="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -143,7 +143,7 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-xl shadow-xl p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
+				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-xl shadow-md p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
 						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
@@ -152,7 +152,7 @@ function renderCards(t, k) {
 					</div>
 					<div class="w-10 h-7 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
 				</div>
-				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-xl rounded-2xl">
+				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-md rounded-2xl">
 					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
 						<div class="flex flex-col w-full gap-0.5">
 							<h3 id="admob-label"></h3>
@@ -164,7 +164,7 @@ function renderCards(t, k) {
 					</div>
 				</div>
 				<div id="admob-stats" class="grid grid-cols-2 gap-1"></div>
-				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-xl rounded-2xl">${n}</div>
+				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-md rounded-2xl">${n}</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -175,7 +175,7 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div id="reels" class="grid grid-cols-1 shadow-xl rounded-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div id="reels" class="grid grid-cols-1 shadow-md rounded-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -195,8 +195,8 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-1 gap-px rounded-2xl overflow-hidden shadow-xl">
-				<div class="bg-white dark:bg-[#1e1f21] overflow-hidden">
+			<div class="bg-white dark:bg-[#1e1f21] grid grid-cols-1 rounded-2xl overflow-hidden shadow-md">
+				<div class="overflow-hidden">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/9887886/pexels-photo-9887886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -215,7 +215,7 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="grid grid-cols-3 gap-px">${stik("Dirilis","10/08/2021")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update)}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
+				<div class="bg-gray-200 dark:bg-blue-100/10 grid grid-cols-3 gap-px pt-px">${stik("Dirilis","10/08/2021")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update)}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
 	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
