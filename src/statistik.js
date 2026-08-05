@@ -100,12 +100,15 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
-				<span class="inline-flex relative mr-1">
-					<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-600 dark:bg-green-400"></span>
-					<span class="relative inline-flex rounded-full h-2 w-2 bg-green-600 border border-gray-100 dark:border-[#131313]"></span>
-				</span>
-				diperbarui jam • <span class="text-sm font-medium leading-none">${formatTime(k.last_update)}</span>
+			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
+				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+				<div class="text-white dark:text-black">
+					<span class="inline-flex relative mr-1">
+						<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-500 dark:bg-green-500"></span>
+						<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500 dark:bg-green-500 border border-[#1e1f21] dark:border-white"></span>
+					</span>
+					diperbarui jam • <span class="text-sm font-medium leading-none">${formatTime(k.last_update)}</span>
+				</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -169,8 +172,9 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
-				video playlist
+			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
+				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+				<div class="text-white dark:text-black">video playlist</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -179,8 +183,9 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
-				Hue are you ?
+			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
+				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+				<div class="text-white dark:text-black">Hue are you ?</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-600 mt-4 text-center">
 				<i class="fa fa-code"></i>
@@ -189,8 +194,9 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="text-xs uppercase text-gray-600 dark:text-gray-400 tracking-wider text-center leading-none">
-				progres hari ini • <span class="text-sm font-medium leading-none">${s}</span>
+			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
+				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+				<div class="text-white dark:text-black">progres hari ini • <span class="text-sm font-medium leading-none">${s}</span></div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-600 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
