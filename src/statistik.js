@@ -86,7 +86,7 @@ function renderAdmobCard(t) {
 	const a = admobData[t];
 	document.getElementById("admob-date").textContent = a.date_range, document.getElementById("admob-label").textContent = LABELS[t].b, document.getElementById("admob-stats").innerHTML = stat("rotate-3", "Peristiwa", a.ad_requests) + stat("-rotate-3", "Pendapatan", a.earnings.split(",")[0]) + stat("-rotate-3", "Tayangan", a.ad_impressions) + stat("rotate-3", "eCPM", a.ecpm.split(",")[0]), document.querySelectorAll(".admob-btn").forEach(a => {
 		const e = a.dataset.key === t;
-		a.className = "admob-btn text-xs px-3 py-1 rounded-lg transition-colors " + (e ? "bg-red-400 dark:bg-red-500 text-gray-50" : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10")
+		a.className = "admob-btn text-xs px-3 py-1 rounded-lg " + (e ? "bg-red-400 dark:bg-red-500 text-gray-50" : "bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10")
 	})
 }
 
