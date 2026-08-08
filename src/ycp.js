@@ -49,7 +49,10 @@ function ycp(selector, j) {
                 hitung = hitung + xyz;
                 let d = '<div class="luhur bg-white dark:bg-[#1e1f21]">';
                 d += `
-					<div class="flex items-center gap-4 p-4">
+					<div class="flex items-center gap-4 p-4 relative overflow-hidden">
+						<div class="absolute left-0 top-0 w-14 h-14 bg-red-500/30 blur-2xl dark:hidden dark:blur-none"></div>
+						<div class="absolute left-1/2 top-0 w-14 h-14 bg-yellow-500/30 blur-2xl dark:hidden dark:blur-none"></div>
+  						<div class="absolute right-0 top-0 w-14 h-14 bg-fuchsia-500/40 blur-2xl dark:hidden dark:blur-none"></div>
 						<svg class="flex-none w-10 h-10" width="40" height="40" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                             <path d="m435.57 444.12h-359.15c-37.781 0-68.409-30.628-68.409-68.409v-239.43c0-37.781 30.628-68.409 68.409-68.409h359.15c37.781 0 68.409 30.628 68.409 68.409v239.43c0 37.781-30.628 68.409-68.409 68.409z" fill="#E35336"/>
                             <path d="m469.78 409.92h-376.25c-28.336 0-51.307-22.971-51.307-51.307v-256.54c0-10.036 2.178-19.558 6.061-28.144-23.738 10.733-40.265 34.604-40.265 62.349v239.43c0 37.781 30.628 68.409 68.409 68.409h359.15c27.745 0 51.616-16.527 62.349-40.265-8.587 3.882-18.108 6.061-28.144 6.061z" fill="#D93C1C"/>
