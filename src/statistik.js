@@ -114,12 +114,9 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="grid grid-cols-1 gap-1">
-				<div class="bg-white dark:bg-[#1e1f21] rounded-t-2xl rounded-b overflow-hidden shadow-md">
+				<div class="bg-white dark:bg-[#1e1f21] rounded-t-2xl rounded-b-lg overflow-hidden shadow-md">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/708488/pexels-photo-708488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
-					<div class="flex items-center gap-4 p-4 relative overflow-hidden">
-						<div class="absolute left-0 top-0 w-14 h-14 bg-orange-500/30 blur-2xl dark:hidden dark:blur-none"></div>
-						<div class="absolute left-1/2 top-0 w-14 h-14 bg-emerald-500/30 blur-2xl dark:hidden dark:blur-none"></div>
-  						<div class="absolute right-0 top-0 w-14 h-14 bg-pink-500/40 blur-2xl dark:hidden dark:blur-none"></div>
+					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" height="40" width="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 							viewBox="0 0 500 500" xml:space="preserve">
 							<path style="fill:#61C2AB;" d="M456.276,381.106c-12.4-73.6-59.6-211.6-148.4-255.6h1.6c-2,4-4.8,4-8,4h-94.4c-2.8,0-5.6,0-7.6-4
@@ -207,10 +204,7 @@ function renderCards(t, k) {
 			<div class="bg-white dark:bg-[#1e1f21] grid grid-cols-1 rounded-2xl overflow-hidden shadow-md">
 				<div class="overflow-hidden">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/9887886/pexels-photo-9887886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
-					<div class="flex items-center gap-4 p-4 relative overflow-hidden">
-						<div class="absolute left-0 top-0 w-14 h-14 bg-rose-500/30 blur-2xl dark:hidden dark:blur-none"></div>
-						<div class="absolute left-1/2 top-0 w-14 h-14 bg-green-500/30 blur-2xl dark:hidden dark:blur-none"></div>
-  						<div class="absolute right-0 top-0 w-14 h-14 bg-amber-500/40 blur-2xl dark:hidden dark:blur-none"></div>
+					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
 							<path style="fill:#387BD3;stroke:#333;stroke-width:2" d="m 5,25 20,1 c 0,0 9,-1 2,-6 -5,-3 -4,-15 8,-16 8,-0.7 13,2.9 13,9 0,7 -9,9 -4,13 2,2 28,0 28,0 0,0 -2,21 -1,24 1,5 7,4 9,0 4,-6 16,-4 17,8 1,9 -5,14 -8,14 -9,0 -7,-5 -13,-5 -4,0 -4,3 -4,8 0,3 2,17 2,17 0,0 -18,3 -22,3 -4,0 -8,1 -9,-3 -1,-4 6,-9 1,-13 -5,-4 -17,-5 -17,5 0,4 4,6 3,9 -1,4 -7,3 -14,2 C 8.8,94 7,94 7,94 L 4,65 c 0,0 0,-4 4,-4 4,0 4,5 9,5 5,0 8,-3 8,-9 C 25,51 18,42 10,49 2,56 5,25 5,25"/>
 						</svg>						
