@@ -225,7 +225,7 @@ function renderCards(t, k) {
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day")
 	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
-	ycp("#reels", { apikey: apikey, playlist: 5, autoplay: false, related: true });
+	ycp("#reels", { apikey: apikey, playlist: 5, autoplay: true, related: false });
 }
 
 async function fetchData() {
