@@ -59,7 +59,10 @@ ICONS = {
 	anr: `<svg fill="currentColor" width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.klsc-1 {fill: none;}</style></defs><path d="M29.4148,21.6664,23.08,15.3305l6.3337-6.334a2,2,0,0,0,.0017-2.8281l-.0017-.002-3.58-3.58a2,2,0,0,0-2.8284-.0015l-.0017.0015L16.67,8.9194,10.3352,2.5839a2.0037,2.0037,0,0,0-2.8281.0005L2.5854,7.5063a2.0011,2.0011,0,0,0,0,2.8286l6.3338,6.3345L2,23.5883V30H8.4106l6.919-6.9194,6.3354,6.3364a2.0076,2.0076,0,0,0,2.8291,0l4.9207-4.9223A2.0011,2.0011,0,0,0,29.4148,21.6664Zm-5.0015-17.67,3.59,3.59L21.67,13.92l-3.59-3.59ZM8,28H4V24.4086L10.3291,18.08l3.677,3.6778Zm15.08.0035L4,8.9213,8.9219,4,12.71,7.7875,10.458,10.04l1.4153,1.4141,2.2507-2.252,4.1294,4.1294L16,15.5834l1.416,1.4141,2.2517-2.252,4.13,4.13-2.2517,2.251,1.4141,1.415L25.2117,20.29l2.7907,2.791Z" transform="translate(0 0)"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="klsc-1" width="32" height="32"/></svg>`
 };
 
-let admobData = {};
+let admobData = {},
+atmButton = document.getElementById('atm-toggle'),
+atmIcon = document.getElementById('atm-icon'),
+atmText = document.getElementById('atm-text');
 
 function stat(t, a, e) {
 	return `
@@ -150,10 +153,15 @@ function renderCards(t, k) {
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
 						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
-						<p class="text-lg font-mono tracking-wider leading-none my-7 md:my-5">•••• •••• •••• 506</p>
+						<p id="atm-text" class="text-lg font-mono tracking-wider leading-none my-7 md:my-5">•••• •••• •••• 506</p>
 						<p class="text-xs text-white/80">Diperbarui pada ${s.replaceAll("/01/", " Jan ").replaceAll("/02/", " Feb ").replaceAll("/03/", " Mar ").replaceAll("/04/", " Apr ").replaceAll("/05/", " Mei ").replaceAll("/06/", " Jun ").replaceAll("/07/", " Jul ").replaceAll("/08/", " Agu ").replaceAll("/09/", " Sep ").replaceAll("/10/", " Okt ").replaceAll("/11/", " Nov ").replaceAll("/12/", " Des ")}, ${formatTime(k.last_update)}</p>
 					</div>
-					<div class="w-10 h-7 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
+					<div class="flex flex-col items-end gap-2">
+						<div class="w-10 h-7 rounded-md mt-4 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600"></div>
+						<div id="atm-toggle" onclick="toggleAtm()" class="text-[11px] text-white flex items-center justify-center w-7 h-7 rounded-full bg-white/20 dark:bg-white/20 backdrop-blur-md my-7 md:my-5 cursor-pointer">
+							<i id="atm-icon" class="far fa-eye"></i>
+						</div>
+					</div>
 				</div>
 				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-md rounded-2xl">
 					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
@@ -234,6 +242,22 @@ function renderCards(t, k) {
 	}, {
 		once: !0
 	});
+}
+
+function updateAtmIcon() {
+	atmIcon.className = atmButton.classList.contains("norek") ? "far fa-eye-slash" : "far fa-eye"
+}
+
+function updateAtmText() {
+	atmText.textContent = atmButton.classList.contains("norek") ? "4180 0100 0414 506" : "•••• •••• •••• 506"
+}
+
+function toggleAtm() {
+	atmButton = document.getElementById('atm-toggle'),
+	atmIcon = document.getElementById('atm-icon'),
+	atmText = document.getElementById('atm-text');
+	atmButton.classList.toggle("norek");
+	updateAtmIcon(), updateAtmText()
 }
 
 function youtube() {
