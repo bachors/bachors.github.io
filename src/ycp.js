@@ -85,7 +85,7 @@ function ycp(selector, j) {
                         vidPlay.innerHTML = '<a href="#"></a>';
                         vidPlay.style.cssText = `background:url(${imgUrl}) no-repeat center/cover`;
                     } else {
-                        vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${videoId}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
+                        vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${videoId}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
                     }
                 }
 
