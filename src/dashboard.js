@@ -173,8 +173,8 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
-				<div class="text-white dark:text-black">video playlist</div>
+				<div class="h-8 w-36 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+				<div class="text-white dark:text-black">work • <span class="text-sm font-medium leading-none">12:30 AM</span></div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
