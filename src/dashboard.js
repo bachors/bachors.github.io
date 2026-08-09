@@ -60,9 +60,9 @@ ICONS = {
 };
 
 let admobData = {},
-atmButton = document.getElementById('atm-toggle'),
-atmIcon = document.getElementById('atm-icon'),
-atmText = document.getElementById('atm-text');
+atmButton,
+atmIcon,
+atmText;
 
 function stat(t, a, e) {
 	return `
@@ -232,16 +232,7 @@ function renderCards(t, k) {
 				<div class="bg-gray-200 dark:bg-[#1e1f21] grid grid-cols-3 gap-px pt-px">${stik("Dirilis","10/08/2021")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update)}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
 			</div>`;
 	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day");
-	let play = !0;
-	window.addEventListener("scroll", function() {
-		play && (play = !1, youtube())
-	}, {
-		once: !0
-	}), document.addEventListener("click", function() {
-		play && (play = !1, youtube())
-	}, {
-		once: !0
-	});
+	youtube();
 }
 
 function updateAtmIcon() {

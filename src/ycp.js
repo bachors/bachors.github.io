@@ -11,7 +11,10 @@ function ycp(selector, j) {
     j.autoplay = j.autoplay ?? n.autoplay;
     j.related  = j.related  ?? n.related;
 
-    let hitung = 0;
+    let hitung = 0,
+    play = !0,
+    v,
+    vidPlay;
 
     const els = selector.startsWith('#')
         ? [document.querySelector(selector)]
@@ -30,6 +33,10 @@ function ycp(selector, j) {
             ycp_play(title, channel, d, i, b);
         }
     });
+
+    function ifPlay() {
+        vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${v}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
+    }
 
     function get(url) {
         return fetch(url).then(r => r.json());
@@ -78,14 +85,15 @@ function ycp(selector, j) {
                 const container = document.querySelector(`${l} .ycp div#ycp_youtube_channels${k}`);
                 container.innerHTML = d;
 
-                const vidPlay = document.querySelectorAll(`${l} .ycp div.ycp_vid_play`)[k];
+                vidPlay = document.querySelectorAll(`${l} .ycp div.ycp_vid_play`)[k];
 
                 function setPlayer(videoId, imgUrl) {
-                    if (!j.autoplay) {
+                    v = videoId;
+                    if (play) {
                         vidPlay.innerHTML = '<a href="#"></a>';
                         vidPlay.style.cssText = `background:url(${imgUrl}) no-repeat center/cover`;
                     } else {
-                        vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${videoId}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
+                        ifPlay();
                     }
                 }
 
@@ -120,7 +128,8 @@ function ycp(selector, j) {
                 vidPlay.addEventListener('click', e => {
                     e.preventDefault();
                     const active = container.querySelector('div.play.vid-active');
-                    vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${active.dataset.vvv}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
+                    v = active.dataset.vvv;
+                    ifPlay();
                 });
             });
     }
@@ -161,4 +170,15 @@ function ycp(selector, j) {
     function addCommas(a) {
         return String(a).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
+
+    window.addEventListener("scroll", function() {
+		play && (play = !1, ifPlay())
+	}, {
+		once: !0
+	}), document.addEventListener("click", function() {
+		play && (play = !1, ifPlay())
+	}, {
+		once: !0
+	});
+
 }
