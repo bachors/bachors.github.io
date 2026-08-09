@@ -5,7 +5,7 @@ function updateThemeIcon() {
 function updateBg() {
 	const dark = document.documentElement.classList.contains("dark");
 	document.getElementById("bg").classList.toggle("bg-gelap", dark);
-	document.getElementById("bg").classList.toggle("bg-terang", !dark);
+	document.getElementById("bg").classList.toggle("bg-terang", !dark)
 }
 
 function toggleTheme() {
@@ -13,4 +13,4 @@ function toggleTheme() {
 	localStorage.theme = t ? "dark" : "light", updateThemeIcon(), updateBg()
 }
 
-updateThemeIcon(), updateBg();
+updateThemeIcon(), updateBg()
