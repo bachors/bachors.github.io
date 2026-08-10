@@ -70,7 +70,7 @@ function stat(t, a, e) {
 				<div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-200 dark:text-gray-900">
 					${ICONS[a.toLowerCase()].a}
 				</div>
-				<h3 class="font-medium mt-2">${e}</h3>
+				<h3 class="font-medium mt-2 ${(a.toLowerCase() == "pendapatan" ? "blur-[3px] hover:blur-none" : "")}">${e}</h3>
 				<p class="text-xs text-gray-400 mb-1">${a}</p>
 				${ICONS[a.toLowerCase()].b}
 			</div>`
@@ -152,7 +152,7 @@ function renderCards(t, k) {
 				<div class="hover:rotate-3 flex items-start flex-row justify-between rounded-xl shadow-md p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
-						<h2 class="text-xl font-medium">${t.all_time.earnings.split(",")[0]}</h2>
+						<h2 class="text-xl font-medium blur-[4px] hover:blur-none">${t.all_time.earnings.split(",")[0]}</h2>
 						<p id="atm-text" class="text-lg font-mono tracking-wider leading-none my-7 md:my-5">•••• •••• •••• 506</p>
 						<p class="text-xs text-white/80">Diperbarui pada ${s.replaceAll("/01/", " Jan ").replaceAll("/02/", " Feb ").replaceAll("/03/", " Mar ").replaceAll("/04/", " Apr ").replaceAll("/05/", " Mei ").replaceAll("/06/", " Jun ").replaceAll("/07/", " Jul ").replaceAll("/08/", " Agu ").replaceAll("/09/", " Sep ").replaceAll("/10/", " Okt ").replaceAll("/11/", " Nov ").replaceAll("/12/", " Des ")}, ${formatTime(k.last_update)}</p>
 					</div>
