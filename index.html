@@ -152,10 +152,10 @@
 				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 					<i class="fa fa-ellipsis-vertical"></i>
 				</div>
-				<div class="grid grid-cols-2 gap-1 text-sm">
+				<div class="grid grid-cols-3 gap-1 text-xs">
 					<button command="show-modal" commandfor="img64" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
 						<svg width="40" height="40" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect height="28" rx="4" ry="4" width="26.53" x="2.74" y="2" fill="#04bd79"/><path d="M7.53 27.32a1 1 0 0 1-.53-.17 1 1 0 0 1-.28-1.39l2.23-3.34a2.4 2.4 0 0 1 2.77-1l2.14.71a.4.4 0 0 0 .48-.18l2.51-4.17a2.4 2.4 0 0 1 2-1.17 2.4 2.4 0 0 1 2.06 1.07l4.42 6.62a1 1 0 1 1-1.67 1.11l-4.41-6.62a.4.4 0 0 0-.35-.18.4.4 0 0 0-.35.2L16 23a2.4 2.4 0 0 1-2.83 1l-2.14-.71a.4.4 0 0 0-.47.16l-2.2 3.42a1 1 0 0 1-.83.45m16.58-11.79a2.48 2.48 0 1 1 2.47-2.48 2.5 2.5 0 0 1-2.47 2.48m0-2.95a.47.47 0 0 0-.48.47.48.48 0 1 0 .95 0 .47.47 0 0 0-.47-.47" fill="#fff"/></svg>
-						<p class="text-gray-400">Image to Base64</p>
+						<p class="text-gray-400">Image Base64</p>
 					</button>
 					<button command="show-modal" commandfor="bilangan" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
 						<svg width="40" height="40" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27.5 5.5h-9.3l-2.1 4.2H4.4v16.8h25.2v-21Zm0 4.2h-8.2l1.1-2.1h7.1Z" fill="#c15356"/><path fill="#9f4246" d="M25.74 9.9h-12.3v21h17.48V15.15z"/><path fill="#fff" d="M29.58 29.66H14.85V11.14h10.06l4.75 4.75v13.77z"/><path d="M18.65 19.95c1.19 0 1.92-1.1 1.92-2.75 0-1.61-.6-2.58-1.8-2.58s-1.92 1.1-1.92 2.74c0 1.62.6 2.59 1.8 2.59m-.93-2.75c0-1.17.32-1.84.99-1.84.49 0 .78.41.92 1.1l-1.9.99zm1 2c-.48 0-.78-.4-.92-1.07l1.9-.99v.22c0 1.17-.31 1.84-.98 1.84m7.7.64.08-.77h-1.24v-4.51l-.88.07v.6l-1.27.14.01.66 1.26-.03v3.07h-1.39v.77zm-5.89 7.12.08-.77h-1.24v-4.51l-.88.08v.6l-1.27.13.01.67 1.26-.03v3.06H17.1v.77zm4.09.11c1.18 0 1.92-1.1 1.92-2.75 0-1.6-.6-2.58-1.8-2.58s-1.93 1.1-1.93 2.75c0 1.6.6 2.58 1.8 2.58Zm-.94-2.75c0-1.17.33-1.84 1-1.84.48 0 .78.41.9 1.1l-1.9.99zm1 2c-.48 0-.78-.4-.91-1.07l1.9-.98v.21c0 1.18-.32 1.84-.99 1.84" fill="#9f4246"/></svg>
@@ -210,14 +210,14 @@
 		</div>
 
 		<el-dialog>
-			<!-- image to base64 -->
+			<!-- image base64 -->
 			<dialog id="img64" aria-labelledby="img64-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
-								<h2 id="img64-title" class="font-medium">Image to Base64</h2>
+								<h2 id="img64-title" class="font-medium">Image Base64</h2>
 								<button command="close" commandfor="img64" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
 									<i class="fa fa-xmark"></i>
 								</button>
