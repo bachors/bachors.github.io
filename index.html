@@ -16,10 +16,12 @@
 		<title>Ican | Bachors</title>
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<link rel="stylesheet" href="src/ycp.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/agate.min.css">
+		<link rel="stylesheet" href="css/ycp.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
-		<link rel="stylesheet" href="src/style.css">
-		<script src="src/config.js"></script>
+		<script src="js/config.js"></script>
 	</head>
 	<body id="bg" class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
 		<header class="z-30 fixed w-full px-3 pt-2">
@@ -49,30 +51,38 @@
 				</div>
 				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 					<i class="fa fa-ellipsis-vertical"></i>
-				</div>				
+				</div>
 				<div class="bg-white dark:bg-[#1e1f21] grid grid-cols-1 shadow-md rounded-2xl overflow-hidden">
 					<div class="overflow-hidden">
 						<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/11297748/pexels-photo-11297748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 						<div class="flex items-center gap-4 p-4">
-							<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="0 0 500 500" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg">
-								<defs><style>.cls-1{fill:#2d140a;}.cls-1,.cls-2,.cls-3,.cls-4{fill-rule:evenodd;}.cls-2{fill:#fced8d;}.cls-3{fill:#eaa5ab;}.cls-4{fill:#ee4861;}</style></defs>
-								<path class="cls-1" d="M91.57,108.08c30.7-35.69,76.32-58.15,125.07-65.65,38.39-5.91,78.8-2.54,115.43,11C368.94,67,402,90.82,425.38,125.75c25.9,38.67,36.92,88.83,30.85,155.51q-1.26,14-3.61,26.71c-11.45,62.36-41.5,101.33-82.8,125.54-40.89,23.95-85.68,30.17-140.93,25.33-12.42-1.09-25-2.78-37.65-5-29.89-5.29-53.83-15.94-74.12-32C86.31,397.31,61.41,366.64,51,328.36,40.61,290.55,39.6,249,46.71,210.29s22.44-75,44.72-102Z"/>
-								<path class="cls-2" d="M219.33,60.12C174.65,67,133,87.44,105.07,119.85c-20.35,24.79-34.38,58.11-41,94.05-6.66,36.28-5.71,75.13,4,110.52C89,401,164,438.55,241.85,442.13c112.64,5.17,180.93-49.29,196.77-161.81,5.68-62.46-4.18-108.91-28-144.5-21.19-31.64-51.2-53.26-84.72-65.62C292.13,57.76,254.82,54.66,219.33,60.12Z"/>
-								<path class="cls-1" d="M160.48,173.7h34.44c5.75,0,10.46.52,10.46,6.27V217A27.77,27.77,0,0,1,177.7,244.7h0A27.76,27.76,0,0,1,150,217V180C150,174.22,154.72,173.7,160.48,173.7Z"/>
-								<path class="cls-2" d="M185,181.65h9.22c1.54,0,2.8.15,2.8,1.68v9.92a7.44,7.44,0,0,1-7.41,7.41h0a7.43,7.43,0,0,1-7.41-7.41v-9.92C182.23,181.79,183.49,181.65,185,181.65Z"/>
-								<path class="cls-1" d="M117.54,169.81h84.33a7.91,7.91,0,0,1,7.9,7.89h0a7.92,7.92,0,0,1-7.9,7.9H117.54a7.92,7.92,0,0,1-7.89-7.9h0A7.91,7.91,0,0,1,117.54,169.81Z"/>
-								<path class="cls-1" d="M322.61,172.47h33.08c5.53,0,10.06.5,10.06,6v35.59a26.68,26.68,0,0,1-26.6,26.59h0a26.67,26.67,0,0,1-26.59-26.59V178.5C312.56,173,317.08,172.47,322.61,172.47Z"/>
-								<path class="cls-2" d="M346.2,180.11h8.85c1.48,0,2.69.14,2.69,1.62v9.52a7.14,7.14,0,0,1-7.12,7.12h0a7.13,7.13,0,0,1-7.11-7.12v-9.52C343.51,180.25,344.72,180.11,346.2,180.11Z"/>
-								<path class="cls-1" d="M281.36,168.73h81a7.6,7.6,0,0,1,7.58,7.58h0a7.6,7.6,0,0,1-7.58,7.59h-81a7.61,7.61,0,0,1-7.59-7.59h0A7.6,7.6,0,0,1,281.36,168.73Z"/>
-								<path class="cls-3" d="M373.09,266.27c16,3,25.9,13.43,28,22,5.87,23.52-72.55,14.18-77.46,10.55C301.33,282.3,344.93,261,373.09,266.27Z"/>
-								<path class="cls-1" d="M345.56,265.2a4.26,4.26,0,1,1,8.13,2.54l-8,25.48a4.26,4.26,0,1,1-8.13-2.54Z"/>
-								<path class="cls-1" d="M371.64,263.55a4.25,4.25,0,0,1,7.77,3.47l-13.23,29.43a4.25,4.25,0,0,1-7.77-3.46Z"/>
-								<path class="cls-3" d="M170.26,266.27c16,3,25.91,13.43,28.05,22,5.86,23.52-72.55,14.18-77.46,10.55C98.51,282.3,142.11,261,170.26,266.27Z"/>
-								<path class="cls-1" d="M142.73,265.21a4.26,4.26,0,0,1,8.14,2.53l-8,25.48a4.26,4.26,0,1,1-8.13-2.54Z"/>
-								<path class="cls-1" d="M168.82,263.55a4.25,4.25,0,1,1,7.76,3.47l-13.22,29.43a4.25,4.25,0,0,1-7.77-3.46Z"/>
-								<path class="cls-1" d="M182.21,338.08c-1.12-3.19.62-7.65,3.9-8.75s7.83-.38,8.95,2.81c4.61,13.31,19.64,22.53,36,26.11,14.47,3.16,30,1.69,40.17-2.15-8.55-9.75-13.52-21.2-16.22-33.8-8.91-41.44,47-63.8,67.85-23.53,4.78,12.1,7.1,19.81,8.82,34.66,0,2.92,0,6.82-1.65,9.67C311.81,374.27,204.06,396.9,182.21,338.08Z"/>
-								<path class="cls-4" d="M296.09,351.12a74.84,74.84,0,0,0,20.8-12.21c5.09-4.23,4.38-5.35,3-11.37a104.46,104.46,0,0,0-8.22-23.28c-5.66-11-15.57-19.1-33-10.56-10.63,5.93-13.91,14.75-11.46,26.11,1.58,7.37,7.54,20.2,13.56,28.29C286.08,355.19,288.31,354,296.09,351.12Z"/>
-								<path class="cls-1" d="M289.73,320.58A3.44,3.44,0,0,1,291.5,316a3.61,3.61,0,0,1,4.73,1.72l13.32,30.06a3.45,3.45,0,0,1-1.77,4.61,3.61,3.61,0,0,1-4.73-1.72Z"/>
+							<svg class="flex-none w-10 h-10" width="40" height="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+								viewBox="0 0 512 512" xml:space="preserve">
+							<polygon style="fill:#57A4FF;" points="512,233.739 512,166.957 478.609,166.957 478.609,133.565 400.696,133.565 400.696,166.957 
+								367.304,166.957 367.304,122.435 333.913,122.435 333.913,89.043 289.391,89.043 289.391,55.652 111.304,55.652 111.304,89.043 
+								66.783,89.043 66.783,122.435 33.391,122.435 33.391,166.957 0,166.957 0,345.043 33.391,345.043 33.391,389.565 66.783,389.565 
+								66.783,422.957 111.304,422.957 111.304,456.348 289.391,456.348 289.391,422.957 333.913,422.957 333.913,389.565 367.304,389.565 
+								367.304,345.043 400.696,345.043 400.696,378.435 478.609,378.435 478.609,345.043 512,345.043 512,278.261 478.609,278.261 
+								478.609,233.739 "/>
+							<rect x="111.304" y="55.652" width="178.087" height="33.391"/>
+							<rect x="66.783" y="89.043" width="44.522" height="33.391"/>
+							<rect x="33.391" y="122.435" width="33.391" height="44.522"/>
+							<rect x="100.174" y="233.739" width="44.522" height="44.522"/>
+							<rect x="33.391" y="345.043" width="33.391" height="44.522"/>
+							<rect x="66.783" y="389.565" width="44.522" height="33.391"/>
+							<rect x="111.304" y="422.957" width="178.087" height="33.391"/>
+							<rect x="289.391" y="389.565" width="44.522" height="33.391"/>
+							<rect x="333.913" y="345.043" width="33.391" height="44.522"/>
+							<rect x="367.304" y="278.261" width="33.391" height="66.783"/>
+							<rect x="367.304" y="166.957" width="33.391" height="66.783"/>
+							<rect x="333.913" y="122.435" width="33.391" height="44.522"/>
+							<rect x="289.391" y="89.043" width="44.522" height="33.391"/>
+							<rect x="400.696" y="133.565" width="77.913" height="33.391"/>
+							<rect x="478.609" y="166.957" width="33.391" height="66.783"/>
+							<rect x="445.217" y="233.739" width="33.391" height="44.522"/>
+							<rect x="478.609" y="278.261" width="33.391" height="66.783"/>
+							<rect x="400.696" y="345.043" width="77.913" height="33.391"/>
+							<rect y="166.957" width="33.391" height="178.087"/>
 							</svg>
 							<div class="flex flex-col items-start">
 								<h3 class="text-lg font-medium flex items-center gap-1">
@@ -132,6 +142,62 @@
 						</div>
 					</div>
 				</div>
+				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
+					<i class="fa fa-ellipsis-vertical"></i>
+				</div>
+				<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
+					<div class="h-8 w-20 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+					<div class="text-white dark:text-black">tools</div>
+				</div>
+				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
+					<i class="fa fa-ellipsis-vertical"></i>
+				</div>
+				<div class="grid grid-cols-2 gap-1 text-sm">
+					<button command="show-modal" commandfor="img64" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect height="28" rx="4" ry="4" width="26.53" x="2.74" y="2" fill="#04bd79"/><path d="M7.53 27.32a1 1 0 0 1-.53-.17 1 1 0 0 1-.28-1.39l2.23-3.34a2.4 2.4 0 0 1 2.77-1l2.14.71a.4.4 0 0 0 .48-.18l2.51-4.17a2.4 2.4 0 0 1 2-1.17 2.4 2.4 0 0 1 2.06 1.07l4.42 6.62a1 1 0 1 1-1.67 1.11l-4.41-6.62a.4.4 0 0 0-.35-.18.4.4 0 0 0-.35.2L16 23a2.4 2.4 0 0 1-2.83 1l-2.14-.71a.4.4 0 0 0-.47.16l-2.2 3.42a1 1 0 0 1-.83.45m16.58-11.79a2.48 2.48 0 1 1 2.47-2.48 2.5 2.5 0 0 1-2.47 2.48m0-2.95a.47.47 0 0 0-.48.47.48.48 0 1 0 .95 0 .47.47 0 0 0-.47-.47" fill="#fff"/></svg>
+						<p class="text-gray-400">Image to Base64</p>
+					</button>
+					<button command="show-modal" commandfor="bilangan" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27.5 5.5h-9.3l-2.1 4.2H4.4v16.8h25.2v-21Zm0 4.2h-8.2l1.1-2.1h7.1Z" fill="#c15356"/><path fill="#9f4246" d="M25.74 9.9h-12.3v21h17.48V15.15z"/><path fill="#fff" d="M29.58 29.66H14.85V11.14h10.06l4.75 4.75v13.77z"/><path d="M18.65 19.95c1.19 0 1.92-1.1 1.92-2.75 0-1.61-.6-2.58-1.8-2.58s-1.92 1.1-1.92 2.74c0 1.62.6 2.59 1.8 2.59m-.93-2.75c0-1.17.32-1.84.99-1.84.49 0 .78.41.92 1.1l-1.9.99zm1 2c-.48 0-.78-.4-.92-1.07l1.9-.99v.22c0 1.17-.31 1.84-.98 1.84m7.7.64.08-.77h-1.24v-4.51l-.88.07v.6l-1.27.14.01.66 1.26-.03v3.07h-1.39v.77zm-5.89 7.12.08-.77h-1.24v-4.51l-.88.08v.6l-1.27.13.01.67 1.26-.03v3.06H17.1v.77zm4.09.11c1.18 0 1.92-1.1 1.92-2.75 0-1.6-.6-2.58-1.8-2.58s-1.93 1.1-1.93 2.75c0 1.6.6 2.58 1.8 2.58Zm-.94-2.75c0-1.17.33-1.84 1-1.84.48 0 .78.41.9 1.1l-1.9.99zm1 2c-.48 0-.78-.4-.91-1.07l1.9-.98v.21c0 1.18-.32 1.84-.99 1.84" fill="#9f4246"/></svg>
+						<p class="text-gray-400">Number System</p>
+					</button>
+					<button command="show-modal" commandfor="snippet" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path d="m0 260.9 174.65-81.13v38.57L42.57 276.19v.73l132.08 57.84v38.57L0 292.21z" fill="#25b6d2"/><path d="m201.6 387.9 77.86-263.8h36.76L238.4 387.9z" fill="#415e72"/><path d="m512 293.28-174.65 80.06v-38.57l135-57.85v-.72l-135-57.86v-38.57L512 259.83z" fill="#e04f5f"/></svg>
+						<p class="text-gray-400">Code Snippet</p>
+					</button>
+					<button command="show-modal" commandfor="temperature" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><circle cx="256" cy="381.47" r="59.94" fill="#cff09e"/><g fill="#507c5c"><path d="M256 456c-41.09 0-74.52-33.44-74.52-74.53s33.43-74.52 74.52-74.52c41.1 0 74.52 33.43 74.52 74.52S297.09 456 256 456m0-119.9c-25.01 0-45.36 20.36-45.36 45.37s20.35 45.36 45.36 45.36a45.4 45.4 0 0 0 45.36-45.36A45.4 45.4 0 0 0 256 336.11"/><path d="M371.34 320.34a14.58 14.58 0 0 0-25.75 13.68 101.5 101.5 0 0 1 11.78 47.45A100.6 100.6 0 0 1 326.82 454a100.8 100.8 0 0 1-73.28 28.81c-54.61-1.29-98.98-46.81-98.91-101.48a100.9 100.9 0 0 1 56.1-90.55 14.6 14.6 0 0 0 8.05-13.04V58.86a29.73 29.73 0 0 1 29.7-29.7h15.04a29.73 29.73 0 0 1 29.7 29.7v209.8a14.58 14.58 0 0 0 29.16 0v-17.47h35.08a14.58 14.58 0 0 0 0-29.15h-35.08v-22.7h13.79a14.58 14.58 0 0 0 0-29.15h-13.8v-22.7h35.1a14.58 14.58 0 0 0 0-29.15h-35.1v-22.7h13.8a14.58 14.58 0 0 0 0-29.15h-13.8v-7.63A58.9 58.9 0 0 0 263.53 0h-15.04a58.9 58.9 0 0 0-58.86 58.86v210.23a129.8 129.8 0 0 0-64.15 112.2c-.1 70.4 57.05 129.01 127.38 130.67q1.6.04 3.19.04a129.5 129.5 0 0 0 91.15-37.14 129.5 129.5 0 0 0 39.34-93.39c0-21.3-5.25-42.44-15.2-61.13"/><path d="M256 283.7a14.6 14.6 0 0 1-14.58-14.58V81.07a14.58 14.58 0 1 1 29.16 0v188.05c0 8.05-6.53 14.58-14.58 14.58"/></g></svg>
+						<p class="text-gray-400">Temperature</p>
+					</button>
+					<button command="show-modal" commandfor="trigonometric" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><polygon style="fill:#F4BA48;" points="0.768,512 0.768,0 511.232,0 "/><polygon style="fill:#BD9139;" points="138.8,373.552 138.8,138.448 373.2,138.448 "/></svg>
+						<p class="text-gray-400">Trigonometric</p>
+					</button>
+					<button command="show-modal" commandfor="gradient" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path fill="#e07188" d="M0 100.2h512v178.1H0z"/><path fill="#ecb45c" d="M128 100.2h384v178.1H128z"/><path fill="#efc27b" d="M256 100.2h256v178.1H256z"/><path fill="#f8e99b" d="M384 100.2h128v178.1H384z"/><path fill="#f8f8f9" d="m456.3 189.2-50.6-50.7v34h-350v33.4h350v34z"/><path fill="#e07188" d="M44.5 289.4 0 333.9v77.9h89v-77.9z"/><path fill="#f8e99b" d="M467.5 289.4 423 333.9v77.9h89v-77.9z"/><path fill="#ededed" d="m456.3 189.2-50.6-50.7v34H256v33.4h149.7v34z"/></svg>
+						<p class="text-gray-400">Image Gradient</p>
+					</button>
+					<button command="show-modal" commandfor="scheme" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path d="M256 0C114.62 0 0 114.62 0 256s114.62 256 256 256 256-114.61 256-256S397.39 0 256 0m0 336.84a80.84 80.84 0 1 1 0-161.68 80.84 80.84 0 0 1 0 161.68" fill="#d8d8da"/><path d="M282.95 188.63h220.07C485.1 122.73 441.51 67.4 383.64 34.04l-154.59 154.6z" fill="#d4b6e6"/><path d="M229.05 188.63 383.64 34.04A255 255 0 0 0 256 0c-23.32 0-45.9 3.14-67.37 8.98v220.07z" fill="#ebafd1"/><path d="M188.63 229.05V8.98C122.73 26.9 67.4 70.49 34.05 128.36l154.58 154.59z" fill="#e07188"/><path d="m188.63 229.05 40.42-40.42h53.9-53.9zm40.42 94.32-40.42-40.42zh53.9l40.42-40.42-40.42 40.42z" fill="#d8d8da"/><path d="M503.02 188.63H282.95h.96l39.46 40.42 154.58 154.59A255 255 0 0 0 512 256c0-23.32-3.13-45.9-8.98-67.37" fill="#b4d8f1"/><path d="M323.37 282.95v220.07c65.9-17.93 121.24-61.51 154.58-119.38L323.37 229.05z" fill="#acfff4"/><path d="M282.95 323.37 128.36 477.96A255 255 0 0 0 256 512c23.32 0 45.9-3.13 67.37-8.98V282.95z" fill="#95d5a7"/><path d="M229.05 323.37H8.98c17.93 65.9 61.51 121.24 119.38 154.59l154.59-154.6z" fill="#f8e99b"/><path d="M188.63 282.95 34.05 128.36A255 255 0 0 0 0 256c0 23.32 3.14 45.9 8.98 67.37h220.07z" fill="#efc27b"/><path fill="#d8d8da" d="M283.9 188.63h-.95l40.42 40.42z"/><path d="M503.02 188.63C485.1 122.73 441.51 67.4 383.64 34.04L256 161.68v26.95z" fill="#b681d5"/><path d="M383.64 34.04A255 255 0 0 0 256 0v161.68z" fill="#e592bf"/><path d="M256 350.32V512c23.32 0 45.9-3.13 67.37-8.98V282.95l-40.42 40.42z" fill="#80cb93"/><path fill="#f6e27d" d="M282.95 323.37H256v26.95z"/></svg>
+						<p class="text-gray-400">Color Scheme</p>
+					</button>
+					<button command="show-modal" commandfor="cssbeautify" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28 4 3h24l-2 25-10 3z" fill="#1172b8"/><path d="M26 5H16v24.5l8-2.5z" fill="#3ad"/><path d="M19.5 17.5h-10L9 14l8-2.5H9l-.5-3H24l-.5 3.5-6.5 2.5h6L22 24l-6 2-6-2-.5-5h3l.5 2.5 3 1 3-1z" fill="#fff"/></svg>
+						<p class="text-gray-400">CSS Beautify</p>
+					</button>
+					<button command="show-modal" commandfor="cssminify" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path d="M100.6 0A25.6 25.6 0 0 0 75 25.6v460.8a25.6 25.6 0 0 0 25.6 25.6h375.5a25.6 25.6 0 0 0 25.6-25.6v-401L416.4 0z" fill="#ecedef"/><path d="M442 85.3h59.7L416.4 0v59.7A25.6 25.6 0 0 0 442 85.3" fill="#d9dcdf"/><path d="M399.3 42.7H75v153.6h324.3c4.7 0 8.5-3.9 8.5-8.6V51.2c0-4.7-3.8-8.5-8.5-8.5" fill="#c6cacf"/><path d="M382.2 179.2H18.8a8.5 8.5 0 0 1-6-14.6L75 102.4 12.8 40.2a8.5 8.5 0 0 1 6-14.6h363.4c4.8 0 8.6 3.8 8.6 8.5v136.6c0 4.7-3.8 8.5-8.6 8.5" fill="#1172B8"/><path d="M186 145h-25.6a8.5 8.5 0 0 1-8.6-8.5V85.3c0-4.7 3.9-8.5 8.6-8.5H186a8.5 8.5 0 0 1 0 17h-17V128h17a8.5 8.5 0 0 1 0 17m51.2 0h-25.6a8.5 8.5 0 0 1 0-17h17v-8.5h-17a8.5 8.5 0 0 1-8.6-8.6V85.3c0-4.7 3.9-8.5 8.6-8.5h25.6a8.5 8.5 0 0 1 0 17h-17v8.6h17c4.7 0 8.5 3.8 8.5 8.5v25.6c0 4.7-3.8 8.6-8.5 8.6m51.2-.1h-25.6a8.5 8.5 0 0 1 0-17h17v-8.5h-17a8.5 8.5 0 0 1-8.6-8.6V85.3c0-4.7 3.9-8.5 8.6-8.5h25.6a8.5 8.5 0 0 1 0 17h-17v8.6h17c4.7 0 8.5 3.8 8.5 8.5v25.6c0 4.7-3.8 8.6-8.5 8.6" fill="#fff"/><g fill="#68727e"><path d="M220.1 452.3h-25.6a25.6 25.6 0 0 1-25.6-25.6v-56.2l-14.6-14.6a8.5 8.5 0 0 1 0-12l14.6-14.6V273a25.6 25.6 0 0 1 25.6-25.6h25.6a8.5 8.5 0 0 1 0 17h-25.6a8.5 8.5 0 0 0-8.5 8.6v59.7q-.1 3.5-2.5 6l-11 11 11 11.1a9 9 0 0 1 2.5 6v59.8c0 4.7 3.8 8.5 8.5 8.5h25.6a8.5 8.5 0 1 1 0 17m162.1.2h-25.6a8.5 8.5 0 0 1 0-17.1h25.6c4.7 0 8.6-3.8 8.6-8.5v-59.8q0-3.4 2.5-6l11-11-11-11a9 9 0 0 1-2.5-6.1v-59.7c0-4.7-3.9-8.6-8.6-8.6h-25.6a8.5 8.5 0 0 1 0-17h25.6a25.6 25.6 0 0 1 25.6 25.6v56.2l14.6 14.5a8.5 8.5 0 0 1 0 12.1l-14.6 14.6v56.2a25.6 25.6 0 0 1-25.6 25.6M289.4 401h-1a8.5 8.5 0 0 1 0-17h1a8.5 8.5 0 0 1 0 17"/><path d="M349.2 401h-1a8.5 8.5 0 0 1 0-17h1a8.5 8.5 0 0 1 0 17m-119.5 0h-1a8.5 8.5 0 0 1 0-17h1a8.5 8.5 0 0 1 0 17"/></g></svg>
+						<p class="text-gray-400">CSS Minify</p>
+					</button>
+					<button command="show-modal" commandfor="jsbeautify" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill="#f5de19" d="M2 2h28v28H2z"/><path d="M20.8 23.9a3 3 0 0 0 2.6 1.6q1.7-.1 1.8-1.3c0-1-.7-1.2-2-1.8l-.6-.3c-1.9-.8-3.1-1.8-3.1-4 0-1.9 1.5-3.4 3.8-3.4a4 4 0 0 1 3.8 2.1L25 18.1a2 2 0 0 0-1.7-1.1 1 1 0 0 0-1.2 1.1q-.1 1 1.6 1.6l.6.3c2.3 1 3.5 2 3.5 4.1 0 2.4-1.8 3.7-4.3 3.7a5 5 0 0 1-4.8-2.7Zm-9.3.2q.5 1.2 1.7 1.4 1.4.1 1.4-1.7v-9h2.6v9c0 2.8-1.6 4-3.9 4a4 4 0 0 1-4-2.4Z"/></svg>
+						<p class="text-gray-400">JS Beautify</p>
+					</button>
+					<button command="show-modal" commandfor="jsbeautify" class="cursor-pointer bg-white dark:bg-[#1e1f21] flex flex-col gap-2 items-center py-4 shadow-md rounded-2xl">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path d="M128 0a32 32 0 0 0-32 32v448a32 32 0 0 0 32 32h320a32 32 0 0 0 32-32V128L352 0z" fill="#e2e5e7"/><path d="M384 128h96L352 0v96a32 32 0 0 0 32 32" fill="#b0b7bd"/><path fill="#cad1d8" d="m480 224-96-96h96z"/><path d="M416 416a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16V256a16 16 0 0 1 16-16h352a16 16 0 0 1 16 16z" fill="#f5de19"/><path d="M193.7 303.2c0-10.8 17-10.8 17 0v50.5c0 20-9.7 32.2-31.8 32.2-10.9 0-20-3-27.9-13.1-6.5-7.9 5.8-19.1 12.4-11a19 19 0 0 0 16.8 8c7.2-.3 13.4-3.5 13.6-16.1zm36.6 11.5c3-24.9 40.4-29.3 58-15.8 8.8 7-.5 18.2-8.1 12.6-9.5-6-31-8.9-33.7 4.4-3.4 21 52.2 9 51.3 43-.9 32.5-48 33.3-65.6 18.7a9.5 9.5 0 0 1-1.8-12.5c3.3-3.3 7-4.5 11.4-1 10.5 7.2 37.5 12.6 39.4-5.6-1.7-18.9-54.9-7.5-51-43.8" fill="#000"/><path d="M400 432H96v16h304a16 16 0 0 0 16-16v-16a16 16 0 0 1-16 16" fill="#cad1d8"/></svg>
+						<p class="text-gray-400">JS Minify</p>
+					</button>
+				</div>
 			</div>
 			<div class="max-w-2xl mx-auto px-3 py-4 mt-6 grid grid-cols-1 gap-3">
 				<div class="flex justify-center items-center gap-3">
@@ -142,8 +208,398 @@
 				</div>
 			</div>
 		</div>
-		<script src="src/ycp.js"></script>
-		<script src="src/main.js"></script>
-		<script src="src/dashboard.js"></script>
+
+		<el-dialog>
+			<!-- image to base64 -->
+			<dialog id="img64" aria-labelledby="img64-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="img64-title" class="font-medium">Image to Base64</h2>
+								<button command="close" commandfor="img64" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative flex py-4 px-4">
+								<label class="flex flex-col gap-1.5">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Upload image (max 800KB)</span>
+									<input id="userfile" type="file" accept="image/*" class="text-sm file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white file:cursor-pointer hover:file:bg-blue-500">
+								</label>
+							</div>
+							<div class="relative flex-1 px-4 pb-4 overflow-y-auto ftools">
+								<div id="img64-result" class="flex flex-col gap-4"></div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- bilangan -->
+			<dialog id="bilangan" aria-labelledby="bilangan-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="bilangan-title" class="font-medium">Number System</h2>
+								<button command="close" commandfor="bilangan" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Binary</span>
+									<input id="bina" onkeyup="bikonpret(this.value)" onkeypress="return bncheck(event,bina)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Decimal</span>
+									<input id="desi" onkeyup="dikonpret()" onkeypress="return dncheck(event,desi)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Octal</span>
+									<input id="octo" onkeyup="oikonpret(this.value)" onkeypress="return oncheck(event,octo)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Hexadecimal</span>
+									<input id="hade" onkeyup="hikonpret(this.value)" onkeypress="return hncheck(event)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- code snippet -->
+			<dialog id="snippet" aria-labelledby="snippet-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="snippet-title" class="font-medium">Code Snippet</h2>
+								<button command="close" commandfor="snippet" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Click <span class="text-sm text-gray-900 dark:text-gray-50">'New'</span> button & paste your code</span>
+									<textarea id="codesnip" spellcheck="false" rows="16" class="font-mono block w-full rounded-md border border-gray-200 dark:border-white/10 p-2.5 text-sm bg-gray-100 dark:bg-[#131313] placeholder-gray-400 shadow-sm transition-all focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none disabled:opacity-50"></textarea>
+								</div>
+								<div class="grid grid-cols-2 gap-2">
+									<div class="flex items-center">
+										<input checked id="opt1" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="opt1" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">&amp;</span> to <span class="text-sm font-mono text-pink-500">&amp;amp;</span></label>
+									</div>
+									<div class="flex items-center">
+										<input id="opt2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="opt2" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">'</span> to <span class="text-sm font-mono text-pink-500">&amp;#039;</span></label>
+									</div>
+									<div class="flex items-center">
+										<input id="opt3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="opt3" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">"</span> to <span class="text-sm font-mono text-pink-500">&amp;quot;</span></label>
+									</div>
+									<div class="flex items-center">
+										<input id="opt4" type="checkbox" value="" class="w-4 h-4 border border-light rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="opt4" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">&lt;</span> to <span class="text-sm font-mono text-pink-500">&amp;lt;</span></label>
+									</div>
+									<div class="flex items-center">
+										<input id="opt5" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="opt5" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">&gt;</span> to <span class="text-sm font-mono text-pink-500">&amp;gt;</span></label>
+									</div>
+								</div>
+								<div class="grid grid-cols-2 gap-4">
+									<button onclick="cdClear();" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">New</button>
+									<button id="cvrt" onclick="cdConvert();this.disabled=true;" disabled="" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Generate</button>
+								</div>
+						
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- temperature -->
+			<dialog id="temperature" aria-labelledby="temperature-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="temperature-title" class="font-medium">Temperature</h2>
+								<button command="close" commandfor="temperature" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<form class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<input type="hidden" name="temp">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span id="temp1" class="text-xs text-gray-500 dark:text-gray-400">&deg; Fahrenheit</span>
+									<input name="ed1" onKeyUp="convert(this.form,1);" onFocus="enterBox(this.form,1);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span id="temp2" class="text-xs text-gray-500 dark:text-gray-400">&deg; Celsius</span>
+									<input name="ed2" onKeyUp="convert(this.form,2);" onFocus="enterBox(this.form,2);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span id="temp3" class="text-xs text-gray-500 dark:text-gray-400">Kelvin</span>
+									<input name="ed3" onKeyUp="convert(this.form,3);" onFocus="enterBox(this.form,3);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span id="temp4" class="text-xs text-gray-500 dark:text-gray-400">&deg; Rankine</span>
+									<input name="ed4" onKeyUp="convert(this.form,4);" onFocus="enterBox(this.form,4);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span id="temp5" class="text-xs text-gray-500 dark:text-gray-400">&deg; R&eacute;aumur</span>
+									<input name="ed5" onKeyUp="convert(this.form,5);" onFocus="enterBox(this.form,5);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+							</form>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- trigonometric -->
+			<dialog id="trigonometric" aria-labelledby="trigonometric-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="trigonometric-title" class="font-medium">Trigonometric</h2>
+								<button command="close" commandfor="trigonometric" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<form onsubmit="return do_trigo()" class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Argument</span>
+									<div class="grid grid-cols-2 gap-2">
+										<input id="arg" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										<select id="deg" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<option selected value="1">degrees</option>
+											<option value="0">radian</option>
+										</select>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Function</span>
+									<select id="fun" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										<option selected value="sin">sine (sin)</option>
+										<option value="cos">cosine (cos)</option>
+										<option value="tan">tangent (tan)</option>
+										<option value="asin">arc sine (asin)</option>
+										<option value="acos">arc cosine (acos)</option>
+										<option value="atan">arc tangent (atan)</option>
+										<option value="sinh">hyperbolic sine (sinh)</option>
+										<option value="cosh">hyperbolic cosine (cosh)</option>
+										<option value="tanh">hyperbolic tangent (tanh)</option>
+										<option value="asinh">inverse hyperbolic sine (asinh)</option>
+										<option value="acosh">inverse hyperbolic cosine (acosh)</option>
+										<option value="atanh">inverse hyperbolic tangent (atanh)</option>
+									</select>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
+									<input id="trigonometric-result" type="text" disabled=true value="0" class="text-pink-500 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+								</div>
+								<input type="submit" value="Calculate" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500"/>
+							</form>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- gradient -->
+			<dialog id="gradient" aria-labelledby="gradient-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="gradient-title" class="font-medium">Image Gradient</h2>
+								<button command="close" commandfor="gradient" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<form id="details" class="grid grid-cols-1 gap-4">
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">CSS untuk gradien</span>
+										<textarea id="css" spellcheck="false" rows="4" class="font-mono block w-full rounded-md border border-gray-200 dark:border-white/10 p-2.5 text-sm bg-gray-100 dark:bg-[#131313] placeholder-gray-400 shadow-sm transition-all focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none disabled:opacity-50">linear-gradient(left, red, yellow, pink, green, purple, orange, blue)</textarea>
+									</div>
+									<div class="grid grid-cols-2 gap-4">
+										<div class="flex shadow-sm">
+											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												W
+											</span>
+											<input id="elementWidth" type="number" value="700" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-r-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												px
+											</span>
+										</div>
+										<div class="flex shadow-sm">
+											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												H
+											</span>
+											<input id="elementHeight" type="number" value="53" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-r-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												px
+											</span>
+										</div>
+										<div class="flex items-center">
+											<input checked name="inline-radio-group" id="singleDim" type="radio" value="" class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="singleDim" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Single pixel</label>
+										</div>
+										<div class="flex items-center">
+											<input name="inline-radio-group" id="bothDim" type="radio" value="" class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="bothDim" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Full dimension</label>
+										</div>
+									</div>
+									<input type="submit" value="Generate" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500"/>
+								</form>
+								<div id="bedebah" class="grid grid-cols-1 gap-4">
+									<p class="text-sm text-red-500" id="errors-result"></p>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Canvas render • klik kanan untuk menyimpan</span>
+										<div id="canvasContainer" class="block w-full overflow-x-auto ftools"></div>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Hasil image<a href="#" id="warpImage" class="font-medium text-gray-900 dark:text-gray-50" data-alt="「 tampilan membentang 」" data-status="actual" title="Click to change">「 lihat ukuran sebenarnya 」</a></span>
+										<div id="imageContainer" class="block w-full h-auto overflow-x-auto ftools"></div>
+									</div>
+									<a href="#" id="imageDownload" class="text-center rounded-lg bg-[#1e1f21] dark:bg-white text-white dark:text-black px-2.5 py-1.5 text-sm hover:bg-black/80 dark:hover:bg-white/80">Download</a>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- scheme -->
+			<dialog id="scheme" aria-labelledby="scheme-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="scheme-title" class="font-medium">Color Scheme</h2>
+								<button command="close" commandfor="scheme" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<form id="codescheme" class="grid grid-cols-1 gap-4">
+									<div class="grid grid-cols-3 gap-4">
+										<div class="flex shadow-sm col-span-2">
+											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												#
+											</span>
+											<input type="text" name="hex" id="currentColor" value="5C5CFF" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<input type="color" id="cpx" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#5C5CFF" title="Choose your color">
+										</div>
+										<input type="button" value="Set HEX" onclick="SetHex(document.getElementById('codescheme').hex.value);" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500"/>
+										<div class="flex shadow-sm col-span-2">
+											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												RGB
+											</span>
+											<input type="text" name="r" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<input type="text" name="g" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<input type="text" name="b" value="255" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-r-md block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										</div>
+										<input type="button" value="Set RGB" onclick="ChangeColors(document.getElementById('codescheme').r.value,document.getElementById('codescheme').g.value,document.getElementById('codescheme').b.value);" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500"/>
+										<input type="button" value="Lighten" onclick="LightenScheme();" class="rounded-lg bg-[#1e1f21] dark:bg-white text-white dark:text-black px-2.5 py-1.5 text-sm hover:bg-black/80 dark:hover:bg-white/80"/>
+										<input type="button" value="Darken" onclick="DarkenScheme();" class="rounded-lg bg-[#1e1f21] dark:bg-white text-white dark:text-black px-2.5 py-1.5 text-sm hover:bg-black/80 dark:hover:bg-white/80"/>
+									</div>
+								</form>
+								<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200 dark:border-white/10 text-xs font-mono">
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(92, 92, 255);" id="0" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="0HEX">#5C5CFF</span>
+										<span id="0RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(173, 92, 255);" id="1" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="1HEX">#5C5CFF</span>
+										<span id="1RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(255, 92, 255);" id="2" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="2HEX">#5C5CFF</span>
+										<span id="2RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(255, 92, 173);" id="3" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="3HEX">#5C5CFF</span>
+										<span id="3RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(255, 92, 92);" id="4" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="4HEX">#5C5CFF</span>
+										<span id="4RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(255, 173, 92);" id="5" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="5HEX">#5C5CFF</span>
+										<span id="5RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(255, 255, 92);" id="6" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="6HEX">#5C5CFF</span>
+										<span id="6RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(173, 255, 92);" id="7" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="7HEX">#5C5CFF</span>
+										<span id="7RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(92, 255, 92);" id="8" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="8HEX">#5C5CFF</span>
+										<span id="8RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(92, 255, 173);" id="9" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="9HEX">#5C5CFF</span>
+										<span id="9RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(92, 255, 255);" id="10" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="10HEX">#5C5CFF</span>
+										<span id="10RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(92, 173, 255);" id="11" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="11HEX">#5C5CFF</span>
+										<span id="11RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(31, 31, 255);" id="m1" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="m1HEX">#5C5CFF</span>
+										<span id="m1RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(0, 0, 224);" id="m2" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="m2HEX">#5C5CFF</span>
+										<span id="m2RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(255, 255, 31);" id="m3" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="m3HEX">#5C5CFF</span>
+										<span id="m3RGB">92.92.255</span>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div style="background-color: rgb(224, 224, 0);" id="m4" onclick="SetHex(this.style.backgroundColor);">&nbsp;</div>
+										<span id="m4HEX">#5C5CFF</span>
+										<span id="m4RGB">92.92.255</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+		</el-dialog>
+
+		<script src="js/ycp.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script src="js/tools.js"></script>
 	</body>
 </html>
