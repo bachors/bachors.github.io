@@ -11,5 +11,5 @@ dialog pre, dialog .ftools::-webkit-scrollbar{width:4px;}
 dialog pre, dialog .ftools::-webkit-scrollbar-track{background:transparent;}
 dialog pre, dialog .ftools::-webkit-scrollbar-thumb{background:#444;border-radius:4px;}
 .CodeMirror{line-height:1.4em !important;font-size:0.75rem !important;}
-.CodeMirror .CodeMirror-scroll{background:#292A2C !important;}
-.CodeMirror .CodeMirror-gutter{background:#292A2C !important;}
+.CodeMirror .CodeMirror-scroll{background:#131313 !important;}
+.CodeMirror .CodeMirror-gutter{background:#131313 !important;}
