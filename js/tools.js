@@ -16,7 +16,7 @@ window.onload = function () {
     cmr_cssgradient = CodeMirror.fromTextArea(document.getElementById("cssgradient"), {
         lineNumbers: true,
         theme: "monokai",
-        mode: "css"
+        mode: "javascript"
     });
 
     cmr_codecssbeautify = CodeMirror.fromTextArea(document.getElementById("codecssbeautify"), {
