@@ -34,6 +34,8 @@ window.onload = function () {
     });
 
     rapihkancss();
+
+    cmr_cssgradient.setSize(null, 44);
 };
 
 // image to base64
