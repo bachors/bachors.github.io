@@ -18,12 +18,13 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/agate.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/dialog.min.css">
 		<link rel="stylesheet" href="css/monokai.css">
 		<link rel="stylesheet" href="css/ycp.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.js"></script>
 		<script src="js/config.js"></script>
 	</head>
 	<body id="bg" class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
@@ -659,8 +660,46 @@
 						</div>
 					</el-dialog-panel>
 				</div>
+			</dialog>			
+			<!-- cssminify -->
+			<dialog id="cssminify" aria-labelledby="cssminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="cssminify-title" class="font-medium">CSS Minify</h2>
+								<button command="close" commandfor="cssminify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your CSS code here</span>
+									<textarea id="codecssminify" spellcheck="false" onChange='cssminify()' onKeyDown='cssminify()' class="text-xs"></textarea>
+								</div>
+								<div class="grid grid-cols-2 gap-2">
+									<div class="flex items-center">
+										<input checked id="o_colors" type="checkbox" name="o_colors" onChange='cssminify()' class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="o_colors" class="select-none ms-2 text-xs">Compress colours</label>
+									</div>
+									<div class="flex items-center">
+										<input checked id="o_fweight" type="checkbox" name="o_fweight" onChange='cssminify()' class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="o_fweight" class="select-none ms-2 text-xs">Compress font-weight</label>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codecssminifylength" class="font-mono text-pink-500">0</span> • Result length <span id="rescssminifylength" class="font-mono text-pink-500">0</span> • Compression <span id="cssminifyresult" class="font-mono text-pink-500">0%</span></span>
+									<textarea id="rescssminify" spellcheck="false" readonly></textarea>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
 			</dialog>
 		</el-dialog>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/dialog.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/search.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/xml.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/javascript.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/css.min.js"></script>
