@@ -43,7 +43,7 @@ window.onload = function () {
         lineNumbers: true,
         lineWrapping: true,
         theme: "monokai",
-        mode: "javascript"
+        mode: "htmlmixed"
     });
 
     cmr_codecssbeautify = CodeMirror.fromTextArea(document.getElementById("codecssbeautify"), {
@@ -125,7 +125,7 @@ window.onload = function () {
         mode: "javascript"
     });
 
-    cmr_cssgradient.setSize(null, 44);
+    cmr_cssgradient.setSize(null, 110);
 };
 
 // image to base64
