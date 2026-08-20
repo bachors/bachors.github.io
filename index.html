@@ -601,7 +601,7 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your CSS code here</span>
-									<textarea id="codecssbeautify" spellcheck="false" onChange='rapihkancss()' onKeyDown='rapihkancss()' class="text-xs"></textarea>
+									<textarea id="codecssbeautify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Distance CSS code</span>
@@ -676,7 +676,7 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your CSS code here</span>
-									<textarea id="codecssminify" spellcheck="false" onChange='cssminify()' onKeyDown='cssminify()' class="text-xs"></textarea>
+									<textarea id="codecssminify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="grid grid-cols-2 gap-2">
 									<div class="flex items-center">
@@ -698,6 +698,60 @@
 				</div>
 			</dialog>			
 			<!-- jsbeautify -->
+			<dialog id="jsbeautify" aria-labelledby="jsbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="jsbeautify-title" class="font-medium">JS Beautify</h2>
+								<button command="close" commandfor="jsbeautify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your js code here</span>
+									<textarea id="codejsbeautify" spellcheck="false" class="text-xs"></textarea>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Distance</span>
+									<div class="grid grid-cols-3 gap-2">
+										<div class="flex items-center">
+											<input checked name="distance-js-beautify" id="jsusetab" type="radio" value="jsusetab" onChange='beautifyjs()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="jsusetab" class="select-none ms-2 text-xs">Use Tab</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-js-beautify" id="jsonespaces" type="radio" value="jsonespaces" onChange='beautifyjs()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="jsonespaces" class="select-none ms-2 text-xs">1 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-js-beautify" id="jstwospaces" type="radio" value="jstwospaces" onChange='beautifyjs()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="jstwospaces" class="select-none ms-2 text-xs">2 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-js-beautify" id="jstreespaces" type="radio" value="jstreespaces" onChange='beautifyjs()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="jstreespaces" class="select-none ms-2 text-xs">3 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-js-beautify" id="jsfivespaces" type="radio" value="jsfivespaces" onChange='beautifyjs()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="jsfivespaces" class="select-none ms-2 text-xs">5 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-js-beautify" id="jssixspaces" type="radio" value="jssixspaces" onChange='beautifyjs()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="jssixspaces" class="select-none ms-2 text-xs">6 Space</label>
+										</div>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
+									<textarea id="resjsbeautify" spellcheck="false" readonly></textarea>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
 			<!-- jsminify -->
 			<dialog id="jsminify" aria-labelledby="jsminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
@@ -713,7 +767,7 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your JS code here</span>
-									<textarea id="codejsminify" spellcheck="false" onChange='jsminify()' onKeyDown='jsminify()' class="text-xs"></textarea>
+									<textarea id="codejsminify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="grid grid-cols-2 gap-2">
 									<div class="flex items-center">
@@ -749,11 +803,39 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your HTML code here</span>
-									<textarea id="codehtmlbeautify" spellcheck="false" lass="text-xs"></textarea>
+									<textarea id="codehtmlbeautify" spellcheck="false" class="text-xs"></textarea>
 								</div>
-								<button onclick='javascript:runTabifier();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Beautify !</button>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs font-mono text-pink-500" id="htmlbeautifyresult"></span>
+									<span class="text-xs text-gray-500 dark:text-gray-400">Distance</span>
+									<div class="grid grid-cols-3 gap-2">
+										<div class="flex items-center">
+											<input checked name="distance-html-beautify" id="htmlusetab" type="radio" value="htmlusetab" onChange='beautifyHtml()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="htmlusetab" class="select-none ms-2 text-xs">Use Tab</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-html-beautify" id="htmlonespaces" type="radio" value="htmlonespaces" onChange='beautifyHtml()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="htmlonespaces" class="select-none ms-2 text-xs">1 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-html-beautify" id="htmltwospaces" type="radio" value="htmltwospaces" onChange='beautifyHtml()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="htmltwospaces" class="select-none ms-2 text-xs">2 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-html-beautify" id="htmltreespaces" type="radio" value="htmltreespaces" onChange='beautifyHtml()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="htmltreespaces" class="select-none ms-2 text-xs">3 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-html-beautify" id="htmlfivespaces" type="radio" value="htmlfivespaces" onChange='beautifyHtml()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="htmlfivespaces" class="select-none ms-2 text-xs">5 Space</label>
+										</div>
+										<div class="flex items-center">
+											<input name="distance-html-beautify" id="htmlsixspaces" type="radio" value="htmlsixspaces" onChange='beautifyHtml()' class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+											<label for="htmlsixspaces" class="select-none ms-2 text-xs">6 Space</label>
+										</div>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
 									<textarea id="reshtmlbeautify" spellcheck="false" readonly></textarea>
 								</div>
 							</div>
@@ -776,7 +858,7 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your HTML code here</span>
-									<textarea id="codehtmlminify" spellcheck="false" lass="text-xs"></textarea>
+									<textarea id="codehtmlminify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<button onclick='htmlMinify();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Minify !</button>
 							</div>
@@ -799,12 +881,12 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Normal Text/HTML/JavaScript</span>
-									<textarea id="codeescape" spellcheck="false" lass="text-xs"></textarea>
+									<textarea id="codeescape" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<button onclick='escapeTxt();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Encode ⬇︎</button>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Escaped Text/HTML/JavaScript</span>
-									<textarea id="resescape" spellcheck="false" lass="text-xs"></textarea>
+									<textarea id="resescape" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<button onclick='unescapeTxt();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">⬆ Decode</button>
 								<div class="flex flex-col gap-1.5 w-full">
@@ -895,6 +977,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/javascript.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/css.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/htmlmixed.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
 		<script src="js/ycp.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/dashboard.js"></script>
