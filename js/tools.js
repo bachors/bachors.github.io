@@ -8,6 +8,9 @@ cmr_codejsminify,
 cmr_resjsminify,
 cmr_codehtmlbeautify,
 cmr_reshtmlbeautify,
+cmr_codehtmlminify,
+cmr_codeescape,
+cmr_resescape,
 formatId,
 cssminifyutil = {},
 HSL = new Object,
@@ -102,6 +105,26 @@ window.onload = function () {
         readOnly: true
     });
 
+    cmr_codehtmlminify = CodeMirror.fromTextArea(document.getElementById("codehtmlminify"), {
+        lineNumbers: true,
+        lineWrapping: true,
+        theme: "monokai",
+        mode: "htmlmixed"
+    });
+
+    cmr_codeescape = CodeMirror.fromTextArea(document.getElementById("codeescape"), {
+        lineNumbers: true,
+        theme: "monokai",
+        mode: "htmlmixed"
+    });
+
+    cmr_resescape = CodeMirror.fromTextArea(document.getElementById("resescape"), {
+        lineNumbers: true,
+        lineWrapping: true,
+        theme: "monokai",
+        mode: "javascript"
+    });
+
     cmr_cssgradient.setSize(null, 44);
 };
 
@@ -141,6 +164,12 @@ var _nativeMap=window.Map,base2={name:"base2",version:"1.0.1(pre)",exports:"Base
 var LOOP_SIZE=100,ownLine=["area","body","head","hr","i?frame","link","meta","noscript","style","table","tbody","thead","tfoot"],contOwnLine=["li","dt","dt","h[1-6]","option","script"],lineBefore=new RegExp("^<(/?"+ownLine.join("|/?")+"|"+contOwnLine.join("|")+")[ >]"),newLevel=["blockquote","div","dl","fieldset","form","frameset","map","ol","p","pre","select","td","th","tr","ul"];function runTabifier(){cmr_reshtmlbeautify.setValue(""),htmlbeautifyCleanHTML(cmr_codehtmlbeautify.getValue())}function finishTabifier(e){e=(e=(e=e.replace(/\n\s*\n/g,"\n")).replace(/^[\s\n]*/,"")).replace(/[\s\n]*$/,""),cmr_reshtmlbeautify.setValue(e),htmlbeautifyLevel=0}function showProgressHtmlBeautify(e,t){var a=Math.floor(100*e/t);document.getElementById("htmlbeautifyresult").innerHTML=a+"% "}function htmlbeautifyCleanHTML(e){var a=0,n=0,l=null,r=null,i="",s="",f="";!function h(){for(var u=a;a<e.length&&a<u+LOOP_SIZE;a++){if(n=a,-1==e.substr(a).indexOf("<"))return void finishTabifier(s+=e.substr(a));for(;n<e.length&&"<"!=e.charAt(n);)n++;for(a!=n&&((f=e.substr(a,n-a)).match(/^\s+$/)||("\n"==s.charAt(s.length-1)?s+=htmlbeautifyTabs():"\n"==f.charAt(0)&&(s+="\n"+htmlbeautifyTabs(),f=f.replace(/^\s+/,"")),f=f.replace(/\s+/g," "),s+=f),f.match(/\n/)&&(s+="\n"+htmlbeautifyTabs())),l=n;n<e.length&&">"!=e.charAt(n);)n++;if(i=e.substr(l,n-l),a=n,"!--"==i.substr(1,3)){if(!i.match(/--$/)){for(;"--\x3e"!=e.substr(n,3);)n++;n+=2,i=e.substr(l,n-l),a=n}"\n"!=s.charAt(s.length-1)&&(s+="\n"),s+=htmlbeautifyTabs(),s+=i+">\n"}else"!"==i[1]?s=htmlbeautifyPlaceTag(i+">",s):"?"==i[1]?s+=i+">\n":(t=i.match(/^<(script|style)/i))?(t[1]=t[1].toLowerCase(),i=htmlbeautifyCleanTag(i),s=htmlbeautifyPlaceTag(i,s),(r=String(e.substr(a+1)).toLowerCase().indexOf("</"+t[1]))&&(f=e.substr(a+1,r),a+=r,s+=f)):(i=htmlbeautifyCleanTag(i),s=htmlbeautifyPlaceTag(i,s))}showProgressHtmlBeautify(a,e.length),a<e.length?setTimeout(h,0):finishTabifier(s)}()}function htmlbeautifyTabs(){for(var e="",t=0;t<htmlbeautifyLevel;t++)e+="\t";return e}function htmlbeautifyCleanTag(e){var t="",a="";(e=(e=(e=e.replace(/\n/g," ")).replace(/[\s]{2,}/g," ")).replace(/^\s+|\s+$/g," ")).match(/\/$/)&&(a="/",e=e.replace(/\/+$/,""));for(var n,l=/\s*([^= ]+)(?:=((['"']).*?\3|[^ ]+))?/;n=l.exec(e);)n[2]?t+=n[1].toLowerCase()+"="+n[2]:n[1]&&(t+=n[1].toLowerCase()),t+=" ",e=e.substr(n[0].length);return t.replace(/\s*$/,"")+a+">"}function htmlbeautifyPlaceTag(e,t){var a=e.match(newLevel);return(e.match(lineBefore)||a)&&(t=t.replace(/\s*$/,""),t+="\n"),a&&"/"==e.charAt(1)&&htmlbeautifyLevel--,"\n"==t.charAt(t.length-1)&&(t+=htmlbeautifyTabs()),a&&"/"!=e.charAt(1)&&htmlbeautifyLevel++,t+=e,(e.match(lineAfter)||e.match(newLevel))&&(t=t.replace(/ *$/,""),t+="\n"),t}lineAfter=new RegExp("^<(br|/?"+ownLine.join("|/?")+"|/"+contOwnLine.join("|/")+")[ >]"),newLevel=new RegExp("^</?("+newLevel.join("|")+")[ >]");
 
 // htmlminify
+function htmlMinify(){var e=cmr_codehtmlminify.getValue();e=(e=e.replace(/(>)?\s+/g,"$1 ")).replace(/([\t\n\s\r]+)</g,"<"),cmr_codehtmlminify.setValue(e)}
 
+// escape
+function escapeTxt(){var e,t=cmr_codeescape.getValue(),n="",c="",r="",s="";for(i=0;i<256;i++)(s=i.toString(16)).length<2&&(s="0"+s),r+=s,c+=unescape("%"+s);for(r=r.toUpperCase(),t.replace(String.fromCharCode(13)+"","%13"),q=0;q<t.length;q++){for(e=t.substr(q,1),i=0;i<c.length;i++)e==c.substr(i,1)&&(e=e.replace(c.substr(i,1),"%"+r.substr(2*i,2)),i=c.length);n+=e}cmr_resescape.setValue(n),document.getElementById("preescape").innerHTML=`&lt;script language=&quot;javascript&quot;&gt;\n  document.write(unescape(&#039;${n}&#039;));\n&lt;/script&gt;`,hljs.highlightElement(document.getElementById("preescape"))}function unescapeTxt(){cmr_codeescape.setValue(unescape(cmr_resescape.getValue()))}document.getElementById("preescape").innerHTML="&lt;script language=&quot;javascript&quot;&gt;\n  document.write(unescape(&#039;ESCAPED&#039;));\n&lt;/script&gt;",hljs.highlightElement(document.getElementById("preescape"));
+
+// password
+function generatePassword(){const e=document.getElementById("pass_kar").value,t=document.getElementById("pass_kec"),n=document.getElementById("pass_bes"),o=document.getElementById("pass_ang"),a=document.getElementById("pass_sim");let l="",s="",r="",c="";t.checked&&(l=t.value),n.checked&&(s=n.value),o.checked&&(r=o.value),a.checked&&(c=a.value);const d=[l,s,r,c].filter(e=>e&&e.length>0);if(0===d.length)return"";if(e<d.length)throw new Error(`Panjang password minimal ${d.length} agar semua kategori terwakili`);const h=d.join("");let g=[];for(const e of d){const t=e[Math.floor(Math.random()*e.length)];g.push(t)}for(let t=g.length;t<e;t++){const e=h[Math.floor(Math.random()*h.length)];g.push(e)}for(let e=g.length-1;e>0;e--){const t=Math.floor(Math.random()*(e+1));[g[e],g[t]]=[g[t],g[e]]}document.getElementById("pass_res").innerText=g.join("")}
 
 // sdfjkd

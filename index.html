@@ -302,7 +302,7 @@
 								</div>
 								<div class="grid grid-cols-2 gap-4">
 									<button onclick="cdClear();" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">New</button>
-									<button id="cvrt" onclick="cdConvert();" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Generate</button>
+									<button id="cvrt" onclick="cdConvert();" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Generate !</button>
 								</div>						
 							</div>
 						</div>
@@ -756,6 +756,135 @@
 									<span class="text-xs font-mono text-pink-500" id="htmlbeautifyresult"></span>
 									<textarea id="reshtmlbeautify" spellcheck="false" readonly></textarea>
 								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- htmlminify -->
+			<dialog id="htmlminify" aria-labelledby="htmlminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="htmlminify-title" class="font-medium">HTML Minify</h2>
+								<button command="close" commandfor="htmlminify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your HTML code here</span>
+									<textarea id="codehtmlminify" spellcheck="false" lass="text-xs"></textarea>
+								</div>
+								<button onclick='htmlMinify();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Minify !</button>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- escape -->
+			<dialog id="escape" aria-labelledby="escape-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="escape-title" class="font-medium">Escape</h2>
+								<button command="close" commandfor="escape" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Normal Text/HTML/JavaScript</span>
+									<textarea id="codeescape" spellcheck="false" lass="text-xs"></textarea>
+								</div>
+								<button onclick='escapeTxt();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Encode ⬇︎</button>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Escaped Text/HTML/JavaScript</span>
+									<textarea id="resescape" spellcheck="false" lass="text-xs"></textarea>
+								</div>
+								<button onclick='unescapeTxt();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">⬆ Decode</button>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-500 dark:text-gray-400">HTML</span>
+									<pre id="preescape" class="font-mono w-full bg-[#292A2C] rounded-lg p-3 text-xs overflow-x-auto select-all cursor-pointer"></pre>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- password -->
+			<dialog id="password" aria-labelledby="password-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="password-title" class="font-medium">Password</h2>
+								<button command="close" commandfor="password" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full">
+									<label class="text-xs text-gray-500 dark:text-gray-400 w-32">Panjang karakter</label>
+									<select id="pass_kar" class="border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8" selected="selected">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+										<option value="32">32</option>
+									</select>
+								</div>
+								<div class="grid grid-cols-2 gap-2">
+									<div class="flex items-center">
+										<input checked id="pass_kec" type="checkbox" name="pass_kec" value="abcdefghijklmnopqrstuvwxyz" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="pass_kec" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Huruf kecil</label>
+									</div>
+									<div class="flex items-center">
+										<input id="pass_bes" type="checkbox" name="pass_bes" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="pass_bes" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Huruf besar</label>
+									</div>
+									<div class="flex items-center">
+										<input id="pass_ang" type="checkbox" name="pass_ang" value="0123456789" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="pass_ang" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Angka</label>
+									</div>
+									<div class="flex items-center">
+										<input id="pass_sim" type="checkbox" name="pass_sim" value="[~!@#$%^&*()-_=+[]{};:,.<>/?]" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+										<label for="pass_sim" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Simbol</label>
+									</div>
+								</div>
+								<div id="pass_res" class="block w-full py-6 items-center border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl text-xl text-center font-mono overflow-x-auto select-all cursor-pointer ftools">
+								&ensp;
+								</div>
+								<button onclick='generatePassword();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Generate !</button>
 							</div>
 						</div>
 					</el-dialog-panel>
