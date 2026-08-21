@@ -17,14 +17,10 @@
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/agate.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/dialog.min.css">
-		<link rel="stylesheet" href="css/monokai.css">
-		<link rel="stylesheet" href="css/ycp.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="css/ycp.css">
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.js"></script>
 		<script src="js/config.js"></script>
 	</head>
 	<body id="bg" class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
@@ -204,9 +200,9 @@
 		<el-dialog>
 			<!-- image base64 -->
 			<dialog id="img64" aria-labelledby="img64-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="img64-title" class="font-medium">Image Base64</h2>
@@ -229,9 +225,9 @@
 			</dialog>
 			<!-- bilangan -->
 			<dialog id="bilangan" aria-labelledby="bilangan-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="bilangan-title" class="font-medium">Number System</h2>
@@ -263,9 +259,9 @@
 			</dialog>
 			<!-- code snippet -->
 			<dialog id="snippet" aria-labelledby="snippet-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="snippet-title" class="font-medium">Code Snippet</h2>
@@ -274,9 +270,12 @@
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Click <span class="text-sm text-gray-900 dark:text-gray-50">'New'</span> button & paste your code</span>
 									<textarea id="codesnip" spellcheck="false"></textarea>
+									<button id="kopi-snippet" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 								<div class="grid grid-cols-2 gap-2">
 									<div class="flex items-center">
@@ -311,9 +310,9 @@
 			</dialog>
 			<!-- temperature -->
 			<dialog id="temperature" aria-labelledby="temperature-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="temperature-title" class="font-medium">Temperature</h2>
@@ -350,9 +349,9 @@
 			</dialog>
 			<!-- trigonometric -->
 			<dialog id="trigonometric" aria-labelledby="trigonometric-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="trigonometric-title" class="font-medium">Trigonometric</h2>
@@ -400,9 +399,9 @@
 			</dialog>
 			<!-- gradient -->
 			<dialog id="gradient" aria-labelledby="gradient-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="gradient-title" class="font-medium">Image Gradient</h2>
@@ -465,9 +464,9 @@
 			</dialog>
 			<!-- scheme -->
 			<dialog id="scheme" aria-labelledby="scheme-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="scheme-title" class="font-medium">Color Scheme</h2>
@@ -588,9 +587,9 @@
 			</dialog>
 			<!-- cssbeautify -->
 			<dialog id="cssbeautify" aria-labelledby="cssbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="cssbeautify-title" class="font-medium">CSS Beautify</h2>
@@ -652,9 +651,12 @@
 										<label for="autosemicolon" class="select-none ms-2 text-xs">Checked</label>
 									</div>
 								</div>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
 									<textarea id="rescssbeautify" spellcheck="false" readonly></textarea>
+									<button id="kopi-cssbeautify" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -663,9 +665,9 @@
 			</dialog>			
 			<!-- cssminify -->
 			<dialog id="cssminify" aria-labelledby="cssminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="cssminify-title" class="font-medium">CSS Minify</h2>
@@ -688,9 +690,12 @@
 										<label for="o_fweight" class="select-none ms-2 text-xs">Compress font-weight</label>
 									</div>
 								</div>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codecssminifylength" class="font-mono text-pink-500">0</span> • Result length <span id="rescssminifylength" class="font-mono text-pink-500">0</span> • Compression <span id="cssminifyresult" class="font-mono text-pink-500">0%</span></span>
 									<textarea id="rescssminify" spellcheck="false" readonly></textarea>
+									<button id="kopi-cssminify" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -699,9 +704,9 @@
 			</dialog>			
 			<!-- jsbeautify -->
 			<dialog id="jsbeautify" aria-labelledby="jsbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="jsbeautify-title" class="font-medium">JS Beautify</h2>
@@ -743,9 +748,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
 									<textarea id="resjsbeautify" spellcheck="false" readonly></textarea>
+									<button id="kopi-jsbeautify" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -754,9 +762,9 @@
 			</dialog>
 			<!-- jsminify -->
 			<dialog id="jsminify" aria-labelledby="jsminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="jsminify-title" class="font-medium">JS Minify</h2>
@@ -779,9 +787,12 @@
 										<label for="o_base62" class="select-none ms-2 text-xs">Base62 Encode</label>
 									</div>
 								</div>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codejsminifylength" class="font-mono text-pink-500">0</span> • Result length <span id="resjsminifylength" class="font-mono text-pink-500">0</span> • Compression <span id="jsminifyresult" class="font-mono text-pink-500">0%</span></span>
 									<textarea id="resjsminify" spellcheck="false" readonly></textarea>
+									<button id="kopi-jsminify" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -790,9 +801,9 @@
 			</dialog>
 			<!-- htmlbeautify -->
 			<dialog id="htmlbeautify" aria-labelledby="htmlbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="htmlbeautify-title" class="font-medium">HTML Beautify</h2>
@@ -834,9 +845,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
 									<textarea id="reshtmlbeautify" spellcheck="false" readonly></textarea>
+									<button id="kopi-htmlbeautify" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -845,9 +859,9 @@
 			</dialog>
 			<!-- htmlminify -->
 			<dialog id="htmlminify" aria-labelledby="htmlminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="htmlminify-title" class="font-medium">HTML Minify</h2>
@@ -856,9 +870,12 @@
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your HTML code here</span>
 									<textarea id="codehtmlminify" spellcheck="false" class="text-xs"></textarea>
+									<button id="kopi-htmlminify" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 								<button onclick='htmlMinify();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Minify !</button>
 							</div>
@@ -868,9 +885,9 @@
 			</dialog>
 			<!-- escape -->
 			<dialog id="escape" aria-labelledby="escape-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="escape-title" class="font-medium">Escape</h2>
@@ -879,14 +896,20 @@
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Normal Text/HTML/JavaScript</span>
 									<textarea id="codeescape" spellcheck="false" class="text-xs"></textarea>
+									<button id="kopi-codeescape" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 								<button onclick='escapeTxt();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Encode ⬇︎</button>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full relative">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Escaped Text/HTML/JavaScript</span>
 									<textarea id="resescape" spellcheck="false" class="text-xs"></textarea>
+									<button id="kopi-resescape" class="absolute top-6 right-0 w-8 h-8 mr-4 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 								<button onclick='unescapeTxt();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">⬆ Decode</button>
 								<div class="flex flex-col gap-1.5 w-full">
@@ -900,9 +923,9 @@
 			</dialog>
 			<!-- password -->
 			<dialog id="password" aria-labelledby="password-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="password-title" class="font-medium">Password</h2>
@@ -971,17 +994,22 @@
 				</div>
 			</dialog>
 		</el-dialog>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/dialog.min.css">
+		<link rel="stylesheet" href="css/monokai.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/dialog.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/search.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/searchcursor.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/xml.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/javascript.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/css.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/htmlmixed.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
 		<script src="js/ycp.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/dashboard.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
 		<script src="js/tools.js"></script>
 	</body>
 </html>

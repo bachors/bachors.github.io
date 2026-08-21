@@ -25,6 +25,8 @@ for (i = 0; i < 16; i++)
 	for (j = 0; j < 16; j++) HEXCodes[sk] = HEX[i] + HEX[j], sk++;
 RGB.R = RGB.G = RGB.B = 0, tempRGB.R = tempRGB.G = tempRGB.B = 0, HSL.H = HSL.S = HSL.L = 0;
 
+async function copyToClipboard(t,a){try{await navigator.clipboard.writeText(a),t.innerHTML='<span class="text-xs">Copied!</span>',setTimeout(()=>t.innerHTML='<i class="far fa-copy text-sm"></i>',1e3)}catch(t){alert("Failed to copy text.")}}
+
 // load
 window.onload = function () {
     'use strict';
@@ -143,6 +145,43 @@ window.onload = function () {
     });
 
     cmr_cssgradient.setSize(null, 110);
+
+    const kopi_snippet = document.getElementById("kopi-snippet");
+    kopi_snippet.addEventListener('click', function() {
+        copyToClipboard(kopi_snippet, cmr_codesnip.getValue());
+    });
+    const kopi_cssbeautify = document.getElementById("kopi-cssbeautify");
+    kopi_cssbeautify.addEventListener('click', function() {
+        copyToClipboard(kopi_cssbeautify, cmr_rescssbeautify.getValue());
+    });
+    const kopi_cssminify = document.getElementById("kopi-cssminify");
+    kopi_cssminify.addEventListener('click', function() {
+        copyToClipboard(kopi_cssminify, cmr_rescssminify.getValue());
+    });
+    const kopi_jsbeautify = document.getElementById("kopi-jsbeautify");
+    kopi_jsbeautify.addEventListener('click', function() {
+        copyToClipboard(kopi_jsbeautify, cmr_resjsbeautify.getValue());
+    });
+    const kopi_jsminify = document.getElementById("kopi-jsminify");
+    kopi_jsminify.addEventListener('click', function() {
+        copyToClipboard(kopi_jsminify, cmr_resjsminify.getValue());
+    });
+    const kopi_htmlbeautify = document.getElementById("kopi-htmlbeautify");
+    kopi_htmlbeautify.addEventListener('click', function() {
+        copyToClipboard(kopi_htmlbeautify, cmr_reshtmlbeautify.getValue());
+    });
+    const kopi_htmlminify = document.getElementById("kopi-htmlminify");
+    kopi_htmlminify.addEventListener('click', function() {
+        copyToClipboard(kopi_htmlminify, cmr_codehtmlminify.getValue());
+    });
+    const kopi_codeescape = document.getElementById("kopi-codeescape");
+    kopi_codeescape.addEventListener('click', function() {
+        copyToClipboard(kopi_codeescape, cmr_codeescape.getValue());
+    });
+    const kopi_resescape = document.getElementById("kopi-resescape");
+    kopi_resescape.addEventListener('click', function() {
+        copyToClipboard(kopi_resescape, cmr_resescape.getValue());
+    });
 };
 
 // image to base64
