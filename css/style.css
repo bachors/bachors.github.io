@@ -11,5 +11,12 @@ dialog .ftools::-webkit-scrollbar{width:4px;}
 dialog .ftools::-webkit-scrollbar-track{background:transparent;}
 dialog .ftools::-webkit-scrollbar-thumb{background:#444;border-radius:4px;}
 .CodeMirror{line-height:1.4em !important;font-size:0.75rem !important;position:relative !important;overflow:hidden !important;}
-.CodeMirror .CodeMirror-scroll{background:#131313 !important;}
+.CodeMirror .CodeMirror-scroll{background:#131313 !important;scrollbar-width:thin !important;scrollbar-color:#444 transparent !important;}
+.CodeMirror .CodeMirror-scroll::-webkit-scrollbar{width:4px !important;}
+.CodeMirror .CodeMirror-scroll::-webkit-scrollbar-track{background:transparent !important;}
+.CodeMirror .CodeMirror-scroll::-webkit-scrollbar-thumb{background:#444 !important;border-radius:4px !important;}
+.CodeMirror .CodeMirror-scrollbar{scrollbar-width:thin !important;scrollbar-color:#444 transparent !important;}
+.CodeMirror .CodeMirror-scrollbar::-webkit-scrollbar{width:4px !important;}
+.CodeMirror .CodeMirror-scrollbar::-webkit-scrollbar-track{background:transparent !important;}
+.CodeMirror .CodeMirror-scrollbar::-webkit-scrollbar-thumb{background:#444 !important;border-radius:4px !important;}
 .CodeMirror .CodeMirror-gutter{background:#131313 !important;}
