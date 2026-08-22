@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="css/ycp.css">
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.min.js"></script>
-		<script src="js/config.js"></script>
+		<script src="js/config.js" type="text/javascript"></script>
 	</head>
 	<body id="bg" class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
 		<header class="z-30 fixed w-full px-3 pt-2">
@@ -41,7 +41,7 @@
 			</div>
 		</header>
 		<div class="max-w-sm md:max-w-xs mx-auto pt-16">
-			<div id="cards" class="mx-3 md:mx-0 mt-5">
+			<div class="mx-3 md:mx-0 mt-5">
 				<div class="text-gray-400 dark:text-gray-500 mb-4 text-center">
 					<i class="fa fa-code-commit"></i>
 				</div>
@@ -187,6 +187,28 @@
 						<p>Password</p>
 					</button>
 				</div>
+				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
+					<i class="fa fa-ellipsis-vertical"></i>
+				</div>
+				<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
+					<div class="h-8 w-28 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
+					<div class="text-white dark:text-black">write code</div>
+				</div>
+				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
+					<i class="fa fa-ellipsis-vertical"></i>
+				</div>
+				<div id="skulpt" class="bg-[#1e1f21] grid grid-cols-1 gap-0 col-span-3 overflow-hidden shadow-md rounded-2xl">
+					<div id="py-canvas" class="w-full bg-blue-100/10" style="display:none"></div>
+					<pre id="py-output" class="font-mono w-full text-gray-50 p-4 bg-blue-100/10" style="display:none"></pre>
+					<div class="relative pt-1">
+						<textarea id="py-editor" spellcheck="false"></textarea>
+						<button id="py-run" class="absolute top-0 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+							<i class="fa fa-play text-sm"></i>
+						</button>
+					</div>
+					<span class="font-mono text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-2">Ctrl+Enter / Shift+Enter to Run</span>
+				</div>
+				<div id="cards"></div>
 			</div>
 			<div class="max-w-2xl mx-auto px-3 py-4 mt-6 grid grid-cols-1 gap-3">
 				<div class="flex justify-center items-center gap-3">
@@ -1004,12 +1026,15 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/javascript.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/css.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/htmlmixed.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/python.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-		<script src="js/ycp.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/dashboard.js"></script>
+		<script src="js/skulpt.min.js" type="text/javascript"></script>
+		<script src="js/skulpt-stdlib.js" type="text/javascript"></script>
+		<script src="js/ycp.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/dashboard.js" type="text/javascript"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
-		<script src="js/tools.js"></script>
+		<script src="js/tools.js" type="text/javascript"></script>
 	</body>
 </html>

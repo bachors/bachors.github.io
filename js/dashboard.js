@@ -78,7 +78,7 @@ function stat(t, a, e) {
 
 function stik(a, e) {
 	return `
-			<div class="bg-white dark:bg-white/5 flex flex-col gap-0.5 items-center py-4">
+			<div class="bg-white dark:bg-blue-100/10 flex flex-col gap-0.5 items-center py-4">
 				${ICONS[a.toLowerCase()]}
 				<p class="text-xs text-gray-400 mt-2">${a}</p>
 				<h3>${e}</h3>
@@ -207,7 +207,7 @@ function renderCards(t, k) {
 				</div>
 				<div class="bg-gray-200 dark:bg-[#1e1f21] grid grid-cols-3 gap-px pt-px">${stik("Dirilis","10/08/2021")}${stik("Kategori","Hiburan")}${stik("Rating",k.apl_konten)}${stik("Diupdate",k.apl_update)}${stik("Versi",k.apl_versi)}${stik("Android",k.apl_os)}${stik("Ukuran",k.apl_size)}${stik("Download",k.apl_download)}${stik("Ulasan",k.apl_ulasan)}${stik("Interaksi",k.apl_interaksi)}${stik("Error",k.apl_error)}${stik("ANR",k.apl_anr)}</div>
 			</div>`;
-	document.getElementById("cards").innerHTML += d + r, renderAdmobCard("seven_day");
+	document.getElementById("cards").innerHTML = d + r, renderAdmobCard("seven_day");
 	youtube();
 }
 
