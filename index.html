@@ -192,14 +192,16 @@
 				</div>
 				<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
 					<div class="h-8 w-28 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
-					<div class="text-white dark:text-black">write code</div>
+					<div class="text-white dark:text-black">write code 🐍</div>
 				</div>
 				<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 					<i class="fa fa-ellipsis-vertical"></i>
 				</div>
 				<div id="skulpt" class="bg-[#1e1f21] grid grid-cols-1 gap-0 col-span-3 overflow-hidden shadow-md rounded-2xl">
-					<div id="py-canvas" class="w-full bg-blue-100/10" style="display:none"></div>
-					<pre id="py-output" class="font-mono w-full text-gray-50 p-4 bg-blue-100/10" style="display:none"></pre>
+					<div class="block w-full bg-blue-100/10 overflow-x-auto ftools">
+						<div id="py-canvas" class="w-full" style="display:none"></div>
+						<pre id="py-output" class="font-mono w-full text-gray-50 p-4" style="display:none"></pre>
+					</div>
 					<div class="relative pt-1">
 						<textarea id="py-editor" spellcheck="false"></textarea>
 						<button id="py-run" class="absolute top-0 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
