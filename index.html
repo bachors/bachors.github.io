@@ -198,9 +198,9 @@
 					<i class="fa fa-ellipsis-vertical"></i>
 				</div>
 				<div id="skulpt" class="bg-[#1e1f21] grid grid-cols-1 gap-0 col-span-3 overflow-hidden shadow-md rounded-2xl">
-					<div class="block w-full bg-blue-100/10 overflow-x-auto ftools">
+					<div class="block w-full min-h-[10rem] max-h-[380px] bg-blue-100/10 overflow-x-auto overflow-y-auto ftools">
 						<div id="py-canvas" class="w-full" style="display:none"></div>
-						<pre id="py-output" class="font-mono w-full text-gray-50 p-4" style="display:none"></pre>
+						<pre id="py-output" class="text-xs font-mono w-full text-gray-50 p-4" style="display:none"></pre>
 					</div>
 					<div class="relative pt-1">
 						<textarea id="py-editor" spellcheck="false"></textarea>
@@ -208,7 +208,12 @@
 							<i class="fa fa-play text-sm"></i>
 						</button>
 					</div>
-					<span class="font-mono text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-2">Ctrl+Enter / Shift+Enter to Run</span>
+					<div class="flex items-center justify-start gap-1 text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-2 w-full font-mono">
+						<span class="w-full">Ctrl+Enter / Shift+Enter to Run</span>
+						<button id="py-clear" class="relative flex-none bg-white/10 rounded-sm px-1 py-0 w-[38px] h-[14px]">
+							<span class="absolute left-1 top-[-3px] text-gray-200">Clear</span>
+						</button>
+					</div>
 				</div>
 				<div id="cards"></div>
 			</div>
