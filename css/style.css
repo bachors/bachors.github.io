@@ -20,4 +20,5 @@ button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:
 .CodeMirror .CodeMirror-scrollbar::-webkit-scrollbar-track{background:transparent !important;}
 .CodeMirror .CodeMirror-scrollbar::-webkit-scrollbar-thumb{background:#444 !important;border-radius:4px !important;}
 #skulpt .CodeMirror .CodeMirror-scroll,#skulpt .CodeMirror .CodeMirror-gutter{background:#1e1f21 !important;}
+#terminal .CodeMirror .CodeMirror-scroll,#terminal .CodeMirror .CodeMirror-gutter{background:#313337 !important;}
 dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{background:#131313 !important;}
