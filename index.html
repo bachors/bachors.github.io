@@ -202,11 +202,14 @@
 								<div id="py-canvas" class="w-full my-1" style="display:none"></div>
 								<pre id="py-output" class="text-xs font-mono w-full text-[#f8f8f2]" style="display:none"></pre>
 							</div>
-							<div class="relative pt-1 bg-[#1e1f21] border-x border-white/10">
-								<textarea id="py-editor" spellcheck="false"></textarea>
-								<button id="py-run" class="absolute top-0 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+							<div class="flex items-center justify-between bg-[#1e1f21] border-x border-white/10 pl-1">
+								<span class="text-xs text-gray-200 pl-2 pr-3 h-6 bg-white/10 flex items-center gap-2 rounded-md"><svg width="14" height="14" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="-133.27" y1="-202.91" x2="-133.2" y2="-202.84" gradientTransform="matrix(189.38 0 0 189.81 25243.06 38519.17)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#387eb8"/><stop offset="1" stop-color="#366994"/></linearGradient><linearGradient id="b" x1="-133.57" y1="-203.2" x2="-133.5" y2="-203.13" gradientTransform="matrix(189.38 0 0 189.81 25309.06 38583.42)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe052"/><stop offset="1" stop-color="#ffc331"/></linearGradient></defs><path d="M15.89 2.1c-7.1 0-6.66 3.07-6.66 3.07v3.19H16v1H6.55S2 8.8 2 16.01s4.01 6.9 4.01 6.9h2.32v-3.35s-.13-4.02 3.9-4.02h6.76s3.77.06 3.77-3.65V5.8s.58-3.71-6.84-3.71Zm-3.74 2.14a1.21 1.21 0 1 1-1.18 1.24v-.02a1.2 1.2 0 0 1 1.21-1.21Z" fill="url(#a)"/><path d="M16.09 29.91c7.1 0 6.65-3.08 6.65-3.08v-3.18h-6.75v-1h9.47S30 23.15 30 16s-4.01-6.92-4.01-6.92h-2.35v3.32s.13 4.01-3.9 4.01h-6.76s-3.78-.05-3.78 3.66v6.13s-.57 3.71 6.84 3.71zm3.73-2.15A1.21 1.21 0 1 1 21 26.52v.03a1.2 1.2 0 0 1-1.21 1.21z" fill="url(#b)"/></svg> play.py</span>
+								<button id="py-run" class="w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 									<i class="fa fa-play text-sm"></i>
 								</button>
+							</div>
+							<div class="bg-[#1e1f21] border-x border-white/10">
+								<textarea id="py-editor" spellcheck="false"></textarea>
 							</div>
 							<div class="bg-[#1e1f21] rounded-b-2xl border-x border-white/10 border-b border-white/10 flex items-center justify-start gap-1 text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-2 pt-1 w-full font-mono">
 								<span class="w-full">Ctrl+Enter / Shift+Enter to Run</span>
