@@ -22,3 +22,4 @@ button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:
 #skulpt .CodeMirror .CodeMirror-scroll,#skulpt .CodeMirror .CodeMirror-gutter{background:#1e1f21 !important;}
 #terminal .CodeMirror .CodeMirror-scroll,#terminal .CodeMirror .CodeMirror-gutter{background:#1e1f21 !important;}
 dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{background:#131313 !important;}
+#terminal .CodeMirror .CodeMirror-gutter pre{color:greenyellow !important;}
