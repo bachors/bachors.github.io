@@ -196,9 +196,13 @@
 								<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19h9M3 5l8 7-8 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 								<p>Terminal</p>
 							</button>
+							<button type="button" onclick="switchTab('frontend', this)" class="rounded-t-2xl shadow-md hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center pt-4 pb-1 text-gray-50 bg-gray-600 dark:bg-gray-700 rounded-none" id="tab-btn-frontend" role="tab" aria-selected="false" aria-controls="frontend">
+								<svg fill="currentColor" width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><circle cx="448" cy="102.4" r="12.8"/><circle cx="396.8" cy="102.4" r="12.8"/><circle cx="345.6" cy="102.4" r="12.8"/><path d="M512 358.4v-25.6h-26.9q-1.6-14.2-6.7-27l22.8-13.1-12.8-22.2-23.2 13.4q-8.4-11.1-19.5-19.6l13.4-23.2-22.2-12.8-13.2 22.9a102 102 0 0 0-27-6.7v-26.9h-25.5v26.9a102 102 0 0 0-27 6.7l-13.1-22.8-22.2 12.8 13.4 23.1q-11.1 8.5-19.6 19.6l-23.2-13.4-12.8 22.2 22.9 13.2q-5.2 12.7-6.7 27H256v25.5h26.9a102 102 0 0 0 6.7 27l-22.8 13.1 12.8 22.2 23.2-13.4q8.4 11.1 19.5 19.6L309 450l22.2 12.8 13.2-22.9a102 102 0 0 0 27 6.7v26.9h25.5v-26.9a102 102 0 0 0 27-6.7l13.1 22.8 22.2-12.8-13.4-23.1q11.1-8.5 19.6-19.6l23.2 13.4 12.8-22.2-22.9-13.2a102 102 0 0 0 6.7-27zm-128 64a76.9 76.9 0 1 1 .2-153.8 76.9 76.9 0 0 1-.2 153.8"/><path d="M486.4 38.4H25.6A25.6 25.6 0 0 0 0 64v384a25.6 25.6 0 0 0 25.6 25.6h256V448h-256V166.4h460.8v76.8H512V64a25.6 25.6 0 0 0-25.6-25.6m0 102.4H25.6V64h460.8z"/></svg>
+								<p>Front-end</p>
+							</button>
 						</nav>
-						<div id="skulpt" role="tabpanel" class="shadow-md rounded-b-2xl rounded-tr-2xl grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
-							<div class="border border-white/10 rounded-tr-2xl px-3 pt-1 pb-2 block w-full min-h-[10rem] max-h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-x-auto overflow-y-auto ftools">
+						<div id="skulpt" role="tabpanel" class="shadow-md rounded-b-2xl grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
+							<div class="border border-white/10 px-3 pt-1 pb-2 block w-full min-h-[10rem] max-h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-x-auto overflow-y-auto ftools">
 								<div id="py-canvas" class="w-full my-1" style="display:none"></div>
 								<pre id="py-output" class="text-xs font-mono w-full text-[#f8f8f2]" style="display:none"></pre>
 							</div>
@@ -211,15 +215,56 @@
 							<div class="bg-[#1e1f21] border-x border-white/10">
 								<textarea id="py-editor" spellcheck="false"></textarea>
 							</div>
-							<div class="bg-[#1e1f21] rounded-b-2xl border-x border-white/10 border-b border-white/10 flex items-center justify-start gap-1 text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-2 pt-1 w-full font-mono">
+							<div class="bg-[#1e1f21] rounded-b-2xl border-x border-white/10 border-b border-white/10 flex items-center justify-start gap-2 text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-2 pt-1 w-full font-mono">
 								<span class="w-full">Ctrl+Enter / Shift+Enter to Run</span>
 								<button id="py-clear" class="relative flex-none bg-white/10 rounded-sm px-1 py-0 w-[38px] h-[14px]">
 									<span class="absolute left-1 top-[-0.7px] text-gray-200">Clear</span>
 								</button>
 							</div>
 						</div>
-						<div id="terminal" role="tabpanel" class="border border-white/10 shadow-md rounded-b-2xl rounded-tr-2xl bg-[#1e1f21] dark:bg-[#1e1f21] overflow-hidden">
+						<div id="terminal" role="tabpanel" class="border border-white/10 shadow-md rounded-b-2xl bg-[#1e1f21] dark:bg-[#1e1f21] overflow-hidden">
 							<textarea id="interactive" spellcheck="false"></textarea>
+						</div>
+						<div id="frontend" role="tabpanel" class="bg-[#1e1f21] shadow-md rounded-b-2xl grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
+							<div class="border-t border-white/10 border-x border-white/10 block w-full h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-x-auto overflow-y-auto ftools">
+								<iframe id="htmlresult" class="w-full h-full bg-[#1e1f21]"></iframe>
+							</div>
+							<div class="border border-white/10 rounded-b-2xl overflow-hidden">
+								<div class="flex items-center justify-between bg-[#1e1f21] pl-1">
+									<nav class="grid grid-cols-3 gap-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+										<button type="button" onclick="pindahTab('con-html', this)" class="text-xs text-gray-200 pl-2 pr-3 h-6 border border-[#343537] bg-white/10 flex items-center gap-2 rounded-md active" id="tab-btn-con-html" role="tab" aria-selected="true" aria-controls="con-html">
+											<i class="fa fa-circle text-red-500"></i>HTML
+										</button>
+										<button type="button" onclick="pindahTab('con-css', this)" class="text-xs text-gray-200 pl-2 pr-3 h-6 border border-white/10 flex items-center gap-2 rounded-md" id="tab-btn-con-css" role="tab" aria-selected="true" aria-controls="con-css">
+											<i class="fa fa-circle text-blue-500"></i>CSS
+										</button>
+										<button type="button" onclick="pindahTab('con-js', this)" class="text-xs text-gray-200 pl-2 pr-3 h-6 border border-white/10 flex items-center gap-2 rounded-md" id="tab-btn-con-js" role="tab" aria-selected="true" aria-controls="con-js">
+											<i class="fa fa-circle text-yellow-500"></i>JS
+										</button>
+									</nav>
+									<button onclick="runFrontend()" class="w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="fa fa-play text-sm"></i>
+									</button>
+								</div>
+								<div id="con-html" class="relative bg-[#1e1f21]">
+									<textarea id="html-editor" spellcheck="false"></textarea>
+									<button command="show-modal" commandfor="cdn" class="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="fa fa-gear text-sm"></i>
+									</button>
+								</div>
+								<div id="con-css" class="relative bg-[#1e1f21]">
+									<textarea id="css-editor" spellcheck="false"></textarea>
+									<button command="show-modal" commandfor="cdn" class="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="fa fa-gear text-sm"></i>
+									</button>
+								</div>
+								<div id="con-js" class="relative bg-[#1e1f21]">
+									<textarea id="js-editor" spellcheck="false"></textarea>
+									<button command="show-modal" commandfor="cdn" class="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="fa fa-gear text-sm"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1028,6 +1073,33 @@
 								<div id="pass_res" class="content-center block w-full h-20 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl text-xl text-center font-mono overflow-x-auto select-all cursor-pointer ftools"></div>
 								<button onclick='generatePassword();' class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Generate !</button>
 							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- cdn -->
+			<dialog id="cdn" aria-labelledby="cdn-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="fixed inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="flex min-h-full items-end justify-center focus:outline-none sm:items-center">
+					<el-dialog-panel class="group/dialog-panel relative transform ease-in-out data-closed:translate-x-full sm:w-full sm:max-w-xs">
+						<div class="relative flex h-full flex-col rounded-2xl backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="cdn-title" class="font-medium">Add external CSS or JS</h2>
+								<button command="close" commandfor="cdn" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div id="cdn-uri" class="grid grid-cols-1 gap-2 text-sm">
+									<div class="flex items-center justify-between">
+										<input name="cdn_url[]" value="" type="text" class="cdn-input border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5" placeholder="https://...">
+										<button id="cdn-add" class="w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-400">
+											<i class="fa fa-plus text-green-600 dark:text-green-500"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<button command="close" commandfor="cdn" class="mx-4 mb-4 rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Close</button>
 						</div>
 					</el-dialog-panel>
 				</div>
