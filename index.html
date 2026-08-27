@@ -1078,11 +1078,11 @@
 				</div>
 			</dialog>
 			<!-- cdn -->
-			<dialog id="cdn" aria-labelledby="cdn-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
-				<el-dialog-backdrop class="fixed inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
-				<div tabindex="0" class="flex min-h-full items-end justify-center focus:outline-none sm:items-center">
-					<el-dialog-panel class="group/dialog-panel relative transform ease-in-out data-closed:translate-x-full sm:w-full sm:max-w-xs">
-						<div class="relative flex h-full flex-col rounded-2xl backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+			 <dialog id="cdn" aria-labelledby="cdn-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="cdn-title" class="font-medium">Add external CSS or JS</h2>
 								<button command="close" commandfor="cdn" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
@@ -1098,8 +1098,8 @@
 										</button>
 									</div>
 								</div>
+								<button command="close" commandfor="cdn" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Close</button>
 							</div>
-							<button command="close" commandfor="cdn" class="mx-4 mb-4 rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Close</button>
 						</div>
 					</el-dialog-panel>
 				</div>
