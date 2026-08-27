@@ -72,9 +72,12 @@ function runFrontend() {
 		}
 	});
 	let e = document.getElementById("htmlresult");
-	e.srcdoc = `<!DOCTYPE html><html><head><meta name="viewport"content="width=device-width,initial-scale=1"><style>html{scrollbar-width:thin;scrollbar-color:#444 transparent;color:oklch(98.5%.002 247.839);background:#1e1f21}html::-webkit-scrollbar{width:4px}html::-webkit-scrollbar-track{background:0 0}html::-webkit-scrollbar-thumb{background:#444;border-radius:4px}</style>${xcss}<style>${cmr_f_css.getValue()}</style></head><body>${xjs}${cmr_f_html.getValue()}<script type="text/javascript">${cmr_f_js.getValue()}</script></body></html>`
+	e.srcdoc = `<!DOCTYPE html><html><head><meta name="viewport"content="width=device-width,initial-scale=1"><style>html{scrollbar-width:thin;scrollbar-color:#444 transparent;color:oklch(98.5%.002 247.839);background:#1e1f21}html::-webkit-scrollbar{width:4px}html::-webkit-scrollbar-track{background:0 0}html::-webkit-scrollbar-thumb{background:#444;border-radius:4px}</style>${xcss}<style>${cmr_f_css.getValue()}</style></head><body>${cmr_f_html.getValue()}${xjs}<script type="text/javascript">${cmr_f_js.getValue()}</script></body></html>`
 }
-runFrontend();
+function clearFrontend() {
+	let e = document.getElementById("htmlresult");
+	e.srcdoc = `<!DOCTYPE html><html><head><meta name="viewport"content="width=device-width,initial-scale=1"><style>html{scrollbar-width:thin;scrollbar-color:#444 transparent;color:oklch(98.5%.002 247.839);background:#1e1f21}html::-webkit-scrollbar{width:4px}html::-webkit-scrollbar-track{background:0 0}html::-webkit-scrollbar-thumb{background:#444;border-radius:4px}</style></head><body></body></html>`
+}
 document.body.addEventListener('click', function(e) {
 	if (e.target.closest('#cdn #cdn-add')) {
 		var inp = document.querySelector('#cdn #cdn-uri');
