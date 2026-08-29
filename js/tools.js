@@ -383,12 +383,12 @@ let pxpaintGenerate = function() {
 	document.getElementById("pxpaint-box").style.display = "";
 	document.getElementById("pxpaint-cod").style.display = "";
 
-	let bh = 22;
-	let jang = sqPadH * 2;
-    if(jang < 22){
+	let bh = 380;
+	let jang = pixelboard.getBoundingClientRect().height;
+    if(jang < 380){
         bh = jang;
     }
-    document.getElementById('pxpaint-box').style.height = bh + 'em';
+    document.getElementById('pxpaint-box').style.height = bh + 'px';
 	var previewAnchor = document.getElementById('pxpaint-preview');
 	previewAnchor.setAttribute('style', finalStyle);
 
