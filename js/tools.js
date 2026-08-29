@@ -28,5 +28,382 @@ function htmlMinify(){var e=cmr_codehtmlminify.getValue();e=(e=e.replace(/(>)?\s
 // escape
 function escapeTxt(){var e,t=cmr_codeescape.getValue(),n="",c="",r="",s="";for(i=0;i<256;i++)(s=i.toString(16)).length<2&&(s="0"+s),r+=s,c+=unescape("%"+s);for(r=r.toUpperCase(),t.replace(String.fromCharCode(13)+"","%13"),q=0;q<t.length;q++){for(e=t.substr(q,1),i=0;i<c.length;i++)e==c.substr(i,1)&&(e=e.replace(c.substr(i,1),"%"+r.substr(2*i,2)),i=c.length);n+=e}cmr_resescape.setValue(n),document.getElementById("preescape").innerHTML=`&lt;script type=&quot;text/javascript&quot;&gt;\n  document.write(unescape(&#039;${n}&#039;));\n&lt;/script&gt;`,hljs.highlightElement(document.getElementById("preescape"))}function unescapeTxt(){cmr_codeescape.setValue(unescape(cmr_resescape.getValue()))}document.getElementById("preescape").innerHTML="&lt;script type=&quot;text/javascript&quot;&gt;\n  document.write(unescape(&#039;ESCAPED&#039;));\n&lt;/script&gt;",hljs.highlightElement(document.getElementById("preescape"));
 // password
-function generatePassword(){const e=document.getElementById("pass_kar").value,t=document.getElementById("pass_kec"),n=document.getElementById("pass_bes"),o=document.getElementById("pass_ang"),a=document.getElementById("pass_sim");let l="",s="",r="",c="";t.checked&&(l=t.value),n.checked&&(s=n.value),o.checked&&(r=o.value),a.checked&&(c=a.value);const d=[l,s,r,c].filter(e=>e&&e.length>0);if(0===d.length)return"";if(e<d.length)throw new Error(`Panjang password minimal ${d.length} agar semua kategori terwakili`);const h=d.join("");let g=[];for(const e of d){const t=e[Math.floor(Math.random()*e.length)];g.push(t)}for(let t=g.length;t<e;t++){const e=h[Math.floor(Math.random()*h.length)];g.push(e)}for(let e=g.length-1;e>0;e--){const t=Math.floor(Math.random()*(e+1));[g[e],g[t]]=[g[t],g[e]]}document.getElementById("pass_res").innerText=g.join("")}
-// sdfjkd
+function generatePassword(){const e=document.getElementById("pass_kar").value,t=document.getElementById("pass_kec"),n=document.getElementById("pass_bes"),o=document.getElementById("pass_ang"),a=document.getElementById("pass_sim");let l="",s="",r="",c="";t.checked&&(l=t.value),n.checked&&(s=n.value),o.checked&&(r=o.value),a.checked&&(c=a.value);const d=[l,s,r,c].filter(e=>e&&e.length>0);if(0===d.length)return"";if(e<d.length)throw new Error(`Panjang password minimal ${d.length} agar semua kategori terwakili`);const h=d.join("");let g=[];for(const e of d){const t=e[Math.floor(Math.random()*e.length)];g.push(t)}for(let t=g.length;t<e;t++){const e=h[Math.floor(Math.random()*h.length)];g.push(e)}for(let e=g.length-1;e>0;e--){const t=Math.floor(Math.random()*(e+1));[g[e],g[t]]=[g[t],g[e]]}document.getElementById("pass_res").innerText=g.join("")}function passhit(){document.getElementById("pass_range").innerText=document.getElementById("pass_kar").value}
+// pxcss
+let dropImage, cmr_pxcss, cmr_pxpaint;
+
+cmr_pxcss = CodeMirror.fromTextArea(document.getElementById("pxcss-output"), {
+	mode: "css",
+	theme: "monokai",
+	lineNumbers: true,
+    readOnly: true,
+	lineWrapping: true
+});
+
+cmr_pxpaint = CodeMirror.fromTextArea(document.getElementById("pxpaint-output"), {
+	mode: "css",
+	theme: "monokai",
+	lineNumbers: true,
+    readOnly: true,
+	lineWrapping: true
+});
+
+document.getElementById("pxcss_img").addEventListener("change",pxcss_readFile,!1);
+document.getElementById("pxcss-scale").addEventListener('change',function(){renderMarkup();});
+document.getElementById("kopi-pxcss").addEventListener("click",function(){copyToClipboard(this,cmr_pxcss.getValue())});
+document.getElementById("kopi-pxpaint").addEventListener("click",function(){copyToClipboard(this,cmr_pxpaint.getValue())});
+
+function pxcss_resizeImage(file, width, height, callback) {
+	const reader = new FileReader();
+	let targetWidth, targetHeight;
+
+	if (width == height) {
+		targetWidth = 64;
+		targetHeight = 64;
+	} else if (width > height) {
+		targetWidth = 64;
+		targetHeight = Math.round(height * (64 / width));
+	} else {
+		targetHeight = 64;
+		targetWidth = Math.round(width * (64 / height));
+	}
+
+	reader.readAsDataURL(file);
+	reader.onload = function(event) {
+		const img = new Image();
+		img.src = event.target.result;
+
+		img.onload = function() {
+			const canvas = document.createElement('canvas');
+			canvas.width = targetWidth;
+			canvas.height = targetHeight;
+
+			const ctx = canvas.getContext('2d');
+			ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
+
+			const dataUrl = canvas.toDataURL(file.type);
+
+			callback(dataUrl);
+		};
+	};
+}
+
+function pxcss_readFile(e) {
+	var t = e.target.files[0];
+	if (t) {
+		if (/(jpe?g|png|gif|bmp)$/i.test(t.type)) {
+			var l = new FileReader;
+			l.onload = function(e) {
+				const img = new Image();
+				img.onload = function() {
+					if (this.naturalWidth <= 64 && this.naturalHeight <= 64) {
+                        document.getElementById("pxcss-res").style.display = "";
+						document.getElementById("pxcss-image").src = e.target.result;
+						dropImage = this;
+						calculatePixels();
+						renderMarkup();
+					} else {
+						pxcss_resizeImage(t, this.naturalWidth, this.naturalHeight, (resultUrl) => {
+							const itil = new Image();
+							itil.onload = function() {
+								dropImage = this;
+								calculatePixels();
+								renderMarkup();
+							};
+							itil.src = resultUrl;
+                            document.getElementById("pxcss-res").style.display = "";
+							document.getElementById("pxcss-image").src = resultUrl;
+						});
+					}
+				};
+				img.src = e.target.result;
+			}, l.readAsDataURL(t)
+		} else {
+			alert("Failed file type");
+		}
+	} else {
+		alert("Failed to load file")
+	}
+}
+
+function calculatePixels() {
+	var canvas = document.createElement('canvas');
+	canvas.width = dropImage.naturalWidth;
+	canvas.height = dropImage.naturalHeight;
+	var context = canvas.getContext('2d');
+
+	context.beginPath();
+	context.rect(0, 0, dropImage.naturalWidth, dropImage.naturalHeight);
+	context.fillStyle = 'rgb(1, 255, 1)';
+	context.fill();
+
+	context.drawImage(dropImage, 0, 0);
+	var data = context.getImageData(0, 0, dropImage.naturalWidth, dropImage.naturalHeight).data;
+
+	var pixels = [];
+	for (var i = 0; i < dropImage.naturalWidth * dropImage.naturalHeight; i++) {
+		var r = data[i * 4];
+		var g = data[i * 4 + 1];
+		var b = data[i * 4 + 2];
+
+		if (r !== 1 || g !== 255 || b !== 1) {
+			pixels.push({
+				x: i % dropImage.naturalWidth,
+				y: Math.floor(i / dropImage.naturalWidth),
+				hex: rgbToHex(r, g, b)
+			});
+		}
+	}
+
+	dropImage.pixels = pixels;
+}
+
+function rgbToHex(r, g, b) {
+	var hex = ((1 << 24) + (r << 16) + (g << 8) + b)
+		.toString(16)
+		.slice(1);
+
+	if (hex[0] === hex[1] && hex[2] === hex[3] && hex[4] === hex[5]) {
+		hex = hex[0] + hex[2] + hex[3];
+	}
+
+	return '#' + hex;
+}
+
+function renderMarkup() {
+	var scale = parseInt(document.getElementById('pxcss-scale').value, 10);
+	var marginLeft = (dropImage.naturalWidth - 1) * scale;
+	var marginBottom = (dropImage.naturalHeight - 1) * scale;
+
+	var bgColor;
+	var shadows = [];
+	for (var i = 0; i < dropImage.pixels.length; i++) {
+		var pixel = dropImage.pixels[i];
+
+		if (i === 0 && pixel.x === 0 && pixel.y === 0) {
+			bgColor = pixel.hex;
+		} else {
+			var x = pixel.x * scale;
+			if (x !== 0) {
+				x += 'px';
+			}
+			var y = pixel.y * scale;
+			if (y !== 0) {
+				y += 'px';
+			}
+			shadows.push(x + ' ' + y + ' ' + pixel.hex);
+		}
+	}
+
+	var style =
+		'display: inline-block;\n' +
+		'width: ' + scale + 'px;\n' +
+		'height: ' + scale + 'px;\n' +
+		'margin: 0 ' + marginLeft + 'px ' + marginBottom + 'px 0;\n' +
+		(bgColor ? 'background-color: ' + bgColor + ';\n' : '') +
+		'box-shadow:\n    ' + shadows.join(',\n    ') + ';';
+
+	var stylec =
+        '#mypixelart {\n' +
+		'    display: inline-block;\n' +
+		'    width: ' + scale + 'px;\n' +
+		'    height: ' + scale + 'px;\n' +
+		'    margin: 0 ' + marginLeft + 'px ' + marginBottom + 'px 0;\n' +
+		(bgColor ? '    background-color: ' + bgColor + ';\n' : '') +
+		'    box-shadow:\n        ' + shadows.join(',\n        ') + ';\n' +
+        '}';
+
+    let bh = 380;
+    if(marginBottom < 380){
+        bh = (marginBottom+10);
+    }
+    document.getElementById('pxcss-box').style.height = bh + 'px';
+	var previewAnchor = document.getElementById('pxcss-preview');
+	previewAnchor.setAttribute('style', style);
+
+	cmr_pxcss.setValue(stylec);
+}
+
+// pxpaint
+document.getElementById("pxpaint-coli").addEventListener('change',function(){
+	document.getElementById("pxpaint-col").value = this.value;
+	pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
+});
+document.getElementById("pxpaint-rowi").addEventListener('change',function(){
+	document.getElementById("pxpaint-row").value = this.value;
+	pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
+});
+document.getElementById("pxpaint-pixi").addEventListener('change',function(){
+	document.getElementById("pxpaint-pix").value = this.value;
+	pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
+});
+document.getElementById("pxpaint-col").addEventListener('change',function(){
+	pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
+});
+document.getElementById("pxpaint-row").addEventListener('change',function(){
+	pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
+});
+document.getElementById("pxpaint-pix").addEventListener('change',function(){
+	pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
+});
+document.getElementById("pxpaint-file").addEventListener("change",pxpaint_readFile,!1);
+
+let pixelboard = document.getElementById("pxpaint-board");
+let pxpaintMousedown = false;
+let pxpaintCurrentcolor = "#000";
+
+document.body.onmousedown = function() {
+	pxpaintMousedown = true;
+};
+document.body.onmouseup = function() {
+	pxpaintMousedown = false;
+};
+
+function pxpaintSetcolor(color){
+	pxpaintCurrentcolor = color;
+}
+
+function pxpaint_readFile(e) {
+	var t = e.target.files[0];
+	if (t) {
+		if (/(jpe?g|png|gif|bmp)$/i.test(t.type)) {
+			var l = new FileReader;
+			l.onload = function(e) {
+				document.getElementById("pxpaint-bg").src = e.target.result;
+			}, l.readAsDataURL(t)
+		} else {
+			alert("Failed file type");
+		}
+	} else {
+		alert("Failed to load file")
+	}
+}
+
+let pxpaintCreategrid = function(row, col, unitsize) {
+  let currentG = document.querySelectorAll("#pxpaint-board div");
+  for (let index = 0; index < currentG.length; index++) {
+    const element = currentG[index];
+    element.parentNode.removeChild(element);
+  }
+  for (let index = 0; index < row * col; index++) {
+    var emptyDiv = document.createElement("div");
+	emptyDiv.classList.add('border-[0.5px]', 'border-gray-300', 'dark:border-gray-500');
+	emptyDiv.style.backgroundColor = "transparent";
+    pixelboard.appendChild(emptyDiv);
+  }
+
+  pixelboard.style.gridTemplateColumns = `repeat(${col}, ${unitsize}px)`;
+  pixelboard.style.gridTemplateRows = `repeat(${row}, ${unitsize}px)`;
+  wireUpSquares();
+};
+
+let wireUpSquares = function() {
+	let gridSquares = document.querySelectorAll("#pxpaint-board div");
+	for (let index = 0; index < gridSquares.length; index++) {
+		const element = gridSquares[index];
+		element.addEventListener("mousedown", function(e) {
+			this.style.backgroundColor = pxpaintCurrentcolor;
+			e.preventDefault();
+		});
+		element.addEventListener("mouseenter", function(e) {
+			if (pxpaintMousedown) {
+				this.style.backgroundColor = pxpaintCurrentcolor;
+			}
+			e.preventDefault();
+		});
+	}
+};
+
+let pxpaintClear = function() {
+	let gridSquares = document.querySelectorAll("#pxpaint-board div");
+	for (let index = 0; index < gridSquares.length; index++) {
+		const element = gridSquares[index];
+		element.style.backgroundColor = "transparent";
+	}
+};
+
+function pxpaintInitcolor(i, c) {
+	document.getElementById('pxpaint-hex' + i).value = c;
+	document.getElementById('pxpaint-rad' + i).value = c;
+	document.getElementById('pxpaint-cpx' + i).value = c;
+	if(document.getElementById('pxpaint-rad' + i).checked){
+		pxpaintSetcolor(c);
+	}
+}
+
+function pxpaintSetimg(c){
+	if(c){
+		document.getElementById("pxpaint-bg").style.display = "";
+		document.getElementById("pxpaint-file").style.display = "";
+	}else{
+		document.getElementById("pxpaint-bg").style.display = "none";
+		document.getElementById("pxpaint-file").style.display = "none";
+	}
+}
+
+function pxpaintEven(n) {
+	return n % 2 == 0;
+}
+
+let pxpaintGenerate = function() {
+	let widthSq = parseInt(document.getElementById("pxpaint-col").value);
+	let heightSq = parseInt(document.getElementById("pxpaint-row").value);
+	let sqMeasW = pxpaintEven(widthSq) ? widthSq / 2 : (widthSq - 1) / 2;
+	let sqMeasH = pxpaintEven(heightSq) ? heightSq / 2 : (heightSq - 1) / 2;
+	let sqPadW = pxpaintEven(widthSq) ? sqMeasW - 1 : sqMeasW;
+	let sqPadH = pxpaintEven(heightSq) ? sqMeasH - 1 : sqMeasH;
+	let backString = "";
+	let hOff = -(sqPadW + 1);
+	let vOff = -(sqMeasH + 1);
+	let styleString = `    content: '';
+    display: block;
+    font-size: ${document.getElementById("pxpaint-pix").value}px;
+    width: 1em;
+    height: 1em;
+    margin: ${sqMeasH}em ${sqMeasW}em ${sqPadH}em ${sqPadW}em;
+    box-shadow:\n        `;
+
+	var shadows = [];
+	let gridSquares = document.querySelectorAll("#pxpaint-board div");
+	for (let index = 0; index < widthSq * heightSq; index++) {
+		let dBG = gridSquares[index] ? gridSquares[index].style.backgroundColor : "";
+		sqColor = dBG ? dBG : "transparent";
+		let row = Math.ceil((index + 1) / widthSq);
+		let col = ((index + 1) / widthSq - (row - 1)) / (1 / widthSq);
+		let vEm = Math.round(row + vOff);
+		let hEm = Math.round(col + hOff);
+		if (vEm === 0 && hEm === 0) {
+			backString = `	background-color: ${sqColor};\n`;
+		} else if (sqColor !== "transparent") {
+			shadows.push(`${hEm}em ${vEm}em 0 0 ${sqColor}`);
+		}
+	}
+	var finalStyle = backString + styleString + shadows.join(',\n        ') + ';\n';
+
+	document.getElementById("pxpaint-box").style.display = "";
+	document.getElementById("pxpaint-cod").style.display = "";
+
+	let bh = 22;
+	let jang = sqPadH * 2;
+    if(jang < 22){
+        bh = jang;
+    }
+    document.getElementById('pxpaint-box').style.height = bh + 'em';
+	var previewAnchor = document.getElementById('pxpaint-preview');
+	previewAnchor.setAttribute('style', finalStyle);
+
+	var stylec =
+        '#mypixelart {\n' +
+		finalStyle +
+        '}';
+
+	cmr_pxpaint.setValue(stylec);
+
+	const container = document.getElementById('pxpaint-con');
+	container.scrollTo({
+		top: container.scrollHeight,
+		behavior: 'smooth'
+	});
+};
+
+pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElementById("pxpaint-col").value, document.getElementById("pxpaint-pix").value);
