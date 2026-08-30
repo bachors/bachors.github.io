@@ -134,6 +134,10 @@
 						<svg width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 403.1 403.1"><path d="M393 38.7a35 35 0 0 0-49.6 0L175.1 207a10 10 0 0 0-2.6 4.6l-12 47.4-.3 1.7h-17.7v28.5H171v-17.8l1.6-.2 47.4-12a10 10 0 0 0 4.6-2.7L393 88.2a35 35 0 0 0 0-49.5m-24.8 9.8q6.1 0 10.6 4.4a15 15 0 0 1 0 21.2l-.7.7-21.3-21.2.8-.7q4.4-4.4 10.6-4.4M196.3 214 342.7 67.7 363.9 89 217.5 235.3zm-8.7 19.5L198 244l-14 3.6zM114 289.2h28.5v28.5H114zm-28.5 28.5H114v28.5H85.5zM57 346.2h28.5v28.5H57zm-28.5-28.5H57v28.5H28.5zM0 289.2h28.5v28.5H0z"/></svg>
 						<p>Pixel Paint</p>
 					</button>
+					<button command="show-modal" commandfor="poly" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+						<svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20 3.5-8 5.8V9H9v.4L4 6.1V4H1v3h1v13H1v3h3v-1h16v1h3v-3h-1V4h1V1h-3zM10 10h1v1h-1zM2 5h1v1H2zm0 17v-1h1v1zm20 0h-1v-1h1zm-1-2h-1v1H4v-1H3V7h.5L9 10.6V12h3v-1.5L21 4zm1-18v1h-1V2z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+						<p>Low-Poly</p>
+					</button>
 					<button command="show-modal" commandfor="ascii" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 						<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M30 20.75h-8.08l1.7-9.5h6.68a1.25 1.25 0 0 0 0-2.5h-6.24l1.17-6.53.02-.23a1.25 1.25 0 0 0-2.48-.22v.01l-1.25 6.97h-9.46l1.17-6.53.02-.23a1.25 1.25 0 0 0-2.48-.22v.01L9.52 8.75H2.3a1.25 1.25 0 0 0 0 2.5h6.78l-1.7 9.5H2a1.25 1.25 0 0 0 0 2.5h4.93l-1.16 6.53a1.25 1.25 0 0 0 1 1.45h.01l.22.02c.61 0 1.12-.44 1.23-1.02v-.01l1.24-6.97h9.46l-1.16 6.53-.02.22a1.25 1.25 0 0 0 2.48.23v-.01l1.24-6.97H30a1.25 1.25 0 0 0 0-2.5m-20.08 0 1.7-9.5h9.46l-1.7 9.5z"/></svg>
 						<p>Ascii Art</p>
@@ -447,6 +451,94 @@
 										<i class="far fa-copy text-sm"></i>
 									</button>
 								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- poly -->
+			<dialog id="poly" aria-labelledby="poly-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="poly-title" class="font-medium">Low-Poly</h2>
+								<button command="close" commandfor="poly" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative flex py-4 px-4">
+								<div class="flex flex-col gap-1.5">
+									<span class="text-xs text-gray-500 dark:text-gray-400">Upload image</span>
+									<input id="poly_img" type="file" accept="image/*" class="text-sm file:mr-3 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white file:cursor-pointer hover:file:bg-blue-500">
+								</div>
+							</div>
+							<div id="poly-res" class="relative grid grid-cols-1 gap-4 px-4 pb-4 overflow-y-auto ftools" style="display:none">
+								<div class="grid grid-cols-2 gap-4">
+									<div class="flex flex-col gap-1.5 w-full">
+										<div class="flex items-center justify-between">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Points</label>
+											<span id="poly-point" class="text-xs text-pink-500">500</span>
+										</div>
+										<input id="poly-rpoint" type="range" min="50" max="1500" step="10" value="500" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div class="flex items-center justify-between">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Edge bias</label>
+											<span id="poly-edge" class="text-xs text-pink-500">0.70</span>
+										</div>
+										<input id="poly-redge" type="range" min="0" max="1" step="0.05" value="0.7" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div class="flex items-center justify-between">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Blur</label>
+											<span id="poly-blur" class="text-xs text-pink-500">1</span>
+										</div>
+										<input id="poly-rblur" type="range" min="0" max="4" step="1" value="1" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div class="flex items-center justify-between">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Stroke width</label>
+											<span id="poly-strok" class="text-xs text-pink-500">0.5</span>
+										</div>
+										<input id="poly-rstrok" type="range" min="0" max="2" step="0.1" value="0.5" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col col-span-2 gap-1.5 w-full">
+										<label class="text-xs text-gray-500 dark:text-gray-400">Color mode</label>										
+										<div class="grid grid-cols-2 gap-4">
+											<div class="flex items-center">
+												<input checked name="poly-radio-group" id="poly-center" type="radio" value="centroid" class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+												<label for="poly-center" class="select-none ms-2 text-xs text-pink-500">Centroid</label>
+											</div>
+											<div class="flex items-center">
+												<input name="poly-radio-group" id="poly-mean" type="radio" value="mean" class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
+												<label for="poly-mean" class="select-none ms-2 text-xs text-pink-500">Mean</label>
+											</div>
+										</div>
+									</div>
+									<button id="poly-generate" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Regenerate</button>
+									<button id="poly-clear" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Clear custom</button>
+								</div>						
+								<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+									<div class="flex flex-col gap-1.5 w-full">
+										<label class="text-xs text-gray-500 dark:text-gray-400">Source</label>
+										<div class="relative w-full">
+											<canvas id="poly-sc" class="block w-full h-auto"></canvas>
+											<svg id="poly-svg" class="absolute top-0 left-0 block w-full h-auto cursor-crosshair" xmlns="http://www.w3.org/2000/svg"></svg>
+      									</div>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div class="flex items-center justify-between">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Result</label>
+											<span id="poly-tr" class="text-xs text-pink-500">0 triangles</span>
+										</div>
+										<div class="relative w-full">
+											<svg id="poly-lw" class="absolute top-0 left-0 block w-full h-auto" xmlns="http://www.w3.org/2000/svg"></svg>
+      									</div>
+									</div>
+								</div>
+								<button id="poly-download" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500">Download SVG</button>
 							</div>
 						</div>
 					</el-dialog-panel>
@@ -1292,6 +1384,7 @@
 		<script src="js/dashboard.js" type="text/javascript"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
+		<script src="https://unpkg.com/delaunator@5/delaunator.min.js"></script>
 		<script src="js/tools.js" type="text/javascript"></script>
 	</body>
 </html>

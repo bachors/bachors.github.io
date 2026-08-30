@@ -24,3 +24,4 @@ html::-webkit-scrollbar-thumb, .ftools::-webkit-scrollbar-thumb{background:#444;
 #frontend .CodeMirror .CodeMirror-scroll,#frontend .CodeMirror .CodeMirror-gutter{background:#1e1f21 !important;}
 dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{background:#131313 !important;}
 #terminal .CodeMirror .CodeMirror-gutter pre{color:greenyellow !important;}
+#poly .pt{cursor:grab}#poly .pt:active{cursor:grabbing}#poly .pt circle{fill:transparent;stroke:oklch(62.7% .194 149.214);stroke-width:1.5}#poly .pt.auto circle{fill:transparent;stroke:oklch(58.8% .158 241.966);stroke-width:1.5}#poly .pt.pinned circle{fill:transparent;stroke:oklch(64.6% .222 41.116);stroke-width:1.5}
