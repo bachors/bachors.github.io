@@ -14,7 +14,7 @@ function ycp(selector, j) {
     let hitung = 0,
     play = !0,
     v,
-    vidPlay;
+    vidPlay = '';
 
     const els = selector.startsWith('#')
         ? [document.querySelector(selector)]
@@ -35,7 +35,9 @@ function ycp(selector, j) {
     });
 
     function ifPlay() {
-        vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${v}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
+        if(vidPlay != ''){
+            vidPlay.innerHTML = `<iframe src="//www.youtube.com/embed/${v}?rel=${j.related ? 1 : 0}&amp;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" class="bingkay"></iframe>`;
+        }
     }
 
     function get(url) {
