@@ -556,21 +556,4 @@ pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElem
 		asciicopy(this, output);
 	});
 
-	document.getElementById("ascii-download").addEventListener("click", function() {
-		const element = document.getElementById('ascii-pre');
-		if (!element) {
-			alert("Belum ada ASCII art untuk diunduh.");
-			return;
-		}
-		requestAnimationFrame(() => {
-			html2canvas(element).then(canvas => {
-				const imageURL = canvas.toDataURL("image/png");
-				const downloadLink = document.createElement('a');
-				downloadLink.href = imageURL;
-				downloadLink.download = 'bachors-id_asciiart.png';
-				downloadLink.click();
-			});
-		});
-	});
-
 })();
