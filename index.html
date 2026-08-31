@@ -565,7 +565,7 @@
 									<input id="ascii_img" type="file" accept="image/*" class="text-sm file:mr-3 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white file:cursor-pointer hover:file:bg-blue-500">
 								</div>
 							</div>
-							<div id="ascii-res" class="relative grid grid-cols-1 gap-4 px-4 pb-4 overflow-auto ftools" style="display:none">
+							<div id="ascii-res" class="relative grid grid-cols-1 gap-4 px-4 pb-4 overflow-y-auto ftools" style="display:none">
 								<img id="ascii-sc" class="w-24"/>
 								<div class="grid grid-cols-2 gap-4">
 									<div class="flex flex-col gap-1.5 w-full">
@@ -604,7 +604,7 @@
 										<label class="text-xs text-gray-500 dark:text-gray-400">Result</label>
 										<span id="ascii-kopi" class="text-xs text-pink-500 underline underline-offset-4 cursor-pointer">Copy text</span>
 									</div>
-									<div id="ascii-pre" style="background:#ffffff;color:#000000;"></div>
+									<div id="ascii-pre" class="overflow-y-hidden overflow-x-auto ftools" style="background:#ffffff;color:#000000;"></div>
 								</div>
 							</div>
 						</div>
