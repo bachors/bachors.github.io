@@ -13,11 +13,4 @@ function toggleTheme() {
 	localStorage.theme = t ? "dark" : "light", updateThemeIcon(), updateBg()
 }
 
-function pindahTab(e) {
-	["con-html", "con-css", "con-js"].forEach(t => {
-		const n = document.getElementById(t),
-			s = document.getElementById("tab-btn-" + t),
-			r = t === e;
-		n.style.display = r ? "" : "none", s.classList.toggle("bg-white/10", r), s.classList.toggle("bg-[#1e1f21]", !r), s.classList.toggle("border-[#343537]", r),  s.classList.toggle("border-white/10", !r),s.setAttribute("aria-selected", r)
-	})
-}
+updateThemeIcon(),updateBg();
