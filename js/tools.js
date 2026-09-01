@@ -570,7 +570,7 @@ function pindahTab(e) {
 
 function switchTab(e){["skulpt","terminal","frontend"].forEach(t=>{const n=document.getElementById(t),s=document.getElementById("tab-btn-"+t),r=t===e;n.style.display=r?"":"none",s.classList.toggle("bg-[#1e1f21]",r),s.classList.toggle("bg-gray-600",!r),s.classList.toggle("dark:bg-[#1e1f21]",r),s.classList.toggle("dark:bg-gray-700",!r),s.setAttribute("aria-selected",r)})}function CodeMirrorREPL(e,t){var n=document.getElementById(e);t=t||{},n.value="";var s={Up:function(){switch(v--){case 0:return void(v=0);case c.length:p=r.getLine(d).slice(f)}r.replaceRange(c[v],w(d),m(d))},Down:function(){switch(v++){case c.length:return void v--;case c.length-1:return void r.replaceRange(p,w(d),m(d))}r.replaceRange(c[v],w(d),m(d))},Delete:A,"Ctrl-Z":function(){},Enter:k,"Ctrl-A":function(){var e=r.getLine(d).slice(f).length;r.setSelection(w(d),{line:d,ch:e})},"Ctrl-Delete":A,"Shift-Enter":k,Backspace:M,"Ctrl-Backspace":M},r=(t={electricChars:!1,theme:t.theme,mode:t.mode,smartIndent:!1,lineWrapping:!0,extraKeys:s,onChange:function e(t,n){var s=n.to,r=n.from,i=n.text,a=n.next,l=i.length;if(h){if(r.line<d||r.ch<f)t.undo();else if(l-- >1){t.undo();var o=t.getLine(d).slice(f);i[0]=o.slice(0,r.ch)+i[0];for(var c=0;c<l;c++)t.replaceRange(i[c],w(d),m(d)),k();var u=i[l]+o.slice(s.ch);t.replaceRange(u,w(d),m(d))}}else t.setMarker(1,">>>","");a&&e(t,a)},indentUnit:4,undoDepth:1,gutters:["note-gutter"],lineNumbers:!0},CodeMirror.fromTextArea(n,t));r.setSize(null,380);var a=[],l=[],o=[],c=[],u=[],g=this,h=!0,p="",d=0,f=0,v=0;function m(e){return{line:e,ch:r.getLine(e).length}}function w(e){return{line:e,ch:0}}function k(e){var t=r.getLine(d),n=t.slice(f);h=!1,f=0,u.push(n),v=c.push(n),r.replaceRange(t+"\n",{line:d++,ch:0},{line:d,ch:0});var s=u.join("\n").replace(/\r/g,"\n"),i=g.isBalanced(s);if(i)g.eval(s),u.length=0,r.setMarker(d,">>>",""),a.push(d),o.push(d);else if(null===i){u.pop(),s=u.join("\n").replace("\r","\n");var p=g.isBalanced(s)?">>>":"...";r.setMarker(d,p,""),a.push(d),g.isBalanced(s)?o.push(d):l.push(d)}else r.setMarker(d,"...",""),a.push(d),l.push(d);for(r.scrollIntoView(w(d)),i=0;i<r.lineCount();i++)a.includes(i)||r.setMarker(i,"&#32;",""),o.includes(i)&&r.setMarker(i,">>>",""),l.includes(i)&&r.setMarker(i,"...","");r.scrollIntoView(w(d)),setTimeout(function(){h=!0},0)}function M(){var e=r.somethingSelected(),t=r.getCursor(!0),n=t.line,s=t.ch;n===d&&s>=f+(e?0:1)&&(e||r.setSelection({line:n,ch:s-1},t),r.replaceSelection(""))}function A(){var e=r.getCursor(!0),t=e.line,n=e.ch;t===d&&n<r.getLine(t).length&&n>=f&&(r.somethingSelected()||r.setSelection({line:t,ch:n+1},e),r.replaceSelection(""))}g.print=function(e,t){var n=h;h=!1;var s=(e=String(e)).replace(/\n$/,"").split("\n"),c=r.getLine(d);if(c){r.setMarker(d,"&#32;","");var u=r.getCursor().ch}for(var g=0;g<s.length;g++){var p=s[g]+"\n";r.replaceRange(p,{line:d++,ch:0},{line:d,ch:0}),r.setMarker(d-1,"&#32;",""),t&&r.markText({line:d-1,ch:0},{line:d-1,ch:p.length},t)}for(c&&(r.replaceRange(c,w(d),m(d)),r.setMarker(d,">>>",""),a.push(d),o.push(d),r.setCursor({line:d,ch:u})),r.scrollIntoView(w(d)),i=0;i<r.lineCount();i++)a.includes(i)||r.setMarker(i,"&#32;",""),o.includes(i)&&r.setMarker(i,">>>",""),l.includes(i)&&r.setMarker(i,"...","");setTimeout(function(){h=n},0)},g.setMode=function(e){r.setOption("mode",e)},g.setTheme=function(e){r.setOption("theme",e)},r.setMarker(d,">>>",""),a.push(1),o.push(1)}CodeMirrorREPL.prototype.isBalanced=function(){return!0},CodeMirrorREPL.prototype.eval=function(){},document.addEventListener("DOMContentLoaded",function(){var e=new CodeMirrorREPL("interactive",{theme:"monokai"}),t=new RegExp("\\s*print"),n=new RegExp("\\s*import"),s=(new RegExp("'''"),new RegExp("def.*|class.*")),r=(new RegExp("^\\s*$"),/^((\s*\(\s*(\s*((\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*)|(\s*\(\s*(\s*((\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*),)*\s*((\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*)|(\s*\(\s*(\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*,)*\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*))\s*\)\s*))\s*\)\s*)|([\s\S]*\s*([\s\S]*))=)/);e.print("Python 3 ("+new Date+") ["+navigator.userAgent+"] on "+navigator.platform),document.getElementById("terminal").style.display="none",e.isBalanced=function(e){var t,n=e.split("\n"),s=0,r=!1;for(t=0;t<n.length;t+=1)null!==n[t].match(/'''/)&&1===n[t].match(/'''/).length&&(r=!r),r||":"!==n[t].substr(n[t].length-1)||(s+=1),!r&&""===n[t]&&s>0&&(s=0);return 0===s&&!r},e.eval=function(i){Sk.configure({output:function(t){""!==t.replace(/\n/g,"").trim()&&e.print(t)},read:function(e){if(void 0===Sk.builtinFiles||void 0===Sk.builtinFiles.files[e])throw"File not found: '"+e+"'";return Sk.builtinFiles.files[e]},retainglobals:!0});var a=i.split("\n"),l=-1,o=0;1===a.length&&!r.test(a[0])&&!s.test(a[0])&&!n.test(a[0])&&a[0].length>0&&(t.test(a[0])||(a.push("evaluationresult = "+a.pop()),a.push("if not evaluationresult == None: print repr(evaluationresult)")));try{if(!a||/^\s*$/.test(a))return;Sk.importMainWithBody("repl",!1,a.join("\n"))}catch(t){e.print(t),-1!==(l=t.toString().indexOf("on line"))&&(l=parseInt(t.toString().substr(l+8),10)),a.forEach(function(t){e.print(++o+(l===o?">":" ")+": "+t)})}}});
 
-let cmr_f_html, cmr_f_css, cmr_f_js, cmr_csstri;
+let cmr_f_html, cmr_f_css, cmr_f_js, cmr_csstri, cmr_polygon, cmr_noise, cmr_barcode;
 cmr_f_html = CodeMirror.fromTextArea(document.getElementById("html-editor"), {
 	mode: "htmlmixed",
 	theme: "monokai",
@@ -596,7 +596,28 @@ cmr_csstri = CodeMirror.fromTextArea(document.getElementById("csstri-code"), {
 	lineWrapping: true,
 	readOnly:true
 });
-cmr_f_html.setSize(null, 380), cmr_f_css.setSize(null, 380), cmr_f_js.setSize(null, 380), cmr_csstri.setSize(null, 200);
+cmr_polygon = CodeMirror.fromTextArea(document.getElementById("svgg-polygon-code"), {
+	mode: "xml",
+	theme: "monokai",
+	lineNumbers: true,
+	lineWrapping: true,
+	readOnly:true
+});
+cmr_noise = CodeMirror.fromTextArea(document.getElementById("svgg-noise-code"), {
+	mode: "xml",
+	theme: "monokai",
+	lineNumbers: true,
+	lineWrapping: true,
+	readOnly:true
+});
+cmr_barcode = CodeMirror.fromTextArea(document.getElementById("svgg-barcode-code"), {
+	mode: "xml",
+	theme: "monokai",
+	lineNumbers: true,
+	lineWrapping: true,
+	readOnly:true
+});
+cmr_f_html.setSize(null, 380), cmr_f_css.setSize(null, 380), cmr_f_js.setSize(null, 380), cmr_csstri.setSize(null, 150);
 cmr_f_html.setValue("<body onresize='_pexresize()'>\n	<canvas id='canvas' width='1280' height='720'></canvas>\n</body>");
 cmr_f_css.setValue("body {\n	margin: 0;\n	padding: 0;\n}\n\n#canvas {\n	background: transparent;\n	display: block;\n  	position: absolute;\n}");
 cmr_f_js.setValue("'use strict';\nvar scene, camera, renderer;\nvar container, HEIGHT, WIDTH, fieldOfView, aspectRatio, nearPlane, farPlane, stats, geometry, particleCount, i, h, color, size, materials = [],\n	mouseX = 0,\n	mouseY = 0,\n	windowHalfX, windowHalfY, cameraZ, fogHex, fogDensity, parameters = {},\n	parameterCount, particles;\ninit();\nanimate();\n\nfunction init() {\n	HEIGHT = window.innerHeight;\n	WIDTH = window.innerWidth;\n	windowHalfX = WIDTH / 2;\n	windowHalfY = HEIGHT / 2;\n	fieldOfView = 75;\n	aspectRatio = WIDTH / HEIGHT;\n	nearPlane = 1;\n	farPlane = 3000;\n	var GUI = dat.gui.GUI;\n	cameraZ = farPlane / 3;\n	fogHex = 0x000000;\n	fogDensity = 0.0007;\n	camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);\n	camera.position.z = cameraZ;\n	scene = new THREE.Scene();\n	scene.fog = new THREE.FogExp2(fogHex, fogDensity);\n	container = document.createElement('div');\n	document.body.appendChild(container);\n	document.body.style.margin = 0;\n	document.body.style.overflow = 'hidden';\n	geometry = new THREE.Geometry();\n	particleCount = 60000;\n	for (i = 0; i < particleCount; i++) {\n		var vertex = new THREE.Vector3();\n		vertex.x = Math.random() * 2000 - 1000;\n		vertex.y = Math.random() * 2000 - 1000;\n		vertex.z = Math.random() * 2000 - 1000;\n		geometry.vertices.push(vertex)\n	}\n	parameters = [\n		[\n			[1, 1, 0.5], 5\n		],\n		[\n			[0.95, 1, 0.5], 4\n		],\n		[\n			[0.90, 1, 0.5], 3\n		],\n		[\n			[0.85, 1, 0.5], 2\n		],\n		[\n			[0.80, 1, 0.5], 1\n		]\n	];\n	parameterCount = parameters.length;\n	for (i = 0; i < parameterCount; i++) {\n		color = parameters[i][0];\n		size = parameters[i][1];\n		materials[i] = new THREE.PointCloudMaterial({\n			size: size\n		});\n		particles = new THREE.PointCloud(geometry, materials[i]);\n		particles.rotation.x = Math.random() * 6;\n		particles.rotation.y = Math.random() * 6;\n		particles.rotation.z = Math.random() * 6;\n		scene.add(particles)\n	}\n	renderer = new THREE.WebGLRenderer();\n	renderer.setPixelRatio(window.devicePixelRatio);\n	renderer.setSize(WIDTH, HEIGHT);\n	container.appendChild(renderer.domElement);\n	stats = new Stats();\n	stats.domElement.style.position = 'absolute';\n	stats.domElement.style.top = '0px';\n	stats.domElement.style.right = '0px';\n	container.appendChild(stats.domElement);\n	window.addEventListener('resize', onWindowResize, false);\n	document.addEventListener('mousemove', onDocumentMouseMove, false);\n	document.addEventListener('touchstart', onDocumentTouchStart, false);\n	document.addEventListener('touchmove', onDocumentTouchMove, false)\n}\n\nfunction animate() {\n	requestAnimationFrame(animate);\n	render();\n	stats.update()\n}\n\nfunction render() {\n	var time = Date.now() * 0.00005;\n	camera.position.x += (mouseX - camera.position.x) * 0.05;\n	camera.position.y += (-mouseY - camera.position.y) * 0.05;\n	camera.lookAt(scene.position);\n	for (i = 0; i < scene.children.length; i++) {\n		var object = scene.children[i];\n		if (object instanceof THREE.PointCloud) {\n			object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1))\n		}\n	}\n	for (i = 0; i < materials.length; i++) {\n		color = parameters[i][0];\n		h = 360 * (color[0] + time) % 360 / 360;\n		materials[i].color.setHSL(h, color[1], color[2])\n	}\n	renderer.render(scene, camera)\n}\n\nfunction onDocumentMouseMove(e) {\n	mouseX = e.clientX - windowHalfX;\n	mouseY = e.clientY - windowHalfY\n}\n\nfunction onDocumentTouchStart(e) {\n	if (e.touches.length === 1) {\n		e.preventDefault();\n		mouseX = e.touches[0].pageX - windowHalfX;\n		mouseY = e.touches[0].pageY - windowHalfY\n	}\n}\n\nfunction onDocumentTouchMove(e) {\n	if (e.touches.length === 1) {\n		e.preventDefault();\n		mouseX = e.touches[0].pageX - windowHalfX;\n		mouseY = e.touches[0].pageY - windowHalfY\n	}\n}\n\nfunction onWindowResize() {\n	windowHalfX = window.innerWidth / 2;\n	windowHalfY = window.innerHeight / 2;\n	camera.aspect = window.innerWidth / window.innerHeight;\n	camera.updateProjectionMatrix();\n	renderer.setSize(window.innerWidth, window.innerHeight)\n}\nvar stage = {\n	w: 1280,\n	h: 720\n}\nvar _pexcanvas = document.getElementById(\"canvas\");\n_pexcanvas.width = stage.w;\n_pexcanvas.height = stage.h;\nvar ctx = _pexcanvas.getContext(\"2d\");\nvar pointer = {\n	x: 0,\n	y: 0\n}\nvar scale = 1;\nvar portrait = true;\nvar loffset = 0;\nvar toffset = 0;\nvar mxpos = 0;\nvar mypos = 0;\nlet branches = [];\nlet leaves = [];\nlet apples = [];\n\nfunction drawApple(x, y, w) {\n	ctx.lineWidth = 2;\n	ctx.beginPath();\n	ctx.moveTo(x, y);\n	ctx.lineTo(x, y + w / 2);\n	ctx.stroke();\n	ctx.fillStyle = '#e74c3c';\n	ctx.beginPath();\n	ctx.arc(x - w / 3, y + w / 4 + w / 2, w / 2, 0, Math.PI * 2, false);\n	ctx.fill();\n	ctx.beginPath();\n	ctx.arc(x + w / 3, y + w / 4 + w / 2, w / 2, 0, Math.PI * 2, false);\n	ctx.fill();\n	ctx.beginPath();\n	ctx.arc(x + w / 4, y + w / 2 + w / 4 + w / 2, w / 2.2, 0, Math.PI * 2, false);\n	ctx.fill();\n	ctx.beginPath();\n	ctx.arc(x - w / 4, y + w / 2 + w / 4 + w / 2, w / 2.2, 0, Math.PI * 2, false);\n	ctx.fill()\n}\nbranches.push({\n	x: stage.w / 2,\n	y: stage.h,\n	act: true,\n	l: 0,\n	tl: stage.h / 2 - 100,\n	a: Math.PI,\n	s: 0,\n	w: 15\n});\nlet timer = 0;\n\nfunction enginestep() {\n	ctx.clearRect(0, 0, stage.w, stage.h);\n	timer++;\n	if (timer > 300) {\n		branches = [{\n			x: stage.w / 2,\n			y: stage.h,\n			act: true,\n			l: 0,\n			tl: stage.h / 2 - 100,\n			a: Math.PI,\n			s: 0,\n			w: 15\n		}];\n		leaves = [];\n		apples = [];\n		timer = 0\n	}\n	ctx.lineCap = 'round';\n	ctx.strokeStyle = '#e67e22';\n	branches.forEach(b => {\n		if (b.s < 5) {\n			ctx.lineWidth = b.w;\n			if (b.l < b.tl - 3) {\n				b.l += (b.tl - b.l) / 8\n			} else if (b.act) {\n				b.act = false;\n				if (b.s == 4) {\n					if (Math.random() * 30 < 1) {\n						apples.push({\n							x: b.x + Math.sin(b.a) * b.l,\n							y: b.y + Math.cos(b.a) * b.l,\n							w: 0,\n							sz: Math.random() * 5 + 8\n						})\n					} else {\n						leaves.push({\n							x: b.x + Math.sin(b.a) * b.l,\n							y: b.y + Math.cos(b.a) * b.l,\n							w: 0,\n							sz: Math.random() * 5 + 8,\n							h: 0,\n							a: Math.PI * 1.5 - b.a\n						})\n					}\n				} else {\n					for (let i = 0; i < 5; i++) {\n						branches.push({\n							x: b.x + Math.sin(b.a) * b.l,\n							y: b.y + Math.cos(b.a) * b.l,\n							act: true,\n							l: 0,\n							tl: Math.random() * (150 - b.s * 35) + 20,\n							a: b.a + Math.random() * Math.PI - Math.PI / 2,\n							s: b.s + 1,\n							w: b.w * 0.5\n						})\n					}\n				}\n			}\n			ctx.beginPath();\n			ctx.moveTo(b.x, b.y);\n			ctx.lineTo(b.x + Math.sin(b.a) * b.l, b.y + Math.cos(b.a) * b.l);\n			ctx.stroke()\n		}\n	});\n	ctx.fillStyle = '#2ecc71';\n	leaves.forEach(l => {\n		l.w += (l.sz - l.w) / 10;\n		l.h += (l.sz / 2 - l.h) / 10;\n		ctx.beginPath();\n		ctx.ellipse(l.x, l.y, l.w, l.h, l.a, 0, Math.PI * 2);\n		ctx.fill()\n	});\n	apples.forEach(a => {\n		a.w += (a.sz - a.w) / 10;\n		drawApple(a.x, a.y, a.w)\n	})\n}\n\nfunction toggleFullScreen() {\n	var doc = window.document;\n	var docEl = doc.documentElement;\n	var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;\n	var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;\n	if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {\n		requestFullScreen.call(docEl)\n	} else {\n		cancelFullScreen.call(doc)\n	}\n}\nvar ox = 0;\nvar oy = 0;\n\nfunction mousestart(e) {\n	mxpos = (e.pageX - loffset) * scale;\n	mypos = (e.pageY - toffset) * scale\n}\n\nfunction mousemove(e) {\n	mxpos = (e.pageX - loffset) * scale;\n	mypos = (e.pageY - toffset) * scale;\n	pointer.x = mxpos;\n	pointer.y = mypos;\n	ox = mxpos\n}\n\nfunction mouseend(e) {}\nwindow.addEventListener('mousedown', function(e) {\n	mousestart(e)\n}, false);\nwindow.addEventListener('mousemove', function(e) {\n	mousemove(e)\n}, false);\nwindow.addEventListener('mouseup', function(e) {\n	mouseend(e)\n}, false);\nwindow.addEventListener('touchstart', function(e) {\n	e.preventDefault();\n	mousestart(e.touches[0])\n}, false);\nwindow.addEventListener('touchmove', function(e) {\n	e.preventDefault();\n	mousemove(e.touches[0])\n}, false);\nwindow.addEventListener('touchend', function(e) {\n	e.preventDefault();\n	mouseend(e.touches[0])\n}, false);\n\nfunction _pexresize() {\n	var cw = window.innerWidth;\n	var ch = window.innerHeight;\n	if (cw <= ch * stage.w / stage.h) {\n		portrait = true;\n		scale = stage.w / cw;\n		loffset = 0;\n		toffset = Math.floor(ch - (cw * stage.h / stage.w)) / 2;\n		_pexcanvas.style.width = cw + \"px\";\n		_pexcanvas.style.height = Math.floor(cw * stage.h / stage.w) + \"px\"\n	} else {\n		scale = stage.h / ch;\n		portrait = false;\n		loffset = Math.floor(cw - (ch * stage.w / stage.h)) / 2;\n		toffset = 0;\n		_pexcanvas.style.height = ch + \"px\";\n		_pexcanvas.style.width = Math.floor(ch * stage.w / stage.h) + \"px\"\n	}\n	_pexcanvas.style.marginLeft = loffset + \"px\";\n	_pexcanvas.style.marginTop = toffset + \"px\"\n}\nwindow.requestAnimFrame = (function() {\n	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {\n		window.setTimeout(callback, 1000 / 60)\n	}\n})();\nvar fps = 60;\nvar nfcount = 0;\n\nfunction animated() {\n	requestAnimFrame(animated);\n	enginestep();\n	nfcount++;\n	ctx.fillStyle = '#2c3e50';\n	ctx.font = \"14px arial\";\n	ctx.textAlign = \"left\"\n}\n_pexresize();\nanimated();\n\nfunction countfps() {\n	fps = nfcount;\n	nfcount = 0\n}\nsetInterval(countfps, 1000);");
@@ -897,3 +918,323 @@ document.getElementById("csstri_border").addEventListener("change", function() {
 });
 
 document.getElementById("kopi-csstri").addEventListener("click",function(){copyToClipboard(this,cmr_csstri.getValue())});
+
+// svg
+const svgg_polygonsideCountEl = document.getElementById('svgg-polygon-side');
+const svgg_polygonradiusEl = document.getElementById('svgg-polygon-radius');
+const svgg_polygoncxEl = document.getElementById('svgg-polygon-x');
+const svgg_polygoncyEl = document.getElementById('svgg-polygon-y');
+const svgg_polygonpolygonEl = document.getElementById('svgg-polygon-res');
+const svgg_polygonsvgEl = document.getElementById('svgg-polygon-svg');
+
+function svgg_polygonpts(sideCount, radius) {
+	const angle = 360 / sideCount;
+	const vertexIndices = svgg_polygonrange(sideCount);
+	const offsetDeg = 90 - (180 - angle) / 2;
+	const offset = svgg_polygondegreesToRadians(offsetDeg);
+
+	return vertexIndices.map(index => {
+		return {
+			theta: offset + svgg_polygondegreesToRadians(angle * index),
+			r: radius
+		};
+
+	});
+}
+
+function svgg_polygonrange(count) {
+	return Array.from(Array(count).keys());
+}
+
+function svgg_polygondegreesToRadians(angleInDegrees) {
+	return Math.PI * angleInDegrees / 180;
+}
+
+
+function svgg_polygonpolygon([cx, cy], sideCount, radius) {
+	return svgg_polygonpts(sideCount, radius).
+	map(({
+		r,
+		theta
+	}) => [
+		cx + r * Math.cos(theta),
+		cy + r * Math.sin(theta)
+	]).
+
+	join(' ');
+}
+
+function svgg_polygongeneratePolygon() {
+	const sideCount = +svgg_polygonsideCountEl.value;
+	const radius = +svgg_polygonradiusEl.value;
+	const cx = +svgg_polygoncxEl.value;
+	const cy = +svgg_polygoncyEl.value;
+	const s = 2 * radius + 50;
+
+	const res = svgg_polygonpolygon([cx, cy], sideCount, radius);
+	const viz = svgg_polygonpolygon([s / 2, s / 2], sideCount, radius);
+
+	svgg_polygonsvgEl.setAttribute('viewBox', `0 0 ${s} ${s}`);
+	svgg_polygonpolygonEl.setAttribute('points', viz);
+	cmr_polygon.setValue(`<polygon points="${res}" />`);
+}
+
+document.getElementById("kopi-svgg-polygon").addEventListener("click",function(){copyToClipboard(this,cmr_polygon.getValue())});
+
+window.onload = svgg_polygongeneratePolygon;
+
+// noise
+function SvggnoiseSimplexNoise(seed) {
+	var p = new Uint8Array(256);
+	var perm = new Uint8Array(512);
+	var permMod12 = new Uint8Array(512);
+	var s = seed || 1;
+
+	function rand() {
+		s = (s * 16807) % 2147483647;
+		return (s - 1) / 2147483646;
+	}
+	for (var i = 0; i < 256; i++) p[i] = i;
+	for (var i = 255; i > 0; i--) {
+		var j = Math.floor(rand() * (i + 1));
+		var t = p[i];
+		p[i] = p[j];
+		p[j] = t;
+	}
+	for (var i = 0; i < 512; i++) {
+		perm[i] = p[i & 255];
+		permMod12[i] = perm[i] % 12;
+	}
+
+	var grad3 = [
+		[1, 1],
+		[-1, 1],
+		[1, -1],
+		[-1, -1],
+		[1, 0],
+		[-1, 0],
+		[1, 0],
+		[-1, 0],
+		[0, 1],
+		[0, -1],
+		[0, 1],
+		[0, -1]
+	];
+
+	var F2 = 0.5 * (Math.sqrt(3) - 1);
+	var G2 = (3 - Math.sqrt(3)) / 6;
+
+	this.noise2D = function(xin, yin) {
+		var n0, n1, n2;
+		var s = (xin + yin) * F2;
+		var i = Math.floor(xin + s);
+		var j = Math.floor(yin + s);
+		var t = (i + j) * G2;
+		var X0 = i - t,
+			Y0 = j - t;
+		var x0 = xin - X0,
+			y0 = yin - Y0;
+		var i1, j1;
+		if (x0 > y0) {
+			i1 = 1;
+			j1 = 0;
+		} else {
+			i1 = 0;
+			j1 = 1;
+		}
+		var x1 = x0 - i1 + G2,
+			y1 = y0 - j1 + G2;
+		var x2 = x0 - 1 + 2 * G2,
+			y2 = y0 - 1 + 2 * G2;
+		var ii = i & 255,
+			jj = j & 255;
+		var gi0 = permMod12[ii + perm[jj]];
+		var gi1 = permMod12[ii + i1 + perm[jj + j1]];
+		var gi2 = permMod12[ii + 1 + perm[jj + 1]];
+
+		var t0 = 0.5 - x0 * x0 - y0 * y0;
+		n0 = t0 < 0 ? 0 : (t0 *= t0, t0 * t0 * (grad3[gi0][0] * x0 + grad3[gi0][1] * y0));
+
+		var t1 = 0.5 - x1 * x1 - y1 * y1;
+		n1 = t1 < 0 ? 0 : (t1 *= t1, t1 * t1 * (grad3[gi1][0] * x1 + grad3[gi1][1] * y1));
+
+		var t2 = 0.5 - x2 * x2 - y2 * y2;
+		n2 = t2 < 0 ? 0 : (t2 *= t2, t2 * t2 * (grad3[gi2][0] * x2 + grad3[gi2][1] * y2));
+
+		return 70 * (n0 + n1 + n2);
+	};
+}
+
+function svggnoiseMap(value, inMin, inMax, outMin, outMax) {
+	return outMin + ((value - inMin) / (inMax - inMin)) * (outMax - outMin);
+}
+
+var svggnoise_simplex = new SvggnoiseSimplexNoise(Date.now() % 1000);
+var svggnoise_SIZE = 600;
+var svggnoise_svg = document.getElementById("svgg-noise-res");
+
+var svggnoise_state = {
+	mode: "LINES",
+	res: 75,
+	noiseInc: 0.02,
+	strokeWidth: 2,
+	color: "#000000"
+};
+
+var svggnoise_NS = "http://www.w3.org/2000/svg";
+
+function svggnoise_clear() {
+	while (svggnoise_svg.firstChild) svggnoise_svg.removeChild(svggnoise_svg.firstChild);
+}
+
+function svggnoise_generate() {
+	svggnoise_clear();
+	var cols = Math.floor(svggnoise_SIZE / svggnoise_state.res);
+	var rows = Math.floor(svggnoise_SIZE / svggnoise_state.res);
+	var xOff = Math.random() * 1000;
+
+	for (var i = 0; i < cols; i++) {
+		var yOff = 0;
+		xOff += svggnoise_state.noiseInc;
+
+		for (var j = 0; j < rows; j++) {
+			var noise = svggnoise_simplex.noise2D(xOff, yOff);
+			var scale = svggnoiseMap(noise, -1, 1, 0.35, 1.15);
+			var rotate = svggnoiseMap(noise, -1, 1, 0, 360);
+
+			var cx = i * svggnoise_state.res + svggnoise_state.res / 2;
+			var cy = j * svggnoise_state.res + svggnoise_state.res / 2;
+			var half = (svggnoise_state.res * 0.5 * scale) / 2;
+
+			if (svggnoise_state.mode === "LINES") {
+				var el = document.createElementNS(svggnoise_NS, "line");
+				el.setAttribute("x1", cx - half);
+				el.setAttribute("y1", cy);
+				el.setAttribute("x2", cx + half);
+				el.setAttribute("y2", cy);
+				el.setAttribute("stroke", svggnoise_state.color);
+				el.setAttribute("stroke-width", svggnoise_state.strokeWidth);
+				el.setAttribute("stroke-linecap", "round");
+				el.setAttribute("transform", "rotate(" + rotate + " " + cx + " " + cy + ")");
+				svggnoise_svg.appendChild(el);
+			} else {
+				var r = Math.max(1, (svggnoise_state.res * 0.28 * scale));
+				var el = document.createElementNS(svggnoise_NS, "circle");
+				el.setAttribute("cx", cx);
+				el.setAttribute("cy", cy);
+				el.setAttribute("r", r);
+				el.setAttribute("fill", svggnoise_state.color);
+				svggnoise_svg.appendChild(el);
+			}
+
+			yOff += svggnoise_state.noiseInc;
+		}
+	}
+
+	var serializer = new XMLSerializer();
+	var svgString = serializer.serializeToString(svggnoise_svg);
+	cmr_noise.setValue(svgString.replace('id="svgg-noise-res" class="mr-12 w-full bg-white border-2 border-dashed border-gray-300 dark:border-blue-100/20" viewBox', 'viewBox'));
+}
+
+// ---- controls ----
+function svggnoiseTogle(a){
+	svggnoise_state.mode = a;
+	svggnoise_generate();
+}
+
+function svggnoiseSize(a){
+	svggnoise_state.res = parseInt(a.value, 10);
+	svggnoise_generate();
+}
+
+function svggnoiseVarian(a){
+	svggnoise_state.noiseInc = parseFloat(a.value);
+	svggnoise_generate();
+}
+
+function svggnoiseStrok(a){
+	svggnoise_state.strokeWidth = parseInt(a.value, 10);
+	svggnoise_generate();
+}
+
+function svggnoiseColor(a){
+	svggnoise_state.color = a.value;
+	svggnoise_generate();
+}
+
+document.getElementById("kopi-svgg-noise").addEventListener("click",function(){copyToClipboard(this,cmr_noise.getValue())});
+
+svggnoise_generate();
+
+// barcode
+function svgggenerateBarcode() {
+	var u = document.getElementById('svgg-barcode-no').value.trim();
+	var upc = u.split('');
+	var ns = u.substring(0, 1);
+	var mc = u.substring(1, 6);
+	var pc = u.substring(6, 11);
+	var cd = u.substring(11, 12);
+	var sg = ["101"];
+	var mg = ["01010"];
+	var op = ["0001101", "0011001", "0010011", "0111101", "0100011", "0110001", "0101111", "0111011", "0110111", "0001011"];
+	var ep = ["1110010", "1100110", "1101100", "1000010", "1011100", "1001110", "1010000", "1000100", "1001000", "1110100"];
+	var upcOP = "";
+	var i = 0;
+	while (i <= 5) {
+		upcOP += op[upc[i]];
+		i++
+	}
+	var upcEP = "";
+	var i = 6;
+	while (i <= 11) {
+		upcEP += ep[upc[i]];
+		i++
+	}
+	var data = sg + upcOP + mg + upcEP + sg;
+	var height = 100,
+		barWidth = 2;
+	var x = d3.scale.linear().domain([0, d3.max(data)]).range([0, height]);
+	d3.select("#svgg-barcode-res").remove();
+	var chart = d3.select("#svgg-barcode-con").append("svg:svg").attr("id", "svgg-barcode-res"), chart = d3.select("#svgg-barcode-res").attr("height", "130px").attr("width", barWidth * data.length + 40).attr("fill", "currentColor");
+	var bar = chart.selectAll("g").data(data).enter().append("g").attr("transform", function(d, i) {
+		return "translate(" + i * barWidth + ")"
+	});
+	bar.append("rect").attr("x", 20).attr("height", function(d, i) {
+		if (i == 0 || i == 2 || i == 46 || i == 48 || i == 92 || i == 94) {
+			return (d * 100)
+		} else {
+			return (d * 80)
+		}
+	}).attr("width", barWidth);
+	chart.append("g").append("text").attr("x", "1px").attr("y", "100px").style("font-size", "24px").style("font-family", "sans-serif").text(ns);
+	chart.append("g").append("text").attr("x", "38px").attr("y", "100px").style("font-size", "24px").style("font-family", "sans-serif").text(mc);
+	chart.append("g").append("text").attr("x", "128px").attr("y", "100px").style("font-size", "24px").style("font-family", "sans-serif").text(pc);
+	chart.append("g").append("text").attr("x", "215px").attr("y", "100px").style("font-size", "24px").style("font-family", "sans-serif").text(cd)
+
+	var serializer = new XMLSerializer();
+	var svgString = serializer.serializeToString(document.getElementById('svgg-barcode-res'));
+	cmr_barcode.setValue(svgString.replace(' id="svgg-barcode-res"','').replace(' fill="currentColor"',''));
+};
+
+function downloadsvg(svg) {
+	var svg_xml = (new XMLSerializer).serializeToString(svg);
+	var blob = new Blob([svg_xml]);
+	var url = window.URL || window.webkitURL;
+	var blobURL = url.createObjectURL(blob);
+	var a = document.createElement('a');
+	a.download = "Barcode.svg";
+	a.href = blobURL;
+	document.body.appendChild(a);
+	a.click()
+}
+
+svgggenerateBarcode();
+
+function setsvgg(id) {
+	document.getElementById('svgg-barcode').style.display = "none";
+	document.getElementById('svgg-noise').style.display = "none";
+	document.getElementById('svgg-polygon').style.display = "none";
+	document.getElementById(id).style.display = "";
+}
+
+document.getElementById("kopi-svgg-barcode").addEventListener("click",function(){copyToClipboard(this,cmr_barcode.getValue())});

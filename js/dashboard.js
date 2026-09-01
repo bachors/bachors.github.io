@@ -228,8 +228,10 @@ function toggleAtm() {
 }
 
 function youtube() {
-	const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
-	ycp("#reels", { apikey: apikey, playlist: 5, autoplay: true, related: false })
+	if(window.location.hostname.includes("bachors.id")){
+		const apikey = "AIzaSyDP4jj5m879TbJlaP4HFdshQg8oFkJnJME";
+		ycp("#reels", { apikey: apikey, playlist: 5, autoplay: true, related: false });
+	}
 }
 
 async function fetchData() {
@@ -251,4 +253,6 @@ function formatTime(t) {
 	return 0 == (a %= 12) && (a = 12), `${String(a).padStart(2,"0")}:${String(e).padStart(2,"0")} ${s}`
 }
 
-fetchData();
+if(window.location.hostname.includes("bachors.id")){
+	fetchData();
+}
