@@ -374,7 +374,7 @@ pxpaintCreategrid(document.getElementById("pxpaint-row").value, document.getElem
 	let asciicolor = false;
 	let asciichars = ['@', '#', '+', "'", ';', ':', ',', '.', '`'];
 	let asciicolorChar = ['B', 'A', 'C', "H", 'O', 'R', 'S'];
-	let asciimaxFilesize = 100000;
+	let asciimaxFilesize = 2500000;
 	let asciicanvas = null;
 	let asciictx = null;
 	let asciiimageData = null;
@@ -570,7 +570,7 @@ function pindahTab(e) {
 
 function switchTab(e){["skulpt","terminal","frontend"].forEach(t=>{const n=document.getElementById(t),s=document.getElementById("tab-btn-"+t),r=t===e;n.style.display=r?"":"none",s.classList.toggle("bg-[#1e1f21]",r),s.classList.toggle("bg-gray-600",!r),s.classList.toggle("dark:bg-[#1e1f21]",r),s.classList.toggle("dark:bg-gray-700",!r),s.setAttribute("aria-selected",r)})}function CodeMirrorREPL(e,t){var n=document.getElementById(e);t=t||{},n.value="";var s={Up:function(){switch(v--){case 0:return void(v=0);case c.length:p=r.getLine(d).slice(f)}r.replaceRange(c[v],w(d),m(d))},Down:function(){switch(v++){case c.length:return void v--;case c.length-1:return void r.replaceRange(p,w(d),m(d))}r.replaceRange(c[v],w(d),m(d))},Delete:A,"Ctrl-Z":function(){},Enter:k,"Ctrl-A":function(){var e=r.getLine(d).slice(f).length;r.setSelection(w(d),{line:d,ch:e})},"Ctrl-Delete":A,"Shift-Enter":k,Backspace:M,"Ctrl-Backspace":M},r=(t={electricChars:!1,theme:t.theme,mode:t.mode,smartIndent:!1,lineWrapping:!0,extraKeys:s,onChange:function e(t,n){var s=n.to,r=n.from,i=n.text,a=n.next,l=i.length;if(h){if(r.line<d||r.ch<f)t.undo();else if(l-- >1){t.undo();var o=t.getLine(d).slice(f);i[0]=o.slice(0,r.ch)+i[0];for(var c=0;c<l;c++)t.replaceRange(i[c],w(d),m(d)),k();var u=i[l]+o.slice(s.ch);t.replaceRange(u,w(d),m(d))}}else t.setMarker(1,">>>","");a&&e(t,a)},indentUnit:4,undoDepth:1,gutters:["note-gutter"],lineNumbers:!0},CodeMirror.fromTextArea(n,t));r.setSize(null,380);var a=[],l=[],o=[],c=[],u=[],g=this,h=!0,p="",d=0,f=0,v=0;function m(e){return{line:e,ch:r.getLine(e).length}}function w(e){return{line:e,ch:0}}function k(e){var t=r.getLine(d),n=t.slice(f);h=!1,f=0,u.push(n),v=c.push(n),r.replaceRange(t+"\n",{line:d++,ch:0},{line:d,ch:0});var s=u.join("\n").replace(/\r/g,"\n"),i=g.isBalanced(s);if(i)g.eval(s),u.length=0,r.setMarker(d,">>>",""),a.push(d),o.push(d);else if(null===i){u.pop(),s=u.join("\n").replace("\r","\n");var p=g.isBalanced(s)?">>>":"...";r.setMarker(d,p,""),a.push(d),g.isBalanced(s)?o.push(d):l.push(d)}else r.setMarker(d,"...",""),a.push(d),l.push(d);for(r.scrollIntoView(w(d)),i=0;i<r.lineCount();i++)a.includes(i)||r.setMarker(i,"&#32;",""),o.includes(i)&&r.setMarker(i,">>>",""),l.includes(i)&&r.setMarker(i,"...","");r.scrollIntoView(w(d)),setTimeout(function(){h=!0},0)}function M(){var e=r.somethingSelected(),t=r.getCursor(!0),n=t.line,s=t.ch;n===d&&s>=f+(e?0:1)&&(e||r.setSelection({line:n,ch:s-1},t),r.replaceSelection(""))}function A(){var e=r.getCursor(!0),t=e.line,n=e.ch;t===d&&n<r.getLine(t).length&&n>=f&&(r.somethingSelected()||r.setSelection({line:t,ch:n+1},e),r.replaceSelection(""))}g.print=function(e,t){var n=h;h=!1;var s=(e=String(e)).replace(/\n$/,"").split("\n"),c=r.getLine(d);if(c){r.setMarker(d,"&#32;","");var u=r.getCursor().ch}for(var g=0;g<s.length;g++){var p=s[g]+"\n";r.replaceRange(p,{line:d++,ch:0},{line:d,ch:0}),r.setMarker(d-1,"&#32;",""),t&&r.markText({line:d-1,ch:0},{line:d-1,ch:p.length},t)}for(c&&(r.replaceRange(c,w(d),m(d)),r.setMarker(d,">>>",""),a.push(d),o.push(d),r.setCursor({line:d,ch:u})),r.scrollIntoView(w(d)),i=0;i<r.lineCount();i++)a.includes(i)||r.setMarker(i,"&#32;",""),o.includes(i)&&r.setMarker(i,">>>",""),l.includes(i)&&r.setMarker(i,"...","");setTimeout(function(){h=n},0)},g.setMode=function(e){r.setOption("mode",e)},g.setTheme=function(e){r.setOption("theme",e)},r.setMarker(d,">>>",""),a.push(1),o.push(1)}CodeMirrorREPL.prototype.isBalanced=function(){return!0},CodeMirrorREPL.prototype.eval=function(){},document.addEventListener("DOMContentLoaded",function(){var e=new CodeMirrorREPL("interactive",{theme:"monokai"}),t=new RegExp("\\s*print"),n=new RegExp("\\s*import"),s=(new RegExp("'''"),new RegExp("def.*|class.*")),r=(new RegExp("^\\s*$"),/^((\s*\(\s*(\s*((\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*)|(\s*\(\s*(\s*((\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*),)*\s*((\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*)|(\s*\(\s*(\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*)))\s*,)*\s*((\s*[_a-zA-Z]\w*\s*)|(\s*\(\s*(\s*[_a-zA-Z]\w*\s*,)*\s*[_a-zA-Z]\w*\s*\)\s*))\s*\)\s*))\s*\)\s*)|([\s\S]*\s*([\s\S]*))=)/);e.print("Python 3 ("+new Date+") ["+navigator.userAgent+"] on "+navigator.platform),document.getElementById("terminal").style.display="none",e.isBalanced=function(e){var t,n=e.split("\n"),s=0,r=!1;for(t=0;t<n.length;t+=1)null!==n[t].match(/'''/)&&1===n[t].match(/'''/).length&&(r=!r),r||":"!==n[t].substr(n[t].length-1)||(s+=1),!r&&""===n[t]&&s>0&&(s=0);return 0===s&&!r},e.eval=function(i){Sk.configure({output:function(t){""!==t.replace(/\n/g,"").trim()&&e.print(t)},read:function(e){if(void 0===Sk.builtinFiles||void 0===Sk.builtinFiles.files[e])throw"File not found: '"+e+"'";return Sk.builtinFiles.files[e]},retainglobals:!0});var a=i.split("\n"),l=-1,o=0;1===a.length&&!r.test(a[0])&&!s.test(a[0])&&!n.test(a[0])&&a[0].length>0&&(t.test(a[0])||(a.push("evaluationresult = "+a.pop()),a.push("if not evaluationresult == None: print repr(evaluationresult)")));try{if(!a||/^\s*$/.test(a))return;Sk.importMainWithBody("repl",!1,a.join("\n"))}catch(t){e.print(t),-1!==(l=t.toString().indexOf("on line"))&&(l=parseInt(t.toString().substr(l+8),10)),a.forEach(function(t){e.print(++o+(l===o?">":" ")+": "+t)})}}});
 
-let cmr_f_html, cmr_f_css, cmr_f_js;
+let cmr_f_html, cmr_f_css, cmr_f_js, cmr_csstri;
 cmr_f_html = CodeMirror.fromTextArea(document.getElementById("html-editor"), {
 	mode: "htmlmixed",
 	theme: "monokai",
@@ -589,7 +589,14 @@ cmr_f_js = CodeMirror.fromTextArea(document.getElementById("js-editor"), {
 	lineNumbers: true,
 	lineWrapping: true
 });
-cmr_f_html.setSize(null, 380), cmr_f_css.setSize(null, 380), cmr_f_js.setSize(null, 380);
+cmr_csstri = CodeMirror.fromTextArea(document.getElementById("csstri-code"), {
+	mode: "css",
+	theme: "monokai",
+	lineNumbers: true,
+	lineWrapping: true,
+	readOnly:true
+});
+cmr_f_html.setSize(null, 380), cmr_f_css.setSize(null, 380), cmr_f_js.setSize(null, 380), cmr_csstri.setSize(null, 200);
 cmr_f_html.setValue("<body onresize='_pexresize()'>\n	<canvas id='canvas' width='1280' height='720'></canvas>\n</body>");
 cmr_f_css.setValue("body {\n	margin: 0;\n	padding: 0;\n}\n\n#canvas {\n	background: transparent;\n	display: block;\n  	position: absolute;\n}");
 cmr_f_js.setValue("'use strict';\nvar scene, camera, renderer;\nvar container, HEIGHT, WIDTH, fieldOfView, aspectRatio, nearPlane, farPlane, stats, geometry, particleCount, i, h, color, size, materials = [],\n	mouseX = 0,\n	mouseY = 0,\n	windowHalfX, windowHalfY, cameraZ, fogHex, fogDensity, parameters = {},\n	parameterCount, particles;\ninit();\nanimate();\n\nfunction init() {\n	HEIGHT = window.innerHeight;\n	WIDTH = window.innerWidth;\n	windowHalfX = WIDTH / 2;\n	windowHalfY = HEIGHT / 2;\n	fieldOfView = 75;\n	aspectRatio = WIDTH / HEIGHT;\n	nearPlane = 1;\n	farPlane = 3000;\n	var GUI = dat.gui.GUI;\n	cameraZ = farPlane / 3;\n	fogHex = 0x000000;\n	fogDensity = 0.0007;\n	camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);\n	camera.position.z = cameraZ;\n	scene = new THREE.Scene();\n	scene.fog = new THREE.FogExp2(fogHex, fogDensity);\n	container = document.createElement('div');\n	document.body.appendChild(container);\n	document.body.style.margin = 0;\n	document.body.style.overflow = 'hidden';\n	geometry = new THREE.Geometry();\n	particleCount = 60000;\n	for (i = 0; i < particleCount; i++) {\n		var vertex = new THREE.Vector3();\n		vertex.x = Math.random() * 2000 - 1000;\n		vertex.y = Math.random() * 2000 - 1000;\n		vertex.z = Math.random() * 2000 - 1000;\n		geometry.vertices.push(vertex)\n	}\n	parameters = [\n		[\n			[1, 1, 0.5], 5\n		],\n		[\n			[0.95, 1, 0.5], 4\n		],\n		[\n			[0.90, 1, 0.5], 3\n		],\n		[\n			[0.85, 1, 0.5], 2\n		],\n		[\n			[0.80, 1, 0.5], 1\n		]\n	];\n	parameterCount = parameters.length;\n	for (i = 0; i < parameterCount; i++) {\n		color = parameters[i][0];\n		size = parameters[i][1];\n		materials[i] = new THREE.PointCloudMaterial({\n			size: size\n		});\n		particles = new THREE.PointCloud(geometry, materials[i]);\n		particles.rotation.x = Math.random() * 6;\n		particles.rotation.y = Math.random() * 6;\n		particles.rotation.z = Math.random() * 6;\n		scene.add(particles)\n	}\n	renderer = new THREE.WebGLRenderer();\n	renderer.setPixelRatio(window.devicePixelRatio);\n	renderer.setSize(WIDTH, HEIGHT);\n	container.appendChild(renderer.domElement);\n	stats = new Stats();\n	stats.domElement.style.position = 'absolute';\n	stats.domElement.style.top = '0px';\n	stats.domElement.style.right = '0px';\n	container.appendChild(stats.domElement);\n	window.addEventListener('resize', onWindowResize, false);\n	document.addEventListener('mousemove', onDocumentMouseMove, false);\n	document.addEventListener('touchstart', onDocumentTouchStart, false);\n	document.addEventListener('touchmove', onDocumentTouchMove, false)\n}\n\nfunction animate() {\n	requestAnimationFrame(animate);\n	render();\n	stats.update()\n}\n\nfunction render() {\n	var time = Date.now() * 0.00005;\n	camera.position.x += (mouseX - camera.position.x) * 0.05;\n	camera.position.y += (-mouseY - camera.position.y) * 0.05;\n	camera.lookAt(scene.position);\n	for (i = 0; i < scene.children.length; i++) {\n		var object = scene.children[i];\n		if (object instanceof THREE.PointCloud) {\n			object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1))\n		}\n	}\n	for (i = 0; i < materials.length; i++) {\n		color = parameters[i][0];\n		h = 360 * (color[0] + time) % 360 / 360;\n		materials[i].color.setHSL(h, color[1], color[2])\n	}\n	renderer.render(scene, camera)\n}\n\nfunction onDocumentMouseMove(e) {\n	mouseX = e.clientX - windowHalfX;\n	mouseY = e.clientY - windowHalfY\n}\n\nfunction onDocumentTouchStart(e) {\n	if (e.touches.length === 1) {\n		e.preventDefault();\n		mouseX = e.touches[0].pageX - windowHalfX;\n		mouseY = e.touches[0].pageY - windowHalfY\n	}\n}\n\nfunction onDocumentTouchMove(e) {\n	if (e.touches.length === 1) {\n		e.preventDefault();\n		mouseX = e.touches[0].pageX - windowHalfX;\n		mouseY = e.touches[0].pageY - windowHalfY\n	}\n}\n\nfunction onWindowResize() {\n	windowHalfX = window.innerWidth / 2;\n	windowHalfY = window.innerHeight / 2;\n	camera.aspect = window.innerWidth / window.innerHeight;\n	camera.updateProjectionMatrix();\n	renderer.setSize(window.innerWidth, window.innerHeight)\n}\nvar stage = {\n	w: 1280,\n	h: 720\n}\nvar _pexcanvas = document.getElementById(\"canvas\");\n_pexcanvas.width = stage.w;\n_pexcanvas.height = stage.h;\nvar ctx = _pexcanvas.getContext(\"2d\");\nvar pointer = {\n	x: 0,\n	y: 0\n}\nvar scale = 1;\nvar portrait = true;\nvar loffset = 0;\nvar toffset = 0;\nvar mxpos = 0;\nvar mypos = 0;\nlet branches = [];\nlet leaves = [];\nlet apples = [];\n\nfunction drawApple(x, y, w) {\n	ctx.lineWidth = 2;\n	ctx.beginPath();\n	ctx.moveTo(x, y);\n	ctx.lineTo(x, y + w / 2);\n	ctx.stroke();\n	ctx.fillStyle = '#e74c3c';\n	ctx.beginPath();\n	ctx.arc(x - w / 3, y + w / 4 + w / 2, w / 2, 0, Math.PI * 2, false);\n	ctx.fill();\n	ctx.beginPath();\n	ctx.arc(x + w / 3, y + w / 4 + w / 2, w / 2, 0, Math.PI * 2, false);\n	ctx.fill();\n	ctx.beginPath();\n	ctx.arc(x + w / 4, y + w / 2 + w / 4 + w / 2, w / 2.2, 0, Math.PI * 2, false);\n	ctx.fill();\n	ctx.beginPath();\n	ctx.arc(x - w / 4, y + w / 2 + w / 4 + w / 2, w / 2.2, 0, Math.PI * 2, false);\n	ctx.fill()\n}\nbranches.push({\n	x: stage.w / 2,\n	y: stage.h,\n	act: true,\n	l: 0,\n	tl: stage.h / 2 - 100,\n	a: Math.PI,\n	s: 0,\n	w: 15\n});\nlet timer = 0;\n\nfunction enginestep() {\n	ctx.clearRect(0, 0, stage.w, stage.h);\n	timer++;\n	if (timer > 300) {\n		branches = [{\n			x: stage.w / 2,\n			y: stage.h,\n			act: true,\n			l: 0,\n			tl: stage.h / 2 - 100,\n			a: Math.PI,\n			s: 0,\n			w: 15\n		}];\n		leaves = [];\n		apples = [];\n		timer = 0\n	}\n	ctx.lineCap = 'round';\n	ctx.strokeStyle = '#e67e22';\n	branches.forEach(b => {\n		if (b.s < 5) {\n			ctx.lineWidth = b.w;\n			if (b.l < b.tl - 3) {\n				b.l += (b.tl - b.l) / 8\n			} else if (b.act) {\n				b.act = false;\n				if (b.s == 4) {\n					if (Math.random() * 30 < 1) {\n						apples.push({\n							x: b.x + Math.sin(b.a) * b.l,\n							y: b.y + Math.cos(b.a) * b.l,\n							w: 0,\n							sz: Math.random() * 5 + 8\n						})\n					} else {\n						leaves.push({\n							x: b.x + Math.sin(b.a) * b.l,\n							y: b.y + Math.cos(b.a) * b.l,\n							w: 0,\n							sz: Math.random() * 5 + 8,\n							h: 0,\n							a: Math.PI * 1.5 - b.a\n						})\n					}\n				} else {\n					for (let i = 0; i < 5; i++) {\n						branches.push({\n							x: b.x + Math.sin(b.a) * b.l,\n							y: b.y + Math.cos(b.a) * b.l,\n							act: true,\n							l: 0,\n							tl: Math.random() * (150 - b.s * 35) + 20,\n							a: b.a + Math.random() * Math.PI - Math.PI / 2,\n							s: b.s + 1,\n							w: b.w * 0.5\n						})\n					}\n				}\n			}\n			ctx.beginPath();\n			ctx.moveTo(b.x, b.y);\n			ctx.lineTo(b.x + Math.sin(b.a) * b.l, b.y + Math.cos(b.a) * b.l);\n			ctx.stroke()\n		}\n	});\n	ctx.fillStyle = '#2ecc71';\n	leaves.forEach(l => {\n		l.w += (l.sz - l.w) / 10;\n		l.h += (l.sz / 2 - l.h) / 10;\n		ctx.beginPath();\n		ctx.ellipse(l.x, l.y, l.w, l.h, l.a, 0, Math.PI * 2);\n		ctx.fill()\n	});\n	apples.forEach(a => {\n		a.w += (a.sz - a.w) / 10;\n		drawApple(a.x, a.y, a.w)\n	})\n}\n\nfunction toggleFullScreen() {\n	var doc = window.document;\n	var docEl = doc.documentElement;\n	var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;\n	var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;\n	if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {\n		requestFullScreen.call(docEl)\n	} else {\n		cancelFullScreen.call(doc)\n	}\n}\nvar ox = 0;\nvar oy = 0;\n\nfunction mousestart(e) {\n	mxpos = (e.pageX - loffset) * scale;\n	mypos = (e.pageY - toffset) * scale\n}\n\nfunction mousemove(e) {\n	mxpos = (e.pageX - loffset) * scale;\n	mypos = (e.pageY - toffset) * scale;\n	pointer.x = mxpos;\n	pointer.y = mypos;\n	ox = mxpos\n}\n\nfunction mouseend(e) {}\nwindow.addEventListener('mousedown', function(e) {\n	mousestart(e)\n}, false);\nwindow.addEventListener('mousemove', function(e) {\n	mousemove(e)\n}, false);\nwindow.addEventListener('mouseup', function(e) {\n	mouseend(e)\n}, false);\nwindow.addEventListener('touchstart', function(e) {\n	e.preventDefault();\n	mousestart(e.touches[0])\n}, false);\nwindow.addEventListener('touchmove', function(e) {\n	e.preventDefault();\n	mousemove(e.touches[0])\n}, false);\nwindow.addEventListener('touchend', function(e) {\n	e.preventDefault();\n	mouseend(e.touches[0])\n}, false);\n\nfunction _pexresize() {\n	var cw = window.innerWidth;\n	var ch = window.innerHeight;\n	if (cw <= ch * stage.w / stage.h) {\n		portrait = true;\n		scale = stage.w / cw;\n		loffset = 0;\n		toffset = Math.floor(ch - (cw * stage.h / stage.w)) / 2;\n		_pexcanvas.style.width = cw + \"px\";\n		_pexcanvas.style.height = Math.floor(cw * stage.h / stage.w) + \"px\"\n	} else {\n		scale = stage.h / ch;\n		portrait = false;\n		loffset = Math.floor(cw - (ch * stage.w / stage.h)) / 2;\n		toffset = 0;\n		_pexcanvas.style.height = ch + \"px\";\n		_pexcanvas.style.width = Math.floor(ch * stage.w / stage.h) + \"px\"\n	}\n	_pexcanvas.style.marginLeft = loffset + \"px\";\n	_pexcanvas.style.marginTop = toffset + \"px\"\n}\nwindow.requestAnimFrame = (function() {\n	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {\n		window.setTimeout(callback, 1000 / 60)\n	}\n})();\nvar fps = 60;\nvar nfcount = 0;\n\nfunction animated() {\n	requestAnimFrame(animated);\n	enginestep();\n	nfcount++;\n	ctx.fillStyle = '#2c3e50';\n	ctx.font = \"14px arial\";\n	ctx.textAlign = \"left\"\n}\n_pexresize();\nanimated();\n\nfunction countfps() {\n	fps = nfcount;\n	nfcount = 0\n}\nsetInterval(countfps, 1000);");
@@ -636,3 +643,257 @@ document.body.addEventListener('click', function(e) {
 		e.target.closest('#cdn #cdn-uri > div').remove()
 	}
 });
+
+// huge
+(function(window) {
+	var huge = window.huge || {};
+	window.huge = window.huge || huge;
+	huge.Geom = {};
+	huge.Geom.Point = function(x, y) {
+		this.x = isNaN(x) ? 0 : x;
+		this.y = isNaN(y) ? 0 : y
+	};
+	huge.Geom.Rectangle = function(x, y, width, height) {
+		this.update(x, y, width, height)
+	};
+	huge.Geom.Rectangle.prototype.update = function(x, y, width, height) {
+		this.x = isNaN(x) ? 0 : x;
+		this.y = isNaN(y) ? 0 : y;
+		this.width = isNaN(width) ? 0 : width;
+		this.height = isNaN(height) ? 0 : height
+	}
+}(window));
+(function(window) {
+	var huge = window.huge || {};
+	window.huge = window.huge || huge;
+	huge.BitmapUtil = {};
+	huge.BitmapUtil.getFirstNonTransparentPixelTopDown = function(canvas) {
+		var context = canvas.getContext("2d");
+		var y, i, rowData;
+		for (y = 0; y < canvas.height; y++) {
+			rowData = context.getImageData(0, y, canvas.width, 1).data;
+			for (i = 0; i < rowData.length; i += 4) {
+				if (rowData[i + 0] + rowData[i + 1] + rowData[i + 2] + rowData[i + 3] > 0) {
+					return new huge.Geom.Point(i / 4, y)
+				}
+			}
+		}
+		return null
+	};
+	huge.BitmapUtil.getFirstNonTransparentPixelBottomUp = function(canvas) {
+		var context = canvas.getContext("2d");
+		var y, i, rowData;
+		for (y = canvas.height - 1; y > -1; y--) {
+			rowData = context.getImageData(0, y, canvas.width, 1).data;
+			for (i = 0; i < rowData.length; i += 4) {
+				if (rowData[i + 0] + rowData[i + 1] + rowData[i + 2] + rowData[i + 3] > 0) {
+					return new huge.Geom.Point(i / 4, y)
+				}
+			}
+		}
+		return null
+	};
+	huge.BitmapUtil.getFirstNonTransparentPixelLeftToRight = function(canvas) {
+		var context = canvas.getContext("2d");
+		var x, i, colData;
+		for (x = 0; x < canvas.width; x++) {
+			colData = context.getImageData(x, 0, 1, canvas.height).data;
+			for (i = 0; i < colData.length; i += 4) {
+				if (colData[i + 0] + colData[i + 1] + colData[i + 2] + colData[i + 3] > 0) {
+					return new huge.Geom.Point(x, i / 4)
+				}
+			}
+		}
+		return null
+	};
+	huge.BitmapUtil.getFirstNonTransparentPixelRightToLeft = function(canvas) {
+		var context = canvas.getContext("2d");
+		var x, i, colData;
+		for (x = canvas.width - 1; x > -1; x--) {
+			colData = context.getImageData(x, 0, 1, canvas.height).data;
+			for (i = 0; i < colData.length; i += 4) {
+				if (colData[i + 0] + colData[i + 1] + colData[i + 2] + colData[i + 3] > 0) {
+					return new huge.Geom.Point(x, i / 4)
+				}
+			}
+		}
+		return null
+	};
+	huge.BitmapUtil.trimImage = function(image) {
+		var trimCanvas = huge.BitmapUtil.createTrimmedCanvas(image);
+		image.src = trimCanvas.toDataURL()
+	};
+	huge.BitmapUtil.trimCanvas = function(canvas) {
+		var trimCanvas = huge.BitmapUtil.createTrimmedCanvas(canvas);
+		canvas.width = trimCanvas.width;
+		canvas.height = trimCanvas.height;
+		var context = canvas.getContext("2d");
+		context.drawImage(trimCanvas, 0, 0)
+	};
+	huge.BitmapUtil.getCanvasTrimRectangle = function(canvas) {
+		var rect = new huge.Geom.Rectangle();
+		rect.x = huge.BitmapUtil.getFirstNonTransparentPixelLeftToRight(canvas).x;
+		rect.y = huge.BitmapUtil.getFirstNonTransparentPixelTopDown(canvas).y;
+		rect.width = huge.BitmapUtil.getFirstNonTransparentPixelRightToLeft(canvas).x - rect.x + 1;
+		rect.height = huge.BitmapUtil.getFirstNonTransparentPixelBottomUp(canvas).y - rect.y + 1;
+		return rect
+	}
+	huge.BitmapUtil.createTrimmedCanvas = function(imageOrCanvas) {
+		var trimCanvas = document.createElement("canvas");
+		var trimContext = trimCanvas.getContext("2d");
+		trimCanvas.width = imageOrCanvas.width;
+		trimCanvas.height = imageOrCanvas.height;
+		trimContext.drawImage(imageOrCanvas, 0, 0);
+		var rect = huge.BitmapUtil.getCanvasTrimRectangle(trimCanvas);
+		trimCanvas.width = rect.width;
+		trimCanvas.height = rect.height;
+		trimContext = trimCanvas.getContext("2d");
+		trimContext.drawImage(imageOrCanvas, rect.x, rect.y, rect.width, rect.height, 0, 0, rect.width, rect.height);
+		return trimCanvas
+	}
+}(window));
+var readyStateCheckInterval = setInterval(function() {
+	if (document.readyState === "complete") {
+		clearInterval(readyStateCheckInterval);
+		huge_init()
+	}
+}, 10);
+var canvas;
+var context;
+var sourceFontSizes = [11, 12, 14, 16, 18, 24, 30, 46, 80];
+var spaceCharacter = ".";
+
+function huge_init() {
+	canvas = document.createElement("canvas");
+	context = canvas.getContext("2d");
+	document.getElementById("huge-size").selectedIndex = 2;
+	huge_createComment()
+}
+
+function huge_createComment() {
+	var sourceFontSize = sourceFontSizes[parseInt(document.getElementById("huge-size").value)];
+	var text = document.getElementById("huge-comment").value;
+	context.font = "bold " + sourceFontSize + "px sans-serif";
+	canvas.width = context.measureText(text).width;
+	canvas.height = sourceFontSize * 2;
+	context.textBaseline = "top";
+	context.font = "bold " + sourceFontSize + "px sans-serif";
+	context.fillStyle = "#FF0000";
+	context.fillText(text, 0, 0);
+	var charPositions = [];
+	var width, i, x = 0;
+	for (var i = 0; i < text.length; i++) {
+		width = context.measureText(text.charAt(i)).width;
+		x += width;
+		charPositions[i] = x
+	}
+	huge.BitmapUtil.trimCanvas(canvas);
+	context = canvas.getContext("2d");
+	var commentString = huge_getBlankLine(canvas.width);
+	var j, rowData;
+	for (i = 0; i < canvas.height; i++) {
+		rowData = context.getImageData(0, i, canvas.width, 1).data;
+		commentString += ("//" + spaceCharacter);
+		for (j = 0; j < rowData.length; j += 4) {
+			if (rowData[j + 0] + rowData[j + 1] + rowData[j + 2] + rowData[j + 3] > 0) {
+				commentString += huge_getCharacterForPixelPosition(j / 4, charPositions, text)
+			} else {
+				commentString += spaceCharacter
+			}
+		}
+		commentString += (spaceCharacter + spaceCharacter + "\n")
+	}
+	commentString += huge_getBlankLine(canvas.width);
+	document.getElementById("huge-res").innerHTML = '<pre class="select-all" style="line-height: 0.8 !important;font: monospace;">'+commentString+'</pre>';
+	return null
+}
+
+function huge_getCharacterForPixelPosition(pixelX, charPostions, word) {
+	for (var i = 0; i < charPostions.length; i++) {
+		if (pixelX < charPostions[i]) {
+			return word.charAt(i)
+		}
+	}
+	return ""
+}
+
+function huge_getBlankLine(width) {
+	var line = "//" + spaceCharacter;
+	for (var i = 0; i < width; i++) {
+		line += spaceCharacter
+	}
+	return (line + spaceCharacter + spaceCharacter + "<br/>")
+}
+
+function huge_wtf() {
+	huge_createComment()
+}
+
+// triangle
+const csstri_rng = document.querySelectorAll('#csstri input[type=range]');
+const csstri_tri = document.getElementById('csstri-res');
+const csstri_tri2 = document.getElementById('csstri-res2');
+const csstri_val = {};
+const csstri_bdr = ['top', 'right', 'bottom', 'left'];
+let csstri_dir;
+
+csstri_rng.forEach(elm => {
+	csstri_val[elm.name] = +elm.value;
+});
+
+csstriDraw();
+
+csstri_rng.forEach(elm => {
+	elm.addEventListener('input', () => {
+		csstri_val[elm.name] = +elm.value;
+		csstriDraw();
+	});
+});
+
+function csstriSetdir(a){
+	csstri_dir = a;
+	while (csstri_bdr[0] !== csstri_dir) {
+		csstri_bdr.push(csstri_bdr.shift());
+	}
+	csstriDraw();
+}
+
+csstri_dir = "top";
+
+csstriDraw();
+
+function csstriDraw() {
+	let style = '';
+	const css = {
+		width: '0',
+		height: '0',
+		border: '0 solid transparent'
+	};
+
+	css['border-' + csstri_bdr[1] + '-width'] = Math.round(csstri_val.size * (-csstri_val.angle / 100 + 1) / 2) + 'px';
+	css['border-' + csstri_bdr[3] + '-width'] = Math.round(csstri_val.size * (csstri_val.angle / 100 + 1) / 2) + 'px';
+	css['border-' + csstri_bdr[2]] = Math.round(csstri_val.size * csstri_val.height / 100) + 'px solid black';
+
+	Object.assign(csstri_tri.style, css);
+	Object.assign(csstri_tri2.style, css);
+
+	Object.entries(css).forEach(([k, v]) => {
+		v = v.replace(/(\d+(px)?)/g, '$1');
+		style += '    ' + k + ': ' + v + ';\n';
+	});
+
+	cmr_csstri.setValue('#mytriangle {\n' + style + "}");
+
+}
+
+document.getElementById("csstri_border").addEventListener("change", function() {
+	if(this.checked){
+		csstri_tri.style.display = "none";
+		csstri_tri2.style.display = "";
+	}else{
+		csstri_tri.style.display = "";
+		csstri_tri2.style.display = "none";
+	}
+});
+
+document.getElementById("kopi-csstri").addEventListener("click",function(){copyToClipboard(this,cmr_csstri.getValue())});

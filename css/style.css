@@ -25,3 +25,12 @@ html::-webkit-scrollbar-thumb, .ftools::-webkit-scrollbar-thumb{background:#444;
 dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{background:#131313 !important;}
 #terminal .CodeMirror .CodeMirror-gutter pre{color:greenyellow !important;}
 #poly .pt{cursor:grab}#poly .pt:active{cursor:grabbing}#poly .pt circle{fill:transparent;stroke:oklch(62.7% .194 149.214);stroke-width:1.5}#poly .pt.auto circle{fill:transparent;stroke:oklch(58.8% .158 241.966);stroke-width:1.5}#poly .pt.pinned circle{fill:transparent;stroke:oklch(64.6% .222 41.116);stroke-width:1.5}
+#csstri-res2 {
+  transition: 0.3s;
+  border-color: #333 #1a1a1a !important;
+  filter: none;
+}
+#csstri-res2:hover {
+  padding: 10px;
+  background: #666;
+}
