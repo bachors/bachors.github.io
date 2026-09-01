@@ -1230,11 +1230,4 @@ function downloadsvg(svg) {
 
 svgggenerateBarcode();
 
-function setsvgg(id) {
-	document.getElementById('svgg-barcode').style.display = "none";
-	document.getElementById('svgg-noise').style.display = "none";
-	document.getElementById('svgg-polygon').style.display = "none";
-	document.getElementById(id).style.display = "";
-}
-
 document.getElementById("kopi-svgg-barcode").addEventListener("click",function(){copyToClipboard(this,cmr_barcode.getValue())});
