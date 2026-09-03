@@ -284,20 +284,20 @@
 								</div>
 								<div id="con-html" class="relative bg-[#1e1f21]">
 									<textarea id="html-editor" spellcheck="false"></textarea>
-									<button command="show-modal" commandfor="cdn" class="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-200">
-										<i class="fa fa-gear text-sm"></i>
-									</button>
 								</div>
 								<div id="con-css" class="relative bg-[#1e1f21]">
 									<textarea id="css-editor" spellcheck="false"></textarea>
-									<button command="show-modal" commandfor="cdn" class="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-200">
-										<i class="fa fa-gear text-sm"></i>
-									</button>
 								</div>
 								<div id="con-js" class="relative bg-[#1e1f21]">
 									<textarea id="js-editor" spellcheck="false"></textarea>
-									<button command="show-modal" commandfor="cdn" class="absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-200">
+								</div>
+								<div class="bg-[#1e1f21] rounded-b-2xl flex items-center justify-start gap-2 text-[11px] text-gray-500 bg-[#1e1f21] px-4 pb-1 pt-1 w-full font-mono">
+									<button command="show-modal" commandfor="cdn" class="w-6 h-6 flex items-center justify-start text-gray-400 hover:text-gray-200">
 										<i class="fa fa-gear text-sm"></i>
+									</button>
+									<span class="w-full">Add external CSS or JS</span>
+									<button onclick="edClear()" class="relative flex-none bg-white/10 rounded-sm px-1 py-0 w-[38px] h-[14px]">
+										<span class="absolute left-1 top-[-0.7px] text-gray-200">Clear</span>
 									</button>
 								</div>
 							</div>
@@ -1671,8 +1671,8 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div id="cdn-uri" class="grid grid-cols-1 gap-2 text-sm">
-									<div class="flex items-center justify-between">
-										<input name="cdn_url[]" value="" type="text" class="cdn-input border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5" placeholder="https://...">
+									<div class="flex items-center justify-between cdn-input">
+										<input name="cdn_url[]" value="" type="text" class="border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5" placeholder="https://...">
 										<button id="cdn-add" class="w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-400">
 											<i class="fa fa-plus text-green-600 dark:text-green-500"></i>
 										</button>

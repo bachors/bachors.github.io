@@ -564,7 +564,10 @@ function pindahTab(e) {
 		const n = document.getElementById(t),
 			s = document.getElementById("tab-btn-" + t),
 			r = t === e;
-		n.style.display = r ? "" : "none", s.classList.toggle("bg-white/10", r), s.classList.toggle("bg-[#1e1f21]", !r), s.classList.toggle("border-[#343537]", r),  s.classList.toggle("border-white/10", !r),s.setAttribute("aria-selected", r)
+		n.style.display = r ? "" : "none", s.classList.toggle("bg-white/10", r), s.classList.toggle("bg-[#1e1f21]", !r), s.classList.toggle("border-[#343537]", r),  s.classList.toggle("border-white/10", !r),s.setAttribute("aria-selected", r);
+		cmr_f_html.refresh();
+		cmr_f_css.refresh();
+		cmr_f_js.refresh();
 	})
 }
 
@@ -628,7 +631,7 @@ document.getElementById("frontend").style.display = "none";
 var fr_xxx = ["https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js", "https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js", "https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"];
 fr_xxx.forEach(function(a, i) {
 	var inp = document.querySelector('#cdn #cdn-uri');
-	var div = `<div class="flex items-center justify-between"><input name="cdn_url[]" value="${a.replace(/^(http:)?\/\//i, "https://")}" type="text" class="cdn-input border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5"placeholder="https://..."><button class="remove w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-400"><i class="fa fa-xmark text-red-600 dark:text-red-500"></i></button></div>`;
+	var div = `<div class="flex items-center justify-between cdn-input"><input name="cdn_url[]" value="${a.replace(/^(http:)?\/\//i, "https://")}" type="text" class="border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5"placeholder="https://..."><button class="remove w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-400"><i class="fa fa-xmark text-red-600 dark:text-red-500"></i></button></div>`;
 	inp.insertAdjacentHTML('beforeend', div)
 });
 
@@ -655,7 +658,7 @@ function clearFrontend() {
 document.body.addEventListener('click', function(e) {
 	if (e.target.closest('#cdn #cdn-add')) {
 		var inp = document.querySelector('#cdn #cdn-uri');
-		var div = `<div class="flex items-center justify-between"><input name="cdn_url[]" value="" type="text" class="cdn-input border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5"placeholder="https://..."><button class="remove w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-400"><i class="fa fa-xmark text-red-600 dark:text-red-500"></i></button></div>`;
+		var div = `<div class="flex items-center justify-between cdn-input"><input name="cdn_url[]" value="" type="text" class="border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5"placeholder="https://..."><button class="remove w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-400"><i class="fa fa-xmark text-red-600 dark:text-red-500"></i></button></div>`;
 		inp.insertAdjacentHTML('beforeend', div)
 	}
 });
@@ -1231,3 +1234,19 @@ function downloadsvg(svg) {
 svgggenerateBarcode();
 
 document.getElementById("kopi-svgg-barcode").addEventListener("click",function(){copyToClipboard(this,cmr_barcode.getValue())});
+
+function edClear(){
+	cmr_f_html.setValue('');
+	cmr_f_css.setValue('');
+	cmr_f_js.setValue('');	
+	cmr_f_html.refresh();
+	cmr_f_css.refresh();
+	cmr_f_js.refresh();
+	var cdn = document.querySelectorAll("#cdn #cdn-uri .cdn-input");
+	cdn.forEach(function(a, i) {
+		if (i > 0) {
+			a.remove();
+		}
+	});
+	runFrontend();
+}
