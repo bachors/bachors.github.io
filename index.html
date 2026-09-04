@@ -25,7 +25,7 @@
 	</head>
 	<body class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
 		<div id="bg"></div>
-		<canvas id="stars-canvas"></canvas>
+		<canvas id="stars-canvas" class="opacity-75"></canvas>
 		<header class="z-30 fixed w-full px-3 pt-2">
 			<div class="max-w-2xl mx-auto p-2 bg-white/50 dark:bg-[#2e3034]/50 backdrop-blur-md shadow-md rounded-full">
 				<div class="flex items-center justify-between">
@@ -160,6 +160,10 @@
 						<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 20.5H7c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5M6 8v8m3-8v4m0 3v1m6-8v1m-3-1v8m3-4v4m3-8v8" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						<p>SVG Barcode</p>
 					</button>
+					<button command="show-modal" commandfor="qrcod" onclick="setTimeout(greet, 200)" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+						<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="qrIconTitle" stroke="currentColor" stroke-linecap="square" color="currentColor"><path d="M10 3v7H3V3z"/><path d="M7 6H6v1h1zm3 8v7H3v-7z"/><path d="M6 17h1v1H6zm8 3h1v1h-1zm3-3h1v1h-1zm-3-3h1v1h-1zm6 3h1v1h-1zm0-3h1v1h-1zm0 6h1v1h-1zm1-17v7h-7V3z"/><path d="M17 6h1v1h-1z"/></svg>
+						<p>QR Code</p>
+					</button>
 					<button command="show-modal" commandfor="bilangan" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 						<svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v2a3 3 0 0 0 3 3M3 6a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0Zm16 0a3 3 0 0 0-6 0v2a3 3 0 0 0 6 0Zm-2 2a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0Zm-7 3a1 1 0 0 1-1-1V4a1 1 0 0 1 2 0v6a1 1 0 0 1-1 1m13-7v6a1 1 0 0 1-2 0V4a1 1 0 0 1 2 0M7 18v-2a3 3 0 0 0-6 0v2a3 3 0 0 0 6 0m-4 0v-2a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0m6 0a3 3 0 0 0 6 0v-2a3 3 0 0 0-6 0Zm2-2a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0Zm12-2v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 2 0m-5-1a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1"/></svg>
 						<p>Number System</p>
@@ -224,6 +228,9 @@
 						<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 20v2h4.6L2 28.6 3.4 30l6.6-6.6V28h2v-8zm23.2 6-2.6 2.6L26 30l4-4-4-4-1.4 1.4zm-8.4 0 2.6-2.6L20 22l-4 4 4 4 1.4-1.4zm6.9-16.7-7-7L18 2H8a2 2 0 0 0-2 2v12h2V4h8v6a2 2 0 0 0 2 2h6v6h2v-8zM18 10V4.4l5.6 5.6Z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
 						<p>Escape</p>
 					</button>
+					<div class="relative overflow-hidden col-span-2 shadow-md h-[90px] rounded-2xl">
+						<img alt="Placeholder" class="w-full max-w-full object-cover hover:scale-150" src="img/ngoding.gif">
+					</div>
 					<div class="grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
 						<nav class="grid grid-cols-3 gap-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
 							<button type="button" onclick="switchTab('skulpt', this),clearFrontend();" class="rounded-t-2xl shadow-md hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center pt-4 pb-1 text-gray-50 bg-[#1e1f21] dark:bg-[#1e1f21] rounded-none active" id="tab-btn-skulpt" role="tab" aria-selected="true" aria-controls="skulpt">
@@ -803,6 +810,80 @@
 										<button id="kopi-svgg-barcode" class="absolute top-0 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 											<i class="far fa-copy text-sm"></i>
 										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- qrcod -->
+			<dialog id="qrcod" aria-labelledby="qrcod-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
+						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
+								<h2 id="qrcod-title" class="font-medium">QR Code</h2>
+								<button command="close" commandfor="qrcod" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+									<i class="fa fa-xmark"></i>
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
+								<div class="grid grid-cols-4 gap-4">
+									<div class="flex flex-col gap-1.5 w-full col-span-4">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Text</span>
+										<textarea id="qrcod-code"></textarea>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full col-span-2">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-500 dark:text-gray-400">Level</span>
+											<span id="qrcod-level" class="text-xs">L</span>
+										</div>
+										<input onchange="qrcod_setLevel(this)" onclick="qrcod_setLevel(this)" type="range" min="0" max="3" step="1" value="0" class="mt-3 w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Padding</span>
+										<input onchange="qrcod_setPadding(this)" onkeyup="qrcod_setPadding(this)" onkeypress="qrcod_setPadding(this)" type="number" min="0" value="16" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
+										<input onchange="qrcod_setSize(this)" onkeyup="qrcod_setSize(this)" onkeypress="qrcod_setSize(this)" type="number" min="0" value="240" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									</div>
+									<div class="grid grid-cols-3 gap-2 col-span-2">
+										<div class="flex flex-col gap-1.5 w-full col-span-2">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Background</label>
+											<div class="flex shadow-sm">
+												<input type="text" id="qrcod-bg1" onchange="qrcod_setBg(this)" onkeyup="qrcod_setBg(this)" onkeypress="qrcod_setBg(this)" value="#FECD64" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												<input type="color" id="qrcod-bg2" onchange="qrcod_setBg(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#FECD64" title="Choose your color">
+											</div>
+										</div>
+										<div class="flex flex-col gap-1.5 w-full">
+											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
+											<input onchange="qrcod_setAlphabg(this)" onkeyup="qrcod_setAlphabg(this)" onkeypress="qrcod_setAlphabg(this)" type="number" min="0.1" max="1.0" step="0.1" value="1" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										</div>
+									</div>
+									<div class="grid grid-cols-3 gap-2 col-span-2">
+										<div class="flex flex-col gap-1.5 w-full col-span-2">
+											<label class="text-xs text-gray-500 dark:text-gray-400">Color</label>
+											<div class="flex shadow-sm">
+												<input type="text" id="qrcod-color1" onchange="qrcod_setColor(this)" onkeyup="qrcod_setColor(this)" onkeypress="qrcod_setColor(this)" value="#2e6caa" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+												<input type="color" id="qrcod-color2" onchange="qrcod_setColor(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#2e6caa" title="Choose your color">
+											</div>
+										</div>
+										<div class="flex flex-col gap-1.5 w-full">
+											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
+											<input onchange="qrcod_setAlphacolor(this)" onkeyup="qrcod_setAlphacolor(this)" onkeypress="qrcod_setAlphacolor(this)" type="number" min="0.1" max="1.0" step="0.1" value="1" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										</div>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full col-span-4">
+										<div class="flex items-center justify-between">
+										<label class="text-xs text-gray-500 dark:text-gray-400">Output</label>
+											<span onclick="qrcod_download()" class="text-xs text-pink-500 underline underline-offset-4 cursor-pointer">Download !</span>
+										</div>
+										<div class="relative flex items-center overflow-auto ftools">
+											<canvas id="qrious"></canvas>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1708,6 +1789,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify-html.min.js"></script>
 		<script src="https://unpkg.com/delaunator@5/delaunator.min.js"></script>
 		<script src="https://d3js.org/d3.v3.min.js"></script>
+    	<script src="js/qrious2.min.js" type="text/javascript"></script>
 		<script src="js/tools.js" type="text/javascript"></script>
 	</body>
 </html>
