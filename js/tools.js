@@ -1277,7 +1277,7 @@ function greet() {
 }
 
 const qrcod_lvel = ['L', 'M', 'Q', 'H'];
-let qrcod_qr,
+let qrcod_qr = new QRious({element: document.getElementById('qrious')}),
 	qrcod_value = 'https://bachors.id',
 	qrcod_index = 0,
 	qrcod_padding = 16,
@@ -1286,9 +1286,16 @@ let qrcod_qr,
 	qrcod_bga = 1.0,
 	qrcod_color = '#2e6caa',
 	qrcod_colora = 1.0;
+	qrcod_seppos = 'D';
+	qrcod_sepdata = 'D';
+	qrcod_corpos = 0;
+	qrcod_cortl = 0;
+	qrcod_cortr = 0;
+	qrcod_corbr = 0;
+	qrcod_corbl = 0;
 
 function qrcod_generet() {
-	qrcod_qr = new QRious({
+	qrcod_qr.set({
 		background: qrcod_bg,
 		backgroundAlpha: qrcod_bga,
 		foreground: qrcod_color,
@@ -1296,8 +1303,14 @@ function qrcod_generet() {
 		level: qrcod_lvel[qrcod_index],
 		padding: qrcod_padding,
 		size: qrcod_size,
-		element: document.getElementById('qrious'),
-		value: qrcod_value
+		value: qrcod_value,
+		positionSep: qrcod_seppos,
+		dataSep: qrcod_sepdata,
+		positionCorner: qrcod_corpos,
+		dataCornerTL: qrcod_cortl,
+		dataCornerTR: qrcod_cortr,
+		dataCornerBR: qrcod_corbr,
+		dataCornerBL: qrcod_corbl
 	});
 }
 
@@ -1338,6 +1351,49 @@ function qrcod_setColor(a) {
 	qrcod_color = a.value;
 	document.getElementById('qrcod-color1').value = qrcod_color;
 	document.getElementById('qrcod-color2').value = qrcod_color;
+	qrcod_generet();
+}
+
+function qrcod_setPos(a) {
+	if(a.checked){
+		qrcod_seppos = "E";
+	}else{
+		qrcod_seppos = "D";
+	}
+	qrcod_generet();
+}
+
+function qrcod_setData(a) {
+	if(a.checked){
+		qrcod_sepdata = "E";
+	}else{
+		qrcod_sepdata = "D";
+	}
+	qrcod_generet();
+}
+
+function qrcod_setCor(a) {
+	qrcod_corpos = parseInt(a.value);
+	qrcod_generet();
+}
+
+function qrcod_setTl(a) {
+	qrcod_cortl = parseInt(a.value);
+	qrcod_generet();
+}
+
+function qrcod_setTr(a) {
+	qrcod_cortr = parseInt(a.value);
+	qrcod_generet();
+}
+
+function qrcod_setBr(a) {
+	qrcod_corbr = parseInt(a.value);
+	qrcod_generet();
+}
+
+function qrcod_setBl(a) {
+	qrcod_corbl = parseInt(a.value);
 	qrcod_generet();
 }
 

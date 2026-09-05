@@ -881,9 +881,38 @@
 										<label class="text-xs text-gray-500 dark:text-gray-400">Output</label>
 											<span onclick="qrcod_download()" class="text-xs text-pink-500 underline underline-offset-4 cursor-pointer">Download !</span>
 										</div>
-										<div class="relative flex items-center overflow-auto ftools">
+										<div class="max-h-[260px] overflow-auto ftools">
 											<canvas id="qrious"></canvas>
 										</div>
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Separate position</span>
+										<input type="checkbox" onChange="qrcod_setPos(this)" onclick="qrcod_setPos(this)" class="mt-2 w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Separate data</span>
+										<input type="checkbox" onChange="qrcod_setData(this)" onclick="qrcod_setData(this)" class="mt-2 w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Position corner</span>
+										<input onchange="qrcod_setCor(this)" onkeyup="qrcod_setCor(this)" onkeypress="qrcod_setCor(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									</div>
+									<div></div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Data corner TL</span>
+										<input onchange="qrcod_setTl(this)" onkeyup="qrcod_setTl(this)" onkeypress="qrcod_setTl(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Data corner TR</span>
+										<input onchange="qrcod_setTr(this)" onkeyup="qrcod_setTr(this)" onkeypress="qrcod_setTr(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Data corner BR</span>
+										<input onchange="qrcod_setBr(this)" onkeyup="qrcod_setBr(this)" onkeypress="qrcod_setBr(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Data corner BL</span>
+										<input onchange="qrcod_setBl(this)" onkeyup="qrcod_setBl(this)" onkeypress="qrcod_setBl(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 									</div>
 								</div>
 							</div>
