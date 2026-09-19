@@ -406,7 +406,7 @@
 										<label class="text-xs text-gray-500 dark:text-gray-400">Quality</label>
 										<span id="imcom-q" class="text-xs text-pink-500">50%</span>
 									</div>
-									<input id="imcom-qr" type="range" min="0" max="100" step="1" value="50" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="imcom-qr" onchange="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div id="imcom-size" class="flex items-center text-xs text-pink-500 justify-center">
 									File size reduced by 0%
