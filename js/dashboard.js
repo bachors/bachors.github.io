@@ -234,7 +234,7 @@ function youtube() {
 	}
 }
 
-async function fetchData() {
+async function fetchData(s) {
 	try {
 		let t = await fetch("https://script.google.com/macros/s/AKfycbxWqv8sfrNtuqkJ281wRBkiftm_6e7zcAe-oTKzrWs3grLG858sBsYQ2_cpJhBxnHZuQQ/exec", {
 			method: "POST",
@@ -244,7 +244,14 @@ async function fetchData() {
 		});
 		if (!t.ok) throw Error(`HTTP ${t.status}`);
 		let a = await t.json();
-		renderCards(a.data, a)
+		let jam = parseInt(a.last_update.split(":")[0]) + 1;
+		if(jam === 25){
+			jam = 1;
+		}
+		localStorage.tanggal = s;
+		localStorage.jam = jam;
+		localStorage.google = JSON.stringify(a);
+		renderCards(a.data, a);
 	} catch (t) {}
 }
 
@@ -253,6 +260,19 @@ function formatTime(t) {
 	return 0 == (a %= 12) && (a = 12), `${String(a).padStart(2,"0")}:${String(e).padStart(2,"0")} ${s}`
 }
 
-if(window.location.hostname.includes("bachors.id")){
-	fetchData();
+function cekData(){	
+	const e = new Date,
+		  s = `${String(e.getDate()).padStart(2,"0")}/${String(e.getMonth()+1).padStart(2,"0")}/${String(e.getFullYear())}`,
+		  w = e.getHours();
+	if(localStorage.tanggal === s){
+		if((w - localStorage.jam) >= 4){
+			fetchData(s);
+		}else{
+			renderCards(JSON.parse(localStorage.google).data, JSON.parse(localStorage.google));
+		}
+	}else{
+		fetchData(s);
+	}
 }
+
+cekData();
