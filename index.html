@@ -348,7 +348,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="pxcss-title" class="font-medium">Pixel Art</h2>
-								<button command="close" commandfor="pxcss" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="pxcss" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -377,6 +377,16 @@
 										<i class="far fa-copy text-sm"></i>
 									</button>
 								</div>
+								<div class="flex flex-col gap-1.5 w-full relative">
+									<div class="flex items-center justify-between">
+										<label class="text-xs text-gray-500 dark:text-gray-400">SVG</label>
+										<span onclick="pxcss_download()" class="text-xs text-pink-500 dark:text-yellow-500 underline underline-offset-4 cursor-pointer">Download !</span>
+									</div>
+									<textarea id="pxcss-output2" spellcheck="false" readonly></textarea>
+									<button id="kopi-pxcss2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</el-dialog-panel>
@@ -390,7 +400,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="imcom-title" class="font-medium">Image Compress</h2>
-								<button command="close" commandfor="imcom" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="imcom" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -404,11 +414,11 @@
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Quality</label>
-										<span id="imcom-q" class="text-xs text-pink-500">50%</span>
+										<span id="imcom-q" class="text-xs text-pink-500 dark:text-yellow-500">50%</span>
 									</div>
 									<input id="imcom-qr" onchange="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
-								<div id="imcom-size" class="flex items-center text-xs text-pink-500 justify-center">
+								<div id="imcom-size" class="flex items-center text-xs text-pink-500 dark:text-yellow-500 justify-center">
 									File size reduced by 0%
 								</div>
 								<div id="imcom-preview" class="flex items-center justify-center"></div>
@@ -426,7 +436,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="emoart-title" class="font-medium">Emoji Art</h2>
-								<button command="close" commandfor="emoart" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="emoart" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -442,28 +452,28 @@
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Analysis window</label>
-											<span id="emoart-window" class="text-xs text-pink-500">7px</span>
+											<span id="emoart-window" class="text-xs text-pink-500 dark:text-yellow-500">7px</span>
 										</div>
 										<input id="emoart-windowr" oninput="document.getElementById('emoart-window').innerText=this.value+'px'" type="range" step="1" min="1" max="50" value="7" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Emoji size</label>
-											<span id="emoart-size" class="text-xs text-pink-500">12px</span>
+											<span id="emoart-size" class="text-xs text-pink-500 dark:text-yellow-500">12px</span>
 										</div>
 										<input id="emoart-sizer" oninput="document.getElementById('emoart-size').innerText=this.value+'px'" type="range" min="1" step="1" max="50" value="12" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Match tolerance</label>
-											<span id="emoart-toleran" class="text-xs text-pink-500">8</span>
+											<span id="emoart-toleran" class="text-xs text-pink-500 dark:text-yellow-500">8</span>
 										</div>
 										<input id="emoart-toleranr" oninput="document.getElementById('emoart-toleran').innerText=this.value" type="range" min="1" step="1" max="30" value="8" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Allowed empty space</label>
-											<span id="emoart-space" class="text-xs text-pink-500">80%</span>
+											<span id="emoart-space" class="text-xs text-pink-500 dark:text-yellow-500">80%</span>
 										</div>
 										<input id="emoart-spacer" oninput="document.getElementById('emoart-space').innerText=(this.value*100).toFixed(0)+'%'" type="range" min=".4" step=".02" max="1" value=".8" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
@@ -501,10 +511,10 @@
 										<input id="emoart-hide" onchange="" onclick="" type="checkbox" value="" class="w-4 h-4 border border-light rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
 									</div>
 								</div>
-								<div id="emoart-message" class="flex items-center text-xs text-pink-500 justify-center">
+								<div id="emoart-message" class="flex items-center text-xs text-pink-500 dark:text-yellow-500 justify-center">
 									loading ...
 								</div>
-								<div id="emoart-download" onclick="emoart_downloadIt()" class="flex items-center text-xs text-pink-500 justify-center cursor-pointer underline underline-offset-4" style="display:none">
+								<div id="emoart-download" onclick="emoart_downloadIt()" class="flex items-center text-xs text-pink-500 dark:text-yellow-500 justify-center cursor-pointer underline underline-offset-4" style="display:none">
 									Download !
 								</div>
 								<canvas id="emoart-result"></canvas>
@@ -521,7 +531,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="pxpaint-title" class="font-medium">Pixel Paint</h2>
-								<button command="close" commandfor="pxpaint" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="pxpaint" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -529,28 +539,28 @@
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Columns</label>
-										<input id="pxpaint-col" type="text" value="24" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md w-20 bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										<input id="pxpaint-col" type="number" value="24" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md w-20 bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 									</div>
 									<input id="pxpaint-coli" type="range" min="3" max="30" step="1" value="24" class="my-1.5 w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Rows</label>
-										<input id="pxpaint-row" type="text" value="24" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md w-20 bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										<input id="pxpaint-row" type="number" value="24" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md w-20 bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 									</div>
 									<input id="pxpaint-rowi" type="range" min="3" max="30" step="1" value="24" class="my-1.5 w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Pixels</label>
-										<input id="pxpaint-pix" type="text" value="12" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md w-20 bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+										<input id="pxpaint-pix" type="number" value="12" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md w-20 bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 									</div>
 									<input id="pxpaint-pixi" type="range" min="8" max="12" step="1" value="12" class="my-1.5 w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Board</label>
-										<label onclick="pxpaintClear()" class="text-xs text-pink-500 cursor-pointer underline underline-offset-2">Clear</label>
+										<label onclick="pxpaintClear()" class="text-xs text-pink-500 dark:text-yellow-500 cursor-pointer underline underline-offset-2">Clear</label>
 									</div>
 									<div class="relative flex max-h-[380px] overflow-auto ftools">
 										<img id="pxpaint-bg" class="absolute top-0 left-0 object-contain"/>
@@ -624,6 +634,16 @@
 										<i class="far fa-copy text-sm"></i>
 									</button>
 								</div>
+								<div id="pxpaint-cod2" class="flex flex-col gap-1.5 w-full relative" style="display:none">
+									<div class="flex items-center justify-between">
+										<label class="text-xs text-gray-500 dark:text-gray-400">SVG</label>
+										<span onclick="pxpaint_download()" class="text-xs text-pink-500 dark:text-yellow-500 underline underline-offset-4 cursor-pointer">Download !</span>
+									</div>
+									<textarea id="pxpaint-output2" spellcheck="false" readonly></textarea>
+									<button id="kopi-pxpaint2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</el-dialog-panel>
@@ -637,7 +657,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="poly-title" class="font-medium">Low-Poly</h2>
-								<button command="close" commandfor="poly" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="poly" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -652,28 +672,28 @@
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Points</label>
-											<span id="poly-point" class="text-xs text-pink-500">1500</span>
+											<span id="poly-point" class="text-xs text-pink-500 dark:text-yellow-500">1500</span>
 										</div>
 										<input id="poly-rpoint" type="range" min="50" max="2000" step="10" value="1500" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Edge bias</label>
-											<span id="poly-edge" class="text-xs text-pink-500">1.00</span>
+											<span id="poly-edge" class="text-xs text-pink-500 dark:text-yellow-500">1.00</span>
 										</div>
 										<input id="poly-redge" type="range" min="0" max="1" step="0.05" value="1.00" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Blur</label>
-											<span id="poly-blur" class="text-xs text-pink-500">1</span>
+											<span id="poly-blur" class="text-xs text-pink-500 dark:text-yellow-500">1</span>
 										</div>
 										<input id="poly-rblur" type="range" min="0" max="4" step="1" value="1" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Stroke width</label>
-											<span id="poly-strok" class="text-xs text-pink-500">0.5</span>
+											<span id="poly-strok" class="text-xs text-pink-500 dark:text-yellow-500">0.5</span>
 										</div>
 										<input id="poly-rstrok" type="range" min="0" max="2" step="0.1" value="0.5" class="w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
@@ -682,11 +702,11 @@
 										<div class="grid grid-cols-2 gap-4">
 											<div class="flex items-center">
 												<input checked name="poly-radio-group" id="poly-center" type="radio" value="centroid" class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
-												<label for="poly-center" class="select-none ms-2 text-xs text-pink-500">Centroid</label>
+												<label for="poly-center" class="select-none ms-2 text-xs text-pink-500 dark:text-yellow-500">Centroid</label>
 											</div>
 											<div class="flex items-center">
 												<input name="poly-radio-group" id="poly-mean" type="radio" value="mean" class="w-4 h-4 border border-default-medium rounded-full checked:border-brand bg-neutral-secondary-medium focus:ring-2 focus:outline-none focus:ring-brand-soft">
-												<label for="poly-mean" class="select-none ms-2 text-xs text-pink-500">Mean</label>
+												<label for="poly-mean" class="select-none ms-2 text-xs text-pink-500 dark:text-yellow-500">Mean</label>
 											</div>
 										</div>
 									</div>
@@ -704,7 +724,7 @@
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Result</label>
-											<span id="poly-tr" class="text-xs text-pink-500">0 triangles</span>
+											<span id="poly-tr" class="text-xs text-pink-500 dark:text-yellow-500">0 triangles</span>
 										</div>
 										<div class="h-full w-full">
 											<svg id="poly-lw" class="block w-full h-auto" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -725,7 +745,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="ascii-title" class="font-medium">Ascii Art</h2>
-								<button command="close" commandfor="ascii" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="ascii" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -772,7 +792,7 @@
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Result</label>
-										<span id="ascii-kopi" class="text-xs text-pink-500 underline underline-offset-4 cursor-pointer">Copy text</span>
+										<span id="ascii-kopi" class="text-xs text-pink-500 dark:text-yellow-500 underline underline-offset-4 cursor-pointer">Copy text</span>
 									</div>
 									<div id="ascii-pre" class="overflow-y-hidden overflow-x-auto ftools" style="background:#ffffff;color:#000000;"></div>
 								</div>
@@ -789,7 +809,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="huge-title" class="font-medium">Comment</h2>
-								<button command="close" commandfor="huge" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="huge" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -816,7 +836,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="svgpolygon-title" class="font-medium">SVG Polygon</h2>
-								<button command="close" commandfor="svgpolygon" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="svgpolygon" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -864,7 +884,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="svgnoise-title" class="font-medium">Noise Pattern</h2>
-								<button command="close" commandfor="svgnoise" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="svgnoise" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -907,7 +927,7 @@
 									<div class="grid grid-cols-4">
 										<div class="flex items-center justify-between col-span-4">
 											<label class="text-xs text-gray-500 dark:text-gray-400">Result</label>
-											<span onclick="svggnoise_generate()" class="text-xs text-pink-500 cursor-pointer underline underline-offset-4">Regenerate!</span>
+											<span onclick="svggnoise_generate()" class="text-xs text-pink-500 dark:text-yellow-500 cursor-pointer underline underline-offset-4">Regenerate!</span>
 										</div>
 										<div class="flex items-center mt-2 col-span-3">
 											<svg id="svgg-noise-res" class="mr-none md:mr-12 w-full bg-white border-2 border-dashed border-gray-300 dark:border-blue-100/20" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -933,7 +953,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="svgbarcode-title" class="font-medium">SVG Barcode</h2>
-								<button command="close" commandfor="svgbarcode" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="svgbarcode" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -969,7 +989,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="qrcod-title" class="font-medium">QR Code</h2>
-								<button command="close" commandfor="qrcod" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="qrcod" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1022,8 +1042,8 @@
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
 										<div class="flex items-center justify-between">
-										<label class="text-xs text-gray-500 dark:text-gray-400">Output</label>
-											<span onclick="qrcod_download()" class="text-xs text-pink-500 underline underline-offset-4 cursor-pointer">Download !</span>
+											<label class="text-xs text-gray-500 dark:text-gray-400">Output</label>
+											<span onclick="qrcod_download()" class="text-xs text-pink-500 dark:text-yellow-500 underline underline-offset-4 cursor-pointer">Download !</span>
 										</div>
 										<div class="max-h-[260px] overflow-auto ftools">
 											<canvas id="qrious"></canvas>
@@ -1072,7 +1092,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="csstri-title" class="font-medium">CSS Triangle</h2>
-								<button command="close" commandfor="csstri" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="csstri" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1153,7 +1173,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="img64-title" class="font-medium">Image Base64</h2>
-								<button command="close" commandfor="img64" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="img64" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1178,7 +1198,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="bilangan-title" class="font-medium">Number System</h2>
-								<button command="close" commandfor="bilangan" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="bilangan" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1212,7 +1232,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="snippet-title" class="font-medium">Code Snippet</h2>
-								<button command="close" commandfor="snippet" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="snippet" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1227,23 +1247,23 @@
 								<div class="grid grid-cols-2 gap-2">
 									<div class="flex items-center">
 										<input checked id="opt1" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
-										<label for="opt1" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">&amp;</span> to <span class="text-sm font-mono text-pink-500">&amp;amp;</span></label>
+										<label for="opt1" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&amp;</span> to <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&amp;amp;</span></label>
 									</div>
 									<div class="flex items-center">
 										<input id="opt2" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
-										<label for="opt2" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">'</span> to <span class="text-sm font-mono text-pink-500">&amp;#039;</span></label>
+										<label for="opt2" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">'</span> to <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&amp;#039;</span></label>
 									</div>
 									<div class="flex items-center">
 										<input id="opt3" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
-										<label for="opt3" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">"</span> to <span class="text-sm font-mono text-pink-500">&amp;quot;</span></label>
+										<label for="opt3" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">"</span> to <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&amp;quot;</span></label>
 									</div>
 									<div class="flex items-center">
 										<input id="opt4" type="checkbox" value="" class="w-4 h-4 border border-light rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
-										<label for="opt4" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">&lt;</span> to <span class="text-sm font-mono text-pink-500">&amp;lt;</span></label>
+										<label for="opt4" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&lt;</span> to <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&amp;lt;</span></label>
 									</div>
 									<div class="flex items-center">
 										<input id="opt5" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
-										<label for="opt5" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500">&gt;</span> to <span class="text-sm font-mono text-pink-500">&amp;gt;</span></label>
+										<label for="opt5" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Change <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&gt;</span> to <span class="text-sm font-mono text-pink-500 dark:text-yellow-500">&amp;gt;</span></label>
 									</div>
 								</div>
 								<div class="grid grid-cols-2 gap-4">
@@ -1263,7 +1283,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="temperature-title" class="font-medium">Temperature</h2>
-								<button command="close" commandfor="temperature" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="temperature" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1302,7 +1322,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="trigonometric-title" class="font-medium">Trigonometric</h2>
-								<button command="close" commandfor="trigonometric" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="trigonometric" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1336,7 +1356,7 @@
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
-									<input id="trigonometric-result" type="text" disabled=true value="0" class="text-pink-500 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+									<input id="trigonometric-result" type="text" disabled=true value="0" class="text-pink-500 dark:text-yellow-500 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 								</div>
 								<input type="submit" value="Calculate" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500"/>
 							</form>
@@ -1352,7 +1372,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="gradient-title" class="font-medium">Image Gradient</h2>
-								<button command="close" commandfor="gradient" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="gradient" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1417,7 +1437,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="scheme-title" class="font-medium">Color Scheme</h2>
-								<button command="close" commandfor="scheme" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="scheme" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1436,9 +1456,9 @@
 											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 												RGB
 											</span>
-											<input type="text" name="r" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
-											<input type="text" name="g" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
-											<input type="text" name="b" value="255" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-r-md block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<input type="number" name="r" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<input type="number" name="g" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+											<input type="number" name="b" value="255" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:border-none focus:ring-none focus:outline-none rounded-r-md block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
 										</div>
 										<input type="button" value="Set RGB" onclick="ChangeColors(document.getElementById('codescheme').r.value,document.getElementById('codescheme').g.value,document.getElementById('codescheme').b.value);" class="rounded-lg bg-blue-600 text-white px-2.5 py-1.5 text-sm hover:bg-blue-500"/>
 										<input type="button" value="Lighten" onclick="LightenScheme();" class="rounded-lg bg-[#1e1f21] dark:bg-white text-white dark:text-black px-2.5 py-1.5 text-sm hover:bg-black/80 dark:hover:bg-white/80"/>
@@ -1540,7 +1560,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="cssbeautify-title" class="font-medium">CSS Beautify</h2>
-								<button command="close" commandfor="cssbeautify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="cssbeautify" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1618,7 +1638,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="cssminify-title" class="font-medium">CSS Minify</h2>
-								<button command="close" commandfor="cssminify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="cssminify" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1638,7 +1658,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codecssminifylength" class="font-mono text-pink-500">0</span> • Result length <span id="rescssminifylength" class="font-mono text-pink-500">0</span> • Compression <span id="cssminifyresult" class="font-mono text-pink-500">0%</span></span>
+									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codecssminifylength" class="font-mono text-pink-500 dark:text-yellow-500">0</span> • Result length <span id="rescssminifylength" class="font-mono text-pink-500 dark:text-yellow-500">0</span> • Compression <span id="cssminifyresult" class="font-mono text-pink-500 dark:text-yellow-500">0%</span></span>
 									<textarea id="rescssminify" spellcheck="false" readonly></textarea>
 									<button id="kopi-cssminify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -1657,7 +1677,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="jsbeautify-title" class="font-medium">JS Beautify</h2>
-								<button command="close" commandfor="jsbeautify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="jsbeautify" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1715,7 +1735,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="jsminify-title" class="font-medium">JS Minify</h2>
-								<button command="close" commandfor="jsminify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="jsminify" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1735,7 +1755,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codejsminifylength" class="font-mono text-pink-500">0</span> • Result length <span id="resjsminifylength" class="font-mono text-pink-500">0</span> • Compression <span id="jsminifyresult" class="font-mono text-pink-500">0%</span></span>
+									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codejsminifylength" class="font-mono text-pink-500 dark:text-yellow-500">0</span> • Result length <span id="resjsminifylength" class="font-mono text-pink-500 dark:text-yellow-500">0</span> • Compression <span id="jsminifyresult" class="font-mono text-pink-500 dark:text-yellow-500">0%</span></span>
 									<textarea id="resjsminify" spellcheck="false" readonly></textarea>
 									<button id="kopi-jsminify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -1754,7 +1774,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="htmlbeautify-title" class="font-medium">HTML Beautify</h2>
-								<button command="close" commandfor="htmlbeautify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="htmlbeautify" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1812,7 +1832,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="htmlminify-title" class="font-medium">HTML Minify</h2>
-								<button command="close" commandfor="htmlminify" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="htmlminify" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1838,7 +1858,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="escape-title" class="font-medium">Escape</h2>
-								<button command="close" commandfor="escape" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="escape" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1876,7 +1896,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="password-title" class="font-medium">Password</h2>
-								<button command="close" commandfor="password" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="password" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
@@ -1921,7 +1941,7 @@
 						<div class="relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-white/10">
 								<h2 id="cdn-title" class="font-medium">Add external CSS or JS</h2>
-								<button command="close" commandfor="cdn" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500">
+								<button command="close" commandfor="cdn" class="text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-red-500">
 									<i class="fa fa-xmark"></i>
 								</button>
 							</div>
