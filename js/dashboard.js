@@ -165,7 +165,15 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div id="reels" class="grid grid-cols-1 shadow-md rounded-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div class="grid grid-cols-1 gap-1">
+				<div class="flex shadow-sm">
+					<input id="yt-id" type="text" placeholder="Enter PlayListId / ChannelId / UserName" spellcheck="false" class="inline-flex items-center border border-gray-200 dark:border-white/10 focus:ring-none focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
+					<button id="yt-bt" class="w-10 block flex items-center justify-center border border-gray-200 dark:border-white/10 focus:ring-none focus:outline-none rounded-r-md bg-gray-100 dark:bg-[#131313] text-sm">
+						<i class="fa fa-magnifying-glass"></i>
+					</button>
+				</div>
+				<div id="reels" class="grid grid-cols-1 shadow-md rounded-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
+			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -209,6 +217,13 @@ function renderCards(t, k) {
 			</div>`;
 	document.getElementById("cards").innerHTML = d + r, renderAdmobCard("seven_day");
 	youtube();
+	document.getElementById("yt-bt").addEventListener("click",function(){
+		var ytId = document.getElementById("yt-id").value.trim();
+		if(ytId != ""){
+			document.getElementById("reels").dataset.ycp_channel = ytId;
+			youtube();
+		}
+	});
 }
 
 function updateAtmIcon() {
