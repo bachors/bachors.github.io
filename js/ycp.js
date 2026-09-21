@@ -24,7 +24,7 @@ function ycp(selector, j) {
         const b = el.id ? `#${el.id}` : `.${el.className.split(' ')[0]}`;
         const title   = el.dataset.ycp_title   || 'ycp.js';
         const channel = el.dataset.ycp_channel;
-        el.innerHTML  = `<div class="ycp"><div class="belah ycp_vid_play rounded-t-2xl overflow-hidden" title="Play video"></div><div class="belah grid grid-cols-1" id="ycp_youtube_channels${i}"></div></div>`;
+        el.innerHTML  = `<div class="ycp"><div class="belah ycp_vid_play overflow-hidden" title="Play video"></div><div class="belah grid grid-cols-1" id="ycp_youtube_channels${i}"></div></div>`;
 
         if (channel.substring(0, 2) === 'PL' || channel.substring(0, 2) === 'UU') {
             ycp_list(title, channel, '', i, b, 1);
