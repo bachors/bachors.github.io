@@ -219,6 +219,7 @@ function renderCards(t, k) {
 		var ytId = document.getElementById("yt-id").value.trim();
 		if(ytId != ""){
 			document.getElementById("reels").dataset.ycp_channel = ytId;
+			document.getElementById("reels").dataset.ycp_title = ytId;
 			youtube();
 		}
 	});
