@@ -923,8 +923,11 @@
 									<div class="flex items-center justify-between">
 										<label class="text-xs text-gray-500 dark:text-gray-400">Result</label>
 										<span id="ascii-kopi" class="text-xs text-pink-500 dark:text-yellow-500 underline underline-offset-4 cursor-pointer">Copy text</span>
+										<span id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="text-xs text-pink-500 dark:text-yellow-500 underline underline-offset-4 cursor-pointer">Download !</span>
 									</div>
-									<div id="ascii-pre" class="overflow-y-hidden overflow-x-auto ftools" style="background:#ffffff;color:#000000;"></div>
+									<div class="overflow-y-hidden overflow-x-auto ftools">
+										<pre id="ascii-pre" class="overflow-hidden" style="display:inline-block;background:#ffffff;color:#000000;"></pre>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2103,6 +2106,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/htmlmixed.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/python.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+		<script src="js/modern-screenshot.js"></script>
 		<script src="js/skulpt.min.js" type="text/javascript"></script>
 		<script src="js/skulpt-stdlib.js" type="text/javascript"></script>
 		<script src="js/ycp.js" type="text/javascript"></script>
