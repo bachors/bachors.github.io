@@ -43,3 +43,11 @@ dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{back
     z-index: -31;
     pointer-events: none;
 }
+.skrol{scrollbar-width:thin;scrollbar-color:oklch(55.1% 0.027 264.364) transparent;}
+.skrol::-webkit-scrollbar{width:4px;}
+.skrol::-webkit-scrollbar-track{background:transparent;}
+.skrol::-webkit-scrollbar-thumb{background:oklch(55.1% 0.027 264.364);border-radius:4px;}
+.dark .skrol{scrollbar-width:thin;scrollbar-color:#444 transparent;}
+.dark .skrol::-webkit-scrollbar{width:4px;}
+.dark .skrol::-webkit-scrollbar-track{background:transparent;}
+.dark .skrol::-webkit-scrollbar-thumb{background:#444;border-radius:4px;}
