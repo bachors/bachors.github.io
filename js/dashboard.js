@@ -290,3 +290,15 @@ function cekData(){
 }
 
 cekData();
+
+document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
+	e.addEventListener("click", function() {
+		document.querySelector('html').style.overflow = 'hidden';
+	});
+});
+
+document.querySelectorAll('button[command="close"]').forEach(e=>{
+	e.addEventListener("click", function() {
+		document.querySelector('html').style.overflow = 'scroll';
+	});
+});
