@@ -299,6 +299,7 @@ document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
 
 document.querySelectorAll('button[command="close"]').forEach(e=>{
 	e.addEventListener("click", function() {
-		document.querySelector('html').style.overflow = 'scroll';
+		document.querySelector('html').style.overflowY = 'scroll';
+		document.querySelector('html').style.overflowX = 'hidden';
 	});
 });
