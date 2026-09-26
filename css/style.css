@@ -51,3 +51,15 @@ dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{back
 .dark .skrol::-webkit-scrollbar{width:4px;}
 .dark .skrol::-webkit-scrollbar-track{background:transparent;}
 .dark .skrol::-webkit-scrollbar-thumb{background:#444;border-radius:4px;}
+#poly-points [data-draggable] {
+  stroke: tomato;
+  stroke-width: 2;
+  fill: transparent;
+  cursor: grab;
+}
+#poly-controls .close-button {
+  display: none;
+}
+#poly-controls .main {
+  width: 100% !important;
+}
