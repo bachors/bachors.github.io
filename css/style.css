@@ -63,3 +63,10 @@ dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{back
 #poly-controls .main {
   width: 100% !important;
 }
+#poly-controls .dg li:not(.folder) {
+    background-color: #1e1f21 !important;
+    border-bottom: 1px solid #1e1f21 !important;
+}
+#poly-controls .property-name {
+    color: oklch(70.7% 0.022 261.325) !important;
+}
