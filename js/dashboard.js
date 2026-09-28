@@ -155,7 +155,7 @@ function renderCards(t, k) {
 				<div id="admob-stats" class="grid grid-cols-2 gap-1"></div>
 				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-md rounded-2xl">${n}</div>
 			</div>
-			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
+			<div id="video" class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
@@ -183,7 +183,7 @@ function renderCards(t, k) {
 				<i class="fa fa-code"></i>
 			</div>`,
 		d = `
-			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
+			<div id="work" class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
@@ -294,6 +294,7 @@ cekData();
 document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
 	e.addEventListener("click", function() {
 		document.querySelector('html').style.overflow = 'hidden';
+		history.pushState('', document.title, window.location.pathname + '#' + e.getAttribute("commandfor"));
 	});
 });
 
@@ -301,5 +302,41 @@ document.querySelectorAll('button[command="close"]').forEach(e=>{
 	e.addEventListener("click", function() {
 		document.querySelector('html').style.overflowY = 'scroll';
 		document.querySelector('html').style.overflowX = 'hidden';
+		history.pushState('', document.title, window.location.pathname);
 	});
 });
+
+function openModalFromHash() {
+  	const id = window.location.hash.slice(1);
+  	if (!id) return;
+
+  	const el = document.getElementById(id);
+	if(id === "privacy-policy"){
+		el.showModal();
+		document.querySelector('html').style.overflow = 'hidden';
+	}else if(id === "cdn"){
+		el.showModal();
+		document.querySelector('html').style.overflow = 'hidden';
+		switchTab('frontend', document.getElementById('tab-btn-frontend')),runFrontend();
+	}else if(id === "editor"){
+		switchTab('skulpt', document.getElementById('tab-btn-skulpt')),clearFrontend();
+	}else if(id === "terminal"){
+		switchTab('terminal', document.getElementById('tab-btn-terminal')),clearFrontend();
+	}else if(id === "front-end"){
+		switchTab('frontend', document.getElementById('tab-btn-frontend')),runFrontend();
+	}else{
+		if (el && typeof el.showModal === 'function') {
+			el.showModal();
+			document.querySelector('html').style.overflow = 'hidden';
+			setTimeout(greet, 200);
+			if(id === "low-poly"){
+				asu();
+			}
+			if(id === "emoji-art"){
+				setTimeout(emoart_sample, 100);
+			}
+		}
+	}
+}
+
+window.addEventListener('DOMContentLoaded', openModalFromHash);
