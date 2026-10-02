@@ -295,6 +295,7 @@ document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
 	e.addEventListener("click", function() {
 		document.querySelector('html').style.overflow = 'hidden';
 		history.pushState('', document.title, window.location.pathname + '#' + e.getAttribute("commandfor"));
+		return false;
 	});
 });
 
@@ -303,6 +304,7 @@ document.querySelectorAll('button[command="close"]').forEach(e=>{
 		document.querySelector('html').style.overflowY = 'scroll';
 		document.querySelector('html').style.overflowX = 'hidden';
 		history.pushState('', document.title, window.location.pathname);
+		return false;
 	});
 });
 
