@@ -342,3 +342,27 @@ function openModalFromHash() {
 }
 
 window.addEventListener('DOMContentLoaded', openModalFromHash);
+
+async function shareContent() {
+	
+	const id = window.location.hash.slice(1);
+  	if (!id) return;
+	
+	const title = document.getElementById(id + '-title').textContent;
+
+	const shareData = {
+		title: title + ' | Bachors',
+		text: title,
+		url: 'https://bachors.id/#' + id
+	};
+
+	try {
+		if (navigator.share) {
+			await navigator.share(shareData);
+		} else {
+			navigator.clipboard.writeText(shareData.url);
+		}
+	} catch (error) {
+		console.error('Error sharing:', error);
+	}
+}

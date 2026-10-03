@@ -515,11 +515,11 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="privacy-policy-title" class="text-sm font-medium">Privacy Policy</h2>
-								<button command="close" commandfor="privacy-policy" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+							<div class="flex items-center gap-2.5 px-4 py-2 border-b border-gray-200 dark:border-white/10">
+								<button command="close" commandfor="privacy-policy" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-arrow-left"></i>
 								</button>
+								<h2 id="privacy-policy-title" class="text-sm font-medium">Privacy Policy</h2>
 							</div>
 							<div class="text-xs relative grid grid-cols-1 px-4 pb-4 overflow-y-auto ftools">
 								<p class="mt-2 text-gray-400 pt-2 mt-2">This privacy policy applies to the Bachors app for mobile devices, together with any related services operated by Bachors (collectively, the "Application"). Bachors is hereby referred to as the "Service Provider".</p>
@@ -603,15 +603,20 @@
 				</div>
 			</dialog>
 			<!-- bwfil -->
-			<dialog id="image-bw" aria-labelledby="bwfil-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="image-bw" aria-labelledby="image-bw-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="bwfil-title" class="text-sm font-medium">Image B&W</h2>
-								<button command="close" commandfor="image-bw" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="image-bw" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="image-bw-title" class="text-sm font-medium">Image B&W</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
@@ -657,15 +662,20 @@
 				</div>
 			</dialog>
 			<!-- pdfim -->
-			<dialog id="pdf-convert" aria-labelledby="pdfim-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="pdf-convert" aria-labelledby="pdf-convert-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="pdfim-title" class="text-sm font-medium">PDF Convert</h2>
-								<button command="close" commandfor="pdf-convert" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="pdf-convert" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="pdf-convert-title" class="text-sm font-medium">PDF Convert</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-2 gap-4 pt-4 px-4">
@@ -692,15 +702,20 @@
 				</div>
 			</dialog>
 			<!-- pxcss -->
-			<dialog id="pixel-art" aria-labelledby="pxcss-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="pixel-art" aria-labelledby="pixel-art-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="pxcss-title" class="text-sm font-medium">Pixel Art</h2>
-								<button command="close" commandfor="pixel-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="pixel-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="pixel-art-title" class="text-sm font-medium">Pixel Art</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
@@ -745,15 +760,20 @@
 				</div>
 			</dialog>
 			<!-- imcom -->
-			<dialog id="image-compress" aria-labelledby="imcom-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="image-compress" aria-labelledby="image-compress-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="imcom-title" class="text-sm font-medium">Image Compress</h2>
-								<button command="close" commandfor="image-compress" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="image-compress" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="image-compress-title" class="text-sm font-medium">Image Compress</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
@@ -785,15 +805,20 @@
 				</div>
 			</dialog>
 			<!-- emoart -->
-			<dialog id="emoji-art" aria-labelledby="emoart-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="emoji-art" aria-labelledby="emoji-art-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="emoart-title" class="text-sm font-medium">Emoji Art</h2>
-								<button command="close" commandfor="emoji-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="emoji-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="emoji-art-title" class="text-sm font-medium">Emoji Art</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
@@ -891,15 +916,20 @@
 				</div>
 			</dialog>
 			<!-- pxpaint -->
-			<dialog id="pixel-paint" aria-labelledby="pxpaint-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="pixel-paint" aria-labelledby="pixel-paint-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="pxpaint-title" class="text-sm font-medium">Pixel Paint</h2>
-								<button command="close" commandfor="pixel-paint" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="pixel-paint" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="pixel-paint-title" class="text-sm font-medium">Pixel Paint</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div id="pxpaint-con" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
@@ -1011,15 +1041,20 @@
 				</div>
 			</dialog>
 			<!-- poly -->
-			<dialog id="low-poly" aria-labelledby="poly-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="low-poly" aria-labelledby="low-poly-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-4xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="poly-title" class="text-sm font-medium">Low-Poly</h2>
-								<button command="close" commandfor="low-poly" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="low-poly" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="low-poly-title" class="text-sm font-medium">Low-Poly</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>							
 							<div class="relative grid grid-cols-2 gap-4 pt-4 px-4">
@@ -1149,15 +1184,20 @@
 				</div>
 			</dialog>
 			<!-- ascii -->
-			<dialog id="ascii-art" aria-labelledby="ascii-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="ascii-art" aria-labelledby="ascii-art-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="ascii-title" class="text-sm font-medium">Ascii Art</h2>
-								<button command="close" commandfor="ascii-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="ascii-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="ascii-art-title" class="text-sm font-medium">Ascii Art</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>							
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
@@ -1224,15 +1264,20 @@
 				</div>
 			</dialog>
 			<!-- huge -->
-			<dialog id="comment" aria-labelledby="huge-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="comment" aria-labelledby="comment-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="huge-title" class="text-sm font-medium">Comment</h2>
-								<button command="close" commandfor="comment" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="comment" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="comment-title" class="text-sm font-medium">Comment</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-2 gap-4 px-4 py-4 overflow-y-auto ftools">
@@ -1253,15 +1298,20 @@
 				</div>
 			</dialog>
 			<!-- svgpolygon -->
-			<dialog id="svg-polygon" aria-labelledby="svgpolygon-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="svg-polygon" aria-labelledby="svg-polygon-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="svgpolygon-title" class="text-sm font-medium">SVG Polygon</h2>
-								<button command="close" commandfor="svg-polygon" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="svg-polygon" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="svg-polygon-title" class="text-sm font-medium">SVG Polygon</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
@@ -1301,15 +1351,20 @@
 				</div>
 			</dialog>
 			<!-- svgnoise -->
-			<dialog id="noise-pattern" aria-labelledby="svgnoise-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="noise-pattern" aria-labelledby="noise-pattern-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="svgnoise-title" class="text-sm font-medium">Noise Pattern</h2>
-								<button command="close" commandfor="noise-pattern" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="noise-pattern" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="noise-pattern-title" class="text-sm font-medium">Noise Pattern</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
@@ -1370,15 +1425,20 @@
 				</div>
 			</dialog>
 			<!-- svgbarcode -->
-			<dialog id="svg-barcode" aria-labelledby="svgbarcode-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="svg-barcode" aria-labelledby="svg-barcode-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="svgbarcode-title" class="text-sm font-medium">SVG Barcode</h2>
-								<button command="close" commandfor="svg-barcode" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="svg-barcode" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="svg-barcode-title" class="text-sm font-medium">SVG Barcode</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
@@ -1406,15 +1466,20 @@
 				</div>
 			</dialog>
 			<!-- qrcod -->
-			<dialog id="qr-code" aria-labelledby="qrcod-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="qr-code" aria-labelledby="qr-code-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="qrcod-title" class="text-sm font-medium">QR Code</h2>
-								<button command="close" commandfor="qr-code" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="qr-code" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="qr-code-title" class="text-sm font-medium">QR Code</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
@@ -1519,15 +1584,20 @@
 				</div>
 			</dialog>
 			<!-- csstri -->
-			<dialog id="css-triangle" aria-labelledby="csstri-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="css-triangle" aria-labelledby="css-triangle-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="csstri-title" class="text-sm font-medium">CSS Triangle</h2>
-								<button command="close" commandfor="css-triangle" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="css-triangle" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="css-triangle-title" class="text-sm font-medium">CSS Triangle</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
@@ -1600,15 +1670,20 @@
 				</div>
 			</dialog>
 			<!-- image base64 -->
-			<dialog id="image-base64" aria-labelledby="img64-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="image-base64" aria-labelledby="image-base64-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="img64-title" class="text-sm font-medium">Image Base64</h2>
-								<button command="close" commandfor="image-base64" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="image-base64" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="image-base64-title" class="text-sm font-medium">Image Base64</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>							
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
@@ -1629,15 +1704,20 @@
 				</div>
 			</dialog>
 			<!-- bilangan -->
-			<dialog id="number-system" aria-labelledby="bilangan-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="number-system" aria-labelledby="number-system-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="bilangan-title" class="text-sm font-medium">Number System</h2>
-								<button command="close" commandfor="number-system" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="number-system" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="number-system-title" class="text-sm font-medium">Number System</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -1663,15 +1743,20 @@
 				</div>
 			</dialog>
 			<!-- code snippet -->
-			<dialog id="code-snippet" aria-labelledby="snippet-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="code-snippet" aria-labelledby="code-snippet-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="snippet-title" class="text-sm font-medium">Code Snippet</h2>
-								<button command="close" commandfor="code-snippet" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="code-snippet" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="code-snippet-title" class="text-sm font-medium">Code Snippet</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -1720,9 +1805,14 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="temperature-title" class="text-sm font-medium">Temperature</h2>
-								<button command="close" commandfor="temperature" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="temperature" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="temperature-title" class="text-sm font-medium">Temperature</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<form class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -1759,9 +1849,14 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="trigonometric-title" class="text-sm font-medium">Trigonometric</h2>
-								<button command="close" commandfor="trigonometric" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="trigonometric" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="trigonometric-title" class="text-sm font-medium">Trigonometric</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<form onsubmit="return do_trigo()" class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -1803,15 +1898,20 @@
 				</div>
 			</dialog>
 			<!-- gradient -->
-			<dialog id="image-gradient" aria-labelledby="gradient-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="image-gradient" aria-labelledby="image-gradient-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="gradient-title" class="text-sm font-medium">Image Gradient</h2>
-								<button command="close" commandfor="image-gradient" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="image-gradient" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="image-gradient-title" class="text-sm font-medium">Image Gradient</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -1868,15 +1968,20 @@
 				</div>
 			</dialog>
 			<!-- scheme -->
-			<dialog id="color-scheme" aria-labelledby="scheme-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="color-scheme" aria-labelledby="color-scheme-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="scheme-title" class="text-sm font-medium">Color Scheme</h2>
-								<button command="close" commandfor="color-scheme" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="color-scheme" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="color-scheme-title" class="text-sm font-medium">Color Scheme</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<form id="codescheme" class="grid grid-cols-1 gap-4 pt-4 px-4">
@@ -1992,15 +2097,20 @@
 				</div>
 			</dialog>
 			<!-- cssbeautify -->
-			<dialog id="css-beautify" aria-labelledby="cssbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="css-beautify" aria-labelledby="css-beautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="cssbeautify-title" class="text-sm font-medium">CSS Beautify</h2>
-								<button command="close" commandfor="css-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="css-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="css-beautify-title" class="text-sm font-medium">CSS Beautify</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2073,15 +2183,20 @@
 				</div>
 			</dialog>			
 			<!-- cssminify -->
-			<dialog id="css-minify" aria-labelledby="cssminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="css-minify" aria-labelledby="css-minify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="cssminify-title" class="text-sm font-medium">CSS Minify</h2>
-								<button command="close" commandfor="css-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="css-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="css-minify-title" class="text-sm font-medium">CSS Minify</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2112,15 +2227,20 @@
 				</div>
 			</dialog>
 			<!-- jsbeautify -->
-			<dialog id="js-beautify" aria-labelledby="jsbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="js-beautify" aria-labelledby="js-beautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="jsbeautify-title" class="text-sm font-medium">JS Beautify</h2>
-								<button command="close" commandfor="js-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="js-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="js-beautify-title" class="text-sm font-medium">JS Beautify</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2170,15 +2290,20 @@
 				</div>
 			</dialog>
 			<!-- jsminify -->
-			<dialog id="js-minify" aria-labelledby="jsminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="js-minify" aria-labelledby="js-minify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="jsminify-title" class="text-sm font-medium">JS Minify</h2>
-								<button command="close" commandfor="js-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="js-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="js-minify-title" class="text-sm font-medium">JS Minify</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2209,15 +2334,20 @@
 				</div>
 			</dialog>
 			<!-- htmlbeautify -->
-			<dialog id="html-beautify" aria-labelledby="htmlbeautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="html-beautify" aria-labelledby="html-beautify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="htmlbeautify-title" class="text-sm font-medium">HTML Beautify</h2>
-								<button command="close" commandfor="html-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="html-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="html-beautify-title" class="text-sm font-medium">HTML Beautify</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2267,15 +2397,20 @@
 				</div>
 			</dialog>
 			<!-- htmlminify -->
-			<dialog id="html-minify" aria-labelledby="htmlminify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+			<dialog id="html-minify" aria-labelledby="html-minify-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="htmlminify-title" class="text-sm font-medium">HTML Minify</h2>
-								<button command="close" commandfor="html-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="html-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="html-minify-title" class="text-sm font-medium">HTML Minify</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2299,9 +2434,14 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="escape-title" class="text-sm font-medium">Escape</h2>
-								<button command="close" commandfor="escape" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="escape" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="escape-title" class="text-sm font-medium">Escape</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2341,9 +2481,14 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="password-title" class="text-sm font-medium">Password</h2>
-								<button command="close" commandfor="password" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+								<div class="flex items-center gap-2.5">
+									<button command="close" commandfor="password" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="password-title" class="text-sm font-medium">Password</h2>
+								</div>
+								<button onclick="shareContent()" class="text-sm px-2.5 h-8 flex items-center justify-center gap-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-share-from-square"></i> <span class="text-xs">Share</span>
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
@@ -2385,11 +2530,11 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<h2 id="cdn-title" class="text-sm font-medium">Add external CSS or JS</h2>
-								<button command="close" commandfor="cdn" class="text-sm w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10">
-									<i class="fa fa-xmark"></i>
+							<div class="flex items-center gap-2.5 px-4 py-2 border-b border-gray-200 dark:border-white/10">
+								<button command="close" commandfor="cdn" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+									<i class="fa fa-arrow-left"></i>
 								</button>
+								<h2 id="cdn-title" class="text-sm font-medium">Add external CSS or JS</h2>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div id="cdn-uri" class="grid grid-cols-1 gap-2">
