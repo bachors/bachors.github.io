@@ -360,6 +360,7 @@ async function shareContent() {
 		if (navigator.share) {
 			await navigator.share(shareData);
 		} else {
+      		alert('URL has been copied.');
 			navigator.clipboard.writeText(shareData.url);
 		}
 	} catch (error) {
