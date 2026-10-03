@@ -1242,7 +1242,7 @@
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
-									<input id="huge-size" oninput="huge_wtf()" type="range" min="0" max="8" step="1" value="2" class="mt-3 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="huge-size" oninput="huge_wtf()" type="range" min="0" max="8" step="1" value="2" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="col-span-2 bg-[#131313] overflow-y-auto overflow-x-auto ftools">
 									<pre id="huge-res" class="p-3 select-all font-mono bg-[#131313] text-xs text-gray-400"></pre>
@@ -1426,9 +1426,9 @@
 									<div class="flex flex-col gap-1.5 w-full col-span-2">
 										<div class="flex items-center justify-between">
 											<span class="text-xs text-gray-500 dark:text-gray-400">Level</span>
-											<span id="qrcod-level" class="text-xs">L</span>
+											<span id="qrcod-level" class="text-xs font-mono">L</span>
 										</div>
-										<input oninput="qrcod_setLevel(this)" type="range" min="0" max="3" step="1" value="0" class="mt-3 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input oninput="qrcod_setLevel(this)" type="range" min="0" max="3" step="1" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-500 dark:text-gray-400">Padding</span>
@@ -1438,38 +1438,40 @@
 										<span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
 										<input onchange="qrcod_setSize(this)" onkeyup="qrcod_setSize(this)" onkeypress="qrcod_setSize(this)" type="number" min="0" value="240" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
-									<div class="grid grid-cols-3 gap-2 col-span-2">
-										<div class="flex flex-col gap-1.5 w-full col-span-2">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Background</span>
-											<div class="flex shadow-sm">
-												<input type="text" id="qrcod-bg1" onchange="qrcod_setBg(this)" onkeyup="qrcod_setBg(this)" onkeypress="qrcod_setBg(this)" value="#FECD64" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-												<input type="color" id="qrcod-bg2" onchange="qrcod_setBg(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#FECD64" title="Choose your color">
-											</div>
-										</div>
-										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
-											<input onchange="qrcod_setAlphabg(this)" onkeyup="qrcod_setAlphabg(this)" onkeypress="qrcod_setAlphabg(this)" type="number" min="0.1" max="1.0" step="0.1" value="1" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<div class="flex flex-col gap-1.5 w-full col-span-2">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Background</span>
+										<div class="flex shadow-sm">
+											<input type="text" id="qrcod-bg1" onchange="qrcod_setBg(this)" onkeyup="qrcod_setBg(this)" onkeypress="qrcod_setBg(this)" value="#FECD64" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<input type="color" id="qrcod-bg2" onchange="qrcod_setBg(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#FECD64" title="Choose your color">
 										</div>
 									</div>
-									<div class="grid grid-cols-3 gap-2 col-span-2">
-										<div class="flex flex-col gap-1.5 w-full col-span-2">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Color</span>
-											<div class="flex shadow-sm">
-												<input type="text" id="qrcod-color1" onchange="qrcod_setColor(this)" onkeyup="qrcod_setColor(this)" onkeypress="qrcod_setColor(this)" value="#2e6caa" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-												<input type="color" id="qrcod-color2" onchange="qrcod_setColor(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#2e6caa" title="Choose your color">
-											</div>
-										</div>
-										<div class="flex flex-col gap-1.5 w-full">
+									<div class="flex flex-col gap-1.5 col-span-2">
+										<div class="flex items-center justify-between">
 											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
-											<input onchange="qrcod_setAlphacolor(this)" onkeyup="qrcod_setAlphacolor(this)" onkeypress="qrcod_setAlphacolor(this)" type="number" min="0.1" max="1.0" step="0.1" value="1" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span id="qrcod-alp" class="text-xs font-mono">1</span>
 										</div>
+										<input oninput="qrcod_setAlphabg(this),document.getElementById('qrcod-alp').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full col-span-2">
+										<span class="text-xs text-gray-500 dark:text-gray-400">Color</span>
+										<div class="flex shadow-sm">
+											<input type="text" id="qrcod-color1" onchange="qrcod_setColor(this)" onkeyup="qrcod_setColor(this)" onkeypress="qrcod_setColor(this)" value="#2e6caa" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<input type="color" id="qrcod-color2" onchange="qrcod_setColor(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#2e6caa" title="Choose your color">
+										</div>
+									</div>
+									<div class="flex flex-col gap-1.5 col-span-2">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
+											<span id="qrcod-alp2" class="text-xs font-mono">1</span>
+										</div>
+										<input oninput="qrcod_setAlphacolor(this),document.getElementById('qrcod-alp2').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
 										<div class="flex items-center justify-between">
 											<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
 											<span onclick="qrcod_download()" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</span>
 										</div>
-										<div class="max-h-[260px] overflow-auto ftools">
+										<div class="p-1 bg-gray-100 dark:bg-gray-300 max-h-[320px] overflow-auto ftools">
 											<canvas id="qrious"></canvas>
 										</div>
 									</div>
