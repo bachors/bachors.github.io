@@ -692,7 +692,7 @@
 							<div id="pdfim-message" class="flex items-center text-xs justify-center mt-4" style="display:none">
 								loading ...
 							</div>
-							<i id="pdfim-download" onclick="pdfim_download()" class="mb-1.5 mt-4 mx-4 fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer text-end" style="display:none"></i>
+							<i id="pdfim-download" onclick="pdfim_download()" class="mb-1.5 mt-4 mx-4 fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer text-end" style="display:none"></i>
 							<div id="pdfim-viewer" class="relative h-full mx-4" style="z-index:999;display:none;"></div>
 							<div class="relative grid grid-cols-1 p-4 overflow-y-auto ftools">								
 								<div id="pdfim-result" class="grid grid-cols-2 gap-2 md:grid-cols-3" style="display:none"></div>
@@ -747,7 +747,7 @@
 								<div class="flex flex-col gap-1.5 w-full relative">
 									<div class="relative flex items-center justify-between">
 										<span class="text-xs text-gray-400">SVG</span>
-										<i onclick="pxcss_download()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+										<i onclick="pxcss_download()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 									</div>
 									<textarea id="pxcss-output2" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxcss2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -903,7 +903,7 @@
 								<div class="relative flex items-center justify-between">
 									<span class="text-xs text-gray-400">Result</span>
 									<span id="emoart-message" class="font-mono text-xs">0%</span>
-									<i id="emoart-download" onclick="emoart_downloadIt()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0" style="display:none"></i>
+									<i id="emoart-download" onclick="emoart_downloadIt()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0" style="display:none"></i>
 								</div>
 								<div id="emoart-box" class="relative flex-none overflow-x-auto overflow-y-hidden ftools">
 									<canvas id="emoart-result"></canvas>
@@ -1026,7 +1026,7 @@
 								<div id="pxpaint-cod2" class="flex flex-col gap-1.5 w-full relative" style="display:none">
 									<div class="flex items-center justify-between">
 										<span class="relative text-xs text-gray-400">SVG</span>
-										<i onclick="pxpaint_download()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+										<i onclick="pxpaint_download()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 									</div>
 									<textarea id="pxpaint-output2" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxpaint2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -1135,7 +1135,7 @@
 									<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
 										<div class="relative flex items-center justify-between">
 											<span class="text-xs text-gray-400">Result</span>
-											<a href="#" id="poly-download" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
+											<a href="#" id="poly-download" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
 										</div>
 										<div class="h-full w-full">
 											<svg id="poly-lw" class="border border-gray-200 dark:border-white/10 block w-full h-auto" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -1168,7 +1168,7 @@
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="relative flex items-center justify-between">
 											<span class="text-xs text-gray-400">Result</span>
-											<a href="#" @click="lowpolydownloadSVG" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
+											<a href="#" @click="lowpolydownloadSVG" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
 										</div>
 										<svg id="low-polygon" v-bind="sizeSVG" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width=".5" class="border border-gray-200 dark:border-white/10 w-full h-auto">
 											<script type="text/x.poly-settings">{{ JSON.stringify(options) }}</script>
@@ -1249,7 +1249,7 @@
 										<span class="text-xs text-gray-400">Result</span>
 										<div class="relative flex items-center gap-4">
 											<i id="ascii-kopi" class="fa fa-copy text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-8"></i>
-											<i id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+											<i id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 										</div>
 									</div>
 									<div class="p-1 bg-gray-100 dark:bg-gray-300 overflow-y-hidden overflow-x-auto ftools">
@@ -1532,7 +1532,7 @@
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
 										<div class="relative flex items-center justify-between">
 											<span class="text-xs text-gray-400">Output</span>
-											<i onclick="qrcod_download()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+											<i onclick="qrcod_download()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 										</div>
 										<div class="p-1 bg-gray-100 dark:bg-gray-300 max-h-[328px] overflow-auto ftools">
 											<canvas id="qrious"></canvas>
@@ -2446,7 +2446,7 @@
 								<div class="flex flex-col gap-1.5 w-full relative">
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Text/HTML/JavaScript</span>
-										<span onclick='escapeTxt();' class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Encode !</span>
+										<span onclick='escapeTxt();' class="text-xs hover:text-gray-400 cursor-pointer decoration-gray-200 dark:decoration-white/10 underline underline-offset-4">Encode<i class="ml-1.5 fa fa-arrow-down"></i></span>
 									</div>
 									<textarea id="codeescape" spellcheck="false" class="text-xs"></textarea>
 									<button id="kopi-codeescape" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -2456,7 +2456,7 @@
 								<div class="flex flex-col gap-1.5 w-full relative">
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Escaped</span>
-										<span onclick='unescapeTxt();' class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Decode !</span>
+										<span onclick='unescapeTxt();' class="text-xs hover:text-gray-400 cursor-pointer decoration-gray-200 dark:decoration-white/10 underline underline-offset-4">Decode<i class="ml-1.5 fa fa-arrow-up"></i></span>
 									</div>									
 									<textarea id="resescape" spellcheck="false" class="text-xs"></textarea>
 									<button id="kopi-resescape" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
