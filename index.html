@@ -502,7 +502,7 @@
 				<div class="flex justify-center items-center gap-4">
 					<a class="underline underline-offset-4" href="#work">Work</a>
 					<a class="underline underline-offset-4" href="#video">Video</a>
-					<a onclick="event.preventDefault();document.getElementById('privacy-policy').showModal(),document.querySelector('html').style.overflow='hidden',history.pushState('', document.title, window.location.pathname + '#privacy-policy');" class="underline underline-offset-4" href="privacy-policy.html">Privacy Policy</a>
+					<a onclick="event.preventDefault();document.getElementById('privacy-policy').showModal(),document.querySelector('html').style.overflow='hidden',history.pushState('', document.title, window.location.pathname + '#privacy-policy'), document.title = 'Privacy Policy | Bachors';" class="underline underline-offset-4" href="privacy-policy.html">Privacy Policy</a>
 				</div>
 				<div class="text-center text-gray-500 dark:text-gray-400">
 					Ican Bachors • &copy; 2026 • bachors.id
@@ -515,7 +515,7 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center gap-2.5 px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="flex items-center gap-2 px-4 py-2 border-b border-gray-200 dark:border-white/10">
 								<button command="close" commandfor="privacy-policy" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 									<i class="fa fa-arrow-left"></i>
 								</button>
@@ -609,7 +609,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-bw" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -622,7 +622,7 @@
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="relative flex items-center">
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Image</span>
+										<span class="text-xs text-gray-400">Image</span>
 										<input id="bwfil_img" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 									</div>
 									<img id="bwfil-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
@@ -631,7 +631,7 @@
 							</div>
 							<div id="bwfil-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Mode</span>										
+									<span class="text-xs text-gray-400">Mode</span>										
 									<div class="flex gap-4 my-1.5">
 										<div class="flex items-center">
 											<input checked id="bwfil-siluet" name="bwfil-radio-group" type="radio" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -645,7 +645,7 @@
 								</div>
 								<div id="bwfil-con-trs" class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Threshold</span>
+										<span class="text-xs text-gray-400">Threshold</span>
 										<div id="bwfil-con-invert" class="flex items-center gap-1.5">
 											<input id="bwfil-invert" type="checkbox" class="accent-gray-900 dark:accent-white w-4 h-4 border border-light rounded-xs">	
 											<span class="text-xs">Invert</span>									
@@ -668,7 +668,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pdf-convert" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -680,11 +680,11 @@
 							</div>
 							<div class="relative grid grid-cols-2 gap-4 pt-4 px-4">
 								<div class="flex flex-col gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Image to PDF</span>
+									<span class="text-xs text-gray-400">Image to PDF</span>
 									<input id="pdfim-imgfile" type="file" accept="image/*" onChange="pdfim_loadImg(event)" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400">PDF to Image</span>
+									<span class="text-xs text-gray-400">PDF to Image</span>
 									<input id="pdfim-pdffile" type="file" accept="application/pdf" onChange="pdfim_loadPdf(event)" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
 								<div class="border-b border-gray-200 dark:border-white/10 col-span-2"></div>
@@ -692,7 +692,7 @@
 							<div id="pdfim-message" class="flex items-center text-xs justify-center mt-4" style="display:none">
 								loading ...
 							</div>
-							<span id="pdfim-download" onclick="pdfim_download()" class="mb-1.5 mt-4 mx-4 text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer text-end" style="display:none">Download PDF</span>
+							<i id="pdfim-download" onclick="pdfim_download()" class="mb-1.5 mt-4 mx-4 fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer text-end" style="display:none"></i>
 							<div id="pdfim-viewer" class="relative h-full mx-4" style="z-index:999;display:none;"></div>
 							<div class="relative grid grid-cols-1 p-4 overflow-y-auto ftools">								
 								<div id="pdfim-result" class="grid grid-cols-2 gap-2 md:grid-cols-3" style="display:none"></div>
@@ -708,7 +708,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pixel-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -721,15 +721,15 @@
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="flex items-center">
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Image (16x16)</span>
+										<span class="text-xs text-gray-400">Image (16x16)</span>
 										<input id="pxcss_img" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 									</div>
 									<img id="pxcss-image" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
 								</div>
 								<div class="flex items-center justify-between gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Smaller</span>
+									<i class="text-sm fa fa-square-minus"></i>
 									<input id="pxcss-scale" type="range" min="1" max="20" step="1" value="5" class="accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Bigger</span>
+									<i class="text-sm fa fa-square-plus"></i>
 								</div>
 								<div class="border-b border-gray-200 dark:border-white/10"></div>
 							</div>
@@ -738,16 +738,16 @@
 									<div id="pxcss-preview" class="flex-none"></div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">CSS</span>
+									<span class="text-xs text-gray-400">CSS</span>
 									<textarea id="pxcss-output" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxcss" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
 									</button>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">SVG</span>
-										<span onclick="pxcss_download()" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</span>
+									<div class="relative flex items-center justify-between">
+										<span class="text-xs text-gray-400">SVG</span>
+										<i onclick="pxcss_download()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 									</div>
 									<textarea id="pxcss-output2" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxcss2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -766,7 +766,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-lg transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-compress" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -778,7 +778,7 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="flex flex-col gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Image</span>
+									<span class="text-xs text-gray-400">Image</span>
 									<input id="imcom_img" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
 								<div class="border-b border-gray-200 dark:border-white/10"></div>
@@ -786,14 +786,14 @@
 							<div id="imcom-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Quality</span>
+										<span class="text-xs text-gray-400">Quality</span>
 										<span id="imcom-q" class="font-mono text-xs">50%</span>
 									</div>
 									<input id="imcom-qr" onchange="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Preview</span>
+										<span class="text-xs text-gray-400">Preview</span>
 										<span id="imcom-size" class="font-mono text-xs"></span>
 									</div>
 									<div id="imcom-preview" class="p-1 flex items-center justify-center bg-gray-100 dark:bg-gray-300"></div>
@@ -811,7 +811,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="emoji-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -824,7 +824,7 @@
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="relative flex items-center">
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Image</span>
+										<span class="text-xs text-gray-400">Image</span>
 										<input id="emoart_img" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 									</div>
 									<img id="emoart-image" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
@@ -836,34 +836,34 @@
 									<div class="grid grid-cols-2 gap-4">
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
-												<span class="text-xs text-gray-500 dark:text-gray-400">Analysis window</span>
+												<span class="text-xs text-gray-400">Analysis window</span>
 												<span id="emoart-window" class="font-mono text-xs">7px</span>
 											</div>
 											<input id="emoart-windowr" oninput="document.getElementById('emoart-window').innerText=this.value+'px'" type="range" step="1" min="1" max="50" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
-												<span class="text-xs text-gray-500 dark:text-gray-400">Emoji size</span>
+												<span class="text-xs text-gray-400">Emoji size</span>
 												<span id="emoart-size" class="font-mono text-xs">12px</span>
 											</div>
 											<input id="emoart-sizer" oninput="document.getElementById('emoart-size').innerText=this.value+'px'" type="range" min="1" step="1" max="50" value="12" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
-												<span class="text-xs text-gray-500 dark:text-gray-400">Match tolerance</span>
+												<span class="text-xs text-gray-400">Match tolerance</span>
 												<span id="emoart-toleran" class="font-mono text-xs">8</span>
 											</div>
 											<input id="emoart-toleranr" oninput="document.getElementById('emoart-toleran').innerText=this.value" type="range" min="1" step="1" max="30" value="8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
-												<span class="text-xs text-gray-500 dark:text-gray-400">Allowed empty space</span>
+												<span class="text-xs text-gray-400">Allowed empty space</span>
 												<span id="emoart-space" class="font-mono text-xs">80%</span>
 											</div>
 											<input id="emoart-spacer" oninput="document.getElementById('emoart-space').innerText=(this.value*100).toFixed(0)+'%'" type="range" min=".4" step=".02" max="1" value=".8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Display mode</span>
+											<span class="text-xs text-gray-400">Display mode</span>
 											<div class="flex items-start gap-4">
 												<div class="my-1.5 flex items-center">
 													<input checked type="radio" name="emoart-radio-group" onChange="emoart_setDisplay('grid')" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -881,16 +881,16 @@
 										</div>
 										<div class="flex items-start gap-4 col-span-2 md:col-span-1">
 											<div class="flex flex-col gap-1.5" title="Hide Black/Transparent">
-												<span class="text-xs text-gray-500 dark:text-gray-400">B/T</span>
+												<span class="text-xs text-gray-400">B/T</span>
 												<div class="my-1.5 flex items-center">
 													<input id="emoart-hide" type="checkbox" class="accent-gray-900 dark:accent-white w-4 h-4 border border-light rounded-xs">
 													<span class="select-none ms-2 text-xs">Hide</span>
 												</div>
 											</div>
 											<div class="flex flex-col gap-1.5 w-full">
-												<span class="text-xs text-gray-500 dark:text-gray-400">Background</span>
+												<span class="text-xs text-gray-400">Background</span>
 												<div class="flex shadow-sm">
-													<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+													<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 														<input checked id="emoart-bg" type="checkbox" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-light rounded-xs">
 													</span>
 													<input type="text" id="emoart-hex" onchange="document.getElementById('emoart-cpx').value=this.value,emoart_main();" value="#000000" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
@@ -900,12 +900,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
+								<div class="relative flex items-center justify-between">
+									<span class="text-xs text-gray-400">Result</span>
 									<span id="emoart-message" class="font-mono text-xs">0%</span>
-									<div id="emoart-download" onclick="emoart_downloadIt()" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer" style="display:none">
-										Download !
-									</div>
+									<i id="emoart-download" onclick="emoart_downloadIt()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0" style="display:none"></i>
 								</div>
 								<div id="emoart-box" class="relative flex-none overflow-x-auto overflow-y-hidden ftools">
 									<canvas id="emoart-result"></canvas>
@@ -922,7 +920,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pixel-paint" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -934,23 +932,23 @@
 							</div>
 							<div id="pxpaint-con" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
 								<div class="flex items-center justify-between gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400 w-9">Cols</span>
+									<span class="text-xs text-gray-400 w-9">Cols</span>
 									<input id="pxpaint-coli" type="range" min="3" max="30" step="1" value="24" class="accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									<input id="pxpaint-col" type="text" value="24" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md w-10 bg-gray-100 dark:bg-[#131313] text-center py-1.5">
 								</div>
 								<div class="flex items-center justify-between gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400 w-9">Rows</span>
+									<span class="text-xs text-gray-400 w-9">Rows</span>
 									<input id="pxpaint-rowi" type="range" min="3" max="30" step="1" value="24" class="accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									<input id="pxpaint-row" type="text" value="24" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md w-10 bg-gray-100 dark:bg-[#131313] text-center py-1.5">
 								</div>
 								<div class="flex items-center justify-between gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400 w-9">Pixel</span>
+									<span class="text-xs text-gray-400 w-9">Pixel</span>
 									<input id="pxpaint-pixi" type="range" min="8" max="12" step="1" value="12" class="accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									<input id="pxpaint-pix" type="text" value="12" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md w-10 bg-gray-100 dark:bg-[#131313] text-center py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Board</span>
+										<span class="text-xs text-gray-400">Board</span>
 										<div class="flex items-center gap-1.5">
 											<input id="pxpaint-img" onchange="pxpaintSetimg(this.checked)" onclick="pxpaintSetimg(this.checked)" type="checkbox" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-light rounded-xs">
 											<span class="text-xs">Background Image</span>
@@ -965,45 +963,45 @@
 									<input id="pxpaint-file" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer" style="display:none">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Color</span>
+									<span class="text-xs text-gray-400">Color</span>
 									<div class="grid grid-cols-2 gap-1.5 md:grid-cols-3">
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input checked id="pxpaint-rad1" onchange="pxpaintSetcolor(this.value)" onclick="pxpaintSetcolor(this.value)" name="pxpaint-radio-group" type="radio" value="#000000" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											</span>
 											<input type="text" name="hex" id="pxpaint-hex1" onKeyUp="pxpaintInitcolor(1, this.value)" onFocus="pxpaintInitcolor(1, this.value)" value="#000000" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="pxpaint-cpx1" onchange="pxpaintInitcolor(1, this.value)" onclick="pxpaintInitcolor(1, this.value)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#000000" title="Choose your color">
 										</div>
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input id="pxpaint-rad2" onchange="pxpaintSetcolor(this.value)" onclick="pxpaintSetcolor(this.value)" name="pxpaint-radio-group" type="radio" value="#ffffff" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											</span>
 											<input type="text" name="hex" id="pxpaint-hex2" onKeyUp="pxpaintInitcolor(2, this.value)" onFocus="pxpaintInitcolor(2, this.value)" value="#ffffff" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="pxpaint-cpx2" onchange="pxpaintInitcolor(2, this.value)" onclick="pxpaintInitcolor(2, this.value)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#ffffff" title="Choose your color">
 										</div>
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input id="pxpaint-rad3" onchange="pxpaintSetcolor(this.value)" onclick="pxpaintSetcolor(this.value)" name="pxpaint-radio-group" type="radio" value="#F44336" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											</span>
 											<input type="text" name="hex" id="pxpaint-hex3" onKeyUp="pxpaintInitcolor(3, this.value)" onFocus="pxpaintInitcolor(3, this.value)" value="#F44336" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="pxpaint-cpx3" onchange="pxpaintInitcolor(3, this.value)" onclick="pxpaintInitcolor(3, this.value)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#F44336" title="Choose your color">
 										</div>
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input id="pxpaint-rad4" onchange="pxpaintSetcolor(this.value)" onclick="pxpaintSetcolor(this.value)" name="pxpaint-radio-group" type="radio" value="#FDD835" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											</span>
 											<input type="text" name="hex" id="pxpaint-hex4" onKeyUp="pxpaintInitcolor(4, this.value)" onFocus="pxpaintInitcolor(4, this.value)" value="#FDD835" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="pxpaint-cpx4" onchange="pxpaintInitcolor(4, this.value)" onclick="pxpaintInitcolor(4, this.value)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#FDD835" title="Choose your color">
 										</div>
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input id="pxpaint-rad5" onchange="pxpaintSetcolor(this.value)" onclick="pxpaintSetcolor(this.value)" name="pxpaint-radio-group" type="radio" value="#1E88E5" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											</span>
 											<input type="text" name="hex" id="pxpaint-hex5" onKeyUp="pxpaintInitcolor(5, this.value)" onFocus="pxpaintInitcolor(5, this.value)" value="#1E88E5" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="pxpaint-cpx5" onchange="pxpaintInitcolor(5, this.value)" onclick="pxpaintInitcolor(5, this.value)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#1E88E5" title="Choose your color">
 										</div>
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input id="pxpaint-rad6" onchange="pxpaintSetcolor(this.value)" onclick="pxpaintSetcolor(this.value)" name="pxpaint-radio-group" type="radio" value="#43b87d" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											</span>
 											<input type="text" name="hex" id="pxpaint-hex6" onKeyUp="pxpaintInitcolor(6, this.value)" onFocus="pxpaintInitcolor(6, this.value)" value="#43b87d" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
@@ -1019,7 +1017,7 @@
 									<div id="pxpaint-preview"></div>
 								</div>
 								<div id="pxpaint-cod" class="flex flex-col gap-1.5 w-full relative" style="display:none">
-									<span class="text-xs text-gray-500 dark:text-gray-400">CSS</span>
+									<span class="text-xs text-gray-400">CSS</span>
 									<textarea id="pxpaint-output" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxpaint" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -1027,8 +1025,8 @@
 								</div>
 								<div id="pxpaint-cod2" class="flex flex-col gap-1.5 w-full relative" style="display:none">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">SVG</span>
-										<span onclick="pxpaint_download()" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</span>
+										<span class="relative text-xs text-gray-400">SVG</span>
+										<i onclick="pxpaint_download()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 									</div>
 									<textarea id="pxpaint-output2" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxpaint2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -1047,7 +1045,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-4xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="low-poly" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1059,11 +1057,11 @@
 							</div>							
 							<div class="relative grid grid-cols-2 gap-4 pt-4 px-4">
 								<div class="flex flex-col gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Image</span>
+									<span class="text-xs text-gray-400">Image</span>
 									<input id="poly_img" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Editor</span>										
+									<span class="text-xs text-gray-400">Editor</span>										
 									<div class="flex items-center gap-4">
 										<div class="flex items-center py-1.5">
 											<input onchange="(this.checked)?document.getElementById('poly-editor').style.display='':document.getElementById('poly-editor').style.display='none'" checked id="poly-basic" type="checkbox" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
@@ -1081,34 +1079,34 @@
 								<div id="poly-editor" class="grid grid-cols-2 gap-4">
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Points</span>
+											<span class="text-xs text-gray-400">Points</span>
 											<span id="poly-point" class="font-mono text-xs">1500</span>
 										</div>
 										<input id="poly-rpoint" type="range" min="50" max="2000" step="10" value="1500" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Edge bias</span>
+											<span class="text-xs text-gray-400">Edge bias</span>
 											<span id="poly-edge" class="font-mono text-xs">1.00</span>
 										</div>
 										<input id="poly-redge" type="range" min="0" max="1" step="0.05" value="1.00" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Blur</span>
+											<span class="text-xs text-gray-400">Blur</span>
 											<span id="poly-blur" class="font-mono text-xs">1</span>
 										</div>
 										<input id="poly-rblur" type="range" min="0" max="4" step="1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Stroke width</span>
+											<span class="text-xs text-gray-400">Stroke width</span>
 											<span id="poly-strok" class="font-mono text-xs">0.5</span>
 										</div>
 										<input id="poly-rstrok" type="range" min="0" max="2" step="0.1" value="0.5" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Color mode</span>										
+										<span class="text-xs text-gray-400">Color mode</span>										
 										<div class="flex items-center gap-4">
 											<div class="flex items-center my-1.5">
 												<input checked name="poly-radio-group" id="poly-center" type="radio" value="centroid" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -1126,7 +1124,7 @@
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Source</span>
+											<span class="text-xs text-gray-400">Source</span>
 											<span id="poly-tr" class="font-mono text-xs">0 triangles</span>
 										</div>
 										<div class="h-full relative w-full">
@@ -1135,9 +1133,9 @@
       									</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
-										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
-											<a href="#" id="poly-download" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</a>
+										<div class="relative flex items-center justify-between">
+											<span class="text-xs text-gray-400">Result</span>
+											<a href="#" id="poly-download" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
 										</div>
 										<div class="h-full w-full">
 											<svg id="poly-lw" class="border border-gray-200 dark:border-white/10 block w-full h-auto" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -1157,7 +1155,7 @@
 									</svg>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Source</span>
+											<span class="text-xs text-gray-400">Source</span>
 											<span class="font-mono text-xs">{{ triangles.length }} triangles</span>
 										</div>
 										<div class="relative w-full">
@@ -1168,9 +1166,9 @@
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
-											<a href="#" @click="lowpolydownloadSVG" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</a>
+										<div class="relative flex items-center justify-between">
+											<span class="text-xs text-gray-400">Result</span>
+											<a href="#" @click="lowpolydownloadSVG" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
 										</div>
 										<svg id="low-polygon" v-bind="sizeSVG" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width=".5" class="border border-gray-200 dark:border-white/10 w-full h-auto">
 											<script type="text/x.poly-settings">{{ JSON.stringify(options) }}</script>
@@ -1190,7 +1188,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="ascii-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1203,7 +1201,7 @@
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="relative flex items-center">
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Image</span>
+										<span class="text-xs text-gray-400">Image</span>
 										<input id="ascii_img" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 									</div>
 									<img id="ascii-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
@@ -1213,33 +1211,33 @@
 							<div id="ascii-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div class="grid grid-cols-2 gap-4">
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Width (chars)</span>
+										<span class="text-xs text-gray-400">Width (chars)</span>
 										<input id="ascii-w" type="range" min="1" max="14" step="1" value="3" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Detail</span>
+										<span class="text-xs text-gray-400">Detail</span>
 										<input id="ascii-q" type="range" min="1" max="10" step="1" value="4" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer" style="direction:rtl;">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Mode</span>
+										<span class="text-xs text-gray-400">Mode</span>
 										<div class="flex items-center py-1.5">
 											<input id="ascii-colored" type="checkbox" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
 											<span class="select-none ms-2 text-xs">Colored</span>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Charset</span>
+										<span class="text-xs text-gray-400">Charset</span>
 										<input id="ascii-chars" value="@#+';:,.`" type="text" class="font-mono tracking-wider border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Background</span>
+										<span class="text-xs text-gray-400">Background</span>
 										<div class="flex shadow-sm">
 											<input type="text" id="ascii-hex1" value="#ffffff" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="ascii-cpx1" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#ffffff" title="Choose your color">
 										</div>
 									</div>
 									<div id="ascii-nt" class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Color</span>
+										<span class="text-xs text-gray-400">Color</span>
 										<div class="flex shadow-sm">
 											<input type="text" id="ascii-hex2" value="#000000" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="ascii-cpx2" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#000000" title="Choose your color">
@@ -1248,10 +1246,10 @@
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
-										<div class="flex items-center gap-4">
-											<span id="ascii-kopi" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Copy Text</span>
-											<span id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</span>
+										<span class="text-xs text-gray-400">Result</span>
+										<div class="relative flex items-center gap-4">
+											<i id="ascii-kopi" class="fa fa-copy text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-8"></i>
+											<i id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 										</div>
 									</div>
 									<div class="p-1 bg-gray-100 dark:bg-gray-300 overflow-y-hidden overflow-x-auto ftools">
@@ -1270,7 +1268,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="comment" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1282,11 +1280,11 @@
 							</div>
 							<div class="relative grid grid-cols-2 gap-4 px-4 py-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Your comment</span>
+									<span class="text-xs text-gray-400">Your comment</span>
 									<input id="huge-comment" onchange="huge_wtf()" onclick="huge_wtf()" type="text" value="BACHORS" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
+									<span class="text-xs text-gray-400">Size</span>
 									<input id="huge-size" oninput="huge_wtf()" type="range" min="0" max="8" step="1" value="2" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="col-span-2 bg-[#131313] overflow-y-auto overflow-x-auto ftools">
@@ -1304,7 +1302,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="svg-polygon" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1318,16 +1316,16 @@
 								<div class="grid grid-cols-1 gap-4">
 									<div class="grid grid-cols-2 gap-4">
 										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Number of Sides</span>
+											<span class="text-xs text-gray-400">Number of Sides</span>
 											<input id="svgg-polygon-side" onchange="svgg_polygongeneratePolygon()" onkeyup="svgg_polygongeneratePolygon()" onkeypress="svgg_polygongeneratePolygon()" type="number" value="8" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Radius</span>
+											<span class="text-xs text-gray-400">Radius</span>
 											<input id="svgg-polygon-radius" onchange="svgg_polygongeneratePolygon()" onkeyup="svgg_polygongeneratePolygon()" onkeypress="svgg_polygongeneratePolygon()" type="number" value="200" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Center</span>
+										<span class="text-xs text-gray-400">Center</span>
 										<div class="grid grid-cols-2 gap-4">
 											<input id="svgg-polygon-x" onchange="svgg_polygongeneratePolygon()" onkeyup="svgg_polygongeneratePolygon()" onkeypress="svgg_polygongeneratePolygon()" type="number" value="396" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input id="svgg-polygon-y" onchange="svgg_polygongeneratePolygon()" onkeyup="svgg_polygongeneratePolygon()" onkeypress="svgg_polygongeneratePolygon()" type="number" value="418" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
@@ -1357,7 +1355,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="noise-pattern" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1371,7 +1369,7 @@
 								<div class="grid grid-cols-1 gap-4">
 									<div class="grid grid-cols-2 gap-4">
 										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Pattern</span>
+											<span class="text-xs text-gray-400">Pattern</span>
 											<div class="flex items-start gap-4">
 												<div class="flex items-center py-1.5">
 													<input checked type="radio" name="svgg-noise-radio-group" onChange="svggnoiseTogle('LINES')" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -1384,29 +1382,29 @@
 											</div>
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Color</span>
+											<span class="text-xs text-gray-400">Color</span>
 											<div class="flex shadow-sm">
 												<input id="svgg-noise-color1" type="text" onkeyup="document.getElementById('svgg-noise-color2').value=this.value,svggnoiseColor(this);" onkeypress="document.getElementById('svgg-noise-color2').value=this.value,svggnoiseColor(this);" value="#000000" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												<input id="svgg-noise-color2" type="color" onchange="document.getElementById('svgg-noise-color1').value=this.value,svggnoiseColor(this);" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#000000" title="Choose your color">
 											</div>
 										</div>
 										<div class="flex flex-col gap-1.5 w-full col-span-2">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Cell size</span>
+											<span class="text-xs text-gray-400">Cell size</span>
 											<input oninput="svggnoiseSize(this)" type="range" min="15" max="100" step="1" value="75" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Variance</span>
+											<span class="text-xs text-gray-400">Variance</span>
 											<input oninput="svggnoiseVarian(this)" type="range" min="0.02" max="0.4" step="0.01" value="0.02" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Stroke weight</span>
+											<span class="text-xs text-gray-400">Stroke weight</span>
 											<input oninput="svggnoiseStrok(this)" type="range" min="1" max="10" step="1" value="2" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 									</div>
 									<div class="grid grid-cols-4">
-										<div class="flex items-center justify-between col-span-4">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
-											<span onclick="svggnoise_generate()" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Regenerate !</span>
+										<div class="relative flex items-center justify-between col-span-4">
+											<span class="text-xs text-gray-400">Result</span>
+											<i onclick="svggnoise_generate()" class="fa fa-rotate text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 										</div>
 										<div class="flex items-center mt-1.5 col-span-3">
 											<svg id="svgg-noise-res" class="mr-none md:mr-12 w-full bg-white border-2 border-dashed border-gray-300 dark:border-blue-100/20" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -1431,7 +1429,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="svg-barcode" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1443,7 +1441,7 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Enter UPC-A</span>
+									<span class="text-xs text-gray-400">Enter UPC-A</span>
 									<div class="flex items-center justify-between gap-1.5">
 										<input id="svgg-barcode-no" type="text" value="8993989311699" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 										<button onclick="svgggenerateBarcode()" class="flex-none bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Generate</button>
@@ -1472,7 +1470,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="qr-code" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1485,26 +1483,26 @@
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
 								<div class="grid grid-cols-4 gap-4">
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Text</span>
+										<span class="text-xs text-gray-400">Text</span>
 										<textarea id="qrcod-code"></textarea>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Level</span>
+											<span class="text-xs text-gray-400">Level</span>
 											<span id="qrcod-level" class="text-xs font-mono">L</span>
 										</div>
 										<input oninput="qrcod_setLevel(this)" type="range" min="0" max="3" step="1" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Padding</span>
+										<span class="text-xs text-gray-400">Padding</span>
 										<input onchange="qrcod_setPadding(this)" onkeyup="qrcod_setPadding(this)" onkeypress="qrcod_setPadding(this)" type="number" min="0" value="16" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
+										<span class="text-xs text-gray-400">Size</span>
 										<input onchange="qrcod_setSize(this)" onkeyup="qrcod_setSize(this)" onkeypress="qrcod_setSize(this)" type="number" min="0" value="240" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Background</span>
+										<span class="text-xs text-gray-400">Background</span>
 										<div class="flex shadow-sm">
 											<input type="text" id="qrcod-bg1" onchange="qrcod_setBg(this)" onkeyup="qrcod_setBg(this)" onkeypress="qrcod_setBg(this)" value="#FECD64" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="qrcod-bg2" onchange="qrcod_setBg(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#FECD64" title="Choose your color">
@@ -1512,13 +1510,13 @@
 									</div>
 									<div class="flex flex-col gap-1.5 col-span-2">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
+											<span class="text-xs text-gray-400">Alpha</span>
 											<span id="qrcod-alp" class="text-xs font-mono">1</span>
 										</div>
 										<input oninput="qrcod_setAlphabg(this),document.getElementById('qrcod-alp').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Color</span>
+										<span class="text-xs text-gray-400">Color</span>
 										<div class="flex shadow-sm">
 											<input type="text" id="qrcod-color1" onchange="qrcod_setColor(this)" onkeyup="qrcod_setColor(this)" onkeypress="qrcod_setColor(this)" value="#2e6caa" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											<input type="color" id="qrcod-color2" onchange="qrcod_setColor(this)" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#2e6caa" title="Choose your color">
@@ -1526,55 +1524,55 @@
 									</div>
 									<div class="flex flex-col gap-1.5 col-span-2">
 										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Alpha</span>
+											<span class="text-xs text-gray-400">Alpha</span>
 											<span id="qrcod-alp2" class="text-xs font-mono">1</span>
 										</div>
 										<input oninput="qrcod_setAlphacolor(this),document.getElementById('qrcod-alp2').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
-										<div class="flex items-center justify-between">
-											<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
-											<span onclick="qrcod_download()" class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Download !</span>
+										<div class="relative flex items-center justify-between">
+											<span class="text-xs text-gray-400">Output</span>
+											<i onclick="qrcod_download()" class="fa fa-download text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
 										</div>
 										<div class="p-1 bg-gray-100 dark:bg-gray-300 max-h-[328px] overflow-auto ftools">
 											<canvas id="qrious"></canvas>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Position</span>
+										<span class="text-xs text-gray-400">Position</span>
 										<div class="flex items-center my-1.5">
 											<input type="checkbox" onChange="qrcod_setPos(this)" onclick="qrcod_setPos(this)" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
 											<label for="csstri_border" class="select-none ms-2 text-xs">Separate</label>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Corner</span>
+										<span class="text-xs text-gray-400">Corner</span>
 										<input onchange="qrcod_setCor(this)" onkeyup="qrcod_setCor(this)" onkeypress="qrcod_setCor(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div></div>
 									<div></div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Data</span>
+										<span class="text-xs text-gray-400">Data</span>
 										<div class="flex items-center my-1.5">
 											<input type="checkbox" onChange="qrcod_setData(this)" onclick="qrcod_setData(this)" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
 											<label for="csstri_border" class="select-none ms-2 text-xs">Separate</label>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Corner TL</span>
+										<span class="text-xs text-gray-400">Corner TL</span>
 										<input onchange="qrcod_setTl(this)" onkeyup="qrcod_setTl(this)" onkeypress="qrcod_setTl(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Corner TR</span>
+										<span class="text-xs text-gray-400">Corner TR</span>
 										<input onchange="qrcod_setTr(this)" onkeyup="qrcod_setTr(this)" onkeypress="qrcod_setTr(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Corner BR</span>
+										<span class="text-xs text-gray-400">Corner BR</span>
 										<input onchange="qrcod_setBr(this)" onkeyup="qrcod_setBr(this)" onkeypress="qrcod_setBr(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div></div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Corner BL</span>
+										<span class="text-xs text-gray-400">Corner BL</span>
 										<input onchange="qrcod_setBl(this)" onkeyup="qrcod_setBl(this)" onkeypress="qrcod_setBl(this)" type="number" min="0" value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 								</div>
@@ -1590,7 +1588,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="css-triangle" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1602,12 +1600,12 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
+									<span class="text-xs text-gray-400">Size</span>
 									<input name="size" type="range" min="0" max="400" step="any" value="200" class="mt-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Height</span>										
+										<span class="text-xs text-gray-400">Height</span>										
 										<div class="flex items-start gap-3">
 											<div class="flex items-center">
 												<input checked type="radio" name="csstri-radio-group" onChange="document.getElementById('csstri-height').value=50,csstri_val['height'] = +50,csstriDraw();" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -1627,7 +1625,7 @@
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">									
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Angle</span>
+										<span class="text-xs text-gray-400">Angle</span>
 										<div class="flex items-center">
 											<input checked id="csstri_iso" type="radio" onChange="document.getElementById('csstri-angle').value=0,csstri_val['angle'] = +0,csstriDraw();" onclick="document.getElementById('csstri-angle').value=0,csstri_val['angle'] = +0,csstriDraw();" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											<label for="csstri_iso" class="select-none ms-2 text-xs">isosceles</label>
@@ -1658,7 +1656,7 @@
 								<div id="csstri-res"></div>
 								<div id="csstri-res2" style="display:none"></div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">CSS</span>	
+									<span class="text-xs text-gray-400">CSS</span>	
 									<textarea id="csstri-code"></textarea>
 									<button id="kopi-csstri" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -1676,7 +1674,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-base64" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1689,7 +1687,7 @@
 							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="relative flex items-center">
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Image</span>
+										<span class="text-xs text-gray-400">Image</span>
 										<input id="userfile" type="file" accept="image/*" class="text-[0px] file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 									</div>
 									<img id="img64-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]" style="display:none">
@@ -1710,7 +1708,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="number-system" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1722,19 +1720,19 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Binary</span>
+									<span class="text-xs text-gray-400">Binary</span>
 									<input id="bina" onkeyup="bikonpret(this.value)" onkeypress="return bncheck(event,bina)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Decimal</span>
+									<span class="text-xs text-gray-400">Decimal</span>
 									<input id="desi" onkeyup="dikonpret()" onkeypress="return dncheck(event,desi)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Octal</span>
+									<span class="text-xs text-gray-400">Octal</span>
 									<input id="octo" onkeyup="oikonpret(this.value)" onkeypress="return oncheck(event,octo)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Hexadecimal</span>
+									<span class="text-xs text-gray-400">Hexadecimal</span>
 									<input id="hade" onkeyup="hikonpret(this.value)" onkeypress="return hncheck(event)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 							</div>
@@ -1749,7 +1747,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="code-snippet" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1761,7 +1759,7 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your code</span>
+									<span class="text-xs text-gray-400">Paste your code</span>
 									<textarea id="codesnip" spellcheck="false"></textarea>
 									<button id="kopi-snippet" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -1805,7 +1803,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="temperature" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1818,23 +1816,23 @@
 							<form class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<input type="hidden" name="temp">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span id="temp1" class="text-xs text-gray-500 dark:text-gray-400">&deg; Fahrenheit</span>
+									<span id="temp1" class="text-xs text-gray-400">&deg; Fahrenheit</span>
 									<input name="ed1" onKeyUp="convert(this.form,1);" onFocus="enterBox(this.form,1);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span id="temp2" class="text-xs text-gray-500 dark:text-gray-400">&deg; Celsius</span>
+									<span id="temp2" class="text-xs text-gray-400">&deg; Celsius</span>
 									<input name="ed2" onKeyUp="convert(this.form,2);" onFocus="enterBox(this.form,2);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span id="temp3" class="text-xs text-gray-500 dark:text-gray-400">Kelvin</span>
+									<span id="temp3" class="text-xs text-gray-400">Kelvin</span>
 									<input name="ed3" onKeyUp="convert(this.form,3);" onFocus="enterBox(this.form,3);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span id="temp4" class="text-xs text-gray-500 dark:text-gray-400">&deg; Rankine</span>
+									<span id="temp4" class="text-xs text-gray-400">&deg; Rankine</span>
 									<input name="ed4" onKeyUp="convert(this.form,4);" onFocus="enterBox(this.form,4);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span id="temp5" class="text-xs text-gray-500 dark:text-gray-400">&deg; R&eacute;aumur</span>
+									<span id="temp5" class="text-xs text-gray-400">&deg; R&eacute;aumur</span>
 									<input name="ed5" onKeyUp="convert(this.form,5);" onFocus="enterBox(this.form,5);" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 							</form>
@@ -1849,7 +1847,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="trigonometric" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1861,7 +1859,7 @@
 							</div>
 							<form onsubmit="return do_trigo()" class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Argument</span>
+									<span class="text-xs text-gray-400">Argument</span>
 									<div class="flex items-center justify-between gap-1.5">
 										<input id="arg" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 										<select id="deg" class="border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
@@ -1871,7 +1869,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Function</span>
+									<span class="text-xs text-gray-400">Function</span>
 									<select id="fun" class="border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 										<option selected value="sin">sine (sin)</option>
 										<option value="cos">cosine (cos)</option>
@@ -1888,7 +1886,7 @@
 									</select>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Result</span>
+									<span class="text-xs text-gray-400">Result</span>
 									<input id="trigonometric-result" type="text" disabled=true value="0" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 								</div>
 								<input type="submit" value="Calculate" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
@@ -1904,7 +1902,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-gradient" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1917,35 +1915,35 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<form id="details" class="grid grid-cols-1 gap-4">
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">CSS gradient</span>
+										<span class="text-xs text-gray-400">CSS gradient</span>
 										<textarea id="cssgradient" spellcheck="false"></textarea>
 									</div>
 									<div class="grid grid-cols-2 gap-4">
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												W
 											</span>
 											<input id="elementWidth" type="number" value="700" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-r-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-r-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												px
 											</span>
 										</div>
 										<div class="flex shadow-sm">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												H
 											</span>
 											<input id="elementHeight" type="number" value="53" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-											<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-r-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-r-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 												px
 											</span>
 										</div>
 										<div class="flex items-center">
 											<input checked name="inline-radio-group" id="singleDim" type="radio" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
-											<label for="singleDim" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Single pixel</label>
+											<label for="singleDim" class="select-none ms-2 text-xs text-gray-400">Single pixel</label>
 										</div>
 										<div class="flex items-center">
 											<input name="inline-radio-group" id="bothDim" type="radio" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
-											<label for="bothDim" class="select-none ms-2 text-xs text-gray-500 dark:text-gray-400">Full dimension</label>
+											<label for="bothDim" class="select-none ms-2 text-xs text-gray-400">Full dimension</label>
 										</div>
 									</div>
 									<input type="submit" value="Generate" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
@@ -1953,11 +1951,11 @@
 								<div id="bedebah" class="grid grid-cols-1 gap-4">
 									<p class="text-xs text-red-500" id="errors-result"></p>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Canvas render</span>
+										<span class="text-xs text-gray-400">Canvas render</span>
 										<div id="canvasContainer" class="block w-full overflow-x-auto ftools"></div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Image result<a href="#" id="warpImage" class="text-gray-900 dark:text-gray-50" data-alt="「 full dimension 」" data-status="actual" title="Click to change">「 single pixel 」</a></span>
+										<span class="text-xs text-gray-400">Image result<a href="#" id="warpImage" class="text-gray-900 dark:text-gray-50" data-alt="「 full dimension 」" data-status="actual" title="Click to change">「 single pixel 」</a></span>
 										<div id="imageContainer" class="h-auto overflow-x-auto ftools"></div>
 									</div>
 									<a href="#" id="imageDownload" class="text-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Download</a>
@@ -1974,7 +1972,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="color-scheme" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -1987,7 +1985,7 @@
 							<form id="codescheme" class="grid grid-cols-1 gap-4 pt-4 px-4">
 								<div class="grid grid-cols-3 gap-4">
 									<div class="flex shadow-sm col-span-2">
-										<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											#
 										</span>
 										<input type="text" name="hex" id="currentColor" value="5C5CFF" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
@@ -1995,7 +1993,7 @@
 									</div>
 									<input type="button" value="Set HEX" onclick="SetHex(document.getElementById('codescheme').hex.value);" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
 									<div class="flex shadow-sm col-span-2">
-										<span class="inline-flex items-center text-gray-500 dark:text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 											RGB
 										</span>
 										<input type="number" name="r" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
@@ -2103,7 +2101,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="css-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2115,11 +2113,11 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your CSS code here</span>
+									<span class="text-xs text-gray-400">Paste your CSS code here</span>
 									<textarea id="codecssbeautify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Indent</span>
+									<span class="text-xs text-gray-400">Indent</span>
 									<div class="grid grid-cols-3 gap-1.5">
 										<div class="flex items-center py-1.5">
 											<input checked name="distance-css-beautify" id="usetab" type="radio" value="usetab" onChange='rapihkancss()' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -2149,21 +2147,21 @@
 								</div>
 								<div class="grid grid-cols-3 gap-1.5">
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Opener</span>
+										<span class="text-xs text-gray-400">Opener</span>
 										<div class="flex items-center py-1.5">
 											<input checked name="openbrace-css-beautify" id="openbrace-end-of-line" type="radio" onChange='rapihkancss()' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											<label for="openbrace-end-of-line" class="select-none ms-2 text-xs">Above head</label>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">&ensp;</span>
+										<span class="text-xs text-gray-400">&ensp;</span>
 										<div class="flex items-center py-1.5">
 											<input name="openbrace-css-beautify" id="openbrace-separate-line" type="radio" onChange='rapihkancss()' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
 											<label for="openbrace-separate-line" class="select-none ms-2 text-xs">Under head</label>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Auto</span>
+										<span class="text-xs text-gray-400">Auto</span>
 										<div class="flex items-center py-1.5">
 											<input checked id="autosemicolon" type="checkbox" name="autosemicolon" onChange='rapihkancss()' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
 											<label for="autosemicolon" class="select-none ms-2 text-xs">Semicolon</label>
@@ -2171,7 +2169,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
+									<span class="text-xs text-gray-400">Output</span>
 									<textarea id="rescssbeautify" spellcheck="false" readonly></textarea>
 									<button id="kopi-cssbeautify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -2189,7 +2187,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="css-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2201,7 +2199,7 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your CSS code here</span>
+									<span class="text-xs text-gray-400">Paste your CSS code here</span>
 									<textarea id="codecssminify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="grid grid-cols-2 gap-1.5">
@@ -2215,7 +2213,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codecssminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Result length <span id="rescssminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Compression <span id="cssminifyresult" class="font-mono text-blue-500 dark:text-blue-300">0%</span></span>
+									<span class="text-xs text-gray-400">Source length <span id="codecssminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Result length <span id="rescssminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Compression <span id="cssminifyresult" class="font-mono text-blue-500 dark:text-blue-300">0%</span></span>
 									<textarea id="rescssminify" spellcheck="false" readonly></textarea>
 									<button id="kopi-cssminify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -2233,7 +2231,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="js-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2245,11 +2243,11 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your js code here</span>
+									<span class="text-xs text-gray-400">Paste your js code here</span>
 									<textarea id="codejsbeautify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Indent</span>
+									<span class="text-xs text-gray-400">Indent</span>
 									<div class="grid grid-cols-3 gap-1.5">
 										<div class="flex items-center py-1.5">
 											<input checked name="distance-js-beautify" id="jsusetab" type="radio" value="jsusetab" onChange='beautifyjs()' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -2278,7 +2276,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
+									<span class="text-xs text-gray-400">Output</span>
 									<textarea id="resjsbeautify" spellcheck="false" readonly></textarea>
 									<button id="kopi-jsbeautify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -2296,7 +2294,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="js-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2308,7 +2306,7 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your JS code here</span>
+									<span class="text-xs text-gray-400">Paste your JS code here</span>
 									<textarea id="codejsminify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="grid grid-cols-2 gap-1.5">
@@ -2322,7 +2320,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Source length <span id="codejsminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Result length <span id="resjsminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Compression <span id="jsminifyresult" class="font-mono text-blue-500 dark:text-blue-300">0%</span></span>
+									<span class="text-xs text-gray-400">Source length <span id="codejsminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Result length <span id="resjsminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Compression <span id="jsminifyresult" class="font-mono text-blue-500 dark:text-blue-300">0%</span></span>
 									<textarea id="resjsminify" spellcheck="false" readonly></textarea>
 									<button id="kopi-jsminify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -2340,7 +2338,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="html-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2352,11 +2350,11 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your HTML code here</span>
+									<span class="text-xs text-gray-400">Paste your HTML code here</span>
 									<textarea id="codehtmlbeautify" spellcheck="false" class="text-xs"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Indent</span>
+									<span class="text-xs text-gray-400">Indent</span>
 									<div class="grid grid-cols-3 gap-1.5">
 										<div class="flex items-center py-1.5">
 											<input checked name="distance-html-beautify" id="htmlusetab" type="radio" value="htmlusetab" onChange='beautifyHtml()' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
@@ -2385,7 +2383,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Output</span>
+									<span class="text-xs text-gray-400">Output</span>
 									<textarea id="reshtmlbeautify" spellcheck="false" readonly></textarea>
 									<button id="kopi-htmlbeautify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -2403,7 +2401,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="html-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2415,7 +2413,7 @@
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<span class="text-xs text-gray-500 dark:text-gray-400">Paste your HTML code here</span>
+									<span class="text-xs text-gray-400">Paste your HTML code here</span>
 									<textarea id="codehtmlminify" spellcheck="false" class="text-xs"></textarea>
 									<button id="kopi-htmlminify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
@@ -2434,7 +2432,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="escape" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2447,7 +2445,7 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full relative">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Text/HTML/JavaScript</span>
+										<span class="text-xs text-gray-400">Text/HTML/JavaScript</span>
 										<span onclick='escapeTxt();' class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Encode !</span>
 									</div>
 									<textarea id="codeescape" spellcheck="false" class="text-xs"></textarea>
@@ -2457,7 +2455,7 @@
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Escaped</span>
+										<span class="text-xs text-gray-400">Escaped</span>
 										<span onclick='unescapeTxt();' class="text-xs decoration-dashed decoration-blue-400 underline underline-offset-4 cursor-pointer">Decode !</span>
 									</div>									
 									<textarea id="resescape" spellcheck="false" class="text-xs"></textarea>
@@ -2466,7 +2464,7 @@
 									</button>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
-									<span class="text-xs text-gray-500 dark:text-gray-400">HTML</span>
+									<span class="text-xs text-gray-400">HTML</span>
 									<pre id="preescape" class="font-mono w-full bg-[#292A2C] rounded-lg p-3 text-xs overflow-x-auto select-all cursor-pointer ftools"></pre>
 								</div>
 							</div>
@@ -2481,7 +2479,7 @@
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
-								<div class="flex items-center gap-2.5">
+								<div class="flex items-center gap-2">
 									<button command="close" commandfor="password" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
 									</button>
@@ -2494,7 +2492,7 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-500 dark:text-gray-400">Panjang karakter</span>
+										<span class="text-xs text-gray-400">Panjang karakter</span>
 										<span id="pass_range" class="text-xs text-gray-900 dark:text-gray-50 font-mono">8</span>
 									</div>
 									<input id="pass_kar" oninput="passhit()" type="range" min="4" max="32" value="8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
@@ -2530,7 +2528,7 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center gap-2.5 px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="flex items-center gap-2 px-4 py-2 border-b border-gray-200 dark:border-white/10">
 								<button command="close" commandfor="cdn" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 									<i class="fa fa-arrow-left"></i>
 								</button>

@@ -293,6 +293,11 @@ cekData();
 
 document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
 	e.addEventListener("click", function() {
+		let title = document.getElementById(e.getAttribute("commandfor") + '-title').textContent;
+		if(e.getAttribute("commandfor") === "cdn"){
+			title = "CDN";
+		}
+		document.title = title + " | Bachors";
 		document.querySelector('html').style.overflow = 'hidden';
 		history.pushState('', document.title, window.location.pathname + '#' + e.getAttribute("commandfor"));
 		return false;
@@ -301,6 +306,7 @@ document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
 
 document.querySelectorAll('button[command="close"]').forEach(e=>{
 	e.addEventListener("click", function() {
+		document.title = "Ican | Bachors";
 		document.querySelector('html').style.overflowY = 'scroll';
 		document.querySelector('html').style.overflowX = 'hidden';
 		history.pushState('', document.title, window.location.pathname);
@@ -311,6 +317,12 @@ document.querySelectorAll('button[command="close"]').forEach(e=>{
 function openModalFromHash() {
   	const id = window.location.hash.slice(1);
   	if (!id) return;
+
+	let title = document.getElementById(id + '-title').textContent;
+	if(id === "cdn"){
+		title = "CDN";
+	}
+	document.title = title + " | Bachors";
 
   	const el = document.getElementById(id);
 	if(id === "privacy-policy"){
@@ -347,12 +359,10 @@ async function shareContent() {
 	
 	const id = window.location.hash.slice(1);
   	if (!id) return;
-	
-	const title = document.getElementById(id + '-title').textContent;
 
 	const shareData = {
-		title: title + ' | Bachors',
-		text: title,
+		title: document.title,
+		text: document.getElementById(id + '-title').textContent,
 		url: 'https://bachors.id/#' + id
 	};
 
