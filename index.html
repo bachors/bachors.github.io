@@ -812,7 +812,7 @@
 			<dialog id="emoji-art" aria-labelledby="emoji-art-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
 				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
-					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-2xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px">
 							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
 								<div class="flex items-center gap-2">
@@ -883,15 +883,15 @@
 												</div>
 											</div>
 										</div>
-										<div class="flex items-start gap-4 col-span-2 md:col-span-1">
-											<div class="flex flex-col gap-1.5" title="Hide Black/Transparent">
+										<div class="grid grid-cols-2 gap-4 md:gap-0 col-span-2 md:col-span-1">
+											<div class="flex flex-col gap-1.5">
 												<span class="text-xs text-gray-400">Black/Transparent</span>
 												<div class="my-1.5 flex items-center">
 													<input id="emoart-hide" type="checkbox" class="accent-gray-900 dark:accent-white w-4 h-4 border border-light rounded-xs">
 													<span class="select-none ms-2 text-xs">Hide</span>
 												</div>
 											</div>
-											<div class="flex flex-col gap-1.5 w-full">
+											<div class="flex flex-col gap-1.5">
 												<span class="text-xs text-gray-400">Background</span>
 												<div class="flex shadow-sm">
 													<span class="inline-flex items-center text-gray-400 font-mono border border-gray-200 dark:border-white/10 rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
