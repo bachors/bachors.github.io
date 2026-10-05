@@ -1,5 +1,5 @@
 function updateThemeIcon() {
-	document.getElementById("theme-icon").className = document.documentElement.classList.contains("dark") ? "fa fa-sun" : "fa fa-moon"
+	document.getElementById("theme-icon").className = document.documentElement.classList.contains("dark") ? "fa fa-moon" : "fa fa-sun"
 }
 
 function updateBg() {
