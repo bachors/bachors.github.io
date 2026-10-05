@@ -238,9 +238,10 @@
 							<p>JS Beautify</p>
 							<i class="absolute top-1.5 right-1.5 text-yellow-500 fa fa-fire"></i>
 						</button>
-						<button command="show-modal" commandfor="js-minify" onclick="setTimeout(greet, 200)" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+						<button command="show-modal" commandfor="js-minify" onclick="setTimeout(greet, 200)" class="relative cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><g fill="currentColor"><path d="M378.4 0H195.1l-9.3 9.3L57 138.1l-9.3 9.3v278.7a86 86 0 0 0 85.9 85.9h244.8a86 86 0 0 0 85.9-85.9V86a86 86 0 0 0-85.9-86m54.1 426.1a54 54 0 0 1-54 54.1h-245a54 54 0 0 1-54.1-54V160.5h83.7a45 45 0 0 0 45.1-45V31.7h170.1a54 54 0 0 1 54.1 54.1z"/><path d="M225.3 252c-5.7 0-9.9 4-9.9 10.6v50.8c0 11.4-5 15.6-12.6 15.6-3 0-6.1-1-8.3-2.5-3-2-5.2-3-7.6-3-5 0-8.8 3.7-8.8 8.5q0 3.8 2.7 6.9c3.8 4.3 12.7 7.7 21.3 7.7 21.2 0 33.3-12 33.3-34.6v-49.4c0-6.6-4.2-10.6-10-10.6m67.9 37.6-5-.7c-10.7-1.5-14.3-5-14.3-10.2 0-5.8 4.3-9.9 12.5-9.9 5.7 0 11.4 1.6 15.8 3.8q3 1.5 5.9 1.5c4.9 0 8.7-3.7 8.7-8.7q0-4.9-4.8-8a54 54 0 0 0-25.8-6.1c-20 0-32.7 11.3-32.7 28.2 0 16.3 10.3 25.2 29.2 27.8l4.9.6c11 1.5 14.2 5 14.2 10.3 0 6.4-5.2 11-15 11-6.8 0-12.3-1.8-19.9-6q-2.4-1.6-5.8-1.7c-5.2 0-9 4-9 8.8a10 10 0 0 0 4.8 8.5 55 55 0 0 0 29 7.8c24.1 0 36.3-12.3 36.3-29s-9.9-25.3-29-28"/></g></svg>
 							<p>JS Minify</p>
+							<i class="absolute top-1.5 right-1.5 text-yellow-500 fa fa-fire"></i>
 						</button>
 						<button command="show-modal" commandfor="html-beautify" onclick="setTimeout(greet, 200)" class="relative cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.5.5V0a.5.5 0 0 0-.5.54zm14 0 .5.04a.5.5 0 0 0-.5-.54zm-1 12 .16.47a.5.5 0 0 0 .34-.43zm-6 2-.16.47q.16.06.32 0zm-6-2-.5.04q.04.32.34.43zm3-9V3H4v.5zm0 3H4V7h.5zm6 0h.5V6h-.5zm0 3 .16.47.34-.11V9.5zm-3 1-.16.47.16.06.16-.06zm-3-1H4v.36l.34.11zM.5 1h14V0H.5zM14 .46l-1 12 1 .08 1-12zm-.66 11.57-6 2 .32.94 6-2zm-5.68 2-6-2-.32.94 6 2zM2 12.46l-1-12-1 .08 1 12zM11 3H4.5v1H11zm-7 .5v3h1v-3zM4.5 7h6V6h-6zm5.5-.5v3h1v-3zm.34 2.53-3 1 .32.94 3-1zm-2.68 1-3-1-.32.94 3 1zM5 9.5V8H4v1.5z" fill="currentColor"/></svg>
@@ -279,7 +280,7 @@
 								</button>
 							</nav>
 							<div id="skulpt" role="tabpanel" class="shadow-md rounded-b-2xl grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
-								<div class="border border-white/10 px-3 pt-1 pb-2 block w-full min-h-[10rem] max-h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-x-auto overflow-y-auto ftools">
+								<div class="border border-white/10 px-3 pt-1 pb-2 block w-full min-h-[10rem] max-h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-hidden hover:overflow-auto md:overflow-auto ftools">
 									<div id="py-canvas" class="w-full my-1" style="display:none"></div>
 									<pre id="py-output" class="text-xs font-mono w-full text-[#f8f8f2]" style="display:none"></pre>
 								</div>
@@ -303,7 +304,7 @@
 								<textarea id="interactive" spellcheck="false"></textarea>
 							</div>
 							<div id="frontend" role="tabpanel" class="bg-[#1e1f21] shadow-md rounded-b-2xl grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
-								<div class="border-t border-white/10 border-x border-white/10 block w-full h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-x-auto overflow-y-auto ftools">
+								<div class="border-t border-white/10 border-x border-white/10 block w-full h-[380px] bg-[#1e1f21] dark:bg-[#1e1f21] overflow-hidden hover:overflow-auto md:overflow-auto ftools">
 									<iframe id="htmlresult" class="w-full h-full bg-[#1e1f21]"></iframe>
 								</div>
 								<div class="border border-white/10 rounded-b-2xl overflow-hidden">
@@ -615,7 +616,7 @@
 									</button>
 									<h2 id="image-bw-title" class="text-sm font-medium">Image B&W</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -674,7 +675,7 @@
 									</button>
 									<h2 id="pdf-convert-title" class="text-sm font-medium">PDF Convert</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -692,11 +693,14 @@
 							<div id="pdfim-message" class="flex items-center text-xs justify-center mt-4" style="display:none">
 								loading ...
 							</div>
-							<i id="pdfim-download" onclick="pdfim_download()" class="mb-1.5 mt-4 mx-4 fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer text-end" style="display:none"></i>
-							<div id="pdfim-viewer" class="relative h-full mx-4" style="z-index:999;display:none;"></div>
-							<div class="relative grid grid-cols-1 p-4 overflow-y-auto ftools">								
-								<div id="pdfim-result" class="grid grid-cols-2 gap-2 md:grid-cols-3" style="display:none"></div>
+							<div id="pdfim-download" class="mb-1.5 mt-4 mx-4 relative flex items-center justify-between" style="display:none">
+								<span class="text-xs text-gray-400">PDF</span>
+								<button onclick='pdfim_download();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+									<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+								</button>
 							</div>
+							<div id="pdfim-viewer" class="relative h-full mx-4 mb-4" style="z-index:999;display:none;"></div>
+							<div id="pdfim-result" class="grid grid-cols-2 gap-2 md:grid-cols-3 p-4 overflow-y-auto ftools" style="display:none"></div>
 						</div>
 					</el-dialog-panel>
 				</div>
@@ -714,7 +718,7 @@
 									</button>
 									<h2 id="pixel-art-title" class="text-sm font-medium">Pixel Art</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -747,7 +751,9 @@
 								<div class="flex flex-col gap-1.5 w-full relative">
 									<div class="relative flex items-center justify-between">
 										<span class="text-xs text-gray-400">SVG</span>
-										<i onclick="pxcss_download()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+										<button onclick='pxcss_download();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+											<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+										</button>
 									</div>
 									<textarea id="pxcss-output2" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxcss2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -772,7 +778,7 @@
 									</button>
 									<h2 id="image-compress-title" class="text-sm font-medium">Image Compress</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -817,7 +823,7 @@
 									</button>
 									<h2 id="emoji-art-title" class="text-sm font-medium">Emoji Art</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -881,7 +887,7 @@
 										</div>
 										<div class="flex items-start gap-4 col-span-2 md:col-span-1">
 											<div class="flex flex-col gap-1.5" title="Hide Black/Transparent">
-												<span class="text-xs text-gray-400">B/T</span>
+												<span class="text-xs text-gray-400">Black/Transparent</span>
 												<div class="my-1.5 flex items-center">
 													<input id="emoart-hide" type="checkbox" class="accent-gray-900 dark:accent-white w-4 h-4 border border-light rounded-xs">
 													<span class="select-none ms-2 text-xs">Hide</span>
@@ -903,7 +909,9 @@
 								<div class="relative flex items-center justify-between">
 									<span class="text-xs text-gray-400">Result</span>
 									<span id="emoart-message" class="font-mono text-xs">0%</span>
-									<i id="emoart-download" onclick="emoart_downloadIt()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0" style="display:none"></i>
+									<button id="emoart-download" onclick='emoart_downloadIt();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10" style="display:none">
+										<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+									</button>
 								</div>
 								<div id="emoart-box" class="relative flex-none overflow-x-auto overflow-y-hidden ftools">
 									<canvas id="emoart-result"></canvas>
@@ -926,7 +934,7 @@
 									</button>
 									<h2 id="pixel-paint-title" class="text-sm font-medium">Pixel Paint</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1026,7 +1034,9 @@
 								<div id="pxpaint-cod2" class="flex flex-col gap-1.5 w-full relative" style="display:none">
 									<div class="flex items-center justify-between">
 										<span class="relative text-xs text-gray-400">SVG</span>
-										<i onclick="pxpaint_download()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+										<button onclick='pxpaint_download();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+											<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+										</button>
 									</div>
 									<textarea id="pxpaint-output2" spellcheck="false" readonly></textarea>
 									<button id="kopi-pxpaint2" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -1051,7 +1061,7 @@
 									</button>
 									<h2 id="low-poly-title" class="text-sm font-medium">Low-Poly</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>							
@@ -1135,7 +1145,9 @@
 									<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
 										<div class="relative flex items-center justify-between">
 											<span class="text-xs text-gray-400">Result</span>
-											<a href="#" id="poly-download" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
+											<a href="#" id="poly-download" class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10 cursor-pointer">
+												<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+											</a>
 										</div>
 										<div class="h-full w-full">
 											<svg id="poly-lw" class="border border-gray-200 dark:border-white/10 block w-full h-auto" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -1168,7 +1180,9 @@
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="relative flex items-center justify-between">
 											<span class="text-xs text-gray-400">Result</span>
-											<a href="#" @click="lowpolydownloadSVG" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></a>
+											<a href="#" @click="lowpolydownloadSVG" class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10 cursor-pointer">
+												<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+											</a>
 										</div>
 										<svg id="low-polygon" v-bind="sizeSVG" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width=".5" class="border border-gray-200 dark:border-white/10 w-full h-auto">
 											<script type="text/x.poly-settings">{{ JSON.stringify(options) }}</script>
@@ -1194,7 +1208,7 @@
 									</button>
 									<h2 id="ascii-art-title" class="text-sm font-medium">Ascii Art</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>							
@@ -1248,8 +1262,12 @@
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Result</span>
 										<div class="relative flex items-center gap-4">
-											<i id="ascii-kopi" class="fa fa-copy text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-8"></i>
-											<i id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+											<button id="ascii-kopi" class="absolute right-24 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+												<i class="fa fa-copy"></i>Copy
+											</button>
+											<button id="ascii-dl" onclick="sosot(document.getElementById('ascii-pre'),'asciiart')" class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+												<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+											</button>
 										</div>
 									</div>
 									<div class="p-1 bg-gray-100 dark:bg-gray-300 overflow-y-hidden overflow-x-auto ftools">
@@ -1274,7 +1292,7 @@
 									</button>
 									<h2 id="comment-title" class="text-sm font-medium">Comment</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1308,7 +1326,7 @@
 									</button>
 									<h2 id="svg-polygon-title" class="text-sm font-medium">SVG Polygon</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1361,7 +1379,7 @@
 									</button>
 									<h2 id="noise-pattern-title" class="text-sm font-medium">Noise Pattern</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1404,7 +1422,9 @@
 									<div class="grid grid-cols-4">
 										<div class="relative flex items-center justify-between col-span-4">
 											<span class="text-xs text-gray-400">Result</span>
-											<i onclick="svggnoise_generate()" class="fa fa-rotate text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+											<button onclick='svggnoise_generate();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+												<i class="fa fa-shuffle"></i>Regenerate
+											</button>
 										</div>
 										<div class="flex items-center mt-1.5 col-span-3">
 											<svg id="svgg-noise-res" class="mr-none md:mr-12 w-full bg-white border-2 border-dashed border-gray-300 dark:border-blue-100/20" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -1435,7 +1455,7 @@
 									</button>
 									<h2 id="svg-barcode-title" class="text-sm font-medium">SVG Barcode</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1476,7 +1496,7 @@
 									</button>
 									<h2 id="qr-code-title" class="text-sm font-medium">QR Code</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1532,7 +1552,9 @@
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
 										<div class="relative flex items-center justify-between">
 											<span class="text-xs text-gray-400">Output</span>
-											<i onclick="qrcod_download()" class="fa fa-arrow-right-to-bracket rotate-90 text-sm text-gray-400 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 cursor-pointer absolute right-0"></i>
+											<button onclick='qrcod_download();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+												<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+											</button>
 										</div>
 										<div class="p-1 bg-gray-100 dark:bg-gray-300 max-h-[328px] overflow-auto ftools">
 											<canvas id="qrious"></canvas>
@@ -1594,7 +1616,7 @@
 									</button>
 									<h2 id="css-triangle-title" class="text-sm font-medium">CSS Triangle</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1680,7 +1702,7 @@
 									</button>
 									<h2 id="image-base64-title" class="text-sm font-medium">Image Base64</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>							
@@ -1714,7 +1736,7 @@
 									</button>
 									<h2 id="number-system-title" class="text-sm font-medium">Number System</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1753,7 +1775,7 @@
 									</button>
 									<h2 id="code-snippet-title" class="text-sm font-medium">Code Snippet</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1809,7 +1831,7 @@
 									</button>
 									<h2 id="temperature-title" class="text-sm font-medium">Temperature</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1853,7 +1875,7 @@
 									</button>
 									<h2 id="trigonometric-title" class="text-sm font-medium">Trigonometric</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1908,7 +1930,7 @@
 									</button>
 									<h2 id="image-gradient-title" class="text-sm font-medium">Image Gradient</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -1978,7 +2000,7 @@
 									</button>
 									<h2 id="color-scheme-title" class="text-sm font-medium">Color Scheme</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2107,7 +2129,7 @@
 									</button>
 									<h2 id="css-beautify-title" class="text-sm font-medium">CSS Beautify</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2193,7 +2215,7 @@
 									</button>
 									<h2 id="css-minify-title" class="text-sm font-medium">CSS Minify</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2237,7 +2259,7 @@
 									</button>
 									<h2 id="js-beautify-title" class="text-sm font-medium">JS Beautify</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2300,7 +2322,7 @@
 									</button>
 									<h2 id="js-minify-title" class="text-sm font-medium">JS Minify</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2344,7 +2366,7 @@
 									</button>
 									<h2 id="html-beautify-title" class="text-sm font-medium">HTML Beautify</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2407,7 +2429,7 @@
 									</button>
 									<h2 id="html-minify-title" class="text-sm font-medium">HTML Minify</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
@@ -2438,15 +2460,15 @@
 									</button>
 									<h2 id="escape-title" class="text-sm font-medium">Escape</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<div class="flex items-center justify-between">
+									<div class="relative flex items-center justify-between">
 										<span class="text-xs text-gray-400">Text/HTML/JavaScript</span>
-										<span onclick='escapeTxt();' class="text-xs hover:text-gray-400 cursor-pointer decoration-gray-200 dark:decoration-white/10 underline underline-offset-4">Encode<i class="ml-1.5 fa fa-arrow-down"></i></span>
+										<button onclick='escapeTxt();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10"><i class="fa fa-gears"></i>Encode</button>
 									</div>
 									<textarea id="codeescape" spellcheck="false" class="text-xs"></textarea>
 									<button id="kopi-codeescape" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -2454,9 +2476,9 @@
 									</button>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full relative">
-									<div class="flex items-center justify-between">
+									<div class="relative flex items-center justify-between">
 										<span class="text-xs text-gray-400">Escaped</span>
-										<span onclick='unescapeTxt();' class="text-xs hover:text-gray-400 cursor-pointer decoration-gray-200 dark:decoration-white/10 underline underline-offset-4">Decode<i class="ml-1.5 fa fa-arrow-up"></i></span>
+										<button onclick='unescapeTxt();' class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10"><i class="fa fa-screwdriver-wrench"></i>Decode</button>
 									</div>									
 									<textarea id="resescape" spellcheck="false" class="text-xs"></textarea>
 									<button id="kopi-resescape" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
@@ -2485,7 +2507,7 @@
 									</button>
 									<h2 id="password-title" class="text-sm font-medium">Password</h2>
 								</div>
-								<button onclick="shareContent()" class="text-xs px-2.5 py-1.5 flex items-center justify-center gap-1.5 rounded-full bg-gray-100 dark:bg-white/10">
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
