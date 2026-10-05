@@ -793,15 +793,26 @@
 										<span class="text-xs text-gray-400">Quality</span>
 										<span id="imcom-q" class="font-mono text-xs">50%</span>
 									</div>
-									<input id="imcom-qr" onchange="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="imcom-qr" oninput="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Preview</span>
 										<span id="imcom-size" class="font-mono text-xs"></span>
 									</div>
-									<div id="imcom-preview" class="p-1 flex items-center justify-center bg-gray-100 dark:bg-gray-300"></div>
+									<div class="flex items-center justify-center p-1 bg-gray-100 dark:bg-gray-300">
+										<div class="relative flex flex-col">
+											<img id="imcom-preview" src=""/>
+											<div id="imcom-after" class="absolute top-0 left-0 h-full z-20 border-r border-blue-400 overflow-hidden" style="width: 100%;">
+												<img id="imcom-preview2" src="" class="absolute top-0 left-0 w-full h-full object-cover object-left">
+												<span id="imcom-lb" class="absolute top-2 left-2 text-xs text-blue-400 bg-white/20 py-1.5 px-2.5" style="display:none">After</span>
+											</div>
+											<span id="imcom-rb" class="absolute top-2 right-2 text-xs text-blue-400 bg-gray-100/20 py-1.5 px-2.5 z-10" style="display:none">Before</span>
+											<input onchange="document.getElementById('imcom-lb').style.display='none',document.getElementById('imcom-rb').style.display='none';" oninput="document.getElementById('imcom-after').style.width=this.value+'%',document.getElementById('imcom-lb').style.display='',document.getElementById('imcom-rb').style.display='';" type="range" min="0" max="100" step="1" value="100" class="absolute -bottom-3 -left-[4px] accent-blue-400 h-2 bg-transparent dark:bg-transparent rounded-full appearance-none cursor-pointer z-30" style="width:calc(100% + 8px)">
+										</div>
+									</div>
 								</div>
+								<div></div>
 								<button id="imcom-download" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Download !</button>
 							</div>
 						</div>

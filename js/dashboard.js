@@ -318,11 +318,13 @@ function openModalFromHash() {
   	const id = window.location.hash.slice(1);
   	if (!id) return;
 
-	let title = document.getElementById(id + '-title').textContent;
-	if(id === "cdn"){
-		title = "CDN";
+	if(document.getElementById(id + '-title')){
+		let title = document.getElementById(id + '-title').textContent;
+		if(id === "cdn"){
+			title = "CDN";
+		}
+		document.title = title + " | Bachors";
 	}
-	document.title = title + " | Bachors";
 
   	const el = document.getElementById(id);
 	if(id === "privacy-policy"){
