@@ -216,9 +216,10 @@
 							<svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 8.5v-1a1 1 0 0 0-1-1h-10a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1m0-4h-4a2 2 0 1 0 0 4h4m0-4a2 2 0 1 1 0 4m-9-6v-3a3 3 0 0 1 6 0v3m2.5 4h1m-3 0h1m-3 0h1" stroke="currentColor"/></svg>
 							<p>Password</p>
 						</button>
-						<button command="show-modal" commandfor="comment" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+						<button command="show-modal" commandfor="comment" class="relative cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.1 502.1" xml:space="preserve"><path d="M39.6 289v-30h30.1v-.2h53V319h37.2V161.6h-30.1v-30.4H99.7v-29.7H62.6v30H32.5v30.2h-30V319h37.1zm0-90.2v-29.9h30v-30.2h23v29.8h30v53.1h-30v.2h-53zm169.8 120h90.2V289h30.1v-67.3h-30v-22.8h30v-67.3h-30v-30H172.2V319h37.1m0-150v-30.1h83.1v52.9h-83.1zm0 90.2V229h83.1v52.9h-83.1zm162.7 30h-29.9V131.5h30v-30.1h97.2v30h30.2V169h-37.3v-30.2h-83.1v113h.3v30.1h82.8v-30.1h37.3V289h-30.2v30h-97.2zM33.5 333.6v33.5H0v-33.5zm0 33.5h33.4v33.4H33.5zm67-33.5v33.5H66.8v-33.5zm0 33.5h33.4v33.4h-33.5zm66.9-33.5v33.5h-33.5v-33.5zm0 33.5h33.4v33.4h-33.4zm67-33.5v33.5h-33.6v-33.5zm0 33.5h33.4v33.4h-33.5zm66.9-33.5v33.5h-33.5v-33.5zm0 33.5h33.4v33.4h-33.4zm66.9-33.5v33.5h-33.5v-33.5zm0 33.5h33.5v33.4h-33.5zm67-33.5v33.5h-33.5v-33.5zm66.9 0v33.5h-33.5v-33.5zm-67 33.5h33.5v33.4h-33.5z"/></svg>
 							<p>Comment</p>
+							<i class="absolute top-1.5 right-1.5 text-yellow-500 fa fa-fire"></i>
 						</button>
 						<button command="show-modal" commandfor="code-snippet" onclick="setTimeout(greet, 200)" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m7 8-4 3.7L7 16m10-8 4 3.7-4 4.3M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1341,8 +1342,37 @@
 										<input id="huge-size" oninput="huge_wtf()" type="range" min="0" max="8" step="1" value="4" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 								</div>
-								<div class="bg-[#131313] overflow-y-auto overflow-x-auto ftools">
-									<pre id="huge-res" class="p-3 select-all font-mono bg-[#131313] text-xs text-gray-400"></pre>
+								<div class="flex items-start gap-4">
+									<div class="flex flex-col gap-1.5 w-36">
+										<span class="text-xs text-gray-400">Background</span>
+										<div class="flex shadow-sm">
+											<input type="text" id="huge-hex1" value="#131313" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<input type="color" id="huge-cpx1" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#131313" title="Choose your color">
+										</div>
+									</div>
+									<div class="flex flex-col gap-1.5 w-36">
+										<span class="text-xs text-gray-400">Color</span>
+										<div class="flex shadow-sm">
+											<input type="text" id="huge-hex2" value="#99a1af" spellcheck="false" class="inline-flex items-center font-mono border border-gray-200 dark:border-white/10 focus:outline-none rounded-l-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+											<input type="color" id="huge-cpx2" class="h-auto w-14 block border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#99a1af" title="Choose your color">
+										</div>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<div class="flex items-center justify-between">
+										<span class="text-xs text-gray-400">Result</span>
+										<div class="relative flex items-center gap-4">
+											<button id="huge-kopi" class="absolute right-24 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+												<i class="fa fa-copy"></i>Copy
+											</button>
+											<button onclick="sosot(document.getElementById('huge-res'),'comment')" class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/10">
+												<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+											</button>
+										</div>
+									</div>
+									<div id="huge-box" class="overflow-y-hidden overflow-x-auto ftools" style="background:#131313;">
+										<pre id="huge-res" class="overflow-hidden p-3 font-mono text-xs" style="display:inline-block;background:#131313;color:#99a1af"></pre>
+									</div>
 								</div>
 							</div>
 						</div>
