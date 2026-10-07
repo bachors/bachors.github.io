@@ -1779,19 +1779,23 @@
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-400">Binary</span>
-									<input id="bina" onkeyup="bikonpret(this.value)" onkeypress="return bncheck(event,bina)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<textarea id="bina" onkeyup="bikonpret(this.value)" onkeypress="return bncheck(event,bina)" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-400">Decimal</span>
-									<input id="desi" onkeyup="dikonpret()" onkeypress="return dncheck(event,desi)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<textarea id="desi" onkeyup="dikonpret()" onkeypress="return dncheck(event,desi)" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-400">Octal</span>
-									<input id="octo" onkeyup="oikonpret(this.value)" onkeypress="return oncheck(event,octo)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<textarea id="octo" onkeyup="oikonpret(this.value)" onkeypress="return oncheck(event,octo)" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-400">Hexadecimal</span>
-									<input id="hade" onkeyup="hikonpret(this.value)" onkeypress="return hncheck(event)" type="text" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<textarea id="hade" onkeyup="hikonpret(this.value)" onkeypress="return hncheck(event)" spellcheck="false" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5"></textarea>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-xs text-gray-400">Text</span>
+									<textarea id="sytx" oninput="txkonpret(this.value)" spellcheck="false" class="font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5"></textarea>
 								</div>
 							</div>
 						</div>
