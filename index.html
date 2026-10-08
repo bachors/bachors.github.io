@@ -56,8 +56,9 @@
 						<i class="fa fa-ellipsis-vertical"></i>
 					</div>
 					<div class="bg-white dark:bg-[#1e1f21] grid grid-cols-1 shadow-md rounded-2xl overflow-hidden">
-						<div class="overflow-hidden">
-							<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/11297748/pexels-photo-11297748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+						<div class="relative overflow-hidden">
+							<img alt="Placeholder" class="absolute top-0 w-full max-w-full h-[10rem] object-cover hover:opacity-0" src="https://images.pexels.com/photos/11297748/pexels-photo-11297748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+							<img class="w-full max-w-full h-[10rem] object-cover" src="img/ss.gif">
 							<div class="flex items-center gap-4 p-4">
 								<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="0 -2 159 159" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M81.02 108.4c-8.01-.18-14.16-1.35-20.03-3.92a23.6 23.6 0 0 1-10.63-9.07c-.95-1.49-1.7-3.26-.17-4.6 1.7-1.5 3.38-.52 4.7.94 7.85 8.76 18.06 10.75 28.97 9.14 9.18-1.36 16.13-6.57 20.14-15.23.48-1.01.79-2.32 1.6-2.9 1.15-.83 2.88-1.76 4.03-1.44 1.17.33 2.73 2.1 2.73 3.24a12 12 0 0 1-1.68 6.32c-7.35 11.23-17.76 17.22-29.66 17.52m20.11-55c.48-2.57.72-4.46 1.2-6.28.57-2.23 1.94-3.85 4.34-4.13 2.44-.3 4.37.8 5.8 2.72 2.58 3.47 2.3 12.37-.45 15.68-2.47 2.98-6.98 2.85-8.72-.6-1.22-2.41-1.58-5.26-2.17-7.4m-46.25.13c-.67 2.58-.94 4.75-1.8 6.66-1.62 3.59-5.66 4.01-7.83.77-2.89-4.31-3.1-9.23-1.42-13.94 1.33-3.76 6.26-4.12 8.38-.67 1.37 2.21 1.88 4.95 2.67 7.18" fill="currentColor"/><path d="M2.82 55.97c-7 27.56-.87 51.86 18.26 72.25q.75.8 1.51 1.56c10.28 10.28 23.08 16.62 33.22 21.04 4.35 1.9 26.68 4.2 32.73 3.3 35.9-5.36 59.54-25.6 67.77-59.5a87 87 0 0 0 2.33-20.25c.04-16.07-6.72-34.75-20.68-48.74a279 279 0 0 1-4.25-3.62c-3-2.58-6.1-5.25-9.35-7.53C99.56-2.97 73.8-3.07 47.78 6.18 24.23 14.57 9.1 31.33 2.82 55.99m45.06-41.53C70.71 4.97 93.61 3.3 115.95 17.5c4.08 2.6 14.97 11.4 16.68 12.73l.12.08.09.1c8.71 9.24 18.69 26.14 18.47 43.5a89 89 0 0 1-3 22c-5.67 20.62-19.23 35.65-41.46 45.93-22.6 10.82-55.02-.12-63.64-5.81a101 101 0 0 1-24.65-23.97C7.92 96.98 5.53 75.33 11.25 55.54a64.2 64.2 0 0 1 36.63-41.1" fill="currentColor"/></svg>
 								<div class="flex flex-col items-start">
@@ -809,7 +810,7 @@
 												<span id="imcom-lb" class="absolute top-2 left-2 text-xs text-white bg-gray-600 shadow-md py-1.5 px-2.5" style="display:none">After</span>
 											</div>
 											<span id="imcom-rb" class="absolute top-3 right-3 text-xs text-white bg-gray-600 shadow-md py-1.5 px-2.5 z-10" style="display:none">Before</span>
-											<input onchange="document.getElementById('imcom-lb').style.display='none',document.getElementById('imcom-rb').style.display='none';" oninput="document.getElementById('imcom-after').style.width=this.value+'%',document.getElementById('imcom-lb').style.display='',document.getElementById('imcom-rb').style.display='';" type="range" min="0" max="100" step="1" value="100" class="absolute top-1/2 -translate-y-1/2 -left-[4px] accent-gray-500 dark:accent-gray-500 h-2 bg-transparent dark:bg-transparent rounded-full appearance-none cursor-pointer z-30" style="width:calc(100% + 8px)">
+											<input onchange="document.getElementById('imcom-lb').style.display='none',document.getElementById('imcom-rb').style.display='none';" oninput="document.getElementById('imcom-after').style.width=this.value+'%',document.getElementById('imcom-lb').style.display='',document.getElementById('imcom-rb').style.display='';" type="range" min="0" max="100" step="1" value="100" class="absolute top-1/2 -translate-y-1/2 -left-[4px] accent-gray-500/80 h-2 bg-transparent dark:bg-transparent rounded-full appearance-none cursor-pointer z-30" style="width:calc(100% + 8px)">
 										</div>
 									</div>
 								</div>
@@ -1309,21 +1310,21 @@
 								<div class="flex items-center gap-4">
 									<div class="flex flex-col gap-1.5">
 										<span class="text-xs text-gray-400">Sign</span>
-										<input oninput="hugesign=this.value,huge_wtf();" type="text" value="//" maxlength="4" class="w-16 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<input oninput="hugesign=this.value,huge_wtf();" type="text" value="//" maxlength="4" spellcheck="false" class="w-16 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5">
 										<span class="text-xs text-gray-400">Space</span>
-										<input oninput="hugespace=(this.value==='')?' ':this.value,huge_wtf();" type="text" value="." maxlength="1" class="w-16 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<input oninput="hugespace=(this.value==='')?' ':this.value,huge_wtf();" spellcheck="false" type="text" value="." maxlength="1" class="w-16 font-mono border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-400">Text</span>
-										<input id="huge-comment" oninput="huge_wtf()" type="text" value="BACHORS" class="border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<input id="huge-comment" oninput="huge_wtf()" type="text" value="BACHORS" spellcheck="false" class="border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
 									</div>
 								</div>
 								<div class="flex items-start gap-4">
 									<div class="flex flex-col gap-1.5">
 										<span class="text-xs text-gray-400">Font family</span>
-										<select oninput="hugefont=this.value,huge_wtf(),setTimeout(huge_wtf, 100);" size="8" class="w-36 border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5 ftools">
+										<select oninput="hugefont=this.value;huge_wtf();document.getElementById('huge-comment').style.fontFamily=this.value;setTimeout(huge_wtf, 100);" size="2" class="h-36 w-36 border border-gray-200 dark:border-white/10 shadow-sm focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5 ftools">
 											<option selected value="Roboto">Roboto</option>
 											<option value="Fontdiner Swanky">Fontdiner Swanky</option>
 											<option value="Eater">Eater</option>
