@@ -274,8 +274,7 @@ function formatTime(t) {
 	return 0 == (a %= 12) && (a = 12), `${String(a).padStart(2,"0")}:${String(e).padStart(2,"0")} ${s}`
 }
 
-function cekData(){	
-	alert(localStorage.tanggal);
+function cekData(){
 	const e = new Date,
 		  s = `${String(e.getDate()).padStart(2,"0")}/${String(e.getMonth()+1).padStart(2,"0")}/${String(e.getFullYear())}`,
 		  w = e.getHours();
