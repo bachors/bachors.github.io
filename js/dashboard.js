@@ -248,7 +248,7 @@ function youtube() {
 	}
 }
 
-async function fetchData(s) {
+async function fetchData() {
 	try {
 		let t = await fetch("https://script.google.com/macros/s/AKfycbxWqv8sfrNtuqkJ281wRBkiftm_6e7zcAe-oTKzrWs3grLG858sBsYQ2_cpJhBxnHZuQQ/exec", {
 			method: "POST",
@@ -262,7 +262,7 @@ async function fetchData(s) {
 		if(jam === 25){
 			jam = 1;
 		}
-		localStorage.tanggal = s;
+		localStorage.tanggal = a.data.today.date_range;
 		localStorage.jam = jam;
 		localStorage.google = JSON.stringify(a);
 		renderCards(a.data, a);
@@ -275,17 +275,18 @@ function formatTime(t) {
 }
 
 function cekData(){	
+	alert(localStorage.tanggal);
 	const e = new Date,
 		  s = `${String(e.getDate()).padStart(2,"0")}/${String(e.getMonth()+1).padStart(2,"0")}/${String(e.getFullYear())}`,
 		  w = e.getHours();
 	if(localStorage.tanggal === s){
 		if((w - localStorage.jam) >= 4){
-			fetchData(s);
+			fetchData();
 		}else{
 			renderCards(JSON.parse(localStorage.google).data, JSON.parse(localStorage.google));
 		}
 	}else{
-		fetchData(s);
+		fetchData();
 	}
 }
 
