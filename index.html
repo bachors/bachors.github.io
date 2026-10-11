@@ -637,7 +637,7 @@
 											<span class="text-xs">Invert</span>									
 										</div>
 									</div>
-									<input id="bwfil-trs" oninput="bwfil_trs=this.value,bwfil_main()" type="range" min="0" max="250" step="0.5" value="100" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="bwfil-trs" oninput="bwfil_trs=this.value,bwfil_main()" type="range" min="0" max="250" step="0.5" value="100" class="mt-2.5 mb-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									<input id="bwfil-trs2" oninput="bwfil_trs2=this.value,bwfil_main()" type="range" min="0" max="250" step="0.5" value="250" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<img id="bwfil-preview" class="w-full border border-gray-200 dark:border-white/10">
@@ -780,7 +780,7 @@
 										<span class="text-xs text-gray-400">Quality</span>
 										<span id="imcom-q" class="font-mono text-xs">50%</span>
 									</div>
-									<input id="imcom-qr" oninput="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="imcom-qr" oninput="document.getElementById('imcom-q').innerText = this.value+'%',imcom_main();" type="range" min="0" max="100" step="1" value="50" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
@@ -847,7 +847,7 @@
 												<span class="text-xs text-gray-400">Emoji size</span>
 												<span id="emoart-size" class="font-mono text-xs">12px</span>
 											</div>
-											<input id="emoart-sizer" oninput="document.getElementById('emoart-size').innerText=this.value+'px'" type="range" min="1" step="1" max="50" value="12" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input id="emoart-sizer" oninput="document.getElementById('emoart-size').innerText=this.value+'px'" type="range" min="1" step="1" max="50" value="12" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
@@ -861,7 +861,7 @@
 												<span class="text-xs text-gray-400">Allowed empty space</span>
 												<span id="emoart-space" class="font-mono text-xs">80%</span>
 											</div>
-											<input id="emoart-spacer" oninput="document.getElementById('emoart-space').innerText=(this.value*100).toFixed(0)+'%'" type="range" min=".4" step=".02" max="1" value=".8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input id="emoart-spacer" oninput="document.getElementById('emoart-space').innerText=(this.value*100).toFixed(0)+'%'" type="range" min=".4" step=".02" max="1" value=".8" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
 											<span class="text-xs text-gray-400">Display mode</span>
@@ -949,7 +949,7 @@
 									<input id="pxpaint-pixi" type="range" min="8" max="12" step="1" value="12" class="accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									<input id="pxpaint-pix" type="text" value="12" class="font-mono border-none focus:outline-none rounded-md w-10 bg-gray-100 dark:bg-[#131313] text-center py-1.5">
 								</div>
-								<div class="flex flex-col gap-1.5 w-full">
+								<div class="flex flex-col gap-1.5 w-full mt-1">
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Board</span>
 										<div class="flex items-center gap-1.5">
@@ -1094,7 +1094,7 @@
 											<span class="text-xs text-gray-400">Edge bias</span>
 											<span id="poly-edge" class="font-mono text-xs">1.00</span>
 										</div>
-										<input id="poly-redge" type="range" min="0" max="1" step="0.05" value="1.00" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input id="poly-redge" type="range" min="0" max="1" step="0.05" value="1.00" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<div class="flex items-center justify-between">
@@ -1108,7 +1108,7 @@
 											<span class="text-xs text-gray-400">Stroke width</span>
 											<span id="poly-strok" class="font-mono text-xs">0.5</span>
 										</div>
-										<input id="poly-rstrok" type="range" min="0" max="2" step="0.1" value="0.5" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input id="poly-rstrok" type="range" min="0" max="2" step="0.1" value="0.5" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5">
 										<span class="text-xs text-gray-400">Color mode</span>										
@@ -1221,11 +1221,11 @@
 								<div class="grid grid-cols-2 gap-4">
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-400">Width (chars)</span>
-										<input id="ascii-w" type="range" min="1" max="14" step="1" value="3" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input id="ascii-w" type="range" min="1" max="14" step="1" value="3" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-400">Detail</span>
-										<input id="ascii-q" type="range" min="1" max="10" step="1" value="4" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer" style="direction:rtl;">
+										<input id="ascii-q" type="range" min="1" max="10" step="1" value="4" class="my-2.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer" style="direction:rtl;">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-400">Mode</span>
@@ -1606,7 +1606,7 @@
 										</div>
 										<input id="svgg-barcode-pd" oninput="document.getElementById('svgg-barcode-pds').textContent=this.value;svgggenerateBarcode()" type="range" min="0" max="25" step="1" value="10" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
-									<div class="flex items-end justify-end my-1.5">
+									<div class="flex items-end justify-end mt-auto">
 										<input id="svgg-barcode-st" checked type="checkbox" oninput="(this.checked)?document.getElementById('svgg-barcode-tb').style.display='':document.getElementById('svgg-barcode-tb').style.display='none';svgggenerateBarcode()" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
 										<label class="select-none ms-2 text-xs">Show text</label>
 									</div>
@@ -1718,7 +1718,7 @@
 											<span class="text-xs text-gray-400">Level</span>
 											<span id="qrcod-level" class="text-xs font-mono">L</span>
 										</div>
-										<input oninput="qrcod_setLevel(this)" type="range" min="0" max="3" step="1" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input oninput="qrcod_setLevel(this)" type="range" min="0" max="3" step="1" value="0" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-400">Padding</span>
@@ -1740,7 +1740,7 @@
 											<span class="text-xs text-gray-400">Alpha</span>
 											<span id="qrcod-alp" class="text-xs font-mono">1</span>
 										</div>
-										<input oninput="qrcod_setAlphabg(this),document.getElementById('qrcod-alp').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input oninput="qrcod_setAlphabg(this),document.getElementById('qrcod-alp').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2">
 										<span class="text-xs text-gray-400">Color</span>
@@ -1754,7 +1754,7 @@
 											<span class="text-xs text-gray-400">Alpha</span>
 											<span id="qrcod-alp2" class="text-xs font-mono">1</span>
 										</div>
-										<input oninput="qrcod_setAlphacolor(this),document.getElementById('qrcod-alp2').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input oninput="qrcod_setAlphacolor(this),document.getElementById('qrcod-alp2').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-4">
 										<div class="relative flex items-center justify-between">
@@ -1830,7 +1830,7 @@
 							<div class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-xs text-gray-400">Size</span>
-									<input name="size" type="range" min="0" max="400" step="any" value="200" class="mt-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input name="size" type="range" min="0" max="400" step="any" value="200" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
@@ -1850,7 +1850,7 @@
 											</div>
 										</div>
 									</div>
-									<input id="csstri-height" name="height" type="range" min="0" max="100" step="any" value="50" class="mt-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="csstri-height" name="height" type="range" min="0" max="100" step="any" value="50" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex flex-col gap-1.5 w-full">									
 									<div class="flex items-center justify-between">
@@ -1860,7 +1860,7 @@
 											<label for="csstri_iso" class="select-none ms-2 text-xs">isosceles</label>
 										</div>
 									</div>
-									<input id="csstri-angle" name="angle" type="range" min="-100" max="100" step="any" value="0" class="mt-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									<input id="csstri-angle" name="angle" type="range" min="-100" max="100" step="any" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex items-center justify-between">
 									<div class="flex items-start gap-3">
@@ -2172,11 +2172,11 @@
 										</div>
 										<div class="flex items-center">
 											<input checked name="inline-radio-group" id="singleDim" type="radio" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
-											<label for="singleDim" class="select-none ms-2 text-xs text-gray-400">Single pixel</label>
+											<label for="singleDim" class="select-none ms-2 text-xs">Single pixel</label>
 										</div>
 										<div class="flex items-center">
 											<input name="inline-radio-group" id="bothDim" type="radio" value="" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
-											<label for="bothDim" class="select-none ms-2 text-xs text-gray-400">Full dimension</label>
+											<label for="bothDim" class="select-none ms-2 text-xs">Full dimension</label>
 										</div>
 									</div>
 									<input type="submit" value="Generate" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
@@ -2188,7 +2188,7 @@
 										<div id="canvasContainer" class="block w-full overflow-x-auto ftools"></div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-400">Image result<a href="#" id="warpImage" class="text-gray-900 dark:text-gray-50" data-alt="「 single pixel 」" data-status="actual" title="Click to change">「 full dimension 」</a></span>
+										<span class="text-xs text-gray-400">Image result<a href="#" id="warpImage" class="text-gray-900 dark:text-gray-50" data-alt="「 Single pixel 」" data-status="actual" title="Click to change">「 Full dimension 」</a></span>
 										<div id="imageContainer" class="h-auto overflow-x-auto ftools"></div>
 									</div>
 									<a href="#" id="imageDownload" class="text-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Download</a>
