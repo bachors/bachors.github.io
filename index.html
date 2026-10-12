@@ -186,7 +186,7 @@
 							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 20.5H7c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5M6 8v8m3-8v4m0 3v1m6-8v1m-3-1v8m3-4v4m3-8v8" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							<p>SVG Barcode</p>
 						</button>
-						<button command="show-modal" commandfor="diagram" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+						<button command="show-modal" commandfor="diagram" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl" id="diagram-show">
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M465.23 446.25h-92.2a50.9 50.9 0 0 0-48.55-35.86H271v-63.5L346.9 271h118.33ZM324.48 482H187.53a20.8 20.8 0 0 1-20.8-20.8c0-11.47 9.33-20.8 20.8-20.8h136.96c11.47 0 20.8 9.33 20.8 20.8s-9.33 20.8-20.8 20.8M46.78 65.81h92.2a50.9 50.9 0 0 0 48.54 35.8H241v63.5l-80.28 80.28a15 15 0 0 0 0 21.22L241 346.89v63.5h-53.48a50.9 50.9 0 0 0-48.55 35.86h-92.2zM187.52 30h136.96c11.47 0 20.8 9.34 20.8 20.81s-9.33 20.8-20.8 20.8H187.53a20.8 20.8 0 0 1-20.8-20.8A20.83 20.83 0 0 1 187.53 30m68.48 289.47L192.55 256l63.46-63.46L319.48 256zM480.23 241H346.89L271 165.12v-63.51h53.48a50.86 50.86 0 0 0 50.8-50.8A50.86 50.86 0 0 0 324.48 0H187.53a50.9 50.9 0 0 0-48.54 35.81H31.79a15 15 0 0 0-15 15v410.44a15 15 0 0 0 15 15h107.22A50.9 50.9 0 0 0 187.53 512h136.96a50.9 50.9 0 0 0 48.53-35.75h107.21a15 15 0 0 0 15-15V256a15 15 0 0 0-15-15" fill-rule="nonzero"/></svg>
 							<p>Diagram</p>
 						</button>
@@ -696,13 +696,7 @@
 								</div>
 								<div class="flex flex-col gap-1.5">
 									<span class="text-xs text-gray-400">Code</span>									
-									<textarea id="diagram-code" spellcheck="false" class="font-mono border-none focus:outline-none block h-72 w-full grow bg-[#131313] text-gray-50 px-2.5 py-1.5 ftools">graph TD
-    A[Client Request] --> B[API Gateway]
-    B --> C{Authentication}
-    C -->|Valid| D[Microservice]
-    C -->|Invalid| E[401 Unauthorized]
-    D --> F[(PostgreSQL)]
-    D --> G[(Redis Cache)]</textarea>
+									<textarea id="diagram-code"></textarea>
 								</div>
 								<div class="flex flex-col gap-1.5">
 									<div class="relative flex items-center justify-between">

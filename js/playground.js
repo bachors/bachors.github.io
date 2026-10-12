@@ -81,18 +81,24 @@ merge develop tag: "v1.0.0"`,
 export class MermaidApp {
 	constructor() {
 		this.presetKey = 'flowchart';
-		this.codeTextarea = document.getElementById('diagram-code');
+		this.codeEditor = null;
 		this.presetSelect = document.getElementById('diagram-preset');
 		this.themeSelect = document.getElementById('diagram-theme');
 		this.targetElement = document.getElementById('diagram-target');
 		this.statusBadge = document.getElementById('diagram-status');
 		this.timingBadge = document.getElementById('diagram-timing');
 		this.download = document.getElementById('diagram-download');
+		this.show = document.getElementById('diagram-show');
 
 		this.init();
 	}
 
 	init() {
+		this.codeEditor = CodeMirror.fromTextArea(document.getElementById('diagram-code'), {
+			lineNumbers: true,
+			theme: 'monokai',
+		});
+		this.codeEditor.setValue(PRESETS[this.presetKey]);
 		this.initPlayground();
 	}
 
@@ -121,6 +127,14 @@ export class MermaidApp {
 			}
 		});
 
+		if (this.show) {
+			this.show.addEventListener('click', () => {
+				setTimeout(() => {
+					this.codeEditor.refresh();
+				}, 200);
+			});
+		}
+
 		if (this.download) {
 			this.download.addEventListener('click', () => {
 				this.downloadSvg();
@@ -132,7 +146,7 @@ export class MermaidApp {
 			this.presetSelect.addEventListener('change', (e) => {
 				this.presetKey = e.target.value;
 				if (PRESETS[this.presetKey]) {
-					this.codeTextarea.value = PRESETS[this.presetKey];
+					this.codeEditor.setValue(PRESETS[this.presetKey]);
 					startTime = performance.now();
 					this.targetElement.diagram = PRESETS[this.presetKey];
 				}
@@ -140,14 +154,15 @@ export class MermaidApp {
 		}
 
 		// Code editing
-		if (this.codeTextarea) {
+		if (this.codeEditor) {
 			let debounceTimer = null;
-			this.codeTextarea.addEventListener('input', () => {
+			this.codeEditor.setOption("onChange", (editor) => {
 				clearTimeout(debounceTimer);
 				debounceTimer = setTimeout(() => {
+					if (!this.targetElement) return;
 					startTime = performance.now();
-					this.targetElement.diagram = this.codeTextarea.value;
-					PRESETS[this.presetKey] = this.codeTextarea.value;
+					this.targetElement.diagram = editor.getValue();
+					PRESETS[this.presetKey] = editor.getValue();
 				}, 250);
 			});
 		}
@@ -163,6 +178,15 @@ export class MermaidApp {
 					this.targetElement.removeAttribute('theme');
 				}
 			});
+		}
+
+		const id = window.location.hash.slice(1);
+  		if(id){
+			if(id === "diagram"){
+				setTimeout(() => {
+					this.codeEditor.refresh();
+				}, 200);
+			}
 		}
 
 	}
