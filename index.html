@@ -21,7 +21,8 @@
 		<link rel="stylesheet" href="css/ycp.css">
 		<script src="https://cdn.jsdelivr.net/npm/unpack-tailwindcss-3.4.17@3.4.17/dist/tailwindcss-3.4.17.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/codemirror.js"></script>
-		<script src="js/config.js" type="text/javascript"></script>
+		<script type="module" src="https://cdn.jsdelivr.net/npm/mermaid-element/index.js"></script>
+		<script src="js/config.js"></script>
 	</head>
 	<body class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
 		<div id="bg"></div>
@@ -185,6 +186,10 @@
 							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 20.5H7c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5M6 8v8m3-8v4m0 3v1m6-8v1m-3-1v8m3-4v4m3-8v8" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							<p>SVG Barcode</p>
 						</button>
+						<button command="show-modal" commandfor="diagram" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+							<svg width="30" height="30" fill="currentColor" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M465.23 446.25h-92.2a50.9 50.9 0 0 0-48.55-35.86H271v-63.5L346.9 271h118.33ZM324.48 482H187.53a20.8 20.8 0 0 1-20.8-20.8c0-11.47 9.33-20.8 20.8-20.8h136.96c11.47 0 20.8 9.33 20.8 20.8s-9.33 20.8-20.8 20.8M46.78 65.81h92.2a50.9 50.9 0 0 0 48.54 35.8H241v63.5l-80.28 80.28a15 15 0 0 0 0 21.22L241 346.89v63.5h-53.48a50.9 50.9 0 0 0-48.55 35.86h-92.2zM187.52 30h136.96c11.47 0 20.8 9.34 20.8 20.81s-9.33 20.8-20.8 20.8H187.53a20.8 20.8 0 0 1-20.8-20.8A20.83 20.83 0 0 1 187.53 30m68.48 289.47L192.55 256l63.46-63.46L319.48 256zM480.23 241H346.89L271 165.12v-63.51h53.48a50.86 50.86 0 0 0 50.8-50.8A50.86 50.86 0 0 0 324.48 0H187.53a50.9 50.9 0 0 0-48.54 35.81H31.79a15 15 0 0 0-15 15v410.44a15 15 0 0 0 15 15h107.22A50.9 50.9 0 0 0 187.53 512h136.96a50.9 50.9 0 0 0 48.53-35.75h107.21a15 15 0 0 0 15-15V256a15 15 0 0 0-15-15" fill-rule="nonzero"/></svg>
+							<p>Diagram</p>
+						</button>
 						<button command="show-modal" commandfor="image-base64" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23 4a3 3 0 0 0-3-3H4a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3zm-2 0a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1z" fill="currentColor"/><path d="m4.8 17.52 4.32-7.91a1 1 0 0 1 1.76 0l3.17 5.8 1.08-1.9a1 1 0 0 1 1.74 0l2.28 4a1 1 0 0 1-.87 1.49H5.68a1 1 0 0 1-.87-1.48M18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor"/></svg>
 							<p>Image Base64</p>
@@ -256,10 +261,10 @@
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 20v2h4.6L2 28.6 3.4 30l6.6-6.6V28h2v-8zm23.2 6-2.6 2.6L26 30l4-4-4-4-1.4 1.4zm-8.4 0 2.6-2.6L20 22l-4 4 4 4 1.4-1.4zm6.9-16.7-7-7L18 2H8a2 2 0 0 0-2 2v12h2V4h8v6a2 2 0 0 0 2 2h6v6h2v-8zM18 10V4.4l5.6 5.6Z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
 							<p>Escape</p>
 						</button>
+						<!--
 						<div class="flex items-center justify-center">
 							<img class="w-20" src="img/coding.gif">
 						</div>
-						<!--
 						<div class="relative overflow-hidden col-span-2 shadow-md h-[90px] rounded-2xl">
 							<img alt="Placeholder" class="w-full max-w-full object-cover hover:scale-150" src="img/ngoding.gif">
 						</div>
@@ -642,6 +647,84 @@
 								</div>
 								<img id="bwfil-preview" class="w-full border border-gray-200 dark:border-white/10">
 								<button onclick="bwfil_download()" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Download !</button>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- diagram -->
+			<dialog id="diagram" aria-labelledby="diagram-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
+						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+								<div class="flex items-center gap-2">
+									<button command="close" commandfor="diagram" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="diagram-title" class="text-sm font-medium">Diagram</h2>
+								</div>
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md border border-gray-400 dark:border-transparent bg-white dark:bg-white/10">
+									<i class="fa fa-share-from-square"></i> Share
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
+								<div class="grid grid-cols-2 gap-4">
+									<div class="flex flex-col gap-1.5">
+										<span class="text-xs text-gray-400">Preset</span>
+										<select id="diagram-preset" size="7" class="h-full border-none focus:outline-none rounded-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5 overflow-y-auto ftools">
+											<option selected value="flowchart">Flowchart</option>
+											<option value="sequence">Sequence Diagram</option>
+											<option value="class">Class Diagram</option>
+											<option value="state">State Diagram</option>
+											<option value="gitGraph">Git Graph</option>
+											<option value="pie">Pie Chart</option>
+											<option value="mindmap">Mindmap</option>
+										</select>
+									</div>
+									<div class="flex flex-col gap-1.5">
+										<span class="text-xs text-gray-400">Theme</span>
+										<select id="diagram-theme" size="5" class="h-full border-none focus:outline-none rounded-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5 overflow-y-auto ftools">
+											<option selected value="">Default Theme</option>
+											<option value="neutral">Neutral</option>
+											<option value="forest">Forest</option>
+											<option value="dark">Dark</option>
+											<option value="base">Base</option>
+										</select>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5">
+									<span class="text-xs text-gray-400">Code</span>									
+									<textarea id="diagram-code" spellcheck="false" class="font-mono border-none focus:outline-none block h-48 w-full grow bg-[#131313] text-gray-50 px-2.5 py-1.5 ftools">graph TD
+    A[Client Request] --> B[API Gateway]
+    B --> C{Authentication}
+    C -->|Valid| D[Microservice]
+    C -->|Invalid| E[401 Unauthorized]
+    D --> F[(PostgreSQL)]
+    D --> G[(Redis Cache)]</textarea>
+								</div>
+								<div class="flex flex-col gap-1.5">
+									<div class="relative flex items-center justify-between">
+										<span class="text-xs text-gray-400">Result</span>
+										<span id="diagram-status" class="absolute right-0 text-xs text-red-500" style="display:none">Syntax error !</span>
+										<button id="diagram-download" onclick="sosot(document.getElementById('diagram-target'),document.getElementById('diagram-preset').value)" class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md border border-gray-400 dark:border-transparent bg-white dark:bg-white/10">
+											<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
+										</button>
+									</div>
+									<div class="bg-gray-100 dark:bg-gray-300">
+										<mermaid-element id="diagram-target">
+graph TD
+    A[Client Request] --> B[API Gateway]
+    B --> C{Authentication}
+    C -->|Valid| D[Microservice]
+    C -->|Invalid| E[401 Unauthorized]
+    D --> F[(PostgreSQL)]
+    D --> G[(Redis Cache)]
+                						</mermaid-element>
+									</div>
+									<div id="diagram-timing" class="flex items-center justify-center text-xs font-mono">&lt;mermaid-element&gt; render time 0 ms</div>
+								</div>
 							</div>
 						</div>
 					</el-dialog-panel>
@@ -2824,12 +2907,12 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/python.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
 		<script src="js/modern-screenshot.js"></script>
-		<script src="js/skulpt.min.js" type="text/javascript"></script>
-		<script src="js/skulpt-stdlib.js" type="text/javascript"></script>
-		<script src="js/ycp.js" type="text/javascript"></script>
-		<script src="js/main.js" type="text/javascript"></script>
-		<script src="js/dashboard.js" type="text/javascript"></script>
-		<script src="js/libs.js" type="text/javascript"></script>
+		<script src="js/skulpt.min.js"></script>
+		<script src="js/skulpt-stdlib.js"></script>
+		<script src="js/ycp.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script src="js/libs.js"></script>
 		<script src="https://unpkg.com/jsfeat@0.0.8/build/jsfeat.js"></script>
 		<script src="https://unpkg.com/kdbush@3"></script>
 		<script src="https://cdn.jsdelivr.net/npm/context-filter-polyfill@0.2.4/dist/index.js"></script>
@@ -2838,11 +2921,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 		<script src="https://unpkg.com/delaunator@5/delaunator.min.js"></script>
-    	<script src="js/qrious2.min.js" type="text/javascript"></script>
-    	<script src="js/pdfobject.js" type="text/javascript"></script>
-    	<script src="js/base62.js" type="text/javascript"></script>
-    	<script src="js/emojis.js" type="text/javascript"></script>
-    	<script src="js/jspdf.js" type="text/javascript"></script>
-		<script src="js/tools.js" type="text/javascript"></script>
+		<script type="module" src="js/playground.js"></script>
+    	<script src="js/qrious2.min.js"></script>
+    	<script src="js/pdfobject.js"></script>
+    	<script src="js/base62.js"></script>
+    	<script src="js/emojis.js"></script>
+    	<script src="js/jspdf.js"></script>
+		<script src="js/tools.js"></script>
 	</body>
 </html>
