@@ -121,6 +121,12 @@ export class MermaidApp {
 			}
 		});
 
+		if (this.download) {
+			this.download.addEventListener('click', () => {
+				this.downloadSvg();
+			});
+		}
+
 		// Preset selection
 		if (this.presetSelect) {
 			this.presetSelect.addEventListener('change', (e) => {
@@ -159,6 +165,39 @@ export class MermaidApp {
 			});
 		}
 
+	}
+	
+	downloadSvg() {
+		const svg = this.targetElement.shadowRoot?.querySelector('svg');
+		if (!svg) return;
+
+		// Clone supaya tampilan di halaman tidak berubah
+		const clone = svg.cloneNode(true);
+		clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+		clone.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
+
+		// Beri ukuran eksplisit dari viewBox agar tidak 100% / max-width saat dibuka mandiri
+		const vb = svg.viewBox?.baseVal;
+		if (vb && vb.width && vb.height) {
+			clone.setAttribute('width', vb.width);
+			clone.setAttribute('height', vb.height);
+			clone.style.maxWidth = 'none';
+		}
+
+		const source = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+			new XMLSerializer().serializeToString(clone);
+
+		const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+		const url = URL.createObjectURL(blob);
+
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = `${this.presetKey}.svg`;
+		document.body.appendChild(a);
+		a.click();
+		a.remove();
+
+		URL.revokeObjectURL(url);
 	}
 	
 }
