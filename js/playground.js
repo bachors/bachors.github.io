@@ -97,6 +97,7 @@ export class MermaidApp {
 		this.codeEditor = CodeMirror.fromTextArea(document.getElementById('diagram-code'), {
 			lineNumbers: true,
 			theme: 'monokai',
+			mode: "python"
 		});
 		this.codeEditor.setValue(PRESETS[this.presetKey]);
 		this.initPlayground();
