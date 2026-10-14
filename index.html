@@ -187,7 +187,7 @@
 							<p>SVG Barcode</p>
 						</button>
 						<button command="show-modal" commandfor="diagram" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl" id="diagram-show">
-							<svg width="30" height="30" fill="currentColor" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M465.23 446.25h-92.2a50.9 50.9 0 0 0-48.55-35.86H271v-63.5L346.9 271h118.33ZM324.48 482H187.53a20.8 20.8 0 0 1-20.8-20.8c0-11.47 9.33-20.8 20.8-20.8h136.96c11.47 0 20.8 9.33 20.8 20.8s-9.33 20.8-20.8 20.8M46.78 65.81h92.2a50.9 50.9 0 0 0 48.54 35.8H241v63.5l-80.28 80.28a15 15 0 0 0 0 21.22L241 346.89v63.5h-53.48a50.9 50.9 0 0 0-48.55 35.86h-92.2zM187.52 30h136.96c11.47 0 20.8 9.34 20.8 20.81s-9.33 20.8-20.8 20.8H187.53a20.8 20.8 0 0 1-20.8-20.8A20.83 20.83 0 0 1 187.53 30m68.48 289.47L192.55 256l63.46-63.46L319.48 256zM480.23 241H346.89L271 165.12v-63.51h53.48a50.86 50.86 0 0 0 50.8-50.8A50.86 50.86 0 0 0 324.48 0H187.53a50.9 50.9 0 0 0-48.54 35.81H31.79a15 15 0 0 0-15 15v410.44a15 15 0 0 0 15 15h107.22A50.9 50.9 0 0 0 187.53 512h136.96a50.9 50.9 0 0 0 48.53-35.75h107.21a15 15 0 0 0 15-15V256a15 15 0 0 0-15-15" fill-rule="nonzero"/></svg>
+							<svg width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" xml:space="preserve"><path d="M352 208v112h144V208h-64v-56H256v-40h64V0H176v112h64v40H64v56H0v112h144V208H80v-40h160v44l-69.3 52 69.3 52v68H120v112h248V384H256v-68l69.3-52-69.3-52v-44h160v40zm-224 16v80H16v-80zm224 176v80H136v-80zm-53.3-136L248 302l-50.7-38 50.7-38zM192 96V16h112v80zm288 128v80H368v-80z" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							<p>Diagram</p>
 						</button>
 						<button command="show-modal" commandfor="image-base64" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
@@ -195,8 +195,12 @@
 							<p>Image Base64</p>
 						</button>
 						<button command="show-modal" commandfor="image-gradient" onclick="setTimeout(greet, 200)" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
-							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M26 4H6a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-4 22v-4h-4v4h-4v-4h-4v-4h4v-4h-4v-4h4V6h4v4h4V6h4v20Z"/><path d="M14 10h4v4h-4zm0 8h4v4h-4zm4-4h4v4h-4z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
+							<svg width="30" height="30" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3.179 5.998a1.005 1.005 0 0 0-1.408.132L.494 7.669a1.004 1.004 0 0 0 .131 1.407l7.888 6.542-3.807-8.354zm3.834-3.315-1.82.829a1.005 1.005 0 0 0-.495 1.324l4.25 9.325.213-9.179-.822-1.804c-.23-.5-.826-.723-1.326-.495m7.198.204a1.003 1.003 0 0 0-.976-1.023l-2-.046a1.003 1.003 0 0 0-1.022.976l-.239 10.243 4.19-8.167zm4.98.95-1.779-.913a1.005 1.005 0 0 0-1.347.434L9.674 15.814a1.004 1.004 0 0 0 .434 1.347l1.779.913a1.003 1.003 0 0 0 1.346-.433l6.391-12.456a1.005 1.005 0 0 0-.433-1.348m-6.392 12.456a1 1 0 1 1-1.78-.911 1 1 0 0 1 1.78.911"/></svg>
 							<p>Image Gradient</p>
+						</button>
+						<button command="show-modal" commandfor="pixel-dissolve" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M26 4H6a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-4 22v-4h-4v4h-4v-4h-4v-4h4v-4h-4v-4h4V6h4v4h4V6h4v20Z"/><path d="M14 10h4v4h-4zm0 8h4v4h-4zm4-4h4v4h-4z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
+							<p>Pixel Dissolve</p>
 						</button>
 						<button command="show-modal" commandfor="css-triangle" onclick="setTimeout(greet, 200)" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M278.3 48.3a43 43 0 0 1 15.9 16l182.5 319.2a42.7 42.7 0 0 1-37 63.9h-365a42.7 42.7 0 0 1-37-63.9L220 64.2a42.7 42.7 0 0 1 58.2-15.9" fill-rule="evenodd"/></svg>
@@ -265,10 +269,10 @@
 						<div class="flex items-center justify-center">
 							<img class="w-20" src="img/coding.gif">
 						</div>
+						-->
 						<div class="relative overflow-hidden col-span-2 shadow-md h-[90px] rounded-2xl">
 							<img alt="Placeholder" class="w-full max-w-full object-cover hover:scale-150" src="img/ngoding.gif">
 						</div>
-						-->
 						<div class="grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
 							<nav class="grid grid-cols-3 gap-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
 								<button type="button" onclick="switchTab('skulpt', this),clearFrontend(),history.pushState('', document.title, window.location.pathname + '#editor');" class="rounded-t-2xl shadow-md hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center pt-4 pb-1 text-gray-50 bg-[#1e1f21] dark:bg-[#1e1f21] rounded-none active" id="tab-btn-skulpt" role="tab" aria-selected="true" aria-controls="skulpt">
@@ -719,6 +723,73 @@ graph TD
 									</div>
 									<div id="diagram-timing" class="flex items-center justify-center text-xs font-mono">&lt;mermaid-element&gt; render time 0 ms</div>
 								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- dissolve -->
+			<dialog id="pixel-dissolve" aria-labelledby="pixel-dissolve-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-lg transform ease-in-out data-closed:translate-x-full">
+						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+								<div class="flex items-center gap-2">
+									<button command="close" commandfor="pixel-dissolve" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="pixel-dissolve-title" class="text-sm font-medium">Pixel Dissolve</h2>
+								</div>
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md border border-gray-400 dark:border-transparent bg-white dark:bg-white/10">
+									<i class="fa fa-share-from-square"></i> Share
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
+								<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+									<div class="flex flex-col gap-1.5">
+										<span class="text-xs text-gray-400">Grid size</span>
+										<input id="dissolve-grid" value="14" type="number" min="2" max="64" step="1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									</div>
+									<div class="flex flex-col gap-1.5">
+										<span class="text-xs text-gray-400">Frames</span>
+										<input id="dissolve-frame" value="14" type="number" min="2" max="4096" step="1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									</div>
+									<div class="flex flex-col gap-1.5">
+										<span class="text-xs text-gray-400">Duration</span>
+										<input id="dissolve-duration" value="0.4" type="number" min="0.1" max="10" step="0.1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									</div>
+									<div class="flex flex-col gap-1.5">
+										<span class="text-xs text-gray-400">Seed</span>
+										<input id="dissolve-seed" value="1" type="number" min="0" step="1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5">
+									<div class="flex items-center justify-between">
+										<span class="text-xs text-gray-400">Sprite</span>
+										<span id="dissolve-sprite-size" class="text-xs font-mono"></span>
+									</div>
+									<img id="dissolve-sprite" class="bg-[#131313] p-1" alt="Sprite of every reveal step" />
+								</div>
+								<div class="flex flex-col gap-1.5">
+									<div class="flex items-center justify-between">
+										<span class="text-xs text-gray-400">Mask image</span>
+										<span id="dissolve-mask-size" class="text-xs font-mono"></span>
+									</div>
+									<pre id="dissolve-mask" class="hljs-string font-mono w-full bg-[#292A2C] rounded-lg p-3 text-xs overflow-x-auto select-all cursor-pointer ftools"></pre>
+								</div>
+								<div class="flex flex-col gap-1.5">
+									<div class="flex items-center justify-between">
+										<span class="text-xs text-gray-400">Transition CSS</span>
+										<span id="dissolve-transition-size" class="text-xs font-mono"></span>
+									</div>
+									<pre id="dissolve-transition" class="hljs-string font-mono w-full bg-[#292A2C] rounded-lg p-3 text-xs overflow-x-auto select-all cursor-pointer ftools"></pre>
+								</div>
+								<div class="grid grid-cols-2 gap-4">
+									<button id="dissolve-optimise" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Optimise</button>
+									<button id="dissolve-small" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Find smallest seed</button>
+								</div>
+								<button id="dissolve-preview" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Preview transition</button>
 							</div>
 						</div>
 					</el-dialog-panel>
