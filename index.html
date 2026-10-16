@@ -222,6 +222,11 @@
 							<svg width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.4 284.4" xml:space="preserve"><path d="M0 284.4h284.4V0zm269.4-15H36.2L269.4 36.2z" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							<p>Trigonometric</p>
 						</button>
+						<button command="show-modal" commandfor="aksara" onclick="setTimeout(greet, 200)" class="relative cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
+							<svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m16 5 2.3-2.3a1 1 0 0 1 1.4 0l1.6 1.6a1 1 0 0 1 0 1.4L19 8m-3-3-5.7 5.7a1 1 0 0 0-.3.71V13a1 1 0 0 0 1 1h1.59a1 1 0 0 0 .7-.3L19 8m-3-3 3 3M6 14H5a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-4"/></svg>
+							<p>Aksara</p>
+							<i class="absolute top-1.5 right-1.5 text-yellow-500 fa fa-fire"></i>
+						</button>
 						<button command="show-modal" commandfor="password" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-md rounded-2xl">
 							<svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 8.5v-1a1 1 0 0 0-1-1h-10a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1m0-4h-4a2 2 0 1 0 0 4h4m0-4a2 2 0 1 1 0 4m-9-6v-3a3 3 0 0 1 6 0v3m2.5 4h1m-3 0h1m-3 0h1" stroke="currentColor"/></svg>
 							<p>Password</p>
@@ -265,14 +270,14 @@
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 20v2h4.6L2 28.6 3.4 30l6.6-6.6V28h2v-8zm23.2 6-2.6 2.6L26 30l4-4-4-4-1.4 1.4zm-8.4 0 2.6-2.6L20 22l-4 4 4 4 1.4-1.4zm6.9-16.7-7-7L18 2H8a2 2 0 0 0-2 2v12h2V4h8v6a2 2 0 0 0 2 2h6v6h2v-8zM18 10V4.4l5.6 5.6Z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
 							<p>Escape</p>
 						</button>
-						<!--
 						<div class="flex items-center justify-center">
 							<img class="w-20" src="img/coding.gif">
 						</div>
-						-->
+						<!--
 						<div class="relative overflow-hidden col-span-2 shadow-md h-[90px] rounded-2xl">
 							<img alt="Placeholder" class="w-full max-w-full object-cover hover:scale-150" src="img/ngoding.gif">
 						</div>
+						-->
 						<div class="grid grid-cols-1 gap-0 col-span-3 overflow-hidden">
 							<nav class="grid grid-cols-3 gap-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
 								<button type="button" onclick="switchTab('skulpt', this),clearFrontend(),history.pushState('', document.title, window.location.pathname + '#editor');" class="rounded-t-2xl shadow-md hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center pt-4 pb-1 text-gray-50 bg-[#1e1f21] dark:bg-[#1e1f21] rounded-none active" id="tab-btn-skulpt" role="tab" aria-selected="true" aria-controls="skulpt">
@@ -2740,6 +2745,65 @@ graph TD
 									<span class="text-xs text-gray-400">Source length <span id="codejsminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Result length <span id="resjsminifylength" class="font-mono text-blue-500 dark:text-blue-300">0</span> • Compression <span id="jsminifyresult" class="font-mono text-blue-500 dark:text-blue-300">0%</span></span>
 									<textarea id="resjsminify" spellcheck="false" readonly></textarea>
 									<button id="kopi-jsminify" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- aksara -->
+			<dialog id="aksara" aria-labelledby="aksara-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
+						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+								<div class="flex items-center gap-2">
+									<button command="close" commandfor="aksara" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="aksara-title" class="text-sm font-medium">Aksara</h2>
+								</div>
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md border border-gray-400 dark:border-transparent bg-white dark:bg-white/10">
+									<i class="fa fa-share-from-square"></i> Share
+								</button>
+							</div>
+							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
+								<div class="flex flex-col gap-1.5 w-full relative">
+									<span class="text-xs text-gray-400">Latin</span>
+									<textarea id="aksara-latin" spellcheck="false"></textarea>
+									<button onclick="copyToClipboard(this,cmr_latin.getValue())" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
+								</div>
+								<div class="flex items-center justify-between gap-2">
+									<div class="flex items-center py-1.5">
+										<input checked name="aksara" type="radio" onChange='aksara="bali";aksara_trans(cmr_latin.getValue());' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
+										<label class="select-none ms-2 text-xs">Bali</label>
+									</div>
+									<div class="flex items-center py-1.5">
+										<input name="aksara" type="radio" onChange='aksara="batak";aksara_trans(cmr_latin.getValue());' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
+										<label class="select-none ms-2 text-xs">Batak</label>
+									</div>
+									<div class="flex items-center py-1.5">
+										<input name="aksara" type="radio" onChange='aksara="bugis";aksara_trans(cmr_latin.getValue());' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
+										<label class="select-none ms-2 text-xs">Bugis</label>
+									</div>
+									<div class="flex items-center py-1.5">
+										<input name="aksara" type="radio" onChange='aksara="jawa";aksara_trans(cmr_latin.getValue());' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
+										<label class="select-none ms-2 text-xs">Jawa</label>
+									</div>
+									<div class="flex items-center py-1.5">
+										<input name="aksara" type="radio" onChange='aksara="sunda";aksara_trans(cmr_latin.getValue());' class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-full checked:border-brand focus:outline-none">
+										<label class="select-none ms-2 text-xs">Sunda</label>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full relative">
+									<span class="text-xs text-gray-400">Aksara</span>
+									<textarea id="aksara-aksara" spellcheck="false"></textarea>
+									<button onclick="copyToClipboard(this,cmr_aksara.getValue())" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
 									</button>
 								</div>
