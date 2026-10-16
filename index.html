@@ -992,36 +992,36 @@ graph TD
 								</div>
 								<div class="border-b border-gray-200 dark:border-white/10"></div>
 							</div>
-							<div id="emoart-res" class="relative grid grid-cols-1 gap-1.5 p-4 overflow-y-auto ftools">
-								<div class="grid grid-cols-1 gap-4 pb-2.5">
+							<div class="relative grid grid-cols-1 gap-1.5 p-4 overflow-y-auto ftools">
+								<div id="emoart-res" class="grid grid-cols-1 gap-4 pb-2.5">
 									<div class="grid grid-cols-2 gap-4">
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
 												<span class="text-xs text-gray-400">Analysis window</span>
 												<span id="emoart-window" class="font-mono text-xs">7px</span>
 											</div>
-											<input id="emoart-windowr" oninput="document.getElementById('emoart-window').innerText=this.value+'px'" type="range" step="1" min="1" max="50" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input id="emoart-windowr" oninput="document.getElementById('emoart-window').textContent=this.value+'px'" type="range" step="1" min="1" max="50" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
 												<span class="text-xs text-gray-400">Emoji size</span>
 												<span id="emoart-size" class="font-mono text-xs">12px</span>
 											</div>
-											<input id="emoart-sizer" oninput="document.getElementById('emoart-size').innerText=this.value+'px'" type="range" min="1" step="1" max="50" value="12" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input id="emoart-sizer" oninput="document.getElementById('emoart-size').textContent=this.value+'px'" type="range" min="1" step="1" max="50" value="12" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
 												<span class="text-xs text-gray-400">Match tolerance</span>
 												<span id="emoart-toleran" class="font-mono text-xs">8</span>
 											</div>
-											<input id="emoart-toleranr" oninput="document.getElementById('emoart-toleran').innerText=this.value" type="range" min="1" step="1" max="30" value="8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input id="emoart-toleranr" oninput="document.getElementById('emoart-toleran').textContent=this.value" type="range" min="1" step="1" max="30" value="8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full">
 											<div class="flex items-center justify-between">
 												<span class="text-xs text-gray-400">Allowed empty space</span>
 												<span id="emoart-space" class="font-mono text-xs">80%</span>
 											</div>
-											<input id="emoart-spacer" oninput="document.getElementById('emoart-space').innerText=(this.value*100).toFixed(0)+'%'" type="range" min=".4" step=".02" max="1" value=".8" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input id="emoart-spacer" oninput="document.getElementById('emoart-space').textContent=(this.value*100).toFixed(0)+'%'" type="range" min=".4" step=".02" max="1" value=".8" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5 w-full col-span-2 md:col-span-1">
 											<span class="text-xs text-gray-400">Display mode</span>
@@ -1380,12 +1380,29 @@ graph TD
 							<div id="ascii-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div class="grid grid-cols-2 gap-4">
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-400">Width (chars)</span>
-										<input id="ascii-w" type="range" min="1" max="14" step="1" value="3" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Font size</span>
+											<span id="ascii-ws" class="text-xs font-mono">3px</span>
+										</div>
+										<input id="ascii-w" oninput="document.getElementById('ascii-ws').textContent=this.value+'px'" type="range" min="1" max="14" step="1" value="3" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
-										<span class="text-xs text-gray-400">Detail</span>
-										<input id="ascii-q" type="range" min="1" max="10" step="1" value="4" class="my-2.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer" style="direction:rtl;">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Line height</span>
+											<span id="ascii-lh" class="text-xs font-mono">0.6</span>
+										</div>
+										<input oninput="document.getElementById('ascii-lh').textContent=this.value;document.getElementById('ascii-pre').style.lineHeight=this.value;" type="range" min="0.4" max="2.4" step="0.1" value="0.6" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Spacing</span>
+											<span id="ascii-sp" class="text-xs font-mono">0em</span>
+										</div>
+										<input oninput="document.getElementById('ascii-sp').textContent=this.value+'em';document.getElementById('ascii-pre').style.letterSpacing=this.value+'em';" type="range" min="-0.5" max="1" step="0.01" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+									</div>
+									<div class="flex flex-col gap-1.5 w-full">
+										<span class="text-xs text-gray-400">Display size</span>
+										<input id="ascii-q" type="range" min="1" max="10" step="1" value="4" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer" style="direction:rtl;">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
 										<span class="text-xs text-gray-400">Mode</span>
@@ -1501,20 +1518,27 @@ graph TD
 												<span class="text-xs text-gray-400">Font size</span>
 												<span id="huge-fs" class="font-mono text-xs">7px</span>
 											</div>
-											<input oninput="document.getElementById('huge-res').style.fontSize=this.value+'px',document.getElementById('huge-fs').innerText=this.value+'px'" type="range" min="4" max="24" step="1" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input oninput="document.getElementById('huge-res').style.fontSize=this.value+'px';document.getElementById('huge-fs').textContent=this.value+'px';" type="range" min="4" max="24" step="1" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5">
 											<div class="flex items-center justify-between">
 												<span class="text-xs text-gray-400">Line height</span>
 												<span id="huge-lh" class="font-mono text-xs">1.2</span>
 											</div>
-											<input oninput="document.getElementById('huge-res').style.lineHeight=this.value,document.getElementById('huge-lh').innerText=this.value" type="range" min="0.4" max="2.4" step="0.1" value="1.2" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<input oninput="document.getElementById('huge-res').style.lineHeight=this.value;document.getElementById('huge-lh').textContent=this.value;" type="range" min="0.4" max="2.4" step="0.1" value="1.2" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 										<div class="flex flex-col gap-1.5">
-											<span class="text-xs text-gray-400">Display size</span>
-											<input id="huge-size" oninput="huge_wtf()" type="range" min="0" max="8" step="1" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+											<div class="flex items-center justify-between">
+												<span class="text-xs text-gray-400">Spacing</span>
+												<span id="huge-sp" class="font-mono text-xs">0em</span>
+											</div>
+											<input oninput="document.getElementById('huge-res').style.letterSpacing=this.value+'em';document.getElementById('huge-sp').textContent=this.value+'em';" type="range" min="-0.5" max="1" step="0.01" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 										</div>
 									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 mt-1">
+									<span class="text-xs text-gray-400">Display size</span>
+									<input id="huge-size" oninput="huge_wtf()" type="range" min="0" max="8" step="1" value="7" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 								</div>
 								<div class="flex items-start gap-4">
 									<div class="flex flex-col gap-1.5 w-36">
@@ -1900,7 +1924,7 @@ graph TD
 											<span class="text-xs text-gray-400">Alpha</span>
 											<span id="qrcod-alp" class="text-xs font-mono">1</span>
 										</div>
-										<input oninput="qrcod_setAlphabg(this),document.getElementById('qrcod-alp').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input oninput="qrcod_setAlphabg(this),document.getElementById('qrcod-alp').textContent=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-2">
 										<span class="text-xs text-gray-400">Color</span>
@@ -1914,7 +1938,7 @@ graph TD
 											<span class="text-xs text-gray-400">Alpha</span>
 											<span id="qrcod-alp2" class="text-xs font-mono">1</span>
 										</div>
-										<input oninput="qrcod_setAlphacolor(this),document.getElementById('qrcod-alp2').innerText=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
+										<input oninput="qrcod_setAlphacolor(this),document.getElementById('qrcod-alp2').textContent=this.value" type="range" min="0.1" max="1" step="0.1" value="1" class="my-auto accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5 w-full col-span-4 mt-1">
 										<div class="relative flex items-center justify-between">
