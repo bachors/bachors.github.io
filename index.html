@@ -746,22 +746,34 @@ graph TD
 								</button>
 							</div>
 							<div class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
-								<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+								<div class="grid grid-cols-2 gap-4">
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-400">Grid size</span>
-										<input id="dissolve-grid" value="14" type="number" min="2" max="64" step="1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Grid size</span>
+											<span id="dissolve-grids" class="text-xs font mono">14</span>
+										</div>
+										<input id="dissolve-grid" oninput="document.getElementById('dissolve-grids').textContent=this.value" value="14" type="range" min="2" max="64" step="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-400">Frames</span>
-										<input id="dissolve-frame" value="14" type="number" min="2" max="4096" step="1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Frames</span>
+											<span id="dissolve-frames" class="text-xs font mono">14</span>
+										</div>
+										<input id="dissolve-frame" oninput="document.getElementById('dissolve-frames').textContent=this.value" value="14" type="range" min="2" max="4096" step="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-400">Duration</span>
-										<input id="dissolve-duration" value="0.4" type="number" min="0.1" max="10" step="0.1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Duration</span>
+											<span id="dissolve-durations" class="text-xs font mono">0.4</span>
+										</div>
+										<input id="dissolve-duration" oninput="document.getElementById('dissolve-durations').textContent=this.value" value="0.4" type="range" min="0.1" max="10" step="0.1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 									<div class="flex flex-col gap-1.5">
-										<span class="text-xs text-gray-400">Seed</span>
-										<input id="dissolve-seed" value="1" type="number" min="0" step="1" class="font-mono border-none focus:outline-none rounded-md block w-full grow bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<div class="flex items-center justify-between">
+											<span class="text-xs text-gray-400">Seed</span>
+											<span id="dissolve-seeds" class="text-xs font mono">1</span>
+										</div>
+										<input id="dissolve-seed" oninput="document.getElementById('dissolve-seeds').textContent=this.value" value="1" type="range" min="0" step="1" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 								</div>
 								<div class="flex flex-col gap-1.5">
