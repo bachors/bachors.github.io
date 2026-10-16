@@ -1852,22 +1852,22 @@ graph TD
 										<input id="svgg-barcode-mg" oninput="document.getElementById('svgg-barcode-mgs').textContent=this.value;svgggenerateBarcode()" type="range" min="-15" max="40" step="1" value="0" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									</div>
 								</div>
-								<div class="flex flex-col gap-1.5 mt-1">
-									<div class="relative flex items-center justify-between">
+								<div class="flex flex-col mt-1">
+									<div class="relative flex items-center justify-between mb-1.5">
 										<span class="text-xs text-gray-400">Result</span>
 										<button onclick="downloadsvg(document.getElementById('svgg-barcode-res'))" class="absolute right-0 text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md border border-gray-400 dark:border-transparent bg-white dark:bg-white/10 cursor-pointer">
 											<i class="fa fa-arrow-right-to-bracket rotate-90"></i>Download
 										</button>
 									</div>
 									<div class="flex p-1 bg-gray-100 dark:bg-gray-300 overflow-x-auto ftools">
-										<svg id="svgg-barcode-res" class="flex-none"></svg>
+										<svg id="svgg-barcode-res" class="flex-none shadow-md"></svg>
 									</div>
-								</div>
-								<div class="flex flex-col gap-1.5 w-full relative">
-									<textarea id="svgg-barcode-code"></textarea>
-									<button id="kopi-svgg-barcode" class="absolute top-0 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
-										<i class="far fa-copy text-sm"></i>
-									</button>
+									<div class="flex flex-col gap-1.5 w-full relative">
+										<textarea id="svgg-barcode-code"></textarea>
+										<button id="kopi-svgg-barcode" class="absolute top-0 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+											<i class="far fa-copy text-sm"></i>
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1948,7 +1948,7 @@ graph TD
 											</button>
 										</div>
 										<div class="p-1 bg-gray-100 dark:bg-gray-300 max-h-[328px] overflow-auto ftools">
-											<canvas id="qrious"></canvas>
+											<canvas id="qrious" class="shadow-md"></canvas>
 										</div>
 									</div>
 									<div class="flex flex-col gap-1.5 w-full">
