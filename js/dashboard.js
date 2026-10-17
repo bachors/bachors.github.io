@@ -166,8 +166,8 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="flex shadow-md">
-				<input id="yt-id" type="text" placeholder="Enter PlayListId / ChannelId / UserName" spellcheck="false" class="inline-flex items-center bg-white dark:bg-[#1e1f21] focus:ring-none focus:outline-none rounded-tl-2xl block w-full bg-gray-100 dark:bg-[#131313] px-3 py-1.5 text-sm">
-				<button id="yt-bt" class="w-10 block flex items-center justify-center bg-white dark:bg-[#1e1f21] focus:ring-none focus:outline-none rounded-tr-2xl bg-gray-100 dark:bg-[#131313] text-sm">
+				<input id="yt-id" type="text" placeholder="Enter PlayListId / ChannelId / UserName" spellcheck="false" class="inline-flex items-center bg-white/50 dark:bg-[#2e3034]/50 backdrop-blur-md focus:ring-none focus:outline-none rounded-tl-2xl block w-full px-3 py-1.5 text-sm">
+				<button id="yt-bt" class="w-10 block flex items-center justify-center bg-white/50 dark:bg-[#2e3034]/50 backdrop-blur-md focus:ring-none focus:outline-none rounded-tr-2xl text-sm">
 					<i class="fa fa-magnifying-glass"></i>
 				</button>
 			</div>
