@@ -66,7 +66,7 @@ atmText;
 
 function stat(t, a, e) {
 	return `
-			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-md rounded-2xl">
+			<div class="hover:${t} bg-white dark:bg-[#1e1f21] flex flex-col gap-0.5 items-start p-4 shadow-sm break-inside rounded-2xl">
 				<div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-200 dark:text-gray-900">
 					${ICONS[a.toLowerCase()].a}
 				</div>
@@ -117,7 +117,7 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="grid grid-cols-1 gap-1">
-				<div class="bg-white dark:bg-[#1e1f21] rounded-t-2xl rounded-b-lg overflow-hidden shadow-md">
+				<div class="bg-white dark:bg-[#1e1f21] rounded-t-2xl rounded-b-lg overflow-hidden shadow-sm break-inside">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/5475814/pexels-photo-5475814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
 						<svg class="flex-none w-10 h-10" width="40" height="40" viewBox="-23.5 0 157 157" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="currentColor"><path d="M59.8 86.2V112l1-.6a54 54 0 0 1 35.1-19.2l5.7-1q5.3-.8 6.5 4.6 1 5.7-.3 11.3a41 41 0 0 1-18.5 25.1q-10.5 7.1-22.8 9.6l-6.8.7q.1 2.6-.2 5-.6 3.5-1.8 6.8a3 3 0 0 1-3.5 2.1 3.4 3.4 0 0 1-3.3-3 68 68 0 0 1-1-9.9q-4.5-.4-8.5-1.2a56 56 0 0 1-38.9-30q-1.5-3-2-6c-1-4.4 1-8 5.3-9.1a50 50 0 0 1 37.9 4c2.5 1.4 4.6 3.5 7.2 5.6.9-6.6 1-13.2 1.5-20q-6-.4-11.3-1.3c-15.7-3-26.4-11.9-30.5-27.7a43 43 0 0 1 5-32.4 51 51 0 0 1 12-14.5 46 46 0 0 1 18.9-8.2 53 53 0 0 1 29.2 1.5c7.6 2.4 14 7.7 17.6 14.8a50 50 0 0 1 5.9 34.8A38 38 0 0 1 69.8 84q-4.8 1.2-10 2.1M49.5 8.7c-9.5-.1-14 1.6-20.4 8.5A43 43 0 0 0 17 46.3c-.1 13.3 6.2 26.7 23 30.8a54 54 0 0 0 32-2A29 29 0 0 0 91.4 51c1.4-9.3-.8-17.9-4.8-26a24 24 0 0 0-17.5-13.6c-6.4-1.3-13-1.8-19.6-2.7m.8 126V122q-.1-1-.9-1.8l-5.5-7.1a22 22 0 0 0-10.8-7.6q-10.6-3.6-21.6-2.4l-2.5.6c5.7 19 27.6 31.8 41.3 31M100 99.2q-1-.2-2-.1c-6.7.9-13.2 2.4-19.2 5.9a41 41 0 0 0-16 15q-3.7 6.1-3 13.5h2.9a50 50 0 0 0 32.6-19c3.4-4.3 5.1-9.8 4.7-15.3"/><path d="m59 66.4-.6 4.7q-.7 3.6-3.4 3.6t-3.5-3.4l-1-5-7.2-2.5q-1.3-.5-2.4-1.3-2.2-1.5-1.4-4c.6-1.8 2.3-1.6 3.7-1.3q3.5.7 7.7 1.8l.6-12.5L47 45c-7-2.5-8-8.3-5.2-13.8 1.8-3.4 4-5.2 9.9-8.2l-.2-4.1c0-1.4.5-2.8 1.8-2.8a4 4 0 0 1 3 1.7q1 2 1.4 4l7 3.1a4 4 0 0 1 1.5 2.3c.3 1.2-.7 2-2 2.2l-6 .8-.2 1.3v9.8l2.6.9 3.9 1.2c8.8 3 8.7 9.4 5.2 15.4q-3 4.4-8 6.4zm-.4-18.8V59c3.1-1 5.4-2.4 6.7-5q1.7-3.3-1.5-4.7-2.5-1-5.2-1.7m-7-16Q46 33.8 46.4 37c.5 2.6 2.8 2.7 5.2 3.3z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.1.7h109v156.2H.1z"/></clipPath></defs></svg>
@@ -127,7 +127,7 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="rotate-2 hover:rotate-0 flex items-start flex-row justify-between rounded-xl shadow-md p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
+				<div class="rotate-2 hover:rotate-0 flex items-start flex-row justify-between rounded-xl shadow-sm break-inside p-4 text-sm text-white bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900">
 					<div class="flex flex-col items-start gap-2">
 						<span class="text-xs text-gray-400">Total Saldo</span>
 						<h2 class="text-xl font-medium blur-[4px] hover:blur-none">${t.all_time.earnings.split(",")[0]}</h2>
@@ -141,7 +141,7 @@ function renderCards(t, k) {
 						</div>
 					</div>
 				</div>
-				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-md rounded-2xl">
+				<div class="hover:-rotate-2 bg-white dark:bg-[#1e1f21] shadow-sm break-inside rounded-2xl">
 					<div class="flex items-center justify-start gap-1 p-4 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl">
 						<div class="flex flex-col w-full gap-0.5">
 							<h3 id="admob-label"></h3>
@@ -153,7 +153,7 @@ function renderCards(t, k) {
 					</div>
 				</div>
 				<div id="admob-stats" class="grid grid-cols-2 gap-1"></div>
-				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-md rounded-2xl">${n}</div>
+				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-sm break-inside rounded-2xl">${n}</div>
 			</div>
 			<div id="video" class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -165,13 +165,13 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="flex shadow-md">
+			<div class="flex shadow-sm break-inside">
 				<input id="yt-id" type="text" placeholder="Enter PlayListId / ChannelId / UserName" spellcheck="false" class="inline-flex items-center bg-white dark:bg-[#1e1f21] focus:ring-none focus:outline-none rounded-tl-2xl block w-full px-3 py-1.5 text-sm">
 				<button id="yt-bt" class="w-10 block flex items-center justify-center bg-white dark:bg-[#1e1f21] focus:ring-none focus:outline-none rounded-tr-2xl text-sm">
 					<i class="fa fa-magnifying-glass"></i>
 				</button>
 			</div>
-			<div id="reels" class="grid grid-cols-1 shadow-md rounded-b-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
+			<div id="reels" class="grid grid-cols-1 shadow-sm break-inside rounded-b-2xl overflow-hidden" data-ycp_title="Reels · @bachors" data-ycp_channel="PLLZytswN8jaU"></div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
@@ -193,7 +193,7 @@ function renderCards(t, k) {
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
-			<div class="bg-white dark:bg-[#1e1f21] grid grid-cols-1 rounded-2xl overflow-hidden shadow-md">
+			<div class="bg-white dark:bg-[#1e1f21] grid grid-cols-1 rounded-2xl overflow-hidden shadow-sm break-inside">
 				<div class="overflow-hidden">
 					<img alt="Placeholder" class="w-full max-w-full h-[10rem] object-cover" src="https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
 					<div class="flex items-center gap-4 p-4">
