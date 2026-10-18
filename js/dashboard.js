@@ -155,7 +155,7 @@ function renderCards(t, k) {
 				<div id="admob-stats" class="grid grid-cols-2 gap-1"></div>
 				<div class="bg-white dark:bg-[#1e1f21] flex flex-wrap gap-2 p-4 shadow-sm break-inside rounded-2xl">${n}</div>
 			</div>
-			<div id="video" class="text-gray-400 dark:text-gray-500 my-4 text-center">
+			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
@@ -183,7 +183,7 @@ function renderCards(t, k) {
 				<i class="fa fa-code"></i>
 			</div>`,
 		d = `
-			<div id="work" class="text-gray-400 dark:text-gray-500 my-4 text-center">
+			<div id="activity" class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
