@@ -70,3 +70,5 @@ dialog .CodeMirror .CodeMirror-scroll,dialog .CodeMirror .CodeMirror-gutter{back
 #poly-controls .property-name {
     color: oklch(70.7% 0.022 261.325) !important;
 }
+#pixel-dissolve .CodeMirror .CodeMirror-scroll{overflow-y:hidden !important;}
+#pixel-dissolve .CodeMirror .CodeMirror-scrollbar{overflow-y:hidden !important;}

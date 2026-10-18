@@ -198,7 +198,7 @@
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3.179 5.998a1.005 1.005 0 0 0-1.408.132L.494 7.669a1.004 1.004 0 0 0 .131 1.407l7.888 6.542-3.807-8.354zm3.834-3.315-1.82.829a1.005 1.005 0 0 0-.495 1.324l4.25 9.325.213-9.179-.822-1.804c-.23-.5-.826-.723-1.326-.495m7.198.204a1.003 1.003 0 0 0-.976-1.023l-2-.046a1.003 1.003 0 0 0-1.022.976l-.239 10.243 4.19-8.167zm4.98.95-1.779-.913a1.005 1.005 0 0 0-1.347.434L9.674 15.814a1.004 1.004 0 0 0 .434 1.347l1.779.913a1.003 1.003 0 0 0 1.346-.433l6.391-12.456a1.005 1.005 0 0 0-.433-1.348m-6.392 12.456a1 1 0 1 1-1.78-.911 1 1 0 0 1 1.78.911"/></svg>
 							<p>Image Gradient</p>
 						</button>
-						<button command="show-modal" commandfor="pixel-dissolve" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-sm break-inside rounded-2xl">
+						<button command="show-modal" commandfor="pixel-dissolve" onclick="setTimeout(greet, 200)" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-sm break-inside rounded-2xl">
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M26 4H6a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-4 22v-4h-4v4h-4v-4h-4v-4h4v-4h-4v-4h4V6h4v4h4V6h4v20Z"/><path d="M14 10h4v4h-4zm0 8h4v4h-4zm4-4h4v4h-4z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
 							<p>Pixel Dissolve</p>
 						</button>
@@ -788,19 +788,25 @@ graph TD
 									</div>
 									<img id="dissolve-sprite" class="bg-[#131313] p-1" alt="Sprite of every reveal step" style="image-rendering:pixelated;image-rendering:crisp-edges;"/>
 								</div>
-								<div class="flex flex-col gap-1.5">
+								<div class="flex flex-col gap-1.5 relative">
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Mask image</span>
 										<span id="dissolve-mask-size" class="text-xs font-mono"></span>
 									</div>
-									<pre id="dissolve-mask" class="hljs-string font-mono w-full bg-[#292A2C] rounded-lg p-3 text-xs overflow-x-auto select-all cursor-pointer ftools"></pre>
+									<textarea id="dissolve-mask"></textarea>
+									<button class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
-								<div class="flex flex-col gap-1.5">
+								<div class="flex flex-col gap-1.5 relative">
 									<div class="flex items-center justify-between">
 										<span class="text-xs text-gray-400">Transition CSS</span>
 										<span id="dissolve-transition-size" class="text-xs font-mono"></span>
 									</div>
-									<pre id="dissolve-transition" class="hljs-string font-mono w-full bg-[#292A2C] rounded-lg p-3 text-xs overflow-x-auto select-all cursor-pointer ftools"></pre>
+									<textarea id="dissolve-transition"></textarea>
+									<button class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
+										<i class="far fa-copy text-sm"></i>
+									</button>
 								</div>
 								<div class="grid grid-cols-2 gap-4">
 									<button id="dissolve-optimise" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Optimise</button>
