@@ -222,10 +222,15 @@
 							<svg width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.4 284.4" xml:space="preserve"><path d="M0 284.4h284.4V0zm269.4-15H36.2L269.4 36.2z" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							<p>Trigonometric</p>
 						</button>
+						<button command="show-modal" commandfor="kalender" onclick="_kalender()" class="relative cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-sm break-inside rounded-2xl">
+							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27 31H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h2v1a3 3 0 1 0 6 0V5h6v1a3 3 0 0 0 6 0V5h2a2 2 0 0 1 2 2v22a2 2 0 0 1-2 2m0-19H5v17h22zm-17 5H7v-3h3zm0 5H7v-3h3zm0 5H7v-3h3zm5-10h-3v-3h3zm0 5h-3v-3h3zm0 5h-3v-3h3zm5-10h-3v-3h3zm0 5h-3v-3h3zm0 5h-3v-3h3zm5-10h-3v-3h3zm0 5h-3v-3h3zm0 5h-3v-3h3zM21.97 8A1.97 1.97 0 0 1 20 6.03V3.97a1.97 1.97 0 1 1 3.94 0v2.06c0 1.09-.88 1.97-1.97 1.97m-12 0A1.97 1.97 0 0 1 8 6.03V3.97a1.97 1.97 0 1 1 3.94 0v2.06c0 1.09-.88 1.97-1.97 1.97"/></svg>
+							<p>Kalender</p>
+							<img class="absolute top-1.5 right-1.5 w-[12px] opacity-[.9]" src="img/id.png">
+						</button>
 						<button command="show-modal" commandfor="aksara" onclick="setTimeout(greet, 200)" class="relative cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-sm break-inside rounded-2xl">
 							<svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m16 5 2.3-2.3a1 1 0 0 1 1.4 0l1.6 1.6a1 1 0 0 1 0 1.4L19 8m-3-3-5.7 5.7a1 1 0 0 0-.3.71V13a1 1 0 0 0 1 1h1.59a1 1 0 0 0 .7-.3L19 8m-3-3 3 3M6 14H5a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-4"/></svg>
 							<p>Aksara</p>
-							<i class="absolute top-1.5 right-1.5 text-yellow-500 fa fa-fire"></i>
+							<img class="absolute top-1.5 right-1.5 w-[12px] opacity-[.9]" src="img/id.png">
 						</button>
 						<button command="show-modal" commandfor="password" class="cursor-pointer bg-gray-600 dark:bg-gray-700 hover:bg-[#1e1f21] dark:hover:bg-[#1e1f21] flex flex-col gap-3 items-center py-4 shadow-sm break-inside rounded-2xl">
 							<svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 8.5v-1a1 1 0 0 0-1-1h-10a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1m0-4h-4a2 2 0 1 0 0 4h4m0-4a2 2 0 1 1 0 4m-9-6v-3a3 3 0 0 1 6 0v3m2.5 4h1m-3 0h1m-3 0h1" stroke="currentColor"/></svg>
@@ -270,10 +275,10 @@
 							<svg width="30" height="30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 20v2h4.6L2 28.6 3.4 30l6.6-6.6V28h2v-8zm23.2 6-2.6 2.6L26 30l4-4-4-4-1.4 1.4zm-8.4 0 2.6-2.6L20 22l-4 4 4 4 1.4-1.4zm6.9-16.7-7-7L18 2H8a2 2 0 0 0-2 2v12h2V4h8v6a2 2 0 0 0 2 2h6v6h2v-8zM18 10V4.4l5.6 5.6Z"/><path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z"/></svg>
 							<p>Escape</p>
 						</button>
+						<!--
 						<div class="flex items-center justify-center">
 							<img class="w-20" src="img/coding.gif">
 						</div>
-						<!--
 						<div class="relative overflow-hidden col-span-2 shadow-sm break-inside h-[90px] rounded-2xl">
 							<img alt="Placeholder" class="w-full max-w-full object-cover hover:scale-150" src="img/ngoding.gif">
 						</div>
@@ -963,6 +968,37 @@ graph TD
 									</div>
 								</div>
 								<button id="imcom-download" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5">Download !</button>
+							</div>
+						</div>
+					</el-dialog-panel>
+				</div>
+			</dialog>
+			<!-- kalender -->
+			<dialog id="kalender" aria-labelledby="kalender-title" class="text-gray-900 dark:text-gray-50 py-6 fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+				<el-dialog-backdrop class="absolute inset-0 bg-black/50 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+				<div tabindex="0" class="absolute inset-0 focus:outline-none">
+					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-lg transform ease-in-out data-closed:translate-x-full">
+						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
+								<div class="flex items-center gap-2">
+									<button command="close" commandfor="kalender" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
+										<i class="fa fa-arrow-left"></i>
+									</button>
+									<h2 id="kalender-title" class="text-sm font-medium">Kalender</h2>
+								</div>
+								<button onclick="shareContent()" class="text-xs px-1.5 py-0.5 flex items-center justify-center gap-1.5 rounded-md border border-gray-400 dark:border-transparent bg-white dark:bg-white/10">
+									<i class="fa fa-share-from-square"></i> Share
+								</button>
+							</div>
+							<div class="relative grid grid-cols-7 gap-y-4 p-4 overflow-y-auto ftools">
+								<div class="col-span-3 flex items-center justify-between">
+									<button onclick="gantiTahun(-1)" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"><i class="fa fa-arrow-left"></i></button>
+									<span id="kalender-tahun" class="w-full text-center font-medium"></span>
+									<button onclick="gantiTahun(1)" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"><i class="fa fa-arrow-right"></i></button>
+								</div>
+								<div></div>
+								<select id="kalender-bulan" onchange="currentMonth=+this.value; renderKalender()" class="col-span-3 border-none focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5 ftools"></select>
+								<div id="kalender-id" class="grid grid-cols-7 col-span-7 hidden"></div>
 							</div>
 						</div>
 					</el-dialog-panel>
@@ -3071,6 +3107,7 @@ graph TD
     	<script src="js/base62.js"></script>
     	<script src="js/emojis.js"></script>
     	<script src="js/jspdf.js"></script>
+    	<script src="js/uqcal.js"></script>
 		<script src="js/tools.js"></script>
 	</body>
 </html>
