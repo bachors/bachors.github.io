@@ -154,12 +154,12 @@ function ycp(selector, j) {
     function _timeSince(a) {
         const s = Math.floor((Date.now() - a) / 1000);
         let i;
-        if ((i = Math.floor(s / 31536000)) > 1) return `${i} thn lalu`;
-        if ((i = Math.floor(s / 2592000))  > 1) return `${i} bln lalu`;
-        if ((i = Math.floor(s / 86400))    > 1) return `${i} h lalu`;
-        if ((i = Math.floor(s / 3600))     > 1) return `${i} jam lalu`;
-        if ((i = Math.floor(s / 60))       > 1) return `${i} mnt lalu`;
-        return `${Math.floor(s)} dtk lalu`;
+        if ((i = Math.floor(s / 31536000)) > 1) return `${i} yrs ago`;
+        if ((i = Math.floor(s / 2592000))  > 1) return `${i} mon ago`;
+        if ((i = Math.floor(s / 86400))    > 1) return `${i} dys ago`;
+        if ((i = Math.floor(s / 3600))     > 1) return `${i} hrs ago`;
+        if ((i = Math.floor(s / 60))       > 1) return `${i} min ago`;
+        return `${Math.floor(s)} sec ago`;
     }
 
     function addCommas(a) {

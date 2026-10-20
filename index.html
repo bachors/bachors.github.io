@@ -2955,7 +2955,7 @@ graph TD
 							<div class="relative grid grid-cols-1 gap-4 py-4 px-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
 									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-400">Panjang karakter</span>
+										<span class="text-xs text-gray-400">Character length</span>
 										<span id="pass_range" class="text-xs text-gray-900 dark:text-gray-50 font-mono">8</span>
 									</div>
 									<input id="pass_kar" oninput="passhit()" type="range" min="4" max="32" value="8" class="my-1.5 accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
@@ -2963,19 +2963,19 @@ graph TD
 								<div class="grid grid-cols-2 gap-2">
 									<div class="flex items-center py-1.5">
 										<input checked id="pass_kec" type="checkbox" name="pass_kec" value="abcdefghijklmnopqrstuvwxyz" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
-										<label for="pass_kec" class="select-none ms-2 text-xs">Huruf kecil</label>
+										<label for="pass_kec" class="select-none ms-2 text-xs">Lowercase</label>
 									</div>
 									<div class="flex items-center py-1.5">
 										<input id="pass_bes" type="checkbox" name="pass_bes" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
-										<label for="pass_bes" class="select-none ms-2 text-xs">Huruf besar</label>
+										<label for="pass_bes" class="select-none ms-2 text-xs">Uppercase</label>
 									</div>
 									<div class="flex items-center py-1.5">
 										<input id="pass_ang" type="checkbox" name="pass_ang" value="0123456789" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
-										<label for="pass_ang" class="select-none ms-2 text-xs">Angka</label>
+										<label for="pass_ang" class="select-none ms-2 text-xs">Numbers</label>
 									</div>
 									<div class="flex items-center py-1.5">
 										<input id="pass_sim" type="checkbox" name="pass_sim" value="[~!@#$%^&*()-_=+[]{};:,.<>/?]" class="accent-gray-900 dark:accent-white w-4 h-4 border border-default-medium rounded-xs">
-										<label for="pass_sim" class="select-none ms-2 text-xs">Simbol</label>
+										<label for="pass_sim" class="select-none ms-2 text-xs">Symbols</label>
 									</div>
 								</div>
 								<div id="pass_res" class="content-center block w-full h-20 border-2 border-dashed border-gray-300 dark:border-blue-100/20 rounded-2xl text-xl text-center font-mono overflow-x-auto select-all cursor-pointer ftools"></div>
