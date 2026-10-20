@@ -61,4 +61,8 @@ function star_animateStars() {
 	});
 	requestAnimationFrame(star_animateStars)
 }
+
 star_animateStars();
+
+const kalender = new Date;
+document.getElementById("tahun").textContent = String(kalender.getFullYear());
