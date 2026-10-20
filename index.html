@@ -28,7 +28,7 @@
 		<div id="bg"></div>
 		<canvas id="stars-canvas" class="opacity-75"></canvas>
 		<header class="z-30 fixed w-full px-3 pt-2">
-			<div class="max-w-2xl mx-auto p-2 bg-white dark:bg-[#2e3034] shadow-sm break-inside rounded-full">
+			<div class="max-w-2xl mx-auto p-2 bg-gray-50 dark:bg-[#2e3034] shadow-sm break-inside rounded-full">
 				<div class="flex items-center justify-between">
 					<a href="https://bachors.id/" class="flex items-center gap-3">
 						<img src="img/logo.png" alt="Ican Bachors" class="w-10 h-10 rounded-full object-cover">
@@ -515,7 +515,7 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center gap-2 px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center gap-2 px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<button command="close" commandfor="privacy-policy" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 									<i class="fa fa-arrow-left"></i>
 								</button>
@@ -608,7 +608,7 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-bw" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -619,15 +619,12 @@
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="relative flex items-center">
-									<div class="flex flex-col gap-1.5 text-xs">
-										<span class="text-xs text-gray-400">Image</span>
-										<input id="bwfil_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
-									</div>
-									<img id="bwfil-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
+							<div class="relative flex items-center py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<div class="flex flex-col gap-1.5 text-xs">
+									<span class="text-xs text-gray-400">Image</span>
+									<input id="bwfil_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+								<img id="bwfil-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
 							</div>
 							<div id="bwfil-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
 								<div class="flex flex-col gap-1.5 w-full">
@@ -667,7 +664,7 @@
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="diagram" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -739,7 +736,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-lg transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pixel-dissolve" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -824,7 +821,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pdf-convert" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -835,7 +832,7 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<div class="relative grid grid-cols-2 gap-4 pt-4 px-4 text-xs">
+							<div class="relative grid grid-cols-2 gap-4 py-4 mx-4 border-b border-gray-200 dark:border-white/10">
 								<div class="flex flex-col gap-1.5">
 									<span class="text-xs text-gray-400">Image to PDF</span>
 									<input id="pdfim-imgfile" type="file" accept="image/*" onChange="pdfim_loadImg(event)" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
@@ -844,7 +841,6 @@ graph TD
 									<span class="text-xs text-gray-400">PDF to Image</span>
 									<input id="pdfim-pdffile" type="file" accept="application/pdf" onChange="pdfim_loadPdf(event)" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10 col-span-2"></div>
 							</div>
 							<div id="pdfim-message" class="flex items-center text-xs justify-center mt-4" style="display:none">
 								loading ...
@@ -867,7 +863,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pixel-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -878,7 +874,7 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
+							<div class="relative grid grid-cols-1 gap-4 py-4 mx-4 border-b border-gray-200 dark:border-white/10">
 								<div class="flex items-center">
 									<div class="flex flex-col gap-1.5 text-xs">
 										<span class="text-xs text-gray-400">Image (16x16)</span>
@@ -891,7 +887,6 @@ graph TD
 									<input id="pxcss-scale" oninput="renderMarkup()" type="range" min="1" max="20" step="1" value="5" class="accent-gray-900 dark:accent-white w-full h-2 bg-gray-100 dark:bg-[#131313] rounded-full appearance-none cursor-pointer">
 									<i class="text-sm fa fa-square-plus"></i>
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
 							</div>
 							<div id="pxcss-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div id="pxcss-box" class="relative flex items-center justify-start bg-gray-100 dark:bg-gray-300 w-full overflow-y-hidden overflow-x-auto ftools">
@@ -927,7 +922,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-lg transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-compress" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -938,12 +933,9 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="flex flex-col gap-1.5 text-xs">
-									<span class="text-xs text-gray-400">Image</span>
-									<input id="imcom_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
-								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+							<div class="relative flex flex-col gap-1.5 py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<span class="text-xs text-gray-400">Image</span>
+								<input id="imcom_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 							</div>
 							<div id="imcom-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div class="flex flex-col gap-1.5 w-full">
@@ -982,7 +974,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-2xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="emoji-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -993,15 +985,12 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="relative flex items-center">
-									<div class="flex flex-col gap-1.5 text-xs">
-										<span class="text-xs text-gray-400">Image</span>
-										<input id="emoart_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
-									</div>
-									<img id="emoart-image" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
+							<div class="relative flex items-center py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<div class="flex flex-col gap-1.5 text-xs">
+									<span class="text-xs text-gray-400">Image</span>
+									<input id="emoart_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+								<img id="emoart-image" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
 							</div>
 							<div class="relative grid grid-cols-1 gap-1.5 p-4 overflow-y-auto ftools">
 								<div id="emoart-res" class="grid grid-cols-1 gap-4 pb-2.5" style="display:none;">
@@ -1093,7 +1082,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="pixel-paint" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1220,7 +1209,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-4xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="low-poly" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1231,7 +1220,7 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>							
-							<div class="relative grid grid-cols-2 gap-4 pt-4 px-4">
+							<div class="relative grid grid-cols-2 gap-4 py-4 mx-4 border-b border-gray-200 dark:border-white/10">
 								<div class="flex flex-col gap-1.5 text-xs">
 									<span class="text-xs text-gray-400">Image</span>
 									<input id="poly_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
@@ -1249,7 +1238,6 @@ graph TD
 										</div>
 									</div>
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10 col-span-2"></div>
 							</div>
 							<div id="poly-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div id="poly-editor" class="grid grid-cols-2 gap-4">
@@ -1367,7 +1355,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="ascii-art" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1378,15 +1366,12 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>							
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="relative flex items-center">
-									<div class="flex flex-col gap-1.5 text-xs">
-										<span class="text-xs text-gray-400">Image</span>
-										<input id="ascii_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
-									</div>
-									<img id="ascii-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
+							<div class="relative flex items-center py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<div class="flex flex-col gap-1.5 text-xs">
+									<span class="text-xs text-gray-400">Image</span>
+									<input id="ascii_img" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+								<img id="ascii-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]">
 							</div>
 							<div id="ascii-res" class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools" style="display:none">
 								<div class="grid grid-cols-2 gap-4">
@@ -1468,7 +1453,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-2xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="comment" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1594,7 +1579,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="svg-polygon" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1647,7 +1632,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="noise-pattern" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1723,7 +1708,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="svg-barcode" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -1734,35 +1719,32 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="flex flex-col gap-1.5">
-									<div class="flex items-center justify-between">
-										<span class="text-xs text-gray-400">Enter number or text</span>
-										<span id="svgg-barcode-er" class="text-xs font-mono text-red-500" style="display:none">Invalid !</span>
-									</div>
-									<div class="flex items-center justify-between">
-										<input oninput="svgggenerateBarcode()" type="text" id="svgg-barcode-no" value="8993989311699" spellcheck="false" class="block w-full font-mono border-none focus:outline-none rounded-l-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-										<select oninput="svgggenerateBarcode()" id="svgg-barcode-tp" class="border-none focus:outline-none rounded-r-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-											<option value="CODE128">CODE128 auto</option>
-											<option value="CODE128A">CODE128 A</option>
-											<option value="CODE128B">CODE128 B</option>
-											<option value="CODE128C">CODE128 C</option>
-											<option selected value="EAN13">EAN13</option>
-											<option value="EAN8">EAN8</option>
-											<option value="UPC">UPC</option>
-											<option value="CODE39">CODE39</option>
-											<option value="ITF14">ITF14</option>
-											<option value="ITF">ITF</option>
-											<option value="MSI">MSI</option>
-											<option value="MSI10">MSI10</option>
-											<option value="MSI11">MSI11</option>
-											<option value="MSI1010">MSI1010</option>
-											<option value="MSI1110">MSI1110</option>
-											<option value="pharmacode">Pharmacode</option>
-										</select>
-									</div>
+							<div class="relative flex flex-col gap-1.5 py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<div class="flex items-center justify-between">
+									<span class="text-xs text-gray-400">Enter number or text</span>
+									<span id="svgg-barcode-er" class="text-xs font-mono text-red-500" style="display:none">Invalid !</span>
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+								<div class="flex items-center justify-between">
+									<input oninput="svgggenerateBarcode()" type="text" id="svgg-barcode-no" value="8993989311699" spellcheck="false" class="block w-full font-mono border-none focus:outline-none rounded-l-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<select oninput="svgggenerateBarcode()" id="svgg-barcode-tp" class="border-none focus:outline-none rounded-r-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										<option value="CODE128">CODE128 auto</option>
+										<option value="CODE128A">CODE128 A</option>
+										<option value="CODE128B">CODE128 B</option>
+										<option value="CODE128C">CODE128 C</option>
+										<option selected value="EAN13">EAN13</option>
+										<option value="EAN8">EAN8</option>
+										<option value="UPC">UPC</option>
+										<option value="CODE39">CODE39</option>
+										<option value="ITF14">ITF14</option>
+										<option value="ITF">ITF</option>
+										<option value="MSI">MSI</option>
+										<option value="MSI10">MSI10</option>
+										<option value="MSI11">MSI11</option>
+										<option value="MSI1010">MSI1010</option>
+										<option value="MSI1110">MSI1110</option>
+										<option value="pharmacode">Pharmacode</option>
+									</select>
+								</div>
 							</div>
 							<div id="svgg-barcode-sk" class="relative grid grid-cols-1 gap-4 px-4 py-4 overflow-y-auto ftools">
 								<div class="grid grid-cols-2 gap-4">
@@ -1891,7 +1873,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="qr-code" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2011,7 +1993,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="css-triangle" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2097,7 +2079,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-base64" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2108,15 +2090,12 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>							
-							<div class="relative grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="relative flex items-center">
-									<div class="flex flex-col gap-1.5 text-xs">
-										<span class="text-xs text-gray-400">Image</span>
-										<input id="userfile" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
-									</div>
-									<img id="img64-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]" style="display:none">
+							<div class="relative flex items-center py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<div class="flex flex-col gap-1.5 text-xs">
+									<span class="text-xs text-gray-400">Image</span>
+									<input id="userfile" type="file" accept="image/*" class="text-xs file:text-xs file:bg-gray-900 dark:file:bg-white file:text-white dark:file:text-gray-900 file:mr-1.5 file:py-1.5 file:px-2.5 file:rounded-lg file:border-0 file:cursor-pointer">
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+								<img id="img64-sc" class="mx-auto p-0.5 border border-gray-200 dark:border-white/10 h-[50px]" style="display:none">
 							</div>
 							<div class="relative grid grid-cols-1 p-4 overflow-y-auto ftools">
 								<div id="img64-result" class="flex flex-col gap-4"></div>
@@ -2131,7 +2110,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="number-system" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2174,7 +2153,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="code-snippet" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2230,7 +2209,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="temperature" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2274,7 +2253,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="trigonometric" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2329,7 +2308,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="image-gradient" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2399,7 +2378,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="color-scheme" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2410,29 +2389,26 @@ graph TD
 									<i class="fa fa-share-from-square"></i> Share
 								</button>
 							</div>
-							<form id="codescheme" class="grid grid-cols-1 gap-4 pt-4 px-4">
-								<div class="grid grid-cols-3 gap-4">
-									<div class="flex col-span-2">
-										<span class="inline-flex items-center text-gray-400 font-mono border-none rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-											#
-										</span>
-										<input type="text" name="hex" id="currentColor" value="5C5CFF" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-										<input type="color" id="cpx" class="h-auto w-14 block border-none bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#5C5CFF" title="Choose your color">
-									</div>
-									<input type="button" value="Set HEX" onclick="SetHex(document.getElementById('codescheme').hex.value);" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
-									<div class="flex col-span-2">
-										<span class="inline-flex items-center text-gray-400 font-mono border-none rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-											RGB
-										</span>
-										<input type="number" name="r" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-										<input type="number" name="g" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-										<input type="number" name="b" value="255" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-r-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
-									</div>
-									<input type="button" value="Set RGB" onclick="ChangeColors(document.getElementById('codescheme').r.value,document.getElementById('codescheme').g.value,document.getElementById('codescheme').b.value);" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
-									<input type="button" value="Lighten" onclick="LightenScheme();" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
-									<input type="button" value="Darken" onclick="DarkenScheme();" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
+							<form id="codescheme" class="grid grid-cols-3 gap-4 py-4 mx-4 border-b border-gray-200 dark:border-white/10">
+								<div class="flex col-span-2">
+									<span class="inline-flex items-center text-gray-400 font-mono border-none rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										#
+									</span>
+									<input type="text" name="hex" id="currentColor" value="5C5CFF" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<input type="color" id="cpx" class="h-auto w-14 block border-none bg-gray-100 dark:bg-[#131313] cursor-pointer rounded-r-md disabled:opacity-50 disabled:pointer-events-none" value="#5C5CFF" title="Choose your color">
 								</div>
-								<div class="border-b border-gray-200 dark:border-white/10"></div>
+								<input type="button" value="Set HEX" onclick="SetHex(document.getElementById('codescheme').hex.value);" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
+								<div class="flex col-span-2">
+									<span class="inline-flex items-center text-gray-400 font-mono border-none rounded-l-md block w-auto bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+										RGB
+									</span>
+									<input type="number" name="r" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<input type="number" name="g" value="92" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-none block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+									<input type="number" name="b" value="255" maxlength="3" spellcheck="false" class="inline-flex items-center font-mono border-none focus:outline-none rounded-r-md block w-full bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5">
+								</div>
+								<input type="button" value="Set RGB" onclick="ChangeColors(document.getElementById('codescheme').r.value,document.getElementById('codescheme').g.value,document.getElementById('codescheme').b.value);" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
+								<input type="button" value="Lighten" onclick="LightenScheme();" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
+								<input type="button" value="Darken" onclick="DarkenScheme();" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg px-2.5 py-1.5"/>
 							</form>
 							<div class="relative grid grid-cols-1 gap-4 p-4 overflow-y-auto ftools">
 								<div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono">
@@ -2528,7 +2504,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="css-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2614,7 +2590,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="css-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2658,7 +2634,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="js-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2721,7 +2697,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="js-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2765,7 +2741,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="aksara" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2824,7 +2800,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="html-beautify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2887,7 +2863,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="html-minify" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2918,7 +2894,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-xl transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="escape" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -2965,7 +2941,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<div class="flex items-center gap-2">
 									<button command="close" commandfor="password" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 										<i class="fa fa-arrow-left"></i>
@@ -3015,7 +2991,7 @@ graph TD
 				<div tabindex="0" class="absolute inset-0 focus:outline-none">
 					<el-dialog-panel class="group/dialog-panel relative ml-auto block size-full max-w-md transform ease-in-out data-closed:translate-x-full">
 						<div class="text-xs relative flex h-full flex-col backdrop:bg-black/60 bg-white dark:bg-[#1e1f21] after:absolute after:inset-y-0 after:left-0 after:w-px">
-							<div class="flex items-center gap-2 px-4 py-2 border-b border-gray-200 dark:border-white/10">
+							<div class="bg-gray-50 dark:bg-[#2e3034] flex items-center gap-2 px-4 py-2 border-b border-gray-200 dark:border-transparent">
 								<button command="close" commandfor="cdn" class="text-sm w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
 									<i class="fa fa-arrow-left"></i>
 								</button>
