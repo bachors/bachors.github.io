@@ -332,7 +332,7 @@ document.querySelectorAll('button[command="close"]').forEach(e=>{
 
 function buildMonthSelect() {
     const sel = document.getElementById('kalender-bulan');
-    sel.innerHTML = MONTHS.map((m, i) => `<option value="${i}" ${i===currentMonth?'selected':''}>${m}</option>`).join('');
+    sel.innerHTML = MONTHS.map((m, i) => `<option class="font-medium" value="${i}" ${i===currentMonth?'selected':''}>${m}</option>`).join('');
 }
 
 async function loadHolidays() {
