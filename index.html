@@ -998,7 +998,17 @@ graph TD
 								</div>
 								<div></div>
 								<select id="kalender-bulan" onchange="currentMonth=+this.value; renderKalender()" class="col-span-3 border-none focus:outline-none rounded-md bg-gray-100 dark:bg-[#131313] px-2.5 py-1.5 ftools"></select>
-								<div id="kalender-id" class="grid grid-cols-7 col-span-7 hidden"></div>
+								<div id="kalender-id" class="border-[0.5px] border-gray-100 dark:border-[#343537] grid grid-cols-7 col-span-7 hidden"></div>
+								<div class="col-span-7 flex items-start justify-end gap-4">
+									<div class="flex items-center gap-2">
+										<span class="w-2 h-2 bg-red-500"></span>
+										<span>Hari Libur</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span class="w-2 h-2 bg-amber-500"></span>
+										<span>Cuti Bersama</span>
+									</div>      
+								</div>
 							</div>
 						</div>
 					</el-dialog-panel>
