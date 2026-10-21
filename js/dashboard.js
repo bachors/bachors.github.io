@@ -316,7 +316,7 @@ document.querySelectorAll('button[command="show-modal"]').forEach(e=>{
 	});
 });
 
-function pasaran(M,B,L){var S=new Date(70,0,2),P=new Date(M,B-1,L),V=(P.getTime()-S.getTime()+86400000)/432000000,D=Math.round(10*(V-Math.floor(V)))/2;var w=["Wage","Kliwon","Legi","Pahing","Pon"][D];return tanggalJawa(P)+'<br>'+w}
+function pasaran(M,B,L){var S=new Date(70,0,2),P=new Date(M,B-1,L),V=(P.getTime()-S.getTime()+86400000)/432000000,D=Math.round(10*(V-Math.floor(V)))/2;var w=["Wage","Kliwon","Legi","Pahing","Pon"][D];return tanggalJawa(P)+' '+w}
 
 function tanggalJawa(a){var n,e=new Intl.DateTimeFormat("en-u-ca-islamic-civil",{day:"numeric",month:"numeric",year:"numeric"}).formatToParts(a);return n="day",parseInt(e.find(function(a){return a.type===n}).value,10)}
 
