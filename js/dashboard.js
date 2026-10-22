@@ -330,6 +330,11 @@ document.querySelectorAll('button[command="close"]').forEach(e=>{
 	});
 });
 
+function spilit(s){
+	const a = s.split(/\r?\n/).filter(line => line.trim() !== '');
+	return a;
+}
+
 function buildMonthSelect() {
     const sel = document.getElementById('kalender-bulan');
     sel.innerHTML = MONTHS.map((m, i) => `<option class="font-medium" value="${i}" ${i===currentMonth?'selected':''}>${m}</option>`).join('');
