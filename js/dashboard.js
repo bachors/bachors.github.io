@@ -112,7 +112,7 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-2">&ensp;</div>
+				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-gray-600 dark:bg-white -rotate-2">&ensp;</div>
 				<div class="text-white dark:text-black">
 					<span class="inline-flex relative mr-1">
 						<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-500 dark:bg-green-500"></span>
@@ -167,7 +167,7 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-52 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-2">&ensp;</div>
+				<div class="h-8 w-52 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-gray-600 dark:bg-white -rotate-2">&ensp;</div>
 				<div class="text-white dark:text-black">code with me • <span class="text-sm font-medium leading-none">12:30 AM</span></div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
@@ -184,8 +184,8 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-3">&ensp;</div>
-				<div class="text-white dark:text-black">Hue are you ?</div>
+				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-gray-600 dark:bg-white -rotate-3">&ensp;</div>
+				<div class="text-white dark:text-black font-medium">Hue are you ?</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 mt-4 text-center">
 				<i class="fa fa-code"></i>
@@ -195,7 +195,7 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#1e1f21] dark:bg-white -rotate-2">&ensp;</div>
+				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-gray-600 dark:bg-white -rotate-2">&ensp;</div>
 				<div class="text-white dark:text-black">progres hari ini • <span class="text-sm font-medium leading-none">${s}</span></div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
