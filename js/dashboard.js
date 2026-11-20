@@ -419,3 +419,5 @@ async function shareContent() {
 		console.error('Error sharing:', error);
 	}
 }
+
+function hapusSemuaId(e){const r=(new DOMParser).parseFromString(e,"text/html");return r.querySelectorAll("[id]").forEach(e=>e.removeAttribute("id")),r.body.innerHTML}
