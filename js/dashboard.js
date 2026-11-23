@@ -124,11 +124,11 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-black dark:bg-white -rotate-2">&ensp;</div>
-				<div class="text-white dark:text-black">
+				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#7CD886] -rotate-2">&ensp;</div>
+				<div class="text-black">
 					<span class="inline-flex relative mr-1">
-						<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-500 dark:bg-green-500"></span>
-						<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500 dark:bg-green-500 border border-[#1e1f21] dark:border-white"></span>
+						<span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-700"></span>
+						<span class="relative inline-flex rounded-full h-2 w-2 bg-green-700 border border-[#7CD886]"></span>
 					</span>
 					diperbarui jam • <span class="text-sm font-medium leading-none">${formatTime(k.last_update)}</span>
 				</div>
@@ -179,8 +179,8 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-52 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-black dark:bg-white -rotate-2">&ensp;</div>
-				<div class="text-white dark:text-black">code with me • <span class="text-sm font-medium leading-none">12:30 AM</span></div>
+				<div class="h-8 w-52 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#EF78BB] -rotate-2">&ensp;</div>
+				<div class="text-black">code with me • <span class="text-sm font-medium leading-none">12:30 AM</span></div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
@@ -196,8 +196,8 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-black dark:bg-white -rotate-3">&ensp;</div>
-				<div class="text-white dark:text-black font-medium">Hue are you ?</div>
+				<div class="h-8 w-32 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#F0E636] -rotate-3">&ensp;</div>
+				<div class="text-black font-medium">Hue are you ?</div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 mt-4 text-center">
 				<i class="fa fa-code"></i>
@@ -207,8 +207,8 @@ function renderCards(t, k) {
 				<i class="fa fa-ellipsis-vertical"></i>
 			</div>
 			<div class="h-4 relative text-xs uppercase tracking-wider text-center leading-none">
-				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-black dark:bg-white -rotate-2">&ensp;</div>
-				<div class="text-white dark:text-black">progres hari ini • <span class="text-sm font-medium leading-none">${s}</span></div>
+				<div class="h-8 w-60 -z-30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-0.5 bg-[#AB87F0] -rotate-2">&ensp;</div>
+				<div class="text-black">progres hari ini • <span class="text-sm font-medium leading-none">${s}</span></div>
 			</div>
 			<div class="text-gray-400 dark:text-gray-500 my-4 text-center">
 				<i class="fa fa-ellipsis-vertical"></i>
