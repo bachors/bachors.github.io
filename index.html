@@ -27,6 +27,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@esri/calcite-components@6.0.0-next.30/dist/cdn/index.js"></script>
 		<script src="js/config.js"></script>
 	</head>
 	<body class="text-sm bg-gray-100 dark:bg-[#131313] text-gray-900 dark:text-gray-50 min-h-screen">
@@ -2987,6 +2988,7 @@ graph TD
 										<span id="m4RGB">92.92.255</span>
 									</div>
 								</div>
+								<div class="h-[1px] bg-gray-200 dark:bg-white/10"></div>
 								<div class="flex flex-col gap-1.5 w-full">
 									<span class="text-gray-400">Accent ramp</span>
 									<div id="cs_swatches"></div>
@@ -2997,6 +2999,23 @@ graph TD
 									<button id="kopi-cs_css" title="Copy" class="absolute top-6 right-0 w-8 h-8 mr-2 flex items-center justify-center text-gray-400 hover:text-gray-200">
 										<i class="far fa-copy text-sm"></i>
 									</button>
+								</div>
+								<div class="h-[1px] bg-gray-200 dark:bg-white/10"></div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-gray-400">Light mode</span>
+									<div class="calcite-mode-light bg-white dark:bg-white text-gray-900 dark:text-gray-900 px-2.5 py-0.5 border border-gray-200 dark:border-gray-200 flex w-full">
+										<table id="cs_theme_light" class="oklch-palette custom-theme w-full">
+											<tbody></tbody>
+										</table>
+									</div>
+								</div>
+								<div class="flex flex-col gap-1.5 w-full">
+									<span class="text-gray-400">Dark mode</span>
+									<div class="calcite-mode-dark bg-[#1e1f21] dark:bg-[#1e1f21] text-gray-50 dark:text-gray-50 px-2.5 py-0.5 border border-white/10 dark:border-white/10 flex w-full">
+										<table id="cs_theme_dark" class="oklch-palette custom-theme w-full">
+											<tbody></tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
